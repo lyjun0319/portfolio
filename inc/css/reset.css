@@ -1,2 +1,16 @@
-html,body,ul,li,ol,dl,dt,dd,a,p,h1,h2,h3,h4,h5,h6 { margin:0;padding:0; }
-section,aside,header,footer,address,article { display:block; }
+html,body,ul,li,ol,dl,dt,dd,a,p,h1,h2,h3,h4,h5,h6,div,
+table,tr,th,td,thead,tbody,tfoot{ 
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-family: inherit;
+}
+section,aside,header,footer,address,article { 
+    display:block;
+    font-family: inherit; 
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}

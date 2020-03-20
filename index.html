@@ -8,17 +8,26 @@
     <link rel="stylesheet" href="/inc/css/reset.css">
     <link rel="stylesheet" href="/inc/css/common.css">
     <link rel="stylesheet" href="/inc/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/inc/js/includeHtml.js"></script>
+    
 </head>
 <body>
-    <header include-html="/inc/html/header.html"></header>
-    <article>
-        <section>section01</section>
-        <section>section02</section>
+    <!-- <header include-html="/inc/html/header.html"></header> -->
+    <article id="introContainer">
+        <section id="introMsg" class="ftEn">
+            <div class="introTitleBox">
+                <h2 class="introTitle">"Front End Developer - Jun"</h2>
+            </div>
+            <ul>
+                <li><a href="/htmlportfolio.html">Defalut Portfolio</a></li>
+                <li><a href="/reactportfolio.html">React Portfolio</a></li>
+            </ul>
+        </section>
     </article>
-    <footer include-html="/inc/html/footer.html"></footer>
+    <!-- <footer include-html="/inc/hptml/footer.html"></footer> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/inc/js/includeHtml.js"></script>
 </body>
+
 <script>
     includeHTML();
 </script>
