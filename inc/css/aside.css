@@ -1,0 +1,15 @@
+#asideLeft { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 200px; 
+    height:100%;
+    border-right: 1px solid #dfdfdf;
+    box-sizing:border-box;
+}
+#asideLeft h1 {
+    color:#fff;
+}
+#asideLeft a {
+    color:#fff;
+}
