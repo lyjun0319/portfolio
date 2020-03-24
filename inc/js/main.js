@@ -34,7 +34,7 @@ function listHtml(item){
         html += "<div class='guideTxt'>";
         html += gudieText(item.guide);
         html += "</div>";
-        html += "<p class='useSkill'>"+item.sk+"</p>"
+        html += "<p class='useSkill'>"+item.skils+"</p>"
         html += "<p class='listDay'>"+item.day+"</p>";
         html += "</article>";
     return html;
