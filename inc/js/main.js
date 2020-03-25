@@ -35,7 +35,11 @@ function listHtml(item){
         html += gudieText(item.guide);
         html += "</div>";
         html += "<p class='useSkill'>"+item.skils+"</p>"
+        html += "<div class='extra_txt'>"
+        html += "<a href='"+item.linkUrl+"' class='linkUrl' target='_blank'>Link"
+        html += "</a>"
         html += "<p class='listDay'>"+item.day+"</p>";
+        html += "</div>"
         html += "</article>";
     return html;
 };
@@ -46,9 +50,9 @@ function gudieText(item){
         guideText += "<p>"+ item[i] +"</p>"
     };
     return guideText;
-}
+};
 
 function listInnerHtml(item){
     let appendTarget = document.getElementById('portfolio_list');
     appendTarget.innerHTML += item;
-}
+};
