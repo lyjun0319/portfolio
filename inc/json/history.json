@@ -1,7 +1,7 @@
 {
     "companyHistroy": [
         {
-            "companyName": "Nct/Nccj",
+            "companyName": "NCT/NCCJ",
             "skils": "DESIGN/HTML/CSS",
             "workDay": "2011.12 ~ 2014.12",
             "intro": "당근웹솔루션, 템플릿, 빌더를 사용하여 웹 구축",
@@ -12,7 +12,7 @@
             ],
             "reason": "IT업의 처음 입문하면서 IT의 경험 과 디자인구축 경험을을 위해 입사했습니다."
         },{
-            "companyName": "비즈밸리",
+            "companyName": "BIZVALLY",
             "skils": "DESIGN/HTMl/CSS/JQUIERY",
             "workDay": "2015.03 ~ 2016.02",
             "intro": "디자인 에이전시 구축 업무",
@@ -34,7 +34,7 @@
             ],
             "reason": "자체 플렛폼을 구축한다 입사했습니다."
         },{
-            "companyName" : "미플즈",
+            "companyName" : "MEPLZ",
             "skils" : "HTML/CSS/JAVASCRIPT/JQUIERY",
             "workDay" : "2017.08 ~ 2018.12",
             "intro" : "큰 기업 위주의 구축 에이전시",

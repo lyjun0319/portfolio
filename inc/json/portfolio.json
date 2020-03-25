@@ -1,6 +1,7 @@
 
 [
     {
+        "company":"UNEEDCOMMS",
         "name": "UIPATH BOT 개발",
         "day": "2020.02.01 ~ ing",
         "skils": "UIPATH, JAVASCRIPT, API",
@@ -11,6 +12,7 @@
         ],
         "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
     },{
+        "company":"UNEEDCOMMS",
         "name": "RPA 사업(TFT)",
         "day": "2019.10.19 ~ 2020.01.31",
         "skils": "UIPATH, JAVASCRIPT, API",
@@ -20,6 +22,7 @@
         ],
         "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
     },{
+        "company":"UNEEDCOMMS",
         "name": "스마트PC 메뉴얼 작업",
         "day": "2019.08.01 ~ 2019.10.18",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
@@ -29,6 +32,7 @@
         ],
         "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
     },{
+        "company":"MEPLZ",
         "name": "카카오 채용 관리자 공통",
         "day": "2018.11.03 ~ 2018.12.06",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / BOOTSTRAP4 / HANDSONTABLE / SWIPER",
@@ -39,6 +43,7 @@
         ],
         "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
     },{
+        "company":"MEPLZ",
         "name": "코오롱 채용 리뉴얼",
         "day": "2018.07.02 ~ 2018.10.31",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / SWIPER",
@@ -49,6 +54,7 @@
         ],
         "linkUrl": "https://dream.kolon.com"
     },{
+        "company":"MEPLZ",
         "name": "풀무원 채용(탈레오솔루션) TL역할",
         "day": "2018.06.18 ~ 2018.06.29",
         "skils": "CSS / TALEO SOLUTION",
@@ -59,6 +65,7 @@
         ],
         "linkUrl": "https://tas-pulmuone.taleo.net/careersection/ext/moresearch.ftl"
     },{
+        "company":"MEPLZ",
         "name": "함소아한의원 리뉴얼",
         "day": "2018.05.01 ~ 2018.07.13",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / SWIPER",
@@ -68,6 +75,7 @@
         ],
         "linkUrl": "http://hamsoa.com/"
     },{
+        "company":"MEPLZ",
         "name": "NCSOFT채용 제안 작업",
         "day": "2018.04.16 ~ 2018.04.25",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / TWEENMAX / TWEENLINE",
@@ -78,6 +86,7 @@
         ],
         "linkUrl": "/portfolio/ncsoft2_ver2/index.php"
     },{
+        "company":"MEPLZ",
         "name": "KFC 리뉴얼",
         "day": "2018.05.01 ~ 2018.05.31",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
@@ -88,6 +97,7 @@
         ],
         "linkUrl": "https://www.kfckorea.com/"
     },{	
+        "company":"MEPLZ",
         "name": "SK채용 소개컨텐츠 작업 ",
         "day": "2017.11.01 ~ 2018.03.16",
         "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS / TALEO",
@@ -98,6 +108,7 @@
         ],
         "linkUrl": "http://careers.sktelecom.com/recruit_user/taleo/index.jsp"
     },{	
+        "company":"MEPLZ",
         "name": "SK채용 탈레오",
         "day": "2017.11.01 ~ 2018.03.16",
         "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS / TALEO",
@@ -108,6 +119,7 @@
         ],
         "linkUrl": "https://tas-sktelecom.taleo.net/careersection/ex/moresearch.ftl?lang=ko&jobfield=300020935"
     },{
+        "company":"MEPLZ",
         "name": "에스쁘아 유지운영",
         "day": "2017.08.24 ~ 2018.03.31",
         "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS",
@@ -118,6 +130,7 @@
         ],
         "linkUrl": "https://www.espoir.com/"
     },{
+        "company":"여의도증권미디어그룹",
         "name": "성공투자클럽",
         "day": "2017.03.15 ~ 2017.03.18",
         "skils": "HTML / JQUIRY / JAVASCRIPT / CSS / GNUBOARD",
@@ -128,6 +141,7 @@
         ],
         "linkUrl": "http://xn--ob0b62s5mhpsgf2lnpc.com/"
     },{
+        "company":"여의도증권미디어그룹",
         "name": "사람넷",
         "day": "2017.02 ~ 2017.04",
         "skils": "HTML / JQUIRY / JAVASCRIPT / CSS / SOLUTION",
@@ -138,6 +152,7 @@
         ],
         "linkUrl": "/portfolio/peoplenet/index.html"
     },{
+        "company":"여의도증권미디어그룹",
         "name": "머니티비",
         "day": "2016.11 ~ 2017.03",
         "skils": "HTML / JQUIRY / JAVASCRIPT / CSS ",
@@ -146,6 +161,7 @@
         ],
         "linkUrl": "http://머니티비.com/"
     },{
+        "company":"BIZVALLY",
         "name": "비즈벨리홈페이지",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP /ILLUSTRATE",
@@ -155,6 +171,7 @@
         ],
         "linkUrl": "http://www.bizvalley.co.kr/"
     },{
+        "company":"BIZVALLY",
         "name": "엔에스트레이딩",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
@@ -165,6 +182,7 @@
         ],
         "linkUrl": "http://www.toyotomi.kr/"
     },{
+        "company":"BIZVALLY",
         "name": "마틴락 리조트",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE",
@@ -174,6 +192,7 @@
         ],
         "linkUrl": "javaJAVAscript:void(0)"
     },{
+        "company":"BIZVALLY",
         "name": "하이캐슬리조트",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
@@ -184,6 +203,7 @@
         ],
         "linkUrl": "http://www.highcastle.co.kr/"
     },{
+        "company":"BIZVALLY",
         "name": "광역교통개선대책",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE",
@@ -194,6 +214,7 @@
         ],
         "linkUrl": "javaJAVAscript:void(0)"
     },{
+        "company":"NCT/NCCJ",
         "name": "부투스트랩 테마",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE",
@@ -204,6 +225,7 @@
         ],
         "linkUrl": "javaJAVAscript:void(0)"
     },{
+        "company":"NCT/NCCJ",
         "name": "당근웹 솔루션 / 템플릿 테마",
         "day": "2011YEAR ~ 2014YEAR",
         "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
