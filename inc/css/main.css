@@ -6,7 +6,7 @@ html,body{
 
 #main_container {
     height:100%;
-    padding:50px 100px 50px 350px;
+    padding:50px 50px 50px 300px;
     font-size:0;
     box-sizing: border-box; 
 }
@@ -15,7 +15,7 @@ html,body{
 #profile_wrap {
     display:inline-block;
     vertical-align: top;
-    width: 35%;
+    width: 33%;
 }
 
 #profile h2 {
@@ -37,11 +37,15 @@ html,body{
 #companyHistory {
     display: inline-block;
     vertical-align: top;
-    width: 38%;
+    width: 37%;
     height: 100%;
     padding-right:10px;
-    overflow-y: scroll;
     box-sizing: border-box;
+}
+
+#companyHistory #cp_historyList {
+    height: calc(100% - 48px);
+    overflow-y: scroll;
 }
 
 #companyHistory .company_list {
@@ -50,9 +54,8 @@ html,body{
     border-top:1px solid #202020;
 }
 
-#companyHisory .company_list:first-child{
+#companyHistory .company_list:first-child{
     margin-top: 0;
-    padding-top: 0;
     border-top: 0;
 }
 
@@ -62,8 +65,8 @@ html,body{
     font-weight:normal;
 }
 .company_list .cp_intro {
-    font-size:14px;
-    color:#949495;
+    font-size:16px;
+    color:#c4c4c4;
 }
 
 .company_list .work_intro p{
@@ -82,11 +85,15 @@ html,body{
 }
 
 /* ====== Portfoilo List ====== */
-#portfolio_list {
+#portfolio {
     display: inline-block;
     vertical-align: top;
-    width: 27%;
+    width: 30%;
     height: 100%;
+}
+
+#portfolio_list {
+    height: calc(100% - 45px);
     overflow-y: scroll;
 }
 

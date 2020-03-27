@@ -9,8 +9,11 @@ body {
     font-family: 'Lato' !important;
 }
 .section_title{
+    padding-bottom:15px;
     font-size:26px;
+    font-weight: 400;
     color:#fff;
+    border-bottom: 1px solid #202020;
 }
 #footer {
     position: absolute;

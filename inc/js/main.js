@@ -20,7 +20,7 @@ function listHtml(item){
         html += "<article class='listItem'>";
         html += "<h3 class='listTitle'>"+item.name+"</h3>";
         html += "<div class='guideTxt'>";
-        html += gudieText(item.guide);
+        html += arrWork(item.guide);
         html += "</div>";
         html += "<p class='useSkill'>"+item.skils+"</p>"
         html += "<div class='extra_txt'>"
@@ -30,14 +30,6 @@ function listHtml(item){
         html += "</div>"
         html += "</article>";
     return html;
-};
-
-function gudieText(item){
-    let guideText = '';
-    for(let i = 0; i < item.length; i++){
-        guideText += "<p>"+ item[i] +"</p>"
-    };
-    return guideText;
 };
 
 function listInnerHtml(item){
@@ -72,6 +64,7 @@ function companyDate(arr){
 function companyHtml(item){
     let html = '';
     html += "<article class='company_list'>";
+    html += "<a href='"+item.link+"'>PORJECT VIEW</a>"
     html += "<h3 class='cp_name'>"+item.companyName;+"</h3>";
     html += "<p class='cp_intro'>"+item.intro+"</p>"
     html += "<div class='work_intro'>"
@@ -87,6 +80,7 @@ function companyHtml(item){
 
     return html;
 }
+
 function arrWork(arr){
     let workHtml ='';
     $.each(arr, function(key, value){
@@ -96,6 +90,6 @@ function arrWork(arr){
 }
 
 function appendCompanyList(item){
-    let appendTarget = document.getElementById('companyHistory');
+    let appendTarget = document.getElementById('cp_historyList');
     appendTarget.innerHTML += item;
 };
