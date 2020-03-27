@@ -8,6 +8,10 @@ body {
 .ftEn { 
     font-family: 'Lato' !important;
 }
+.section_title{
+    font-size:26px;
+    color:#fff;
+}
 #footer {
     position: absolute;
     top:auto;

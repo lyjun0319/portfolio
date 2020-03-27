@@ -18,7 +18,7 @@ $.ajax({
 function listHtml(item){
     let html = '';
         html += "<article class='listItem'>";
-        html += "<h2 class='listTitle'>"+item.name+"</h2>";
+        html += "<h3 class='listTitle'>"+item.name+"</h3>";
         html += "<div class='guideTxt'>";
         html += gudieText(item.guide);
         html += "</div>";
@@ -71,16 +71,17 @@ function companyDate(arr){
 
 function companyHtml(item){
     let html = '';
-    html += "<article class='companyList'>";
-    html += "<h2>"+item.companyName;+"</h2>";
-    html += "<p>"+item.intro+"</p>"
-    html += "<div>"
+    html += "<article class='company_list'>";
+    html += "<h3 class='cp_name'>"+item.companyName;+"</h3>";
+    html += "<p class='cp_intro'>"+item.intro+"</p>"
+    html += "<div class='work_intro'>"
     html += arrWork(item.work);
+    html += "</div>"
     html += "</p>"
-    html += "<p>"+item.reason+"</p>"
+    html += "<p class='cp_choose'>"+item.reason+"</p>"
     html += "<div class='extraBox'>";
-    html += "<span class='skils'>"+item.skils+"</span>",
-    html += "<span>"+item.workDay+"</span>",
+    html += "<span class='cp_skils'>"+item.skils+"</span>",
+    html += "<span class='cp_workday>"+item.workDay+"</span>",
     html += "</div>",
     html += "</article>"
 

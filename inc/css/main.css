@@ -3,9 +3,10 @@ html,body{
     overflow: hidden;
     background-color:#000;
 }
+
 #main_container {
     height:100%;
-    padding:100px 350px;
+    padding:50px 100px 50px 350px;
     font-size:0;
     box-sizing: border-box; 
 }
@@ -14,18 +15,69 @@ html,body{
 #profile_wrap {
     display:inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 35%;
 }
+
 #profile h2 {
     font-size:30px;
     font-weight: 400;
     color:#fff;
 }
-#profile .subtitle{
+
+#profile .subtitle {
     font-size:16px;
 }
+
 #profile p {
     font-size:14px;
+    color:#949495;
+}
+
+/* ====== Company history List ====== */
+#companyHistory {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+    height: 100%;
+    padding-right:10px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#companyHistory .company_list {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top:1px solid #202020;
+}
+
+#companyHisory .company_list:first-child{
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.company_list .cp_name {
+    font-size:20px;
+    color:#fff;
+    font-weight:normal;
+}
+.company_list .cp_intro {
+    font-size:14px;
+    color:#949495;
+}
+
+.company_list .work_intro p{
+    font-size:12px;
+    color:#949495;
+}
+
+.company_list .cp_choose {
+    font-size:12px;
+    color:#949495;
+}
+
+.company_list .cp_skils {
+    font-size:12px;
     color:#949495;
 }
 
@@ -33,10 +85,11 @@ html,body{
 #portfolio_list {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 27%;
     height: 100%;
     overflow-y: scroll;
 }
+
 .listItem {
     max-width:400px;
     padding:20px;
@@ -48,29 +101,35 @@ html,body{
 .listItem:first-child {
     margin-top:0;
 }
+
 .listTitle{
     color:#fff;
     font-size: 20px;
     font-weight:400;
 }
+
 .guideTxt p {
     font-size:12px; 
     color:#949495;
 }
+
 .useSkill {
     font-size:14px;
     color:#949495;
 }
+
 .extra_txt:after {
     display: block;
     content:'';
     clear: both;
 }
+
 .linkUrl{
     float:left;
     color:#949495;
     font-size:12px;
 }
+
 .listDay {
     float: right;
     font-size:11px;
