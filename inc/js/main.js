@@ -1,3 +1,4 @@
+/* ===== Portfolio ===== */
 $.ajax({
     type: "post",
     url: "/inc/json/portfolio.json",
@@ -7,25 +8,12 @@ $.ajax({
     },
     success : function(data){
         const list = data;
-        const list_len = list.length;
-        for(let i = 0; i < list_len; i++){
-            let arrJSON = list[i];
-            let objItems = objItem(arrJSON);
-            let html = listHtml(objItems);
-            listInnerHtml(html);
-        };
+        $.each(list, function(key, value){
+            let _listHtml = listHtml(value);
+            listInnerHtml(_listHtml);
+        });
     }
 });
-
-function objItem(item){
-    return {
-        "name":item.name,
-        "day":item.day,
-        "skils": item.skils,
-        "guide": item.guide ,
-        "linkUrl" :item.linkUrl
-    };
-};
 
 function listHtml(item){
     let html = '';
@@ -54,5 +42,59 @@ function gudieText(item){
 
 function listInnerHtml(item){
     let appendTarget = document.getElementById('portfolio_list');
+    appendTarget.innerHTML += item;
+};
+
+
+/* ===== Profile ===== */
+$.ajax({
+    type: "post",
+    url: "/inc/json/history.json",
+    dataType: "JSON",
+    error: function(){
+        alert('history 통신실패');
+    },
+    success : function(data){
+        const obj = data;
+        const companyHistory = obj.companyHistory;
+        const myHistory = obj.myHistory;
+        companyDate(companyHistory);
+    }
+});
+
+function companyDate(arr){
+    $.each(arr, function(key, value){
+        const htmls = companyHtml(value);
+        appendCompanyList(htmls)
+    })
+}
+
+function companyHtml(item){
+    let html = '';
+    html += "<article class='companyList'>";
+    html += "<h2>"+item.companyName;+"</h2>";
+    html += "<p>"+item.intro+"</p>"
+    html += "<div>"
+    html += arrWork(item.work);
+    html += "</p>"
+    html += "<p>"+item.reason+"</p>"
+    html += "<div class='extraBox'>";
+    html += "<span class='skils'>"+item.skils+"</span>",
+    html += "<span>"+item.workDay+"</span>",
+    html += "</div>",
+    html += "</article>"
+
+    return html;
+}
+function arrWork(arr){
+    let workHtml ='';
+    $.each(arr, function(key, value){
+        workHtml += "<p>"+value+"</p>";
+    });
+    return workHtml;
+}
+
+function appendCompanyList(item){
+    let appendTarget = document.getElementById('companyHistory');
     appendTarget.innerHTML += item;
 };
