@@ -15,6 +15,15 @@ body {
     color:#fff;
     border-bottom: 1px solid #202020;
 }
+.extra_dot{
+    display:inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 3px;
+    margin-right:3px;
+    background-color: #707070;
+    border-radius: 50%;;
+}
 #footer {
     position: absolute;
     top:auto;

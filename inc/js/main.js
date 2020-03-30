@@ -62,29 +62,30 @@ function companyDate(arr){
 }
 
 function companyHtml(item){
+    
     let html = '';
     html += "<article class='company_list'>";
     html += "<a href='"+item.link+"'>PORJECT VIEW</a>"
-    html += "<h3 class='cp_name'>"+item.companyName;+"</h3>";
+    html += "<div class='list_head'>"
+    html += "<h3 class='cp_name'>"+item.companyName+"</h3>";
+    html += "<p class='cp_workday'>"+item.workDay+"</p>";
+    html += "</div>"
+    html += "<p class='cp_skils'>"+item.skils+"</p>";
     html += "<p class='cp_intro'>"+item.intro+"</p>"
+    html += "<p class='cp_choose'>"+item.reason+"</p>"
     html += "<div class='work_intro'>"
     html += arrWork(item.work);
     html += "</div>"
-    html += "</p>"
-    html += "<p class='cp_choose'>"+item.reason+"</p>"
-    html += "<div class='extraBox'>";
-    html += "<span class='cp_skils'>"+item.skils+"</span>",
-    html += "<span class='cp_workday>"+item.workDay+"</span>",
-    html += "</div>",
-    html += "</article>"
+    html += "</article>";
 
+    console.log(html)
     return html;
 }
 
 function arrWork(arr){
     let workHtml ='';
     $.each(arr, function(key, value){
-        workHtml += "<p>"+value+"</p>";
+        workHtml += "<p> <span class='extra_dot'></span><span>"+value+"</span></p>";
     });
     return workHtml;
 }

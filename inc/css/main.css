@@ -58,17 +58,34 @@ html,body{
     margin-top: 0;
     border-top: 0;
 }
+.company_list .list_head {
+    position: relative;
+}
 
 .company_list .cp_name {
     font-size:20px;
     color:#fff;
     font-weight:normal;
 }
+.company_list .cp_workday {
+    position: absolute;
+    top:auto;
+    right:0;
+    bottom:0;
+    left:auto;
+    font-size:12px;
+    color:#949495;
+}    
 .company_list .cp_intro {
     font-size:16px;
     color:#c4c4c4;
 }
 
+.company_list .work_intro{
+    margin-top:5px;
+    padding:10px;
+    background:#202020;
+}
 .company_list .work_intro p{
     font-size:12px;
     color:#949495;
