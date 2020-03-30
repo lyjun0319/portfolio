@@ -34,6 +34,7 @@ html,body{
 }
 
 /* ====== Company history List ====== */
+
 #companyHistory {
     display: inline-block;
     vertical-align: top;
@@ -46,6 +47,12 @@ html,body{
 #companyHistory #cp_historyList {
     height: calc(100% - 48px);
     overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#companyHistory #cp_historyList::-webkit-scrollbar {
+    display:none;
 }
 
 #companyHistory .company_list {
@@ -58,6 +65,7 @@ html,body{
     margin-top: 0;
     border-top: 0;
 }
+
 .company_list .list_head {
     position: relative;
 }
@@ -67,6 +75,7 @@ html,body{
     color:#fff;
     font-weight:normal;
 }
+
 .company_list .cp_workday {
     position: absolute;
     top:auto;
@@ -76,6 +85,7 @@ html,body{
     font-size:12px;
     color:#949495;
 }    
+
 .company_list .cp_intro {
     font-size:16px;
     color:#c4c4c4;
@@ -86,6 +96,7 @@ html,body{
     padding:10px;
     background:#202020;
 }
+
 .company_list .work_intro p{
     font-size:12px;
     color:#949495;
@@ -111,7 +122,13 @@ html,body{
 
 #portfolio_list {
     height: calc(100% - 45px);
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     overflow-y: scroll;
+}
+
+#portfolio_list::-webkit-scrollbar{
+    display:none;
 }
 
 .listItem {
