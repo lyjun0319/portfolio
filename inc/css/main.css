@@ -92,6 +92,7 @@ html,body{
 }
 
 .company_list .work_intro{
+    position: relative;
     margin-top:5px;
     padding:10px;
     background:#202020;
@@ -102,15 +103,32 @@ html,body{
     color:#949495;
 }
 
+.company_list .cp_Portfolio {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    left:auto;
+    z-index: 1;
+    display:block;
+    padding:5px 10px;
+    margin-top: -14px;
+    background-color: #555;
+    font-size: 12px;
+    color: #b4b4b4;
+    border:0;
+    outline:none;
+}
+
 .company_list .cp_choose {
-    font-size:12px;
-    color:#949495;
+    font-size: 11px;
+    color: #949495;
 }
 
 .company_list .cp_skils {
-    font-size:12px;
+    font-size: 12px;
     color:#949495;
 }
+
 
 /* ====== Portfoilo List ====== */
 #portfolio {
@@ -150,13 +168,13 @@ html,body{
 }
 
 .guideTxt p {
-    font-size:12px; 
-    color:#949495;
+    font-size:12px;
+    color:#b4b4b4;
 }
 
 .useSkill {
-    font-size:14px;
-    color:#949495;
+    font-size:12px;
+    color:#555555;
 }
 
 .extra_txt:after {
