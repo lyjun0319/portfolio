@@ -66,6 +66,11 @@ html,body{
     border-top: 0;
 }
 
+.slowAdd .company_list {
+    opacity: 1;
+    transition: 1s;
+}
+
 .company_list .list_head {
     position: relative;
 }
@@ -137,7 +142,10 @@ html,body{
     width: 30%;
     height: 100%;
 }
-
+.all_ptList{ 
+    font-size: 12px;
+    color: #949494;
+}
 #portfolio_list {
     height: calc(100% - 45px);
     -ms-overflow-style: none; /* IE and Edge */

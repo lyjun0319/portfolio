@@ -1,16 +1,32 @@
+/* ===== Grobal Variable ===== */
 const portfolioUrl = "/inc/json/portfolio.json";
 const historyUrl = "/inc/json/history.json";
 
 const arrPortfolio = dataParsing(portfolioUrl);
 const arrHistory = dataParsing(historyUrl);
+/* ===== // Grobal Variable ===== */
 
-mainPortfolioList(arrPortfolio);
+/* ===== Start Code ===== */
+portfolioList(arrPortfolio);
 mainHistoryList(arrHistory);
 
 $(document).on('click', '.cp_Portfolio', function(e){
-    clearList();
-})
+    const target = $(this);
+    const companyName = target.parents('.company_list').find('.cp_name').text();
+    portfolioList(arrPortfolio, "filter", companyName);
+    animateList()
+});
 
+$('.all_ptList').on('click',function(e){
+    clearList();
+    portfolioList(arrPortfolio);
+    animateList()
+    e.preventDefault;
+})
+/* ===== // Start Code ===== */
+
+
+/* ===== FUNCITON CODE ===== */
 //PORTFOLIO & HISTORY AJAX RETURN
 function dataParsing(links){
     let newData = new Array();
@@ -30,15 +46,28 @@ function dataParsing(links){
 }
 
 // MAIN LOAD PORTFOLIO LIST
-function mainPortfolioList(data){
+function portfolioList(data, type, name){
     const obj = data;
     const listType = "portfolio_list";
-    $.each(obj, function(key, value){
-        let _listHtml = portfolioHtml(value);
-        appendListDate(_listHtml, listType);
-    });
-}
+    // FILter
+    if(type){
+        clearList();
+        const newObj = obj.filter(obj => name == obj.company);
+        $.each(newObj, function(key, value){
+            let _listHtml = portfolioHtml(value);
+            appendListDate(_listHtml, listType);
+        });
+    }else{
+        $.each(obj, function(key, value){
+            let _listHtml = portfolioHtml(value);
+            appendListDate(_listHtml, listType);
+        });
+    }
+};
 
+function filterPortfolio(data,target){
+    const dataCompanyName = data;
+}
 
 // MAIN LOAD HISTORY LIST
 function mainHistoryList(data){
@@ -47,8 +76,9 @@ function mainHistoryList(data){
     const myHistory = obj.myHistory;
     const listType = "cp_historyList"
     companyDate(companyHistory,listType);
-}
+};
 
+// COMPANY DATA CHECK
 function companyDate(arr, listType){
     $.each(arr, function(key, value){
         const htmls = companyHtml(value);
@@ -112,4 +142,12 @@ function clearList(){
     portfolioTarget.innerHTML = '';
 }
 
+function animateList(){
+    $('#portfolio_list').children().css({
+        opacity : 0,
 
+    }).animate({
+        opacity : 1
+    },1000);
+}
+/* ===== // FUNCITON CODE ===== */
