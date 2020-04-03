@@ -65,10 +65,6 @@ function portfolioList(data, type, name){
     }
 };
 
-function filterPortfolio(data,target){
-    const dataCompanyName = data;
-}
-
 // MAIN LOAD HISTORY LIST
 function mainHistoryList(data){
     const obj = data;
