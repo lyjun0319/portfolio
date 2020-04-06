@@ -6,6 +6,8 @@ const arrPortfolio = dataParsing(portfolioUrl);
 const arrHistory = dataParsing(historyUrl);
 /* ===== // Grobal Variable ===== */
 
+
+
 /* ===== Start Code ===== */
 portfolioList(arrPortfolio);
 mainHistoryList(arrHistory);
@@ -24,6 +26,8 @@ $('.all_ptList').on('click',function(e){
     e.preventDefault;
 })
 /* ===== // Start Code ===== */
+
+
 
 
 /* ===== FUNCITON CODE ===== */
@@ -53,15 +57,9 @@ function portfolioList(data, type, name){
     if(type){
         clearList();
         const newObj = obj.filter(obj => name == obj.company);
-        $.each(newObj, function(key, value){
-            let _listHtml = portfolioHtml(value);
-            appendListDate(_listHtml, listType);
-        });
+        portfolioData(newObj, listType);
     }else{
-        $.each(obj, function(key, value){
-            let _listHtml = portfolioHtml(value);
-            appendListDate(_listHtml, listType);
-        });
+        portfolioData(obj, listType);
     }
 };
 
@@ -70,17 +68,33 @@ function mainHistoryList(data){
     const obj = data;
     const companyHistory = obj.companyHistory;
     const myHistory = obj.myHistory;
-    const listType = "cp_historyList"
-    companyDate(companyHistory,listType);
+    const listType = ["cp_historyList","my_historyList"];
+    companyData(companyHistory, listType[0]);
+    myHistoryData(myHistory, listType[1]);
 };
 
+// PORTFOLIO DATA CHECK
+function portfolioData(arr, listType){
+    $.each(arr, function(idx, value){
+        let _listHtml = portfolioHtml(value);
+        appendListDate(_listHtml, listType);
+    });
+}
+
 // COMPANY DATA CHECK
-function companyDate(arr, listType){
-    $.each(arr, function(key, value){
+function companyData(arr, listType){
+    $.each(arr, function(idx, value){
         const htmls = companyHtml(value);
         appendListDate(htmls, listType);
     });
 };
+
+//MYHISTORY DATA CHECK
+function myHistoryData(arr, listType){
+    $.each(arr, function(idx, value){
+        myHistoryHtml(value)
+    });
+}
 
 // PORTFOLIO HTML
 function portfolioHtml(item){
@@ -117,6 +131,12 @@ function companyHtml(item){
     html += "</article>";
     return html;
 };
+
+function myHistoryHtml(item){
+    let html ="";
+
+    return html;
+}
 
 function arrWork(arr, type){
     let workHtml ='';
