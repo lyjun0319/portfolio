@@ -6,16 +6,39 @@ html,body{
 
 #main_container {
     height:100%;
-    padding:50px 50px 50px 300px;
+    padding:50px;
     font-size:0;
+    overflow: hidden;
     box-sizing: border-box; 
 }
 
-/* ====== Profile ====== */
 #profile_wrap {
     display:inline-block;
     vertical-align: top;
-    width: 33%;
+    width: 50%;
+    padding-right:20px;
+    box-sizing: border-box;
+}
+
+#companyHistory {
+    display: inline-block;
+    vertical-align: top;
+    width: 27%;
+    height: 100%;
+    padding-right:10px;
+    box-sizing: border-box;
+}
+
+#portfolio {
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    height: 100%;
+}
+
+/* ====== Profile ====== */
+#profile {
+    margin-bottom: 20px;
 }
 
 #profile h2 {
@@ -26,23 +49,117 @@ html,body{
 
 #profile .subtitle {
     font-size:16px;
+    color:#fff;
 }
 
-#profile p {
+#profile .sub_text {
+    font-size:12px;
+    color: #959595;
+}
+
+#profile .thumbImg {
+    display: inline-block;
+    vertical-align: middle;
+    width:150px;
+    height: 150px;
+    border:5px solid #202020;
+    border-radius: 50%;
+    background-image: url('/inc/img/my01.jpeg');
+    background-size: cover;
+}
+#profile .profileTitle {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 160px);
+    padding-left:20px;
+    box-sizing: border-box;
+}
+
+#profile::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* ====== my history List ====== */
+#my_historyList {
+    height: 100%;
+    overflow: hidden;
+}
+#my_historyList h2 {
+    font-size:26px;
+    font-weight: 400;
+    color:#fff;
+}
+
+#my_historyList h3 {
+    padding-bottom: 10px;
+    font-size:20px;
+    font-weight: 400;
+    color:#fff;
+}
+
+#my_historyList h4 {
+    font-size:16px;
+    font-weight: 400;
+    color:#fff;
+}
+
+#my_historyList h5 {
+    font-size:16px;
+    font-weight: 400;
+    color:#fff;
+}
+
+#my_historyList .sub_text{
     font-size:14px;
+    color:#959595;
+}
+
+.academy {
+    padding-top:20px;
+    font-size: 0;
+}
+
+.academy .academy_list {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    min-height:171px;
+    padding:20px;
+    background-color: #202020;
+    box-sizing: border-box;
+}
+
+.academy .academy_list:first-of-type{
+    margin-right:4%;
+}
+
+.academy_list h4 {
+    padding-bottom: 7px;
+}
+
+.academy_list h4 span{
+    font-size:12px;
     color:#949495;
 }
 
-/* ====== Company history List ====== */
-
-#companyHistory {
-    display: inline-block;
-    vertical-align: top;
-    width: 37%;
-    height: 100%;
-    padding-right:10px;
+.introduction {
+    padding:10px;
+    max-height: 370px;
+    overflow-y: scroll;
     box-sizing: border-box;
 }
+
+.introduction .qnalist {
+    padding-top:20px;
+}
+
+.introduction .qnalist h5{
+    padding-bottom: 7px;
+}
+
+/* ====== Company history List ====== */
 
 #companyHistory #cp_historyList {
     height: calc(100% - 48px);
@@ -97,7 +214,6 @@ html,body{
 }
 
 .company_list .work_intro{
-    position: relative;
     margin-top:5px;
     padding:10px;
     background:#202020;
@@ -109,14 +225,9 @@ html,body{
 }
 
 .company_list .cp_Portfolio {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    left:auto;
-    z-index: 1;
     display:block;
     padding:5px 10px;
-    margin-top: -14px;
+    margin-top:10px;
     background-color: #555;
     font-size: 12px;
     color: #b4b4b4;
@@ -135,13 +246,10 @@ html,body{
 }
 
 
+
+
 /* ====== Portfoilo List ====== */
-#portfolio {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    height: 100%;
-}
+
 .all_ptList{ 
     font-size: 12px;
     color: #949494;
@@ -163,6 +271,14 @@ html,body{
     margin-top:10px;
     background:#202020;
     box-sizing:border-box;
+}
+.listItem:hover{
+    background-color: #960000;
+    transition: 1s;
+}
+.listItem:hover .useSkill{
+    color:#fff;
+    transition: 1s;
 }
 
 .listItem:first-child {

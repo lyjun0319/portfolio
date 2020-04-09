@@ -48,48 +48,10 @@
             "intro": "당근웹솔루션, 템플릿, 빌더를 사용하여 웹 구축",
             "work": [
                 "첫 6개월동안 유지운영 및 선임들 서포터 역활을 했습니다.",
-                "선임들이 좋게 봐주셔서 6개월 이후 구축 업무에 투입되어 디자인 하게 되었습니다.",
+                "6개월 이후 구축 업무에 투입되어 디자인 하게 되었습니다.",
                 "1년이후 신규 템플릿 제작 업무를 하면서 HTML,CSS를 배우게 됐습니다."
             ],
             "reason": "IT업의 처음 입문하면서 IT의 경험 과 디자인구축 경험을을 위해 입사했습니다."
         }
-    ],
-    "myHistory": {
-        "name": "이용준",
-        "birthday": "1988.03.19",
-        "address": "경기도 부천",
-        "github": {
-            "title" :"Github",
-            "gitLink" : "https://github.com/lyjun0319/",
-            "githubIcon": "/inc/image/git_icon.png"
-        },
-        "insta":{
-            "title":"Instagram",
-            "instaLink": "",
-            "instaIcon": "/inc/image/insta_icon.png"
-        },
-        "academy":[
-            {
-                "name": "웹디자인컨텐츠(고급)",
-                "academyDay":"2011.06 ~ 2011.09",
-                "class": [
-                    "- illustration",
-                    "- photoshop",
-                    "- dreamweaver",
-                    "- flash"
-                ]
-            },
-            {
-                "name" : "스마트웹&컨텐츠 개발",
-                "academyDay":"2016.04 ~ 2016.09",
-                "class": [
-                    "- UI&UX 디자인",
-                    "- 프로토타입 제작,수정보안,구현",
-                    "- 웹표준 기반 HTML5.0 & CSS3",
-                    "- github 소스 형성관리",
-                    "- 웹접근성 기반 JAVASCRIPT & JQUERY"
-                ]
-            }
-        ]
-    }
+    ]
 }

@@ -133,8 +133,8 @@ function companyHtml(item){
 };
 
 function myHistoryHtml(item){
-    let html ="";
-
+    let html = "";
+        html = "";
     return html;
 }
 
