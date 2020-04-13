@@ -101,12 +101,14 @@ function portfolioHtml(item){
     let html = '';
     html += "<article class='listItem'>";
     html += "<h3 class='listTitle'>"+item.name+"</h3>";
+    html += "<p class='useSkill'>"+item.skils+"</p>";
     html += "<div class='guideTxt'>";
     html += arrWork(item.guide, "portfolio");
     html += "</div>";
-    html += "<p class='useSkill'>"+item.skils+"</p>";
     html += "<div class='extra_txt'>";
-    html += "<a href='"+item.linkUrl+"'class='linkUrl' target='_blank'>Link</a>";
+    if(item.linkUrl){
+        html += "<a href='"+item.linkUrl+"'class='linkUrl' target='_blank'>Link</a>";
+    }
     html += "<p class='listDay'>"+item.day+"</p>";
     html += "</div>";
     html += "</article>";

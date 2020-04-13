@@ -50,19 +50,23 @@
         "guide": [
             "티르리르 PC 웹사이트 구축",
             "Timesale PC버전 제작",
+            "카페24 솔루션 구축",
             "메인 상품 데이터 ajax호출 하여 커스텀 노출"
         ],
         "linkUrl": "https://tirrlirrshop.com/"
     },{
         "company":"UNEEDCOMMS",
-        "name": "살롱드엑사, 엑사브라, 라블리스, 바디이펙트",
+        "name": "살롱드엑사",
         "day": "2019.05.13 ~ 2019.10.11",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
             "엑사브라, 라블리스, 살롱드엑사, 바디이펙트 4개 구축진행",
-            "브랜드별 각각의 메인페이지, 서브페이지 동일(HEADER) 부분만 브랜드에 맞게 노출",
-            "브랜드별 도메인에 따라 분기처리하여 해당 메인페이지로 이동되게 작업",
-            "메타태그 author 설정 브랜드명에 따라 서브 HEADER 브랜드별 노출"
+            "브랜드별 메인구축, SUB HEADER 브랜드에 맞게 노출",
+            "브랜드별 도메인에 따라 해당 메인으로 이동되게 작업",
+            "메타태그 author 브랜드명에 SUB HEADER 브랜드 노출",
+            "Timesale PC버전 제작",
+            "카페24 솔루션 구축",
+            "메인 상품 데이터 ajax호출 하여 커스텀 노출"
         ],
         "linkUrl": "http://exabra.com"
     },{
@@ -72,7 +76,8 @@
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
             "스마트스킨 v6 모바일 구축",
-            "가로 스크롤 사용하여 슬라이드 처럼 보이게 작업"
+            "가로 스크롤 사용하여 슬라이드 처럼 보이게 작업",
+            "카페24 솔루션 구축"
         ],
         "linkUrl": "http://m.gabalnara.com/"
     },{
@@ -81,7 +86,8 @@
         "day": "2019.08.01 ~ 2019.08.14",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "스마트스킨 v6 모바일 구축"
+            "스마트스킨 v6 모바일 구축",
+            "MAKESHOP 솔루션 구축"
         ],
         "linkUrl": "https://m.secretlabel.jp/"
     },{
@@ -90,7 +96,9 @@
         "day": "2019.06.25 ~ 2019.07.31",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "PC 구축 진행"
+            "PC 구축 진행",
+            "카페24 솔루션 구축",
+            "메인 상품 데이터 ajax호출 하여 커스텀 노출"
         ],
         "linkUrl": "http://varada.co.kr/"
     },{
@@ -99,7 +107,8 @@
         "day": "2019.04.17 ~ 2019.05.10",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "PC 구축 진행"
+            "PC 구축 진행",
+            "MAKESHOP 솔루션 구축"
         ],
         "linkUrl": "http://www.mooncheri.co.kr/"
     },{
@@ -108,7 +117,9 @@
         "day": "2019.03.27 ~ 2019.04.16",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "PC 구축 진행"
+            "PC 구축 진행",
+            "카페24 솔루션 구축",
+            "메인 상품 데이터 ajax호출 하여 커스텀 노출"
         ],
         "linkUrl": "http://shebeach.co.kr/"
     },{
@@ -117,7 +128,8 @@
         "day": "2019.03.21 ~ 2019.04.08",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "PC 구축 진행"
+            "PC 구축 진행",
+            "메이크샵 솔루션 구축"
         ],
         "linkUrl": "http://www.pinksisly.com/"
     },{
@@ -126,7 +138,8 @@
         "day": "2019.02.27 ~ 2019.03.20",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
         "guide": [
-            "PC 구축 진행"
+            "PC 구축 진행",
+            "메이크샵 솔루션 구축"
         ],
         "linkUrl": "https://cherrykoko.com/"
     },{
