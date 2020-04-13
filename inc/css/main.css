@@ -152,6 +152,9 @@ html,body{
     scrollbar-width: none; /* Firefox */
     box-sizing: border-box;
 }
+.introduction::-webkit-scrollbar{
+    display: none;
+}
 
 .introduction .qnalist {
     padding-top:20px;
