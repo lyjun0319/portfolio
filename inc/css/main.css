@@ -352,11 +352,12 @@ html,body{
     #profile { text-align:center;}
     #profile .thumbImg { display: block; margin:0 auto; }
     #profile .profileTitle { display:block; width: 100%; padding:0; }
+
+    .introduction{ padding:0; margin-top:10px;}
 }
 
 @media screen and (max-width:414px){
     #profile h2 { letter-spacing: -1px; }
     #profile .subtitle { font-size: 14px; letter-spacing: -0.5px; }
     #main_container{ padding:10px; }
-    .introduction{ padding:0; margin-top:10px;}
 }
