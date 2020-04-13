@@ -148,6 +148,8 @@ html,body{
     padding:10px;
     max-height: 370px;
     overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     box-sizing: border-box;
 }
 
