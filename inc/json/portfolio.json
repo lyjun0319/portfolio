@@ -3,24 +3,35 @@
     {
         "company":"UNEEDCOMMS",
         "name": "UIPATH BOT PROCESS 개발",
-        "day": "2020.02.01 ~ ing",
+        "day": "2020.01.01 ~ ing",
+        "skils": "UIPATH",
+        "guide": [
+            "교환접수일, 반품접수일 기준으로 상품 데이터 추출",
+            "상품데이터 기반으로 엑셀 보고서 작성업부",
+            "카카오톡 보고서 발송"
+        ],
+        "linkUrl": ""
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "UIPATH ARCHITECTURE 개발",
+        "day": "2020.01.01 ~ ing",
         "skils": "UIPATH, JAVASCRIPT, API",
         "guide": [
-            "UIPATH PROCESS 아키테처링 참여",
-            "재사용 코드 작업",
-            "분석을 통한 보고서 작업"
+            "UIPATH PROCESS 아키텍처 참여",
+            "모듈화 작업으로 재사용 코드 작업",
+            "기능단위 분리 작업 실행"
         ],
-        "linkUrl": "#"
+        "linkUrl": ""
     },{
         "company":"UNEEDCOMMS",
         "name": "RPA 사업(TFT)",
-        "day": "2019.11.11 ~ 2020.01.31",
+        "day": "2019.11.11 ~ 2020.12.31",
         "skils": "UIPATH, JAVASCRIPT, API",
         "guide":[ 
             "UIPATH 플렛폼을 활용하여 업무자동화 프로세스 구현을 위한 분석",
             "UIPATH 플렛폼 기능 분석"
         ],
-        "linkUrl": "#"
+        "linkUrl": ""
     },{
         "company":"UNEEDCOMMS",
         "name": "스마트PC 메뉴얼 작업",
@@ -30,7 +41,7 @@
             "스마트PC 메뉴얼 작업",
             "Defalut Template 작업"
         ],
-        "linkUrl": "#"
+        "linkUrl": ""
     },{
         "company":"UNEEDCOMMS",
         "name": "티르리르",
@@ -118,6 +129,16 @@
             "PC 구축 진행"
         ],
         "linkUrl": "https://cherrykoko.com/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "기술지원 및 소스분석",
+        "day": "2019.02.18 ~ 2019.03.26",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "솔루션사 소스 분석",
+            "고객사 기술지원팀 지원"
+        ],
+        "linkUrl": ""
     },{
         "company":"MEPLZ",
         "name": "카카오 채용 관리자 공통",
@@ -270,16 +291,6 @@
         "linkUrl": "http://www.toyotomi.kr/"
     },{
         "company":"BIZVALLY",
-        "name": "마틴락 리조트",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE",
-        "guide": [
-            "메인 디자인 작업",
-            "서브 디자인 작업"
-        ],
-        "linkUrl": "javaJAVAscript:void(0)"
-    },{
-        "company":"BIZVALLY",
         "name": "하이캐슬리조트",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
@@ -291,6 +302,16 @@
         "linkUrl": "http://www.highcastle.co.kr/"
     },{
         "company":"BIZVALLY",
+        "name": "마틴락 리조트",
+        "day": "2015YEAR / 1MONTH",
+        "skils": "PHOTOSHOP / ILLUSTRATE",
+        "guide": [
+            "메인 디자인 작업",
+            "서브 디자인 작업"
+        ],
+        "linkUrl": ""
+    },{
+        "company":"BIZVALLY",
         "name": "광역교통개선대책",
         "day": "2015YEAR / 1MONTH",
         "skils": "PHOTOSHOP / ILLUSTRATE",
@@ -299,7 +320,7 @@
             "서브 디자인 작업",
             "퍼블 작업"
         ],
-        "linkUrl": "javaJAVAscript:void(0)"
+        "linkUrl": ""
     },{
         "company":"NCT/NCCJ",
         "name": "부투스트랩 테마",
@@ -310,7 +331,7 @@
             "퍼블 작업",
             "메인/서브 디자인 작업"
         ],
-        "linkUrl": "javaJAVAscript:void(0)"
+        "linkUrl": ""
     },{
         "company":"NCT/NCCJ",
         "name": "당근웹 솔루션 / 템플릿 테마",
@@ -321,6 +342,6 @@
             "HTML 템플릿 솔루션 작업",
             "메인/서브 디자인 작업"
         ],
-        "linkUrl": "javaJAVAscript:void(0)"
+        "linkUrl": ""
     }
 ]
