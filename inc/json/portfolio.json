@@ -4,7 +4,7 @@
         "company":"UNEEDCOMMS",
         "name": "UIPATH BOT PROCESS 개발",
         "day": "2020.01.01 ~ ing",
-        "skils": "UIPATH",
+        "skils": "UIPATH, BITBUCKET, SOURCETREE",
         "guide": [
             "교환접수일, 반품접수일 기준으로 상품 데이터 추출",
             "상품데이터 기반으로 엑셀 보고서 작성업부",
@@ -15,7 +15,7 @@
         "company":"UNEEDCOMMS",
         "name": "UIPATH ARCHITECTURE 개발",
         "day": "2020.01.01 ~ ing",
-        "skils": "UIPATH, JAVASCRIPT, API",
+        "skils": "UIPATH, JAVASCRIPT, API, BITBUCKET, SOURCETREE",
         "guide": [
             "UIPATH PROCESS 아키텍처 참여",
             "모듈화 작업으로 재사용 코드 작업",
@@ -26,7 +26,7 @@
         "company":"UNEEDCOMMS",
         "name": "RPA 사업(TFT)",
         "day": "2019.11.11 ~ 2020.12.31",
-        "skils": "UIPATH, JAVASCRIPT, API",
+        "skils": "UIPATH, JAVASCRIPT, API, BITBUCKET, SOURCETREE",
         "guide":[ 
             "UIPATH 플렛폼을 활용하여 업무자동화 프로세스 구현을 위한 분석",
             "UIPATH 플렛폼 기능 분석"
