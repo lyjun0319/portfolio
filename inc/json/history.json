@@ -1,326 +1,57 @@
-
-[
-    {
-        "company":"UNEEDCOMMS",
-        "name": "UIPATH BOT PROCESS 개발",
-        "day": "2020.02.01 ~ ing",
-        "skils": "UIPATH, JAVASCRIPT, API",
-        "guide": [
-            "UIPATH PROCESS 아키테처링 참여",
-            "재사용 코드 작업",
-            "분석을 통한 보고서 작업"
-        ],
-        "linkUrl": "#"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "RPA 사업(TFT)",
-        "day": "2019.11.11 ~ 2020.01.31",
-        "skils": "UIPATH, JAVASCRIPT, API",
-        "guide":[ 
-            "UIPATH 플렛폼을 활용하여 업무자동화 프로세스 구현을 위한 분석",
-            "UIPATH 플렛폼 기능 분석"
-        ],
-        "linkUrl": "#"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "스마트PC 메뉴얼 작업",
-        "day": "2019.08.01 ~ 2019.11.08",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
-        "guide": [
-            "스마트PC 메뉴얼 작업",
-            "Defalut Template 작업"
-        ],
-        "linkUrl": "#"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "티르리르",
-        "day": "2019.10.14 ~ 2019.11.04",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
-        "guide": [
-            "티르리르 PC 웹사이트 구축",
-            "Timesale PC버전 제작",
-            "메인 상품 데이터 ajax호출 하여 커스텀 노출"
-        ],
-        "linkUrl": "https://tirrlirrshop.com/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "살롱드엑사, 엑사브라, 라블리스, 바디이펙트",
-        "day": "2019.05.13 ~ 2019.10.11",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "엑사브라, 라블리스, 살롱드엑사, 바디이펙트 4개 구축진행",
-            "브랜드별 각각의 메인페이지, 서브페이지 동일(HEADER) 부분만 브랜드에 맞게 노출",
-            "브랜드별 도메인에 따라 분기처리하여 해당 메인페이지로 이동되게 작업",
-            "메타태그 author 설정 브랜드명에 따라 서브 HEADER 브랜드별 노출"
-        ],
-        "linkUrl": "http://exabra.com"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "가발나라",
-        "day": "2019.05.13 ~ 2019.10.11",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "스마트스킨 v6 모바일 구축",
-            "가로 스크롤 사용하여 슬라이드 처럼 보이게 작업"
-        ],
-        "linkUrl": "http://m.gabalnara.com/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "시크릿라벨 일본몰",
-        "day": "2019.08.01 ~ 2019.08.14",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "스마트스킨 v6 모바일 구축"
-        ],
-        "linkUrl": "https://m.secretlabel.jp/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "바라다",
-        "day": "2019.06.25 ~ 2019.07.31",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "PC 구축 진행"
-        ],
-        "linkUrl": "http://varada.co.kr/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "문체리",
-        "day": "2019.04.17 ~ 2019.05.10",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "PC 구축 진행"
-        ],
-        "linkUrl": "http://www.mooncheri.co.kr/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "쉬비치",
-        "day": "2019.03.27 ~ 2019.04.16",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "PC 구축 진행"
-        ],
-        "linkUrl": "http://shebeach.co.kr/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "핑크시슬리",
-        "day": "2019.03.21 ~ 2019.04.08",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "PC 구축 진행"
-        ],
-        "linkUrl": "http://www.pinksisly.com/"
-    },{
-        "company":"UNEEDCOMMS",
-        "name": "체리코코",
-        "day": "2019.02.27 ~ 2019.03.20",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
-        "guide": [
-            "PC 구축 진행"
-        ],
-        "linkUrl": "https://cherrykoko.com/"
-    },{
-        "company":"MEPLZ",
-        "name": "카카오 채용 관리자 공통",
-        "day": "2018.11.03 ~ 2018.12.06",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / BOOTSTRAP4 / HANDSONTABLE / SWIPER",
-        "guide": [
-            "카카오 채용 관리자 공통 UI/UX 퍼블",
-            "공통 개발자와 개발진행",
-            "가이드 작업"
-        ],
-        "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
-    },{
-        "company":"MEPLZ",
-        "name": "코오롱 채용 리뉴얼",
-        "day": "2018.07.02 ~ 2018.10.31",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / SWIPER",
-        "guide": [
-            "코오롱 채용 홈페이지 리뉴얼 작업",
-            "PC, MOBILE 메인 / 지원하기 작업진행",
-            "기존폼 사용(입력항목 팝업형태로 변경)"
-        ],
-        "linkUrl": "https://dream.kolon.com"
-    },{
-        "company":"MEPLZ",
-        "name": "풀무원 채용(탈레오솔루션) TL역할",
-        "day": "2018.06.18 ~ 2018.06.29",
-        "skils": "CSS / TALEO SOLUTION",
-        "guide": [
-            "풀무원 채용 테크니컬리더 역할 수행",
-            "CSS만으로 사이트 디자인 교체",
-            "외국계 솔루션 HTML, MARKUP, JAVASCRIPT, PLUGIN, JQUIRY 등 추가 및 사용불가"
-        ],
-        "linkUrl": "https://tas-pulmuone.taleo.net/careersection/ext/moresearch.ftl"
-    },{
-        "company":"MEPLZ",
-        "name": "함소아한의원 리뉴얼",
-        "day": "2018.05.01 ~ 2018.07.13",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / SWIPER",
-        "guide": [
-            "함소아 한의원 리뉴얼 작업",
-            "PC / MOBILE 작업진행"
-        ],
-        "linkUrl": "http://hamsoa.com/"
-    },{
-        "company":"MEPLZ",
-        "name": "NCSOFT채용 제안 작업",
-        "day": "2018.04.16 ~ 2018.04.25",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / TWEENMAX / TWEENLINE",
-        "guide": [
-            "NCSOFT채용 제안 작업 진행",
-            "NCSOFT 1차 제안에서 호평",
-            "NCSOFT 2차 제안 컨텐츠 영역 보강"
-        ],
-        "linkUrl": "/portfolio/ncsoft2_ver2/index.php"
-    },{
-        "company":"MEPLZ",
-        "name": "KFC 리뉴얼",
-        "day": "2018.05.01 ~ 2018.05.31",
-        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
-        "guide": [
-            "KFC 리뉴얼 반응형 작업",
-            "MYPAGE, 매장찾기 PC/MOBILE 진행",
-            "2018.10.31 유지운영 진행"
-        ],
-        "linkUrl": "https://www.kfckorea.com/"
-    },{	
-        "company":"MEPLZ",
-        "name": "SK채용 소개컨텐츠 작업 ",
-        "day": "2017.11.01 ~ 2018.03.16",
-        "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS / TALEO",
-        "guide": [
-            "외국계 탈레오 솔루션 사용 작업",
-            "외국계 솔루션 HTML, MARKUP, JAVASCRIPT, PLUGIN, JQUIRY 등 추가 및 사용불가 CSS만으로 사이트 디자인",
-            "탈레오 솔루션으로는 컨텐츠 및 소개페이지 불가로 컨텐츠 페이지 작업진행"
-        ],
-        "linkUrl": "http://careers.sktelecom.com/recruit_user/taleo/index.jsp"
-    },{	
-        "company":"MEPLZ",
-        "name": "SK채용 탈레오",
-        "day": "2017.11.01 ~ 2018.03.16",
-        "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS / TALEO",
-        "guide":[
-            "외국계 탈레오 솔루션 사용 작업",
-            "외국계 솔루션 HTML, MARKUP, JAVASCRIPT, PLUGIN, JQUIRY 등 추가 및 사용불가 CSS만으로 사이트 디자인",
-            "탈레오 솔루션으로는 컨텐츠 및 소개페이지 불가로 컨텐츠 페이지 작업진행"
-        ],
-        "linkUrl": "https://tas-sktelecom.taleo.net/careersection/ex/moresearch.ftl?lang=ko&jobfield=300020935"
-    },{
-        "company":"MEPLZ",
-        "name": "에스쁘아 유지운영",
-        "day": "2017.08.24 ~ 2018.03.31",
-        "skils": "HTML / SWIPER / JQUIRY / JAVASCRIPT / CSS",
-        "guide": [
-            "이벤트, 상품 상세페이지 작업진행",
-            "설문 조사 페이지 작업진행",
-            "운영업체 변경으로 인한 홈페이지 리뉴얼 됐습니다."
-        ],
-        "linkUrl": "https://www.espoir.com/"
-    },{
-        "company":"여의도증권미디어그룹",
-        "name": "성공투자클럽",
-        "day": "2017.03.15 ~ 2017.03.18",
-        "skils": "HTML / JQUIRY / JAVASCRIPT / CSS / GNUBOARD",
-        "guide":[ 
-            "그누보드 기반으로 작업진행",
-            "그누보드 CSS 초기화 후 CSS 작업",
-            "성공투자클럽 리뉴얼 됐습니다."
-        ],
-        "linkUrl": "http://xn--ob0b62s5mhpsgf2lnpc.com/"
-    },{
-        "company":"여의도증권미디어그룹",
-        "name": "사람넷",
-        "day": "2017.02 ~ 2017.04",
-        "skils": "HTML / JQUIRY / JAVASCRIPT / CSS / SOLUTION",
-        "guide": [
-            "사람넷 채용 사이트 작업",
-            "프로젝트 기간 및 회사 내부 결정에 의해 SOLUTION 작업",
-            "추후 프로젝트 드랍"
-        ],
-        "linkUrl": "/portfolio/peoplenet/index.html"
-    },{
-        "company":"여의도증권미디어그룹",
-        "name": "머니티비",
-        "day": "2016.11 ~ 2017.03",
-        "skils": "HTML / JQUIRY / JAVASCRIPT / CSS ",
-        "guide": [
-            "머니티비 플랫폼 작업"
-        ],
-        "linkUrl": "http://머니티비.com/"
-    },{
-        "company":"BIZVALLY",
-        "name": "비즈벨리홈페이지",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE",
-        "guide": [
-            "메인 디자인 작업",
-            "서브 디자인 작업"
-        ],
-        "linkUrl": "http://www.bizvalley.co.kr/"
-    },{
-        "company":"BIZVALLY",
-        "name": "엔에스트레이딩",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
-        "guide":[ 
-            "메인 디자인 작업",
-            "서브 디자인 작업",
-            "서브 퍼블 작업"
-        ],
-        "linkUrl": "http://www.toyotomi.kr/"
-    },{
-        "company":"BIZVALLY",
-        "name": "마틴락 리조트",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE",
-        "guide": [
-            "메인 디자인 작업",
-            "서브 디자인 작업"
-        ],
-        "linkUrl": "javaJAVAscript:void(0)"
-    },{
-        "company":"BIZVALLY",
-        "name": "하이캐슬리조트",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
-        "guide": [
-            "메인 디자인 작업",
-            "서브 디자인 작업",
-            "퍼블 작업"
-        ],
-        "linkUrl": "http://www.highcastle.co.kr/"
-    },{
-        "company":"BIZVALLY",
-        "name": "광역교통개선대책",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE",
-        "guide": [
-            "메인 디자인 작업",
-            "서브 디자인 작업",
-            "퍼블 작업"
-        ],
-        "linkUrl": "javaJAVAscript:void(0)"
-    },{
-        "company":"NCT/NCCJ",
-        "name": "부투스트랩 테마",
-        "day": "2015YEAR / 1MONTH",
-        "skils": "PHOTOSHOP / ILLUSTRATE",
-        "guide": [
-            "부트스트렙 테마 작업",
-            "퍼블 작업",
-            "메인/서브 디자인 작업"
-        ],
-        "linkUrl": "javaJAVAscript:void(0)"
-    },{
-        "company":"NCT/NCCJ",
-        "name": "당근웹 솔루션 / 템플릿 테마",
-        "day": "2011YEAR ~ 2014YEAR",
-        "skils": "PHOTOSHOP / ILLUSTRATE / HTML / CSS",
-        "guide":[
-            "당근웹 솔루션 테마 작업",
-            "HTML 템플릿 솔루션 작업",
-            "메인/서브 디자인 작업"
-        ],
-        "linkUrl": "javaJAVAscript:void(0)"
-    }
-]
+{
+    "companyHistory": [
+        {
+            "companyName" : "UNEEDCOMMS",
+            "skils" : "HTML / CSS / JAVASCRIPT / JQUIERY",
+            "workDay": "2019.02 ~ 2020",
+            "intro": "이커머스 솔루션(카페24,메이크샵,고도몰)을 커스텀한 구축",
+            "work": [
+                "스마트피씨 템플릿 구축",
+                "스마트스킨(mobile) 구축 진행",
+                "RPA - UIPATH를 이용한 프로세스 개발"
+            ],
+            "reason" : "이커머스 대표솔루션 카페24,메이크샵에 대하여 경험을 위해 입사했습니다. "
+        },{
+            "companyName" : "MEPLZ",
+            "skils" : "HTML / CSS / JAVASCRIPT / JQUIERY",
+            "workDay" : "2017.08 ~ 2018.12",
+            "intro" : "큰 기업 위주의 구축 에이전시",
+            "work":[
+                "구축 업무 및 파트장 역활",
+                "필요시 업체와 미팅 진행"
+            ],
+            "reason": "큰 기업들 위주의 포토폴리오와 경험을 배두이 위해 입사했습니다."
+        },{
+            "companyName" : "여의도증권미디어그룹",
+            "skils" : "HTML / CSS / JAVASCRIPT / JQUIERY",
+            "workDay" : "2016.11 ~ 2017.05",
+            "intro": "증권회사 증권사이트 유지운영 및 신규 프로젝트 진행",
+            "work":[
+                "그누보드를 활용한 금융서비스 제작 및 운영",
+                "신규 자체 프로젝트 진행"
+            ],
+            "reason": "자체 플렛폼을 구축한다 입사했습니다."
+        },{
+            "companyName": "BIZVALLY",
+            "skils": "DESIGN / HTMl / CSS / JQUIERY",
+            "workDay": "2015.03 ~ 2016.02",
+            "intro": "디자인 에이전시 구축 업무",
+            "work": [
+                "디자인 제작 업무를 진행했습니다.",
+                "급할 경우 퍼블리싱 업무를 진행했습니다."
+            ],
+            "reason": "전직장에서 에이전시의 얘기를 많이 들었고 에이전시에서의 경험을 위해 입사했습니다."
+        },{
+            "companyName": "NCT/NCCJ",
+            "skils": "DESIGN / HTML / CSS",
+            "workDay": "2011.12 ~ 2014.12",
+            "intro": "당근웹솔루션, 템플릿, 빌더를 사용하여 웹 구축",
+            "work": [
+                "첫 6개월동안 유지운영 및 선임들 서포터 역활을 했습니다.",
+                "6개월 이후 구축 업무에 투입되어 디자인 하게 되었습니다.",
+                "1년이후 신규 템플릿 제작 업무를 하면서 HTML,CSS를 배우게 됐습니다."
+            ],
+            "reason": "IT업의 처음 입문하면서 IT의 경험 과 디자인구축 경험을을 위해 입사했습니다."
+        }
+    ]
+}

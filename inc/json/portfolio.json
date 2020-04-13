@@ -2,7 +2,7 @@
 [
     {
         "company":"UNEEDCOMMS",
-        "name": "UIPATH BOT 개발",
+        "name": "UIPATH BOT PROCESS 개발",
         "day": "2020.02.01 ~ ing",
         "skils": "UIPATH, JAVASCRIPT, API",
         "guide": [
@@ -10,27 +10,114 @@
             "재사용 코드 작업",
             "분석을 통한 보고서 작업"
         ],
-        "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
+        "linkUrl": "#"
     },{
         "company":"UNEEDCOMMS",
         "name": "RPA 사업(TFT)",
-        "day": "2019.10.19 ~ 2020.01.31",
+        "day": "2019.11.11 ~ 2020.01.31",
         "skils": "UIPATH, JAVASCRIPT, API",
         "guide":[ 
             "UIPATH 플렛폼을 활용하여 업무자동화 프로세스 구현을 위한 분석",
             "UIPATH 플렛폼 기능 분석"
         ],
-        "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
+        "linkUrl": "#"
     },{
         "company":"UNEEDCOMMS",
         "name": "스마트PC 메뉴얼 작업",
-        "day": "2019.08.01 ~ 2019.10.18",
+        "day": "2019.08.01 ~ 2019.11.08",
         "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
         "guide": [
             "스마트PC 메뉴얼 작업",
             "Defalut Template 작업"
         ],
-        "linkUrl": "/portfolio/kakao_guide/html_layout_guide.html"
+        "linkUrl": "#"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "티르리르",
+        "day": "2019.10.14 ~ 2019.11.04",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY",
+        "guide": [
+            "티르리르 PC 웹사이트 구축",
+            "Timesale PC버전 제작",
+            "메인 상품 데이터 ajax호출 하여 커스텀 노출"
+        ],
+        "linkUrl": "https://tirrlirrshop.com/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "살롱드엑사, 엑사브라, 라블리스, 바디이펙트",
+        "day": "2019.05.13 ~ 2019.10.11",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "엑사브라, 라블리스, 살롱드엑사, 바디이펙트 4개 구축진행",
+            "브랜드별 각각의 메인페이지, 서브페이지 동일(HEADER) 부분만 브랜드에 맞게 노출",
+            "브랜드별 도메인에 따라 분기처리하여 해당 메인페이지로 이동되게 작업",
+            "메타태그 author 설정 브랜드명에 따라 서브 HEADER 브랜드별 노출"
+        ],
+        "linkUrl": "http://exabra.com"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "가발나라",
+        "day": "2019.05.13 ~ 2019.10.11",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "스마트스킨 v6 모바일 구축",
+            "가로 스크롤 사용하여 슬라이드 처럼 보이게 작업"
+        ],
+        "linkUrl": "http://m.gabalnara.com/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "시크릿라벨 일본몰",
+        "day": "2019.08.01 ~ 2019.08.14",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "스마트스킨 v6 모바일 구축"
+        ],
+        "linkUrl": "https://m.secretlabel.jp/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "바라다",
+        "day": "2019.06.25 ~ 2019.07.31",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "PC 구축 진행"
+        ],
+        "linkUrl": "http://varada.co.kr/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "문체리",
+        "day": "2019.04.17 ~ 2019.05.10",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "PC 구축 진행"
+        ],
+        "linkUrl": "http://www.mooncheri.co.kr/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "쉬비치",
+        "day": "2019.03.27 ~ 2019.04.16",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "PC 구축 진행"
+        ],
+        "linkUrl": "http://shebeach.co.kr/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "핑크시슬리",
+        "day": "2019.03.21 ~ 2019.04.08",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "PC 구축 진행"
+        ],
+        "linkUrl": "http://www.pinksisly.com/"
+    },{
+        "company":"UNEEDCOMMS",
+        "name": "체리코코",
+        "day": "2019.02.27 ~ 2019.03.20",
+        "skils": "HTML / CSS / JAVASCRIPT / JQUIRY / Web Storage",
+        "guide": [
+            "PC 구축 진행"
+        ],
+        "linkUrl": "https://cherrykoko.com/"
     },{
         "company":"MEPLZ",
         "name": "카카오 채용 관리자 공통",
