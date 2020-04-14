@@ -259,7 +259,8 @@ html,body{
 
 /* ====== Portfoilo List ====== */
 
-.all_ptList{ 
+.all_ptList{
+    padding-left:10px;
     font-size: 12px;
     color: #949494;
 }
@@ -348,16 +349,36 @@ html,body{
     .academy .academy_list:first-of-type{ margin-right:0; margin-bottom: 10px; }
     
     #companyHistory #cp_historyList {height: auto; overflow:auto;}
-    #portfolio #portfolio_list { height:auto; overflow: auto; }
+    
     #profile { text-align:center;}
     #profile .thumbImg { display: block; margin:0 auto; }
     #profile .profileTitle { display:block; width: 100%; padding:0; }
 
-    .introduction{ padding:0; margin-top:10px;}
+    .introduction{ padding:0; margin-top:10px; }
+
+    #portfolio {
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background:rgba(0, 0, 0, 0.8);
+        margin-top:0;
+        padding:30px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    #portfolio.open { display:block; }
+    .all_ptList { padding-left:10px; }
+    #portfolio #portfolio_list { height:calc(100% - 48px); overflow-y: scroll; }
+    .flaticon-close { position: fixed; top:30px; left:auto; right:30px; display:block; }
 }
 
 @media screen and (max-width:414px){
     #profile h2 { letter-spacing: -1px; }
     #profile .subtitle { font-size: 14px; letter-spacing: -0.5px; }
     #main_container{ padding:10px; }
+    #portfolio { padding:15px; }
+    .flaticon-close { position: fixed; top:15px; left:auto; right:15px; }
 }

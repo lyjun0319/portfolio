@@ -16,7 +16,11 @@ $(document).on('click', '.cp_Portfolio', function(e){
     const target = $(this);
     const companyName = target.parents('.company_list').find('.cp_name').text();
     portfolioList(arrPortfolio, "filter", companyName);
-    animateList()
+    animateList();
+    const win_w = deviceChk();
+    if(win_w < 751){
+        $('#portfolio').addClass('open');
+    }
 });
 
 $('.all_ptList').on('click',function(e){
@@ -24,6 +28,10 @@ $('.all_ptList').on('click',function(e){
     portfolioList(arrPortfolio);
     animateList()
     e.preventDefault;
+})
+
+$('.flaticon-close').on('click', function(){
+    $(this).parents('#portfolio').removeClass('open');
 })
 /* ===== // Start Code ===== */
 
@@ -167,5 +175,9 @@ function animateList(){
     }).animate({
         opacity : 1
     },1000);
+}
+
+function deviceChk(){
+    return $(window).width();
 }
 /* ===== // FUNCITON CODE ===== */
