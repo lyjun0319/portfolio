@@ -52,6 +52,11 @@ html,body{
     color:#fff;
 }
 
+#profile .github a{
+    font-size: 12px;
+    color:#949495;
+}
+
 #profile .sub_text {
     font-size:12px;
     color: #959595;
