@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>개인정보수정</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../libs/css/common.css">
+    <link rel="stylesheet" href="../../libs/css/reset.css">
+    <link rel="stylesheet" href="../../libs/css/header.css">
+    <link rel="stylesheet" href="../../libs/css/main.css">
+    <link rel="stylesheet" href="../../libs/css/list_style.css">
+    <link rel="stylesheet" href="../../libs/css/mypage/UserInfoManager.css">
+    <link rel="stylesheet" href="../../libs/css/mypage/common.css">
+    <link rel="stylesheet" href="../../libs/fonts/flaticon.css">
+
+    <script src="https://ajax.googleapis.com/ajax../../libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../libs/js/common.js"></script>
+    <script src="../../libs/js/slider.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <!-- html5 tag -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com../../libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- nth-child 적용 -->
+    <!--[if lt IE 9]>
+      <script src=".../../libs/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- HEADER START -->
+        <header>
+            <div id="header_wrap">
+                <div class="header_inner">
+                    <div class="lately_Announcement">
+                        <div class="lately_title">최근본 공고 <span>0</span>건</div>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집aa</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="javascript:void(0)" class="top_btn"><img src="../../libs/images/header/top_btn.png" alt="top버튼"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR START -->
+                <div id="globalBar" class="util_wrap">
+                    <div class="header_inner">
+                        <div class="util_default">
+                            <a href="/" class="home_link_btn"><i class="flaticon-home"></i><span class="home_link">홈으로</span></a>
+                            <a href="javascript:void(0)" class="bookmark_link_btn" id="favorite"><i class="flaticon-star"></i><span class="bookmark_link">즐겨찾기</span></a>
+                        </div>
+                        <div class="util_option">
+                            <a href="" class="login floatleft">로그인</a>
+                            <a href="" class="join floatleft" >회원가입</a>
+                            <div id="person_header_btn2" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">개인회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                          <li><a href="">개인회원 안내</a></li>
+                                          <li><a href=""><strong>이력서 등록</strong></a></li>
+                                          <li><a href=""><strong>이력서 현황</strong></a></li>
+                                          <li><a href=""><strong>입사지원 현황</strong></a></li>
+                                          <li><a href="">맞춤채용 정보</a></li>
+                                          <li><a href="">스크랩한 공고</a></li>
+                                          <li><a href="">최근 본 공고</a></li>
+                                          <li><a href="">개인정보 수정</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="company_header_btn" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">기업회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                        <li><a href="">기업회원 안내</a></li>
+                                        <li><a href=""><strong>채용공고등록</strong></a></li>
+                                        <li><a href=""><strong>공고/지원자 관리</strong></a></li>
+                                        <li><a href=""><strong>기업정보 수정</strong></a></li>
+                                        <li><a href=""><strong>결제내역 조회</strong></a></li>
+                                        <li><a href="">채용광고 상품</a></li>
+                                        <li><a href="">채용솔루션 상품</a></li>
+                                        <li><a href="">인재정보 열람 상품</a></li>
+                                        <li><a href="">SIAT 인적성검사</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="" class="floatleft">고객센터</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR END -->
+
+                <!-- HEADER MAIN START -->
+                <div id="header_main">
+                    <div class="header_inner">
+                        <h1><img src="../../libs/images/header/main_logo_1.png" alt="사람넷"></h1>
+                        <div class="search_box">
+                            <fieldset class="fieldset">
+                                <legend class="hide">검색 폼</legend>
+                                <span id="search_wrap_span" class="box_search_input banner-on">
+                                    <input type="text" name="searchword" id="combineSearchWord" title="검색어 입력" tabindex="1" accesskey="s" autocomplete="off" size="20" value="">
+                                </span>
+                                <button type="submit" id="submit_button" name="go" class="btn_search"><i class="flaticon-magnifying-glass"></i><span class="search_txt">검색</span></button>
+                            </fieldset>
+                            <p class="hastag_record"><span>#디자이너</span><span>#서울</span><span>#퍼블리셔</span></p>
+                        </div>
+                        <div class="header_bn">
+                            <img src="../../libs/images/header/header_bn.png" alt="필요한 채용정보만 확실하게! 해시태그로 간편검색">
+                        </div>
+                    </div>
+                </div>
+                <!-- HEADER MAIN END -->
+
+                <!-- HEADER GNB START -->
+                <div id="header_gnb">
+                    <div class="header_inner">
+                        <h2 class="textindent hide">사람넷 주요 메뉴</h2>
+                        <ul class="gnb_list">
+                            <li id="all">
+                                <a href="#">전체 채용정보</a>
+                            </li>
+                            <li id="job">
+                                <a href="#">직무별</a>
+                            </li>
+                            <li id="area">
+                                <a href="">지역별</a>
+                            </li>
+                        </ul>
+                        <ul class="side_menu">
+                            <li id="resume">
+                                <a href="#"><span class="extra_icon"><i class="flaticon-black"></i></span><span class="txt">이력서 등록</span></a>
+                            </li>
+                            <li id="advertise">
+                                <a href="#"><span class="extra_icon"><i class="flaticon-list-with-dots"></i></span><span class="txt">맞춤공고</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HEADER GNB END-->
+                <div id="header_search">
+                    <div id="header_search_inner">
+                        <div id="hd_search">
+                            <input type="text" class="search_input" />
+                            <button type="button" class="submit_btn"><i class="flaticon-magnifying-glass"></i></button>
+                        </div>
+                        <div id="search_hastag">
+                            <span class="search_hs_arrow"><img src="../../libs/images/header/search_arrow.png" alt="디자인 요소 화살표입니다."></span>
+                            <p>#사람넷 #디자이너 #퍼블리셔 #단넷개발자 #기획자 #1년 #신규</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- SUB WRAPPER START -->
+        <div id="sub_wrapper">
+            <div id="sub_container">
+                <!-- ASIDE START -->
+                <div id="aside">
+                    <div id="lnb">
+                        <h2 class="lnb_title">마이페이지</h2>
+                        <div class="sub_list">
+                            <!-- RESUME SETTING START -->
+                            <div class="resume eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">이력서 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">이력서 등록</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이력서관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="">입사지원현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="">기업러브콜</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- RESUME SETTING END -->
+
+                            <!-- APPLICATION START -->
+                            <div class="application eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">입사지원 현황</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">입사지원 현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="">기업러브콜</a>
+                                    </li>
+                                    <li>
+                                        <a href="">내이력서 열람기업</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- APPLICATION END -->
+
+                            <!-- ETCMENU START -->
+                            <div class="etc_menu eachlist">
+                                <ul>
+                                    <li><a href="">스크랩 공고</a></li>
+                                    <li><a href="">최근 본 공고</a></li>
+                                    <li><a href="">맞춤채용 정보</a></li>
+                                </ul>
+                            </div>
+                            <!-- ETCMENU END -->
+
+                            <!-- MEMBER_INFO START -->
+                            <div class="member_info eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">회원정보 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">개인정보 수정</a>
+                                    </li>
+                                    <li>
+                                        <a href="">비밀번호변경</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                            <!-- CUSTOMER START -->
+                            <div class="customer eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">고객센터</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이벤트</a>
+                                    </li>
+                                    <li>
+                                        <a href="">신고하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ASIDE END -->
+
+                <!-- SUB CONTENTS START -->
+                <div id="sub_contents">
+                    <div id="UserInfoManager">
+                        <div class="UserInfoMng_Title">
+                            <h2>개인정보수정</h2>
+                        </div>
+                        <div class="UserInfoMng_List">
+                            <div class="UIM_Guide">
+                                <p class="UIM_GuideTxt">회원님의 정보를 수정·확인할 수 있습니다.</p>
+                                <p class="MustInput_Guide"><span class="Must">*</span>필수 입력 요소입니다.</p>
+                            </div>
+                            <div class="UIM_TableList">
+                                <table>
+                                    <colgroup>
+                                        <col width="95px">
+                                        <col width="95px">
+                                    </colgroup>
+                                    <tr>
+                                        <th colspan="2"><span class="Must">*</span>아이디</th>
+                                        <td><input type="text" value="superman" readonly="readonly" style="border:0;" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2"><span class="Must">*</span>이름</th>
+                                        <td><input type="text" value="홍길동" readonly="readonly" style="border:0;" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2"><span class="Must">*</span>생년월일</th>
+                                        <td><input type="text" value="1988년 3월 19일" readonly="readonly" style="border:0;" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2"><span class="Must">*</span>성별</th>
+                                        <td><input type="text" value="남자" readonly="readonly" style="border:0;" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">연락처</th>
+                                        <th class="sub_th"><span class="Must">*</span>휴대폰</th>
+                                        <td>
+                                            <select class="phone_numfirst" id="user_phone">
+                                                <option value="">010</option>
+                                                <option value="">011</option>
+                                                <option value="">016</option>
+                                                <option value="">017</option>
+                                                <option value="">018</option>
+                                                <option value="">019</option>
+                                            </select>&nbsp;-&nbsp;
+                                            <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="6758" style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                            <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="8803" style='ime-mode:disabled;' size="4" maxlength="4" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="sub_th">전화번호</th>
+                                        <td>
+                                            <select class="phone_numfirst" id="user_phone">
+                                                <option value="">선택하세요</option>
+                                                <option value="02">02</option>
+                                                <option value="031">031</option>
+                                                <option value="032">032</option>
+                                                <option value="033">033</option>
+                                                <option value="041">041</option>
+                                                <option value="042">042</option>
+                                                <option value="043">043</option>
+                                                <option value="044">044</option>
+                                                <option value="051">051</option>
+                                                <option value="052">052</option>
+                                                <option value="053">053</option>
+                                                <option value="054">054</option>
+                                                <option value="055">055</option>
+                                                <option value="061">061</option>
+                                                <option value="062">062</option>
+                                                <option value="063">063</option>
+                                                <option value="064">064</option>
+                                                <option value="070">070</option>
+                                                <option value="">010</option>
+                                                <option value="">011</option>
+                                                <option value="">016</option>
+                                                <option value="">017</option>
+                                                <option value="">018</option>
+                                                <option value="">019</option>
+                                            </select>&nbsp;-&nbsp;
+                                            <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="" style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                            <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="" style='ime-mode:disabled;' size="4" maxlength="4" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="sub_th">이메일</th>
+                                        <td>
+                                            <input type="text" class="input_st input_email" value="lyjun03" placeholder="- 이메일" />&nbsp;&nbsp;@&nbsp;&nbsp;
+                                            <input type="text" class="input_st input_email" value="naver.com" placeholder="- 이메일을 선택해주세요" />
+                                            <select class="choose_email">
+                                                <option value="">선택하기</option>
+                                                <option value="" selected="">naver.com</option>
+                                                <option value="">hanmail.net</option>
+                                                <option value="">gmail.com</option>
+                                                <option value="">nate.com</option>
+                                                <option value="">daum.net</option>
+                                                <option value="">hotmail.com</option>
+                                                <option value="">직접입력</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">개인홈페이지</th>
+                                        <td>
+                                            <input type="text" placeholder="- 개인 홈페이지를 입력해주세요." class="UserHomepage">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">주소</th>
+                                        <td><input type="text" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="10" maxlength="10" value="422-240" placeholder="- 개인 홈페이지를 입력해주세요." class="UserAddress"><a href="javascript:void(0)" class="address_search">주소검색</a><br/><input type="text" class="UserAddress" value="경기도 부천시 소사구 심곡본동"><br/><input type="text"  value="롯데아파트 3동 608호" class="UserAddress"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="submit_btn">
+                            <button type="submit" >수정하기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- SUB CONTENTS END -->
+            </div>
+        </div>
+        <!-- SUB WRAPPER END -->
+    </div>
+
+</body>
+</html>

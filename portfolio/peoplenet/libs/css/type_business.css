@@ -1,0 +1,54 @@
+#type_business{ background:#fff; overflow:hidden; height:auto;}
+#type_business .type_bs_title { padding:10px; padding-right:0; background:#155ed5; color:#fff; }
+#type_business .type_bs_title h1 { color:#fff; }
+#type_business .type_bs_title .flaticon-delete:before { font-size:13px; color:#fff; position:absolute; top:13px; left:auto;right:10px; }
+
+/* 빠른업종 검색 */
+#type_business .type_search { padding:10px 0; background:#2289eb; position:relative; }
+#type_business .type_search .search_box{  width:604px; height:26px; display:inline-block; vertical-align: middle; background:#fff; padding-left:5px; font-size:12px; color:#969696;}
+#type_business .type_search .type_search_btn{ display:inline-block; vertical-align: middle; font-size:12px; letter-spacing:-1px; background:#fff; padding:5px; }
+#type_business .type_search_title { font-size:13px; display:inline-block; vertical-align: middle; padding:0 10px; box-sizing:border-box; color:#fff; font-weight:normal;}
+#type_business .flaticon-magnifying-glass:before { font-size:15px; color:#2289eb; }
+
+/* 빠른업종 검색리스트 */
+#type_business .search_job {display:none; width:633px; border:1px solid #2289eb; padding:10px; box-sizing:border-box; position:absolute; top:37px; left:106px; background:#f5f5f5; z-index:2;}
+#type_business .search_job_inner { border:1px solid #ddd; width:100%; height:250px; background:#fff; overflow:auto; }
+#type_business .search_list { padding:5px; font-size:13px; }
+#type_business .search_list li { padding-top:10px; }
+#type_business .search_list li:first-child { padding-top:0; }
+#type_business .search_list input{ vertical-align:middle;}
+#type_business .search_list span{ margin-left:5px; vertical-align:middle;}
+
+
+#type_business #category {  display:inline-block; vertical-align:top; height:400px; overflow:auto; border-right:1px solid #ddd; box-sizing:border-box; font-size:13px; }
+#type_business #category li.active { background:#f9f9f9; }
+#type_business .job_list{  width:100%; box-sizing:border-box; position:relative; font-size:0;}
+#type_business .job_list .depth1{ border-left:0; width:249px; padding:0 10px; }
+#type_business .job_list .depth1 li { padding:10px;  }
+
+#type_business .job_list .sub_category{ width:499px; height:400px; display:inline-block; vertical-align:top; position:relative;}
+
+.sub_category .depth2 { width:249px; height:400px; padding:10px; display:none; border-right:1px solid #ddd; box-sizing:border-box;}
+.sub_category .depth2.open { display:block; }
+.sub_category .depth2 li.depth2_cate {padding-top:10px; font-size:13px;}
+.sub_category .depth2 li:first-child { padding-top:0; }
+
+.sub_category .depth3 { display:none; position:absolute; top:0; left:auto; right:0; width:250px; padding:10px; height:100%; overflow:auto; box-sizing:border-box;}
+.sub_category .depth3.open { display:block; }
+.sub_category .depth3 li.depth3_cate { padding-top:10px; }
+.sub_category .depth3 li:first-child { padding-top:0; }
+.depth2_cate label { vertical-align:middle; }
+.depth2_cate input { vertical-align:middle; }
+.depth2_cate span { vertical-align: middle; padding-left:5px; }
+
+.check_select_box { border-top:1px solid #ddd; height:50px; padding:15px; box-sizing:border-box;}
+
+.check_select_box p { font-size:13px; color:#595959; }
+.check_select_box .select_depth2{ color:#155ed5; }
+.check_select_box .select_depth3{ color:#595959; margin-left:5px; }
+.check_select_box .select_depth3 .flaticon-delete:before { font-size:5px; padding:2px; border:1px solid #ddd; margin-left:5px; color:#c5c5c5; }
+
+/*.ui-dialog .ui-dialog-titlebar{display:none;}*/
+.ui-widget-content{ background:#155ed5; }
+.ui-dialog .ui-dialog-titlebar{padding:0;}
+.ui-dialog .ui-dialog-titlebar-close { background:transparent; border:0; outline:0;}

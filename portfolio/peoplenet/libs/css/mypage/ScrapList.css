@@ -1,0 +1,20 @@
+.ScrapList ul li .list_inner{border:1px solid #e9e9e9; padding:20px 50px; position:relative;}
+.ScrapList ul li .ChooseCheckBox { position:absolute; top:50%; left:20px; margin-top:-10px; }
+.ScrapList ul li .ChosseCheckBox input{ width:20px; height:20px; }
+
+.ScrapListNum { margin-top:50px; }
+.ScrapSearch { margin-top:25px;}
+.ScrapSearch .ScrapSearchTitle p { font-size:13px; margin-top:5px; }
+.ScrapSearch .ScrapSearchTitle p:first-child { margin:0;}
+
+.ScrapSearch .ScrapSearchBox { margin-top:25px; border:1px solid #e9e9e9; background:#fafafa; padding:20px 0; text-align:center; font-size:0;}
+.ScrapSearch .ScrapSelect { height:30px; border:1px solid #ddd; background:#fff; width:120px;  vertical-align: top; font-size:13px; padding-left:10px;}
+.ScrapSearch .ScrapTxtBox { height:30px; border:1px solid #ddd; background:#fff; width:400px; margin-left:20px; vertical-align: middle; border-right:0;}
+.ScrapSearch .ScrapSubmit { height:32px; background:#155ed5; width:70px; color:#fff; vertical-align: top; font-size:13px;}
+
+
+.ScrapListDelet{}
+.ScrapListDelet { margin-top:15px; }
+.ScrapListDelet .DeletBtn { width:50px; display:inline-block; vertical-align:middle; border:1px solid #ddd; padding:6px 7px; box-sizing:border-box; font-size:13px; color:#f00}
+.ScrapListDelet .DeletBtn img { vertical-align:middle;}
+.ScrapListDelet .DeletBtn span { vertical-align:middle; padding-left:5px; font-size:13px; font-weight:normal; }

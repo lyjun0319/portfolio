@@ -1,0 +1,43 @@
+#sub_wrapper #sub_container #aside { width:190px; position:absolute; background:#fff;}
+#sub_wrapper #sub_container #sub_contents { width:895px; margin-left:205px; border:1px solid #ddd; background:#fff; padding:60px 40px; box-sizing:border-box;}
+
+/* 기업 마이페이지 왼쪽메뉴 */
+#lnb {  }
+#lnb .lnb_title { font-size:17px; font-weight:bold; color:#fff; background:#155ed5; padding:20px; padding-top:29px; border-bottom:1px solid #e9e9e9; }
+#lnb .sub_list { padding:0 20px; padding-bottom:40px; border:1px solid #ddd; border-top:0;}
+
+#lnb .sub_list .lnb_sub_tt a { font-size:15px; color:#333333; font-weight:bold; }
+#lnb .sub_list ul li { padding-top:5px; letter-spacing:-0.5px; }
+#lnb .sub_list ul li a { font-size:13px; color:#777777; font-weight:100; }
+#lnb .eachlist { padding:20px 0; border-bottom:1px solid #e9e9e9; }
+#lnb .sub_list .customer{ border-bottom:0; }
+#lnb .sub_list .etc_menu ul li a { font-size:15px; color:#333; font-weight:bold; }
+
+
+
+/* 고객센터 */
+.CustomerInfo { background:#f4f6f9; margin-top:60px; padding:42px 30px; position:relative; }
+.CustomerInfo .CSNumber { display:inline-block; vertical-align:top; margin-top:10px;}
+.CustomerInfo .CSNumber p{ font-size:13px; color:#444; font-weight:bold; }
+.CustomerInfo .CSNumber .CSNumTitle{ font-size:16px;  color:#2289eb; }
+.CustomerInfo .CSNumber .CSCallNum { font-size:25px; margin-top:5px; font-weight:900;}
+.CustomerInfo .CSNumber .CSTimeWork { margin-top:5px;}
+
+.CustomerInfo .CSNumInfo { display:inline-block; vertical-align:top; margin-left:110px;}
+.CSNumInfo dl {margin-top:8px;}
+.CSNumInfo dl:first-child { margin-top:0; }
+.CSNumInfo dl dt { display:inline-block; vertical-align: middle; width:80px;}
+.CSNumInfo dl dt img{  font-size:3px; vertical-align:middle; color:#bfc6d3; }
+.CSNumInfo dl dt .CSNumInfoTitle{  font-size:13px; vertical-align:middle; color:#444444; padding-left:10px; font-weight:bold; }
+
+.CSNumInfo dl dd { display:inline-block; vertical-align:middle; color:#666666; font-size:13px; }
+
+.CSLink{ display:inline-block; vertical-align:top; position:absolute; top:42px; right:30px; left:auto; }
+.CSLink ul{ width:124px; border:1px solid #e7eaf0; background:#fff;}
+.CSLink ul li { height:34px; border-top:1px solid #e7eaf0; text-align:center; line-height:34px; }
+.CSLink ul li:first-child { border-top:0; }
+.CSLink ul li [class^="flaticon-"]:before { vertical-align:middle; font-size:15px; color:#bfc6d3; margin-right:5px;}
+.CSLink ul li span { font-size:13px; color:#666; vertical-align:middle;}
+
+
+/* 체크박스 */

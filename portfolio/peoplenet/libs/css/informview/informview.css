@@ -1,0 +1,37 @@
+.SubContentTitle h2{ font-size:28px; color:#222222; }
+
+
+.CompanyInfo { margin-top:20px; border:1px solid #ddd; border-top:1px solid #333;}
+.CompanyInfo .CompanyInfoInner { padding:40px; padding-bottom:20px; border-bottom:1px dotted #ddd; }
+
+
+.CompanyInfoLeft{ display:inline-block; vertical-align:top;}
+.CompanyInfoLeft .CompanyTitle h3 { font-size:25px; color:#444; font-weight:400; }
+
+.CompanyContent { margin-top:32px; font-size:0; }
+.CompanyContent .CompanyContentLeft { display:inline-block; vertical-align:top; }
+.CompanyContent .CompanyContentRight { display:inline-block; vertical-align:top; }
+
+.CompanyContentLeft {}
+.CompanyContent .CCLTitle p { font-size:14px; color:#444444; }
+.CompanyContent .CCLList ul li { margin-top:7px; }
+.CompanyContent .CCLList ul li dl { font-size:0; }
+.CompanyContent .CCLList ul li dl dt { display:inline-block; vertical-align:middle; font-size:13px; color:#888888; width:70px;}
+.CompanyContent .CCLList ul li dl dd { display:inline-block; vertical-align:middle; font-size:13px; color:#888888; }
+
+.CompanyContentRight { margin-left:80px;}
+.CompanyInfoRight{ display:inline-block; vertical-align:top; background:#f9f9f9; padding:20px; width:410px; box-sizing:border-box; margin-left:51px;}
+.CompanyLogo { display:inline-block; vertical-align:middle; width:170px; height:70px; padding:20px 0; background:#fff; border:1px solid #ddd; box-sizing:border-box; text-align:center;  }
+.CompanyLogo img { height:100%; }
+.CompanyInfomation { display:inline-block; vertical-align:middle; margin-left:15px;}
+.CompanyInfomation p { font-size:13px; color:#666; margin-top:5px; }
+.CompanyInfomation p:first-child { margin-top:0; }
+.CompanyInfomation p.HompageUrl a{ vertical-align:middle; }
+.CompanyInfomation p.HompageUrl img { vertical-align:middle; margin-left:5px; }
+
+.CompanyInfoList { margin-top:10px; }
+.CompanyInfoList ul { font-size:0; }
+.CompanyInfoList ul li { display:inline-block; vertical-align:middle; width:50%; margin-top:10px; }
+.CompanyInfoList dl { font-size:13px; }
+.CompanyInfoList dl dt { display:inline-block; vertical-align:middle; width:60px; border-right:1px solid #ddd; padding-left:10px; box-sizing:border-box; }
+.CompanyInfoList dl dd { display:inline-block; vertical-align:middle; padding-left:20px; box-sizing:border-box; }

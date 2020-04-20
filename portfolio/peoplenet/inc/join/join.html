@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="../../libs/js/join.js"></script>
+    <script src="../../libs/js/common.js"></script>
+    <link rel="stylesheet" href="../../libs/css/header.css">
+    <link rel="stylesheet" href="../../libs/css/common.css">
+    <link rel="stylesheet" href="../../libs/css/reset.css">
+    <link rel="stylesheet" href="../../libs/css/join/join.css">
+    <link rel="stylesheet" href="../../libs/css/modal.css" />
+
+    <title>Document</title>
+</head>
+<body class="join_bg">
+    <div id="join_wrapper">
+        <h1 id="join_logo"><a href="/peoplenet"><img src="../../libs/images/join/logo.png" alt="사람넷"></a></h1>
+        <div class="member_category">
+            <ul>
+                <li rel="personalJoin" class="active personaltab">
+                    <a href="javascript:void(0)">
+                        <h2 class="hide">개인회원가입</h2>
+                        <p class="join_title">개인회원 가입</p>
+                        <p class="individualJoin_subtt">만 15세 이상 가능</p>
+                    </a>
+                </li>
+                <li rel="companyJoin" class="businesstab">
+                    <a href="javascript:void(0)">
+                        <h2 class="hide">기업회원가입</h2>
+                        <p class="join_title">기업회원 가입</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="compulsory">* 필수항목 입니다.</p>
+        </div>
+        <div id="personalJoin" class="joinTap_content">
+            <!-- 개인정보 입력 -->
+            <div class="personal_info">
+                <h3 class="tit_join_member">
+                    <span class="personal_input"></span>개인정보입력
+                </h3>
+                <table class="personal_entry">
+                    <colgroup>
+                        <col width="22%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><label for="user_id"><span class="compulsory_cheak">*</span>아이디</label></th>
+                            <td><input type="text" class="input_st" placeholder="- 4~20자의 영문,숫자를 사용하세요." id="user_id" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_pw"><span class="compulsory_cheak">*</span>비밀번호</label></th>
+                            <td><input type="password" class="input_st" placeholder="- 비밀번호는 대소문자 구분합니다." id="user_pw" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_pw_re"><span class="compulsory_cheak">*</span>비밀번호 재확인</label></th>
+                            <td><input type="password" class="input_st" id="user_pw_re" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="personal_entry">
+                    <colgroup>
+                        <col width="22%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><label for="user_name"><span class="compulsory_cheak">*</span>이름</label></th>
+                            <td><input type="text" class="input_st" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' placeholder="- 4~20자의 영문,숫자를 사용하세요." id="user_name" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_year"><span class="compulsory_cheak">*</span>생년월일</label></th>
+                            <td>
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' placeholder="예시 (1997) " id="user_year" size="4" maxlength="4" />&nbsp;년&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="2" maxlength="2" />&nbsp;월&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="2" maxlength="2" />&nbsp;일&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_phone"><span class="compulsory_cheak">*</span>핸드폰번호</label></th>
+                            <td>
+                                <select class="phone_numfirst" id="user_phone">
+                                    <option value="">선택하세요</option>
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>&nbsp;-&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                <button type="button" class="certification_btn">인증번호 전송</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_pw_re">인증번호</label></th>
+                            <td>
+                                <input type="text" class="input_st certification_number" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' placeholder="인증번호를 입력해주세요" size="8" maxlength="8" />
+                                <button type="button" class="certification_btn re_num_btn">재전송</button>
+                                <button type="button" class="certification_btn">확인</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address"><span class="compulsory_cheak">*</span>이메일</label></th>
+                            <td>
+                                <input type="text" class="input_st input_email" placeholder="- 이메일" />&nbsp;&nbsp;@&nbsp;&nbsp;
+                                <input type="text" class="input_st input_email" placeholder="- 이메일을 선택해주세요" />
+                                <select class="choose_email floatright">
+                                    <option value="">선택하기</option>
+                                    <option value="">naver.com</option>
+                                    <option value="">hanmail.net</option>
+                                    <option value="">gmail.com</option>
+                                    <option value="">nate.com</option>
+                                    <option value="">daum.net</option>
+                                    <option value="">hotmail.com</option>
+                                    <option value="">직접입력</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address">우편번호</label></th>
+                            <td><input type="text" class="input_st input_address" placeholder="- 우편번호" readonly="readonly" /><button type="button" class="certification_btn">주소검색</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div>상세주소 api</div></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address">주소</label></th>
+                            <td><input type="text" class="input_st input_address" placeholder="- 주소" readonly="readonly" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_adress_1">상세주소</label></th>
+                            <td><input type="text" class="input_st" placeholder="- 상세주소를 입력해주세요" id="user_adress_1" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="man">성별</label></th>
+                            <td><label for="man"><input type="radio" name="sex" id="man" />남자</label>&nbsp;&nbsp;<label for="women"><input type="radio" name="sex" id="women" />여자</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 개인정보 입력 -->
+
+            <!-- 약관동의 입력 -->
+            <div id="agree">
+                <h3 class="tit_join_member">
+                    <span class="agree_input_title"></span>개인정보입력
+                </h3>
+                <div id="agree_inner">
+                    <div id="anterior">
+                        <h4 class="anterior_title"><span class="compulsory_cheak">*</span>개인회원 약관에 동의</h4>
+                        <textarea name="" id="" class="anterior_txt">
+
+                        </textarea>
+                        <div class="agree_checked">
+                            <label for="agree_checked">약관동의<input type="checkbox" id="agree_checked" class="checkbox"/></label>
+                        </div>
+                    </div>
+
+                    <div id="anterior" class="mgtop15">
+                        <h4 class="anterior_title"><span class="compulsory_cheak">*</span>개인정보 수집 및 이용에 동의</h4>
+                        <textarea name="" id="" class="anterior_txt">
+
+                        </textarea>
+                        <div class="agree_checked">
+                            <label for="agree_checked_1">약관동의<input type="checkbox" id="agree_checked_1" class="checkbox"/></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="companyJoin" class="joinTap_content">
+            <!-- 개인정보 입력 -->
+            <div class="company_info">
+                <h3 class="tit_join_member">
+                    <span class="company_input"></span>개인정보입력
+                </h3>
+                <table class="company_entry">
+                    <colgroup>
+                        <col width="22%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><label for="user_id"><span class="compulsory_cheak">*</span>아이디</label></th>
+                            <td><input type="text" class="input_st" placeholder="- 4~20자의 영문,숫자를 사용하세요." id="user_id" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_pw"><span class="compulsory_cheak">*</span>비밀번호</label></th>
+                            <td><input type="password" class="input_st" placeholder="- 비밀번호는 대소문자 구분합니다." id="user_pw" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_pw_re"><span class="compulsory_cheak">*</span>비밀번호 재확인</label></th>
+                            <td><input type="password" class="input_st" id="user_pw_re" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="company_entry">
+                    <colgroup>
+                        <col width="22%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><label for="user_pw_re"><span class="compulsory_cheak">*</span>사업자번호</label></th>
+                            <td>
+                                <input type="text" class="input_st compnay_number" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' id="company_name" placeholder="지점(지사)의 사업자등록번호를 입력해주시기 바랍니다" />
+                                <button type="button" class="certification_btn">인증확인</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="company_name"><span class="compulsory_cheak">*</span>회사명</label></th>
+                            <td><input type="text" class="input_st" id="company_name" placeholder="해당 지점(지사)명을 표기" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="company_name"><span class="compulsory_cheak">*</span>대표자명</label></th>
+                            <td><input type="text" class="input_st" id="company_name" placeholder="" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address"><span class="compulsory_cheak">*</span>우편번호</label></th>
+                            <td><input type="text" class="input_st input_address" placeholder="- 우편번호" readonly="readonly" /><button type="button" class="certification_btn">주소검색</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div>상세주소 api</div></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address"><span class="compulsory_cheak">*</span>주소</label></th>
+                            <td><input type="text" class="input_st input_address" placeholder="- 주소" readonly="readonly" /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_adress_1"><span class="compulsory_cheak">*</span>상세주소</label></th>
+                            <td><input type="text" class="input_st" placeholder="- 상세주소를 입력해주세요" id="user_adress_1" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="company_entry">
+                    <colgroup>
+                        <col width="22%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><label for="user_pw_re"><span class="compulsory_cheak">*</span>업종</label></th>
+                            <td>
+                                <input type="text" class="input_st compnay_number" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' id="company_name" placeholder="업종을 선택해주시기 바랍니다." />
+                                <a href="../type_business/type_business.html" class="certification_btn type_business_btn">선택</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="manager_name"><span class="compulsory_cheak">*</span>담당자</label></th>
+                            <td><input type="text" class="input_st" id="manager_name" placeholder="채용공고 등록 시 담당자 변경 가능합니다." /></td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_phone"><span class="compulsory_cheak">*</span>핸드폰번호</label></th>
+                            <td>
+                                <select class="phone_numfirst" id="user_phone">
+                                    <option value="">선택하세요</option>
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>&nbsp;-&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="user_address"><span class="compulsory_cheak">*</span>이메일</label></th>
+                            <td>
+                                <input type="text" class="input_st input_email" placeholder="- 이메일" />&nbsp;&nbsp;@&nbsp;&nbsp;
+                                <input type="text" class="input_st input_email" placeholder="- 이메일을 선택해주세요" />
+                                <select class="choose_email floatright">
+                                    <option value="">선택하기</option>
+                                    <option value="">naver.com</option>
+                                    <option value="">hanmail.net</option>
+                                    <option value="">gmail.com</option>
+                                    <option value="">nate.com</option>
+                                    <option value="">daum.net</option>
+                                    <option value="">hotmail.com</option>
+                                    <option value="">직접입력</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 개인정보 입력 -->
+
+            <!-- 약관동의 입력 -->
+            <div id="agree">
+                <h3 class="tit_join_member">
+                    <span class="agree_input_title"></span>개인정보입력
+                </h3>
+                <div id="agree_inner">
+                    <div id="anterior">
+                        <h4 class="anterior_title"><span class="compulsory_cheak">*</span>기업회원 약관에 동의</h4>
+                        <textarea name="" id="" class="anterior_txt">
+
+                        </textarea>
+                        <div class="agree_checked">
+                            <label for="agree_checked">약관동의<input type="checkbox" id="agree_checked" class="checkbox"/></label>
+                        </div>
+                    </div>
+
+                    <div id="anterior" class="mgtop15">
+                        <h4 class="anterior_title"><span class="compulsory_cheak">*</span>개인정보 수집 및 이용에 동의</h4>
+                        <textarea name="" id="" class="anterior_txt">
+
+                        </textarea>
+                        <div class="agree_checked">
+                            <label for="agree_checked_1">약관동의<input type="checkbox" id="agree_checked_1" class="checkbox"/></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mem_join_btn">
+            <button type="button" class="member_join_btn">회원가입</button>
+        </div>
+    </div>
+</body>
+</html>

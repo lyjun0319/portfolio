@@ -1,0 +1,29 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+@font-face {
+ font-family: 'Nanum Barun Gothic';
+ src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+ src: url('../fonts/NanumBarunGothic.eot');
+ src: url('../fonts/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+ url('../fonts/NanumBarunGothic.woff') format('woff'),
+ url('../fonts/NanumBarunGothic.ttf') format('truetype');
+}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Nanum Barun Gothic', sans-serif; color:#888; letter-spacing:-0.5px;
+}
+a { color:#888; letter-spacing:-0.5px;  }
+
+/* 플롯 */
+.floatleft{ float:left; }
+.floatright { float:right; }
+
+/* 삭제 */
+.hide{ position:absolute; left:-10000px;}
+select { border:0; height:26px; vertical-align:middle;}
+
+.mgtop10 { margin-top:10px; }
+.mgtop15 { margin-top:15px; }
+.mgtop15 { margin-top:20px; }
+.mgtop50 { margin-top:50px; }
+/* 서브 기본 레이아웃 */
+#sub_wrapper {margin-top:20px;}
+#sub_wrapper #sub_container { width:1100px; min-height:1000px; margin:0 auto; }

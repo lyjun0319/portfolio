@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NC SOFT</title>	
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style2.css">
+	<link rel="stylesheet" href="./css/flaticon.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+
+	<!--[if lte IE 9]>
+		<link href='./css/animations-ie-fix.css' rel='stylesheet'>
+	<![endif]-->
+
+	<script src="./js/jquery.3.3.1.min.js"></script>
+	<script src="./js/selectivizr-min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	
+	<script src="./js/jquery.fittext.js"></script>
+	<script src="./js/jquery.lettering.js"></script>
+	<script src="./js/jquery.textillate.js"></script>
+	<script src="./js/TweenMax.min.js"></script>
+	<script src="./js/jquery.mousewheel.min.js"></script>
+	
+	<script src="./js/main.js"></script>
+	<script src="./js/run.js"></script>
+	<script src="./js/TextPlugin.min.js"></script>
+
+	<!--[if lte IE 8]>
+		<script src="./js/html5.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+	<div class="wrap">
+		<header class="header_wrap">
+			<h1><a href=""><img src="./img/ncsoft.png" alt="엔씨소프트"></a></h1>
+			<div class="login"><a href="" class="login_link"><i class="flaticon-arrows-2"></i></a></div>
+			<div class="close_btn"><a href="javascript:void(0)" class="close_nav"><i class="flaticon-error"></i></a></div>
+		</header>
+		<div class="video">
+			<div class="dimm"></div>	
+			<video class="covervid-video" autoplay loop>
+				<source src="video/movie2.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="mtxt">
+			<p class="mtxt_num01"><img src="./img/mtxt_extra.png" alt=""></p>
+			<p class="mtxt_num02 tlt">A place filled with enthusiasm,<br/><span> passion</span> and <span>enthusiasm!</span></p>
+			<p class="mtxt_num03 tlt2">enjoy NCSOFT, passionate NCSOFT, youth NCSOFT</p>
+			<p class="mtxt_num04">
+				<span class="flaticon_mouse"><i class="flaticon-computer"></i></span>
+				<span class="tlt3">Mouse Wheel</span>
+			</p>
+		</div>
+
+		<div class="nav_box">
+			<nav class="">
+				<ul class="nav">
+					<li>
+						<a href="javascirpt:void(0)">
+							<span class="nav_tt">About US</span>
+							<span class="extra_line"></span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span class="nav_tt">Enjoy NCSOFT</span>
+							<span class="extra_line"></span>	
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span class="nav_tt">NCSOFT Meet</span>
+							<span class="extra_line"></span>	
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<span class="nav_tt">Apply</span>
+							<span class="extra_line"></span>
+						</a>					
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="menu_list">
+			<ul class="cf">
+				<li>
+					<a href="sub2.html">
+						<span class="txt_wrap">
+							<span class="txt_wrap_inner">
+								<span class="tit">About US</span>
+								<span class="sub_tit">작고, 강하고, 알찬기업</span>
+							</span>
+						</span> <!-- //txt_wrap -->
+						<span class="menu_overlay"><span class="icon_view">view</span></span>
+						<img src="img/menu_list_bg_01.jpg" alt="" class="menu_list_img" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="txt_wrap">
+							<span class="txt_wrap_inner">
+								<span class="tit">Enjoy NCSOFT</span>
+								<span class="sub_tit">즐거움으로 연결된 새로운 세상</span>
+							</span>
+						</span> <!-- //txt_wrap -->
+						<span class="menu_overlay"><span class="icon_view">view</span></span>
+						<img src="img/menu_list_bg_02.jpg" alt="" class="menu_list_img" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="txt_wrap">
+							<span class="txt_wrap_inner">
+								<span class="tit">NCSOFT Meet</span>
+								<span class="sub_tit">온라인 세상을 뛰어넘은 즐거움</span>
+							</span>
+						</span> <!-- //txt_wrap -->
+						<span class="menu_overlay"><span class="icon_view">view</span></span>
+						<img src="img/menu_list_bg_03.jpg" alt="" class="menu_list_img" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="txt_wrap">
+							<span class="txt_wrap_inner">
+								<span class="tit">Apply</span>
+								<span class="sub_tit">젊음과 패기와 열정이 가득한 곳</span>
+							</span>
+						</span> <!-- //txt_wrap -->
+						<span class="menu_overlay"><span class="icon_view">view</span></span>
+						<img src="img/menu_list_bg_04.jpg" alt="" class="menu_list_img" />
+					</a>
+				</li>
+			</ul>
+		</div> <!-- //menu_list -->
+
+		<div class="nc_cont_wrap">
+			<a href="javascript:void(0)" class="arrow">
+				<p class="arrow_icon"><i class="flaticon-arrow"></i></p>
+				<p>SCROLL UP</p>
+			</a>
+			<div class="nc_cont">
+				<ul>
+					<li class="li_first">
+						<div class="cont_icon"></div>
+						<div class="cont_box">
+							<div class="maintitle"><span class="title">수시채용</span><span class="countnum">99</span><span class="extratxt">건</span></div>
+							<div class="subtitle"><span>미래의 꿈을 만들어가는<br/>엔씨인을 기다립니다.</span></div>
+							<a href="" class="cont_link">채용 더보기+</a>
+						</div>
+					</li>
+					<li class="li_two">
+						<div class="cont_icon"></div>
+						<div class="cont_box">
+							<div class="maintitle"><span class="title">신입사원</span><span class="countnum">13</span><span class="extratxt">건</span></div>
+							<div class="subtitle"><span>삶의 가치를 만들어 가는<br/>엔씨인을 기다립니다.</span></div>
+							<a href="" class="cont_link">채용 더보기+</a>
+						</div>
+					</li>
+					<li class="li_three">
+						<div class="cont_icon"></div>
+						<div class="cont_box">
+							<div class="maintitle"><span class="title">수시채용</span><span class="countnum">13</span><span class="extratxt">건</span></div>
+							<div class="subtitle"><span>엔씨와 함께 꿈을 키워갈<br/>엔씨인을 기다립니다.</span></div>
+							<a href="" class="cont_link">채용 더보기+</a>
+						</div>
+					</li>	
+					<li class="li_four">
+						<div class="cont_icon"></div>
+						<div class="cont_box">
+							<div class="maintitle"><span class="title">인재DB등록</span></div>
+							<div class="subtitle"><span>엔씨에 대한 애정과 열정을 품은<br/>우수한 인재를 기다리고 있습니다.</span></div>
+							<a href="" class="cont_link">등록하기+</a>
+						</div>
+					</li>	
+				</ul>	
+			</div>
+			<div class="wave2"></div>
+		</div>
+
+		<footer class="footer">
+			<div class="sns">
+				<ul>
+					<li class="f_facebook"><a href=""><i class="flaticon-facebook-logo"></i></a></li>
+					<li class="f_twitter"><a href=""><i class="flaticon-twitter-letter-logo"></i></a></li>
+					<li class="f_youtube"><a href=""><i class="flaticon-play"></i></a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				<div class="familysite">FAMILY SITE <i class="flaticon-arrow"></i></div>
+				<p>Copyright ⓒ<span>NCSOFT</span> All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>

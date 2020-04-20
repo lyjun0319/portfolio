@@ -1,0 +1,338 @@
+#ResumeWrap{}
+#ResumeWrap .ResumeTitle { padding:20px 0 16px;  }
+#ResumeWrap .ResumeTitle h2{ font-size:28px; color:#222; }
+
+/* 이력서 컨테이너 화면 */
+#ResumeWrap .Resume_Container{}
+.ResumeContainer .ResumeKindBox {background:#f3f8fc; border:1px solid #dae6f0; padding:9px 0;}
+.ResumeContainer .ResumeKindTitle{ font-size:14px; color:#737373; padding:0 30px; }
+.ResumeKindBox .ResumeKind { width:452px; height:30px; font-size:13px; color:#afafaf; padding-left:10px; border:1px solid #ddd; box-sizing:border-box; letter-spacing:-1px; }
+
+/* 이력서 입력화면 */
+.ResumeContent{ margin-top:20px; }
+.ResumeContent .ResumeTitleInput { height:60px; border:6px solid #6bb7ff; box-sizing:border-box; overflow:auto; }
+.ResumeContent .TitleInput { width:100%; height:100%; text-align:center; font-size:16px; color:#333; font-weight:bold; }
+
+/* 기본정보 입력 */
+.ResumeUserInfo { margin-top:18px;}
+.ResumeContent .ResumeSubTitle { padding-bottom:9px; position:relative; }
+.ResumeContent .ResumeSubTitle h3{ font-size:18px; color:#444444; }
+.ResumeContent .MustInput{ position:absolute; top:auto; bottom:5px; right:10px; font-size:13px; color:#666666; }
+
+.ResumeTableInput {  border-top:2px solid #2289eb; border-bottom:1px solid #ddd; }
+.ResumeTableInput .ResumeUserImg { width:115px; height:145px; overflow:hidden; padding:20px; position:absolute; }
+
+/* 기본테이블스타일 */
+.ResumeTableInput table{ margin-left:155px;}
+.ResumeTableInput table tr { border-top:1px solid #ddd; }
+.ResumeTableInput table tr:first-child{ border:0; }
+.ResumeTableInput table th { text-align:left; font-size:13px; color:#444444; background:#f5f5f5; padding-left:20px; box-sizing:border-box;}
+.ResumeTableInput table td { text-align:left; color:#666666; font-weight:100; padding:12px 20px; font-size:14px; box-sizing:border-box; }
+.ResumeTableInput table td input { border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; box-sizing:border-box; font-size:14px;}
+.ResumeTableInput table td input.UserHomepage { width:100%;box-sizing: border-box;}
+.ResumeTableInput table td input.UserAddress { width:100%; margin-top:5px; vertical-align:middle;}
+.ResumeTableInput table td input.UserAddress:first-child{ width:20%; margin-top:0; }
+.ResumeTableInput table select { border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; box-sizing:border-box;}
+.ResumeTableInput .address_search{ display:inline-block; padding:7px 15px; background:#969696; border:1px solid #787878;  vertical-align: middle; color:#fff; margin-left:5px; font-size:12px;}
+
+/* 테이블스타일 2 */
+.ResumeTableInput_St table{width:100%; border-top:2px solid #2289eb;}
+.ResumeTableInput_St table tr { border-bottom:1px solid #ddd; }
+.ResumeTableInput_St table th { text-align:left; font-size:13px; color:#444444; background:#f5f5f5; padding-left:20px; vertical-align:middle; box-sizing:border-box;}
+.ResumeTableInput_St table td { text-align:left; color:#666666; font-weight:100; padding:12px 20px; font-size:14px; box-sizing:border-box; }
+.ResumeTableInput_St table td input { width:60%; border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; padding-left:5px; font-size:12px; box-sizing:border-box; }
+.ResumeTableInput_St table select { border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; box-sizing:border-box;}
+.ResumeTableInput_St table td input[type=radio] { width:14px; height:14px; margin-right:5px; }
+.ResumeTableInput_St table textarea { width:100%; height:100px; border:1px solid #ddd; }
+
+.TableListTitle {padding-bottom:5px;}
+.TableListTitle h3{font-size:18px; color:#444;}
+
+/* 학력사항 */
+.ResumeAcademic{ margin-top:42px;}
+.ResumeAcademic .ResumeChecked {margin-top:5px; background:#f3f8fc; border:1px solid #dae6f0; padding:9px 0; text-align:center;}
+.ResumeAcademic .ResumeCheckedTitle { font-size:16px; color:#444444; }
+.ResumeAcademic select{ width:150px; height:30px; border:1px solid #ddd;}
+.ResumeAcademic .AcademicChoose{ margin-left:10px; }
+.ResumeAcademic .QualiFication { margin-left:10px; }
+
+.ResumeAcademic .UniversityDelet { float:right; padding:8px 10px; border:1px solid #ddd; font-weight:normal; font-family:"돋움","dotum"; font-weight:bold; font-size:13px; }
+.ResumeAcademic .UniversityDelet img{ vertical-align: middle;}
+.ResumeAcademic .UniversityDelet span{margin-left:5px; vertical-align: middle;}
+.ResumeAcademic .UniversityTD:after{content:""; display:block; clear:both;}
+
+.ResumeAcademic .GraduationYear{ width:70px; margin-right:5px; }
+.ResumeAcademic .GraduationMonth { width:40px; }
+.ResumeAcademic .University{ margin-top:10px; }
+
+.ResumeAcademic .Major { width:150px; }
+.ResumeAcademic .MajorPlusBtn { width:50px; display:inline-block; vertical-align:middle; border:1px solid #ddd; padding:6px 7px; box-sizing:border-box; margin-left:5px;}
+.ResumeAcademic .MajorPlusBtn img { vertical-align:middle;}
+.ResumeAcademic .MajorPlusBtn span { vertical-align:middle; padding-left:3px; font-size:13px; font-weight:normal;}
+
+.ResumeAcademic .MajorMinusBtn { width:50px; display:inline-block; vertical-align:middle; border:1px solid #ddd; padding:6px 7px; box-sizing:border-box; margin-left:5px;}
+.ResumeAcademic .MajorMinusBtn img { vertical-align:middle;}
+.ResumeAcademic .MajorMinusBtn span { vertical-align:middle; padding-left:3px; font-size:13px; font-weight:normal; }
+
+
+.ResumeAcademic .MajorPluseLI { margin-top:5px;}
+
+.ResumeAcademic .AcademicTableListPluse { text-align:right; margin-top:20px; }
+.ResumeAcademic .AcademicTableListPluse a { padding:8px 10px; border:1px solid #ddd; font-size:13px; font-family:"돋움","dotum"; font-weight:bold;}
+.ResumeAcademic .AcademicTableListPluse a span { vertical-align:middle; margin-left:3px;}
+.ResumeAcademic .AcademicTableListPluse a img { vertical-align:middle;}
+
+/* 경력사항 */
+.JobCareer { margin-top:50px; }
+.JobCareer .ResumeChecked {margin-top:5px; background:#f3f8fc; border:1px solid #dae6f0; padding:20px 0; text-align:center; margin-bottom:10px;}
+.JobCareer .ResumeChecked input {vertical-align:middle;}
+.JobCareer .ResumeChecked input[type=radio] { margin-right:3px; }
+.JobCareer .ResumeChecked label {vertical-align:middle; font-size:13px;}
+.JobCareer .ResumeChecked .CareerCheck { margin:0 10px; margin-left:30px; }
+.JobCareer .GraduationYear{ width:70px; margin-right:5px; }
+.JobCareer .GraduationMonth { width:40px; }
+.JobCareer .selectbox{margin-left:3px;}
+
+.JobCareer .JobCareerPluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.JobCareer .JobCareerPluseBtn img { vertical-align:middle;}
+.JobCareer .JobCareerPluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.JobCareer .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.JobCareer .TitleTr .JobCareerNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.JobCareer .TitleTr th:after { content:""; display:block; clear:both;}
+
+.JobCareer .CareerCountBox{margin-top:30px; background:#f3f8fc; border:1px solid #dae6f0; padding:15px 20px; text-align:left; color:#444444; }
+.JobCareer .CareerCountBox input { height:30px; border:1px solid #ddd; text-align:right; padding-right:10px; box-sizing:border-box; color:#ff7a29;}
+.JobCareer .CareerCountBox .CareerCountTitle { margin-right:50px; }
+
+
+/* 추가사항항목 */
+.AddInfo { margin-top:50px; }
+.AddInfo .AddInfoTitle { padding-bottom:10px; }
+.AddInfo .AddInfoTitle h3{font-size:18px; color:#444444;}
+.AddInfo .AddInfoTitle p{font-size:14px; color:#666666; padding-top:5px;}
+.AddInfo .AddInfoChoose {background:#f3f8fc; border:1px solid #dae6f0; padding:20px 0 10px;}
+.AddInfo .AddInfoChoose ul {font-size:0;}
+.AddInfo .AddInfoChoose ul li { display:inline-block; vertical-align:middle; width:25%; font-size:13px; margin-bottom:10px; padding-left:30px; box-sizing:border-box; color:#333; }
+.AddInfo .AddInfoChoose ul li label{color:#444; font-weight:normal;}
+
+
+/* 우대사항 */
+.JobPreference { margin-top:20px; }
+.JobPreference th { padding:15px 0; }
+.JobPreference td label { font-size:13px; margin-right:10px;}
+.JobPreference .EmploySupportLink { float:right; font-family:"돋움","dotum"; font-size:12px;}
+.JobPreference .EmploySupport:after { content:""; display:block; clear:both; }
+.JobPreference .ObstacleRating{ padding-left:15px; font-size:13px;}
+.JobPreference .ObstacleSelect { width:50px;margin-left:10px; }
+
+.JobPreference .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.JobPreference .TitleTr .JobPreferencelNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.JobPreference .TitleTr th:after { content:""; display:block; clear:both;}
+.JobPreference .JobPreferencePluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.JobPreference .JobPreferencePluseBtn img { vertical-align:middle;}
+.JobPreference .JobPreferencePluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+.JobPreference .JobPreferenceMinusBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.JobPreference .JobPreferenceMinusBtn img { vertical-align:middle;}
+.JobPreference .JobPreferenceMinusBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.JobPreference .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.JobPreference .TitleTr .JobPreferenceNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.JobPreference .TitleTr th:after { content:""; display:block; clear:both;}
+
+.JobPreference .MilitaryDate { margin-top:10px; }
+.JobPreference .GraduationYear{ width:70px; margin-right:5px; }
+.JobPreference .GraduationMonth { width:40px; }
+.JobPreference .University{ margin-top:10px; }
+
+/* 대외활동 */
+.Social { margin-top:20px; }
+.Social table th{ padding:15px 0; padding-left:15px; width:141px; }
+.Social table td { width:306px; }
+.Social table td input { width:100%; }
+.Social table td textarea { width:100%; }
+
+.Social .GraduationYear{ width:70px; margin-right:5px; }
+.Social .GraduationMonth { width:40px; }
+.Social .University{ margin-top:10px; }
+
+.Social .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.Social .TitleTr .SocialNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.Social .TitleTr th:after { content:""; display:block; clear:both;}
+.Social .SocialPluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.Social .SocialPluseBtn img { vertical-align:middle;}
+.Social .SocialPluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Social .SocialMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.Social .SocialMinuseBtn img { vertical-align:middle;}
+.Social .SocialMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+
+/* 수상내역 */
+.Prize { margin-top:20px; }
+.Prize .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.Prize .TitleTr .PrizeNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.Prize .TitleTr th:after { content:""; display:block; clear:both;}
+.Prize .PrizePluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.Prize .PrizePluseBtn img { vertical-align:middle;}
+.Prize .PrizePluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+.Prize .PrizeMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.Prize .PrizeMinuseBtn img { vertical-align:middle;}
+.Prize .PrizeMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Prize table td input{ width:100%; }
+
+.Prize .GraduationYear{ width:70px; margin-right:5px; }
+.Prize .GraduationMonth { width:40px; }
+.Prize .University{ margin-top:10px; }
+
+/* 교육이수 */
+.Education { margin-top:20px; }
+.Education .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.Education .TitleTr .EducationNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.Education .TitleTr th:after { content:""; display:block; clear:both;}
+.Education .EducationPluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.Education .EducationPluseBtn img { vertical-align:middle;}
+.Education .EducationPluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Education .EducationMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.Education .EducationMinuseBtn img { vertical-align:middle;}
+.Education .EducationMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Education .GraduationYear{ width:70px; margin-right:5px; }
+.Education .GraduationMonth { width:40px; }
+.Education .University{ margin-top:10px; }
+
+/* OA능력 */
+.OAAbility {margin-top:20px;}
+.OAAbility table th { text-align: center; padding:10px 0; }
+.OAAbility table td { text-align: center;}
+.OAAbility table td select { width:100%;  }
+.OAAbility table .TitleTr th {text-align:left;}
+
+.OAAbility .OAAbilityPluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.OAAbility .OAAbilityPluseBtn img { vertical-align:middle;}
+.OAAbility .OAAbilityPluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.OAAbility .OAAbilityMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.OAAbility .OAAbilityMinuseBtn img { vertical-align:middle;}
+.OAAbility .OAAbilityMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+
+.OAAbility .OATitle { font-size:13px; font-weight:bold; color:#333; }
+.OAAbility .OASubtxt { font-size:12px; padding-top:5px; color:#666666; font-weight:normal;}
+
+/* 자격증/면허증 */
+.Certificate { margin-top:20px; }
+.Certificate table th { padding:15px 0; padding-left:15px;}
+.Certificate table td input { width:100%; }
+.Certificate table td select {width:100%;}
+.Certificate .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.Certificate .TitleTr .CertificateNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.Certificate .TitleTr th:after { content:""; display:block; clear:both;}
+.Certificate .CertificatePluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.Certificate .CertificatePluseBtn img { vertical-align:middle;}
+.Certificate .CertificatePluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Certificate .CertificateMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.Certificate .CertificateMinuseBtn img { vertical-align:middle;}
+.Certificate .CertificateMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Certificate .GraduationYear{ width:70px; margin-right:5px; }
+.Certificate .GraduationMonth { width:40px; }
+.Certificate .University{ margin-top:10px; }
+
+/* 어학점수 */
+.Language{ margin-top:20px; }
+.Language .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.Language .TitleTr .LanguageNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.Language .TitleTr th:after { content:""; display:block; clear:both;}
+.Language .LanguagePluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.Language .LanguagePluseBtn img { vertical-align:middle;}
+.Language .LanguagePluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+.Language .LanguageMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.Language .LanguageMinuseBtn img { vertical-align:middle;}
+.Language .LanguageMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.Language .LangsInput  { width:150px; display:none;}
+.Language .LangsSelect { width:150px; }
+.Language .LangsInputBox { margin-left:5px; }
+
+/* 해외연수 및 해외경험 */
+.OverseasTraining{margin-top:20px;}
+.OverseasTraining .TitleTr th{ padding:10px; color:#2289eb; font-size:14px; }
+.OverseasTraining .TitleTr .OverseasTrainingNum {margin-right:5px; display:inline-block; margin-top:5px; width:16px; height:16px; border-radius:50%; background:#2289eb; text-align: center; color:#fff; font-size:11px; line-height:18px;}
+.OverseasTraining .TitleTr th:after { content:""; display:block; clear:both;}
+.OverseasTraining .OverseasTrainingPluseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; float:right;}
+.OverseasTraining .OverseasTrainingPluseBtn img { vertical-align:middle;}
+.OverseasTraining .OverseasTrainingPluseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+.OverseasTraining .OverseasTrainingMinuseBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:right;}
+.OverseasTraining .OverseasTrainingMinuseBtn img { vertical-align:middle;}
+.OverseasTraining .OverseasTrainingMinuseBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.OverseasTraining .GraduationYear{ width:70px; margin-right:5px; }
+.OverseasTraining .GraduationMonth { width:40px; }
+.OverseasTraining .University{ margin-top:10px; }
+
+.OverseasTraining table tr td input { width:100%; }
+
+/* 포토폴리오 */
+.Portfolio {margin-top:50px; position:relative;}
+.PortfolioContents { border:1px solid #dae6f0; background:#f3f8fc; padding:15px 20px; }
+.PortfolioContents input[type=checkbox] + label { font-size:13px; color:#000; font-weight:normal;  }
+
+.PortfolioButton { margin-top:10px;}
+.PortfolioButton .PortfolioMinusBtn{ padding:3px 5px; border:1px solid #ddd; background:#fff; margin-right:5px; float:left;}
+.PortfolioButton .PortfolioMinusBtn img { vertical-align:middle;}
+.PortfolioButton .PortfolioMinusBtn span { vertical-align:middle; margin-left:3px; font-family:"돋움","dotum"; font-size:12px; font-weight:normal; }
+
+.PortfolioButton .PortfolioPluseBtn { background:#2289eb; border:1px solid #0f71cf; font-size:12px; color:#fff; padding:7px 15px; float:right;}
+.PortfolioButton .PortfolioPluseBtn img { vertical-align:middle;}
+.PortfolioButton .PortfolioPluseBtn span { vertical-align:middle; margin-left:5px;}
+.PortfolioButton:after { content:""; display:block; clear:both; }
+
+.PtPopup {width:470px; position:absolute; top:-200px;left:50%; margin-left:-235px; border:2px solid #2288ea; background:#fff; display:none;}
+.PtPopup .PopHead {padding:12px 0; padding-left:20px; background:#2288ea; color:#fff;}
+.PtPopup .PopHead .CloseBtn {position:absolute; top:14px; left:auto; right:10px; }
+.PtPopup .PopContent{ padding:20px; box-sizing:border-box; }
+
+.PopContent table { border-top:2px solid #333; border-bottom:1px solid #ddd; width:100%; }
+.PopContent table tr { border-top:1px solid #ddd; }
+.PopContent table tr:first-child { border-top:0; }
+.PopContent table th { width:100px; font-size:14px; font-weight:normal; color:#666666; vertical-align: middle; }
+.PopContent table td { padding:15px; vertical-align: middle; font-size:13px;}
+.PopContent table td .FileInputBox{ margin-top:5px;}
+.PopContent table td select { width:150px; height:30px; border:1px solid #ddd; }
+.PopContent table td label { vertical-align: middle; margin-left:5px;}
+.PopContent table td input { vertical-align: middle; }
+.PortfolioUrl { margin-top:5px; display:none; }
+.PopContent table td input[type="text"] { width:100%; height:30px; border:1px solid #ddd; box-sizing: border-box;}
+.PopContent table td label.FilePushs { margin-right:15px;}
+.PopContent .jFiler-theme-default .jFiler-input { width:300px; margin:0; }
+
+.PopSubmitBtn { padding:10px 0;}
+.PopSubmitBtn p { font-size:13px; color:#666666; }
+.PopSubmitBtn .FC_Orange { color:#ff7623; }
+
+.PopSubmitBtn .SubmitBtn { margin-top:10px; text-align: center;}
+.PopSubmitBtn .SubmitBtn button{ display:inline-block; background:#2288ea; border:1px solid #0566c4; color:#fff;padding:10px 25px; }
+
+/* 희망근무조건 */
+.Hope { margin-top:50px; }
+.Hope table tr td select { width:200px; }
+.Hope input[type=checkbox] + label { font-weight:normal; margin-left:20px;}
+.Hope input[type=checkbox] + label.LabelReset { margin-left:0; }
+.Hope .Areachosee { margin-right:15px; }
+/* 자기소개서 */
+.MyIntroduction{ margin-top:50px;}
+.MyIntroduction .MyIntroTitle h3{ font-size:18px; color:#444444; }
+.MyIntroduction .MyIntroTitle p { font-size:14px; color:#666666; padding-top:5px; }
+
+.MyIntroContent .MyIntroContentTxtBox { background:#fafafa; border-top:2px solid #2289eb; border-bottom:1px solid #e9e9e9; padding:20px 22px; margin-top:10px; }
+.MyIntroContent .MyIntroContentTxtBox p { font-size:13px; color:#666666;}
+.MyIntroContent .MyIntroInputBox { margin-top:10px;}
+.MyIntroContent .MyIntroInputBox textarea{width:100%; height:440px; border:1px solid #ddd; padding:10px; box-sizing:border-box;}
+
+/* 버튼 */
+.ResumeSave { text-align:center; margin-top:50px;}
+.ResumeSave button { padding:17px 52px; background:#155ed5; color:#fff; }

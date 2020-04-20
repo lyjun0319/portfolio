@@ -1,0 +1,151 @@
+/* 메인 상품리스트 타이틀 */
+.product_title { padding-bottom:12px; position:relative; }
+.product_title h2 { font-size:18px; font-weight:normal; letter-spacing:-1px;}
+.product_title h2 a { color:#252525; }
+.product_title h2 .product_guide { font-size:12px;padding:0 10px 0 5px; color:#555555; background:url('../images/main/product_title_arrow.png') no-repeat right center;   }
+
+/* 상품안내 토글 */
+.product_guide_content { width:470px; background:#fff;border:2px solid #2288ea; box-sizing:border-box; position:absolute;top:32px;left:0; z-index:100; display:none; }
+.product_guide_content .title { padding:10px; background:#2288ea; font-size:15px; color:#fff; }
+.product_guide_content .close_btn { position:absolute; top:12px; left:auto; right:10px; }
+.product_guide_content .flaticon-close:before { font-size:16px; color:#fff; }
+
+.product_guide_content .pd_guide_content{ padding:15px; box-sizing:border-box;}
+.product_guide_content .pd_guide_content h4 { font-size:15px; color:#444444; }
+.product_guide_content .pd_guide_content h4 .text_st{ font-size:15px; color:#2288ea; }
+
+.product_guide_content .pd_guide_list {margin-top:10px; width:100%;}
+.product_guide_content .pd_guide_list tr { font-size:14px; font-weight:normal;  }
+.product_guide_content .pd_guide_list tr th { text-align:left; padding:15px 0; font-size:14px; color:#666666; padding-left:10px; font-weight:400; box-sizing:border-box; }
+
+.product_guide_content .pd_guide_list tr.firsttr{border-top:1px solid #26203f; border-bottom:1px solid #dddddd;}
+.product_guide_content .pd_guide_list tr.all_product_list th{ padding-top:15px; padding-bottom:0; text-align:center; }
+.product_guide_content .pd_guide_list .product_lnk { display:inline-block; width:126px; height:35px; border:1px solid #2288ea; line-height:35px;font-size:12px; color:#2288ea; box-sizing:border-box; text-align:center;}
+
+.product_guide_content .pd_guide_list tr td { text-align:right; }
+.product_guide_content .pd_guide_list tr td.price { padding-right:5px; color:#444444; }
+.product_guide_content .pd_guide_list tr td.price strong { color:#fe3c1c; }
+.product_guide_content .pd_guide_list tr td .pay_btn { display:block; background:#2288ea; width:49px; height:24px; line-height:24px; font-size:12px; border:1px solid #0566c4; text-align:center; color:#fff; margin-right:5px;}
+
+
+/* 리스트 공통 사용  */
+.list .compnay_name { padding:10px 15px 0 15px; font-size:17px;  }
+.list .compnay_name a{ width:100%; display:block; color:#333; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.list .company_info { padding:10px 15px 0 15px;  }
+.list .company_info p{ font-size:13px; color:#666; font-weight:normal; padding-top:3px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+.list .list_inner .data { font-size:12px; color:#666; position:absolute; top:auto; left:15px; bottom:10px; }
+.list .list_inner .btn_area { font-size:12px; color:#666; position:absolute; top:auto; left:auto; right:15px; bottom:10px; }
+.list .list_inner .btn_area .flaticon-star:before { font-size:16px; color:#ddd; }
+.list .list_inner .btn_area .scrap { display:block; width:18px; height:17px; background:url('../images/main/scrap.png') no-repeat left top; }
+.list .list_inner .btn_area .scrap.active { display:block; width:18px; height:17px; background:url('../images/main/scrap.png') no-repeat right top; }
+.list .list_inner .extra_bar { position:absolute; top:0; left:0; }
+
+.list_line { margin:4px 0 15px 0; height:4px; background:url('../images/main/list/list_line_bg.png') repeat-x left center; }
+
+/* 플래티넘 공고 리스트 */
+.product_list ul.list { font-size:0;}
+.product_list ul.list li { width:24.25%; height:220px; border:2px solid #5eaefa; box-sizing:border-box; display:inline-block; vertical-align:top; margin-right:1%; margin-bottom:1%; position:relative; }
+.product_list ul.list li:first-child{ float:left; height:451px; }
+.product_list ul.list li:nth-child(4) { margin-right:0; }
+.product_list ul.list li:nth-child(11) { margin-right:0; }
+.product_list ul.list li:nth-child(7) { margin-right:0; }
+
+/* 플래티넘 리스트 로고 */
+.product_list .company_logo { padding:23px 40px 0 40px; width:184px;height:72px;}
+.product_list .company_logo img { width:100%; height:72px; }
+
+/* 플래티넘 퍼스트 리스트 */
+#section2 .different_list .company_img{ height:300px; }
+#section2 .different_list .company_img img{ width:100%; height:100%; max-height:300px; }
+#section2 .different_list .company_img_title { position:absolute; top:250px; left:25px; }
+#section2 .different_list .compnay_name { padding:40px 15px 0 15px; font-size:17px;  }
+#section2 .different_list .compnay_name a{ width:100%; display:block; color:#333; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+
+#section2 .different_list .company_info { padding:12px 15px 0 15px;  }
+#section2 .different_list .company_info p{ font-size:13px; color:#666; font-weight:200; padding-top:3px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+.product_list ul.list:after { display:block; content:""; clear:both; }
+
+/* 프리미엄 공고 리스트 */
+.product_list_2 ul.list { font-size:0;}
+.product_list_2 ul.list li { width:19.2%; height:206px; border:1px solid #77bbfb; position:relative; border-top:4px solid #77bbfb; box-sizing:border-box; display:inline-block; vertical-align:top; margin-right:1%; margin-bottom:1%; }
+.product_list_2 ul.list li:hover { border-color:#2289eb; }
+
+.product_list_2 ul.list.premium li:nth-child(9) { margin-right:0; }
+.product_list_2 ul.list.premium li:nth-child(13){ margin-right:0; }
+.product_list_2 ul.list.premium li:nth-child(18){ margin-right:0; }
+.product_list_2 ul.list.premium_default li:nth-child(5n){ margin-right:0; }
+
+
+/* 프리미엄 리스트 로고 */
+.product_list_2 .company_logo { padding:20px 34px 0 34px; }
+.product_list_2 .compnay_name { padding:20px 15px 0 15px; font-size:15px;  }
+
+/* 프리미엄 리스트 여의도 미디어 그룹 리스트 */
+#section3 .different_list{ width:39.4%; height:206px; float:right; margin-right:0; border:1px solid #cccccc;}
+#section3 .different_list_1{ width:39.4%; height:206px; float:left; border:1px solid #ccc; }
+
+.product_list ul.list:after { display:block; content:""; clear:both; }
+
+
+/* 퍼스트 공고 리스트 */
+.product_list_3 { }
+.product_list_3 .default_list { font-size:0; }
+.product_list_3 .default_list li { width:221px; height:155px; margin:-1px 0 0 -1px; border:1px solid #68ba2b; border-top:1px solid #68ba2b; display:inline-block; vertical-align:top; box-sizing:border-box; position:relative; z-index:5;}
+
+.product_list_3 .default_list li:hover { border-color:#167a02; z-index:10;}
+
+.product_list_3 .first_list { font-size:0; }
+.product_list_3 .first_list li { width:221px; height:155px; margin:-1px 0 0 -1px; border:1px solid #68ba2b;border-top:4px solid #68ba2b; display:inline-block; vertical-align:top; box-sizing:border-box; position:relative; z-index:5;}
+
+.product_list_3 .first_list li:hover { border-color:#167a02; z-index:10;}
+
+.product_list_3 .company_logo { padding:18px 26px 0 26px; width:168px; height:52px;}
+.product_list_3 .company_logo img { width:100%; height:52px; }
+.product_list_3 .compnay_name { padding:12px 15px 0 15px; font-size:14px; }
+.product_list_3 .company_info { padding:2px 15px 0 15px;  }
+
+#section4 .list_line{ margin:15px 0; }
+
+/* 스페셜 공고 리스트  */
+.product_list_4 .list { font-size:0; }
+.product_list_4 .list li { width:260px; height:258px; margin-left:20px; background:#fff; display:inline-block; vertical-align:top; border:1px solid #e8e9ec; border-bottom:3px solid #e8e9ec; box-sizing:border-box;}
+.product_list_4 .list li:first-child{margin-left:0;}
+
+.product_list_4 .company_logo { height:160px; }
+.product_list_4 .company_logo  img { width:100% height:160px;}
+.product_list_4 .company_name { font-size:14px;  padding:20px 0 0 15px; font-weight:bold; }
+.product_list_4 .company_name a { color:#2289eb; }
+.product_list_4 .company_info { padding-top:2px; font-size:13px; color:#555555; }
+.product_list_4 .recruit_data { padding:10px 0 0 15px; font-size:12px; color:#888888; }
+
+
+/* 프라임 공고 리스트 */
+.product_list_5 .default_list { font-size:0;}
+.product_list_5 .default_list li { position:relative; display:inline-block; vertical-align:top; border:1px solid #ddd; width:362px; height:92px; margin:0 7px 7px 0; padding:7px 0; box-sizing:border-box;}
+.product_list_5 .default_list li:nth-child(3n) { margin-right:0; }
+.product_list_5 .default_list dl {margin-left:114px; width:240px; height:74px; border-left:1px solid #eee; box-sizing:border-box;}
+
+.product_list_5 .prime_list { font-size:0;}
+.product_list_5 .prime_list li { position:relative; display:inline-block; vertical-align:top; border:1px solid #ff9e3f; width:362px; height:92px; margin:0 7px 7px 0; padding:7px 0; box-sizing:border-box;}
+.product_list_5 .prime_list li:nth-child(3n) { margin-right:0; }
+.product_list_5 .prime_list dl {margin-left:114px; width:240px; height:74px; border-left:1px solid #eee; box-sizing:border-box;}
+
+.product_list_5 .prime_list_emphasis { font-size:0;}
+.product_list_5 .prime_list_emphasis li { position:relative; display:inline-block; vertical-align:top; border:1px solid #ff9e3f; border-left:3px solid #ff9e3f; width:362px; height:92px; margin:0 7px 7px 0; padding:7px 0; box-sizing:border-box;}
+.product_list_5 .prime_list_emphasis li:nth-child(3n) { margin-right:0; }
+.product_list_5 .prime_list_emphasis dl {margin-left:114px; width:240px; height:74px; border-left:1px solid #eee; box-sizing:border-box;}
+
+.product_list_5 .prime_list li:hover{ border-color:#fd612b; }
+.product_list_5 .prime_list_emphasis li:hover{ border-color:#fd612b; }
+
+.product_list_5 .company_logo { width:94px; height:44px; position:absolute; left:8px; top:50%; margin-top:-22px; }
+.product_list_5 .company_logo  img { width:100% height:44px;}
+.product_list_5 .company_name { font-size:14px;  padding:6px 0 0 15px; font-weight:bold; }
+.product_list_5 .company_name a { color:#252525; }
+
+.product_list_5 .company_info { width:100%; padding:10px 0 0 15px; font-size:13px; color:#555555; box-sizing:border-box;}
+.product_list_5 .company_info a p{  width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.product_list_5 .recruit_data { padding:10px 0 0 15px; font-size:12px; color:#aaaaaa; }

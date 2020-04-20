@@ -1,0 +1,4557 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title>카카오 관리자</title>
+		<script src="js/popper.min.js"></script>
+		<script src="js/jquery-1.10.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/hcm.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/handsontable-pro@latest/dist/handsontable.full.min.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		<script src="js/datepicker.ko.js"></script>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable-pro@latest/dist/handsontable.full.min.css">
+
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/datepicker.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.theme.css">
+		
+		<link rel="stylesheet" href="css/hcm.css">
+		<link rel="stylesheet" href="css/hcm-main.css">
+		
+		<link rel="stylesheet" href="css/guide.css">
+		<link rel="stylesheet" href="css/prism.css">
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];
+
+			$(function(){
+				$('.guide_tab_content').hide();
+				$('.guide_tab_content:first').show();
+				$('.guide_nav').on('click','a',function(){
+					var tab_id = $(this).parent().attr('rel');
+					$('.guide_tab_content').hide();
+					$('#'+tab_id).show();
+					$(this).parent().addClass('active').siblings().removeClass('active');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="guide_wrap">
+			<div class="guide_nav">
+				<ul>
+					<li ><a href="html_tag_guide.html" class="a-link">HTML TAG GUIDE</a></li>
+					<li><span>레이아웃</span></li>
+					<li rel="tab01" class="active"><a href="javascript:void(0)">마크업(행) 구조</a></li>
+					<li rel="tab02"><a href="javascript:void(0)">Grid width</a></li>
+					<li rel="tab03"><a href="javascript:void(0)">Grid 가변 구조</a></li>
+					<li><span>마크업 예시</span></li>
+					<li rel="tab04"><a href="javascript:void(0)">Search(검색)<br/>레이아웃</a></li>
+					<li rel="tab11"><a href="javascript:void(0)">Search(검색) 왼쪽 마크업 예시</a></li>
+					<li rel="tab05"><a href="javascript:void(0)">입력창 마크업 예시</a></li>
+					<li rel="tab06"><a href="javascript:void(0)">입력된 마크업 예시</a></li>
+					<li rel="tab07"><a href="javascript:void(0)">테이블 마크업 예시</a></li>
+					<li rel="tab17"><a href="javascript:void(0)">테이블 마크업<br/>(th 배경색상)</a></li>
+					<li rel="tab08"><a href="javascript:void(0)">테이블 마크업 예시<br/>(하단 통계 통합)</a></li>
+					<li rel="tab18`"><a href="javascript:void(0)">테이블 마크업 예시<br/>(handsontable)</a></li>
+					<li rel="tab09"><a href="javascript:void(0)">고정값과 가변값<br/>마크업 예시</a></li>
+					<li rel="tab10"><a href="javascript:void(0)">고정값과 가변값<br/>가변값 속에 가변값</br>마크업 예시</a></li>
+					<li rel="tab12"><a href="javascript:void(0)">첫번째 변경<br/>마크업 예시</a></li>
+					<li><span>ETC  마크업</span></li>
+					<li rel="tab13"><a href="javascript:void(0)">TAB NAV</a></li>
+					<li rel="tab14"><a href="javascript:void(0)">SECTION TITLE</a></li>
+					<li rel="tab15"><a href="javascript:void(0)">PAGENATION</a></li>
+					<li rel="tab16"><a href="javascript:void(0)">TOP SCROLL BUTTON</a></li>
+					<li rel="tab19"><a href="javascript:void(0)">CLENDER LAYOUT</a></li>
+				</ul>
+			</div>
+			<div class="guide_container">
+				<div class="guide_tab_content" id="tab01">
+					<h1>레이아웃 기본구조 설명</h1>
+					<div class="guide_contents">
+						<div class="guide_text_box">
+							<p>- 전체 레이아웃 사이즈 <span class="hcm-css">1280px</span></p>
+							<p>- 전체 사이즈에서 좌우 여백값 <span class="css">16px</span> 제외 한 <span class="hcm-css">1248px</span></p>
+							<p>- <span class="hcm-class">hcm-col-1</span>  ~  <span class="hcm-class">hcm-col-12</span> </p>
+							<p>- <span class="hcm-class">hcm-col-1</span> 한개의 값은 <span class="hcm-css">104px</span> 씩 증가합니다.</p>
+							<p>- <span class="hcm-class">form-group</span> 기본 클래스이며 <span class="hcm-class">hcm-col-3</span>의 동일한 값 입니다. (<span class="hcm-css">312px</span>)</p>
+							<p>- <span class="hcm-tag">COL</span> (열의 1개의 값은 <span class="hcm-css">312px</span>이며) 4열로 작업하면 <span class="hcm-css">1248px</span>값이 나옵니다. </p>
+						</div>
+					</div>
+					<h1>행을잡는 기본구조 FORM GROUP</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-class">row</span>&nbsp; > &nbsp; <span class="hcm-class">col-12</span>&nbsp; > &nbsp;<span class="hcm-class">form-group</span> 마크업 Default 구조</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group hcm-gride-col">기본마크업구조 form-group사이즈 312px</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">form-group</span>기본클래스이며 <span class="hcm-class">hcm-col-3</span>과 동일한(<span class="hcm-css">312px</span>)사이즈입니다.</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group hcm-gride-col">기본마크업구조 form-group사이즈 312px</div><div class="form-group hcm-gride-col">기본마크업구조 form-group사이즈 312px</div><div class="form-group hcm-gride-col">기본마크업구조 form-group사이즈 312px</div><div class="form-group hcm-gride-col">기본마크업구조 form-group사이즈 312px</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">&lt;/div>
+		&lt;div class="form-group">&lt;/div>
+		&lt;div class="form-group">&lt;/div>
+		&lt;div class="form-group">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab02">
+					<h1>gride width 값</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-1</span>&nbsp;클래스를 추가하면 <span class="hcm-css">104px</span>값으로 지정이 됩니다.</div>
+									<div class="form-group hcm-col-1 hcm-gride-col">104px</div><div class="form-group hcm-col-1 hcm-gride-col">104px</div><div class="form-group hcm-col-1 hcm-gride-col">104px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-1">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-2</span>&nbsp;클래스를 추가하면 <span class="hcm-css">208px</span>값으로 지정이 됩니다.</div>
+									<div class="form-group hcm-col-2 hcm-gride-col">208px</div><div class="form-group hcm-col-2 hcm-gride-col">208px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-2">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">form-group / hcm-col-3</span>&nbsp;클래스를 추가하면 <span class="hcm-css">312px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-gride-col">312px</div><div class="form-group hcm-gride-col">312px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid ">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-4</span>&nbsp;클래스를 추가하면 <span class="hcm-css">416px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-4 hcm-gride-col">416px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-4">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-5</span>&nbsp;클래스를 추가하면 <span class="hcm-css">520px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-5 hcm-gride-col">520px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-5">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-6</span>&nbsp;클래스를 추가하면 <span class="hcm-css">624px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-6 hcm-gride-col">624px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-6">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-6</span>&nbsp;클래스를 추가하면 <span class="hcm-css">728px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-7 hcm-gride-col">728px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-7">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-8</span>&nbsp;클래스를 추가하면 <span class="hcm-css">832px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-8 hcm-gride-col">832px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-8">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-9</span>&nbsp;클래스를 추가하면 <span class="hcm-css">936px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-9 hcm-gride-col">936px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-9">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-10</span>&nbsp;클래스를 추가하면 <span class="hcm-css">1040px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-10 hcm-gride-col">1040px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-10">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-11</span>&nbsp;클래스를 추가하면 <span class="hcm-css">1144px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-11 hcm-gride-col">1144px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-11">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"><span class="hcm-class">hcm-col-12</span>&nbsp;클래스를 추가하면 <span class="hcm-css">1248px</span>값으로 지정이 됩니다</div>
+									<div class="form-group hcm-col-12 hcm-gride-col">1248px</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group hcm-col-12">&lt;/div>
+	&lt;/div>	
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab03">
+					<h1>Grid 가변 구조</h1>
+					<div class="guide_contents">
+						<div class="guide_text_box">
+							<p>- 왼쪽 고정 <span class="hcm-css">width</span>값 지정 (<span class="hcm-class">hcm-col-1~12</span>지정)</p>
+							<p>- 왼쪽을 뺀 나머지 <span class="hcm-css">width</span>값 지정 (<span class="hcm-class">hcm-col-1~12-calc</span>지정)</p>
+							<p>- <span class="hcm-class">hcm-col-1~12-calc</span>&nbsp; CSS 속성은[<span class="hcm-css">width(100% - 왼쪽 위드 값)</span>]</p>
+						</div>
+					</div>
+					<h1>Grid 가변기본 구조</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"></div>
+									<div class="row">
+										<div class="col-12 d-flex">
+											<div class="form-group hcm-col-4 hcm-gride-col"><span class="hcm-class">hcm-col-4</span>&nbsp;&nbsp;Grid 고정 값</div>
+											<div class="hcm-col-4-calc hcm-gride-col"><span class="hcm-class">hcm-col-4-calc</span>&nbsp;&nbsp;Grid 가변 값</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12 d-flex">
+		&lt;div class="form-group hcm-col-4">&lt;/div>
+		&lt;div class="hcm-col-4-calc">&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<div class="hcm-gride-txt"></div>
+									<div class="row">
+										<div class="col-12 d-flex">
+											<div class="form-group hcm-col-4 hcm-gride-col"><span class="hcm-class">hcm-col-4</span>&nbsp;&nbsp;Grid 고정 값</div>
+											<div class="hcm-col-4-calc hcm-gride-col d-flex">
+												<div class="form-group hcm-col-4 hcm-gride-col"><span class="hcm-class">hcm-col-4</span>&nbsp;&nbsp;Grid 고정 값</div>
+												<div class="hcm-col-4-calc hcm-gride-col">
+													<span class="hcm-class">hcm-col-4-calc</span>&nbsp;&nbsp;Grid 가변 값
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-12 d-flex">
+		&lt;div class="form-group hcm-col-4">&lt;/div>
+		&lt;div class="hcm-col-4-calc">
+			&lt;div class="form-group hcm-col-4">&lt;/div>
+				&lt;div class="hcm-col-4-calc">
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab04">
+					<h1>SEARCH 화면 기본 마크업 구조</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-search-wrap</span> 최상위 부모가 됩니다.</p>
+										<p>- 기본 레이아웃 처럼 <span class="hcm-class">row</span>&nbsp; > &nbsp;<span class="hcm-class">col-12</span>&nbsp; > &nbsp;<span class="hcm-class">form-group</span>마크업 적용</p>
+										<p>- <span class="hcm-class">form-group</span>&nbsp; 아래로 <span class="hcm-tag">label, input, select, button</span> 태그로 작업을 합니다.</p>
+									</div>
+									<!-- hcm-search-wrap -->
+									<div class="hcm-search-wrap">
+										<div class="row">
+											<div class="col-12 d-flex">
+												<div class="form-group ui-widget">
+													<label for="hcm-program-id">작업년월</label>
+													<input type="text" class="form-control "/>
+												</div>
+												<div class="form-group">
+													<label for="hcm-program-name">기준일</label>
+													<input type="text" class="form-control "/>
+													<button type="button" class="hcm-btn-calnder hcm-btn-calnder1"></button>
+												</div>
+												<div class="form-group">
+													<label for="hcm-program-url">급여지급유형</label>
+													<select name="" id="" class="form-control">
+														<option value="">전체</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="">백그라운드 인풋</label>
+													<input type="text" class="form-control hcm-bg-magnifying">
+												</div>
+												<div class="ml-auto"><button type="button" class="hcm-btn-form">조회</button></div>
+											</div>
+										</div>
+									</div><!-- hcm-search-wrap -->
+									
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-search-wrap">
+	&lt;div class="row">
+		&lt;div class="col-12 d-flex">
+			&lt;div class="form-group">
+				&lt;label for="hcm-program-id">작업년월&lt;/label>
+				&lt;input type="text" id="datepickers" class="form-control hcm-datepicker"/>
+				&lt;button type="button" class="hcm-btn-calnder hcm-btn-calnder1">&lt;/button>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="hcm-program-name">기준일&lt;/label>
+				&lt;input type="text" id="datepickers" class="form-control hcm-datepicker"/>
+				&lt;button type="button" class="hcm-btn-calnder hcm-btn-calnder1">&lt;/button>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="hcm-program-url">급여지급유형&lt;/label>
+				&lt;select name="" id="" class="form-control">
+					&lt;option value="">전체&lt;/option>
+				&lt;/select>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="">백그라운드 인풋&lt;/label>
+				&lt;input type="text" class="form-control hcm-bg-magnifying">
+			&lt;/div>
+			&lt;div class="ml-auto">&lt;button type="button" class="hcm-btn-form">조회&lt;/button>&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab05">
+					<h1>입력창 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-detail-box</span> 최상위 부모가 됩니다.</p>
+										<p>- 기본 레이아웃 처럼 <span class="hcm-class">row</span>&nbsp; > &nbsp;<span class="hcm-class">col-12</span>&nbsp; > &nbsp;<span class="hcm-class">form-group</span>마크업 적용</p>
+										<p>- <span class="hcm-class">form-group</span>&nbsp; 아래로 <span class="hcm-tag">label, input, select, button</span> 태그로 작업을 합니다.</p>
+									</div>
+									<!-- hcm-detail-box -->
+									<div class="hcm-detail-box">
+										<h3 class="row">
+											<div class="col-6">프로그램 상세</div>
+										</h3>
+
+										<div class="row hcm-top-bd"></div>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label01" class="hcm-label-strong">프로그램ID</label>
+													<input type="text" class="form-control" id="label01" value="AppDbQuery" />
+												</div>
+												<div class="form-group hcm-col-6">
+													<label for="label02" class="hcm-label-strong">프로그램명</label>
+													<input type="text" class="form-control" id="label02" value="AppDbQuery" />
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label03" class="hcm-label-strong">VIEW PAGE</label>
+													<input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+												</div>
+												<div class="form-group hcm-col-6">
+													<label for="label04">프로그램 UEL </label>
+													<input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label04">버튼 기능</label>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-check-input" value="">신규
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-check-input" value="">삭제
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-check-input" value="">조회
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<input type="checkbox" class="form-check-input" value="">저장
+														</label>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label for="label05">작업회사여부</label>
+													<select name="" id="label05" class="form-control">
+														<option value="">아니오</option>
+														<option value="">예</option>
+													</select>
+												</div>
+
+												<div class="form-group disabled">
+													<label for="label06">기준일자여부</label>
+													<select name="" id="label06" class="form-control">
+														<option value="">아니오</option>
+														<option value="">예</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label07">신청자코드</label>
+													<input type="text" id="label07" class="form-control" value="Q18535651" />
+												</div>
+												<div class="form-group">
+													<label for="label08">공용메뉴얼</label>
+													<input type="text" id="label08" class="form-control" />
+													<button type="button" class="hcm-btn-icon-share">공유하기</button>
+												</div>
+												<div class="form-group">
+													<label for="label09">관리자메뉴얼</label>
+													<input type="text" id="label09" class="form-control"/>
+													<button type="button" class="hcm-btn-icon-share">공유하기</button>
+												</div>
+											</div>
+										</div>
+										<div class="row hcm-btm-bd"></div>
+									</div><!-- hcm-detail-box -->
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-detail-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6">프로그램 상세&lt;/div>
+	&lt;/h3>
+
+	&lt;div class="row hcm-top-bd">&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label01" class="hcm-label-strong">프로그램ID&lt;/label>
+				&lt;input type="text" class="form-control" id="label01" value="AppDbQuery" />
+			&lt;/div>
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label02" class="hcm-label-strong">프로그램명&lt;/label>
+				&lt;input type="text" class="form-control" id="label02" value="AppDbQuery" />
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label03" class="hcm-label-strong">VIEW PAGE&lt;/label>
+				&lt;input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+			&lt;/div>
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label04">프로그램 UEL&lt;/label>
+				&lt;input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label04">버튼 기능&lt;/label>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;input type="checkbox" class="form-check-input" value="">신규
+					&lt;/label>
+				&lt;/div>
+
+				&lt;iv class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;input type="checkbox" class="form-check-input" value="">삭제
+					&lt;/label>
+				&lt;/div>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;input type="checkbox" class="form-check-input" value="">조회
+					&lt;/label>
+				&lt;/div>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;input type="checkbox" class="form-check-input" value="">저장
+					&lt;/label>
+				&lt;/div>
+			&lt;/div>
+
+			&lt;div class="form-group">
+				&lt;label for="label05">작업회사여부&lt;/label>
+				&lt;select name="" id="label05" class="form-control">
+					&lt;option value="">아니오&lt;/option>
+					&lt;option value="">예&lt;/option>
+				&lt;/select>
+			&lt;/div>
+
+			&lt;div class="form-group disabled">
+				&lt;label for="label06">기준일자여부&lt;/label>
+				&lt;select name="" id="label06" class="form-control">
+					&lt;option value="">아니오&lt;/option>
+					&lt;option value="">예&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label07">신청자코드&lt;/label>
+				&lt;input type="text" id="label07" class="form-control" value="Q18535651" />
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="label08">공용메뉴얼&lt;/label>
+				&lt;input type="text" id="label08" class="form-control" />
+				&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="label09">관리자메뉴얼&lt;/label>
+				&lt;input type="text" id="label09" class="form-control"/>
+				&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row hcm-btm-bd">&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab06">
+					<h1>입력된 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-view-detail</span> 최상위 부모가 됩니다.</p>
+										<p>- <span class="hcm-class">hcm-view-detail</span> 데이터 값은 <span class="hcm-tag">span</span>안에 생성 됩니다.</p>
+										<p>- 기본 레이아웃 처럼 <span class="hcm-class">row</span>&nbsp; > &nbsp;<span class="hcm-class">col-12</span>&nbsp; > &nbsp;<span class="hcm-class">form-group</span>마크업 적용</p>
+									</div>
+									<!-- hcm-view-box -->
+									<div class="hcm-view-detail">
+										<h3 class="row">
+											<div class="col-6 hcm-title">프로그램 상세 View</div>
+										</h3>
+										<div class="row hcm-top-bd"></div>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label01">프로그램ID</label>
+													<span>AppDbQuery</span>
+												</div>
+												<div class="form-group hcm-col-6">
+													<label for="label02">프로그램명</label>
+													<span>AppDbQuery</span>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label03">VIEW PAGE</label>
+													<span>engine_app::AppDbQuery.xfdl</span>
+												</div>
+												<div class="form-group hcm-col-6">
+													<label for="label04">프로그램 UEL</label>
+													<span>/benit/hr/engine/app/controller/AppDbQuery</span>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label04">버튼 기능</label>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<span>신규</span>
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<span>삭제</span>
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<span>추가</span>
+														</label>
+													</div>
+
+													<div class="form-check-inline">
+														<label class="form-check-label">
+															<span>저장</span>
+														</label>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label for="label05">작업회사여부</label>
+													<span>아니오</span>
+												</div>
+
+												<div class="form-group disabled">
+													<label for="label06">기준일자여부</label>
+													<span>예</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group hcm-col-6">
+													<label for="label07">신청자코드</label>
+													<span>Q18535651</span>
+												</div>
+												<div class="form-group">
+													<label for="label08">공용메뉴얼</label>
+													<span>test</span>
+												</div>
+												<div class="form-group">
+													<label for="label09">관리자메뉴얼</label>
+													<span>test</span>
+												</div>
+											</div>
+										</div>
+										<div class="row hcm-btm-bd"></div>
+									</div>
+									<!-- hcm-view-box -->
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-view-detail">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">프로그램 상세 View&lt;/div>
+	&lt;/h3>
+	&lt;div class="row hcm-top-bd">&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label01">프로그램ID&lt;/label>
+				&lt;span>AppDbQuery&lt;/span>
+			&lt;/div>
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label02">프로그램명&lt;/label>
+				&lt;span>AppDbQuery&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label03">VIEW PAGE&lt;/label>
+				&lt;span>engine_app::AppDbQuery.xfdl&lt;/span>
+			&lt;/div>
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label04">프로그램 UEL&lt;/label>
+				&lt;span>/benit/hr/engine/app/controller/AppDbQuery&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label04">버튼 기능&lt;/label>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;span>신규&lt;/span>
+					&lt;/label>
+				&lt;/div>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;span>삭제&lt;/span>
+					&lt;/label>
+				&lt;/div>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;span>추가&lt;/span>
+					&lt;/label>
+				&lt;/div>
+
+				&lt;div class="form-check-inline">
+					&lt;label class="form-check-label">
+						&lt;span>저장&lt;/span>
+					&lt;/label>
+				&lt;/div>
+			&lt;/div>
+
+			&lt;div class="form-group">
+				&lt;label for="label05">작업회사여부&lt;/label>
+				&lt;span>아니오&lt;/span>
+			&lt;/div>
+
+			&lt;div class="form-group">
+				&lt;label for="label06">기준일자여부&lt;/label>
+				&lt;span>예&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="form-group hcm-col-6">
+				&lt;label for="label07">신청자코드&lt;/label>
+				&lt;span>Q18535651&lt;/span>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="label08">공용메뉴얼&lt;/label>
+				&lt;span>test&lt;/span>
+			&lt;/div>
+			&lt;div class="form-group">
+				&lt;label for="label09">관리자메뉴얼&lt;/label>
+				&lt;span>test&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row hcm-btm-bd">&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="guide_tab_content" id="tab07">
+					<h1>테이블 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-list-box</span> 최상위 부모가 됩니다.</p>
+										<p>- <span class="hcm-tag">table</span>마크업에 <span class="hcm-class">hcm-list-table</span>클래스를 추가하여 <span class="hcm-tag">table</span>을 컨트롤 합니다.</p>
+									</div>
+									<!-- hcm-list-box -->
+									<div class="hcm-list-box">
+
+										<h3 class="row">
+											<div class="col-6 hcm-title">프로그램 목록</div>
+											<div class="col-6 d-flex justify-content-end">
+												<div class="btn-group hcm-btn-dropdown">
+													<button type="button" class="">추가</button>
+													<button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown"></button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">저장</a>
+														<a class="dropdown-item" href="#">삭제</a>
+													</div>
+												</div>
+												<button type="button" class="hcm-btn-list-align"><span>상단</span><span class="align-self-center"></span></button>
+												<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+												<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+												<button type="button" class="hcm-btn-icon-close" title="취소/닫기">취소/닫기</button>
+												<button type="button" class="hcm-btn-icon-upload" title="업로드">업로드</button>
+												<button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드</button>
+												<button type="button" class="hcm-btn-icon-pdf" title="pdf">pdf</button>
+												<button type="button" class="hcm-btn-icon-excel" title="엑셀">엑실</button>
+												<button type="button" class="hcm-btn-icon-trashcan" title="휴지통">휴지통</button>
+												<button type="button" class="hcm-btn-icon-addfile" title="첨부파일">첨부파일</button>
+												<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+											</div>
+										</h3>
+										
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table"> 
+													<colgroup>
+														<col class="hcm-table-count" span=""/>
+														<col class="hcm-tabel-space"/>
+													</colgroup>	
+													<thead>
+														<tr>
+															<th>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</th>
+															<th>No</th>
+															<th>상태</th>
+															<th>운영ID</th>
+															<th>프로그램ID</th>
+															<th>프로그램명</th>
+															<th>프로그램URL</th>
+															<th>사용여부</th>
+															<th>신규</th>
+															<th>삭제</th>
+															<th>조회</th>
+															<th>저장</th>
+															<th>공용매뉴얼</th>
+															<th>관리자메뉴얼</th>
+															<th>버튼로그</th>
+															<th>타입</th>
+															<th>권한부여</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>01</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>02</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>03</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>04</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<input type="checkbox" id="hcm-list-new04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-del04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-search04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-save04"/>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>05</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-4">
+												<div class="hcm-pgbar-record">
+													Showing<span>1</span>to<span>12</span>of<span>40<span>entries
+												</div>
+											</div>
+											<div class="col-4">
+												<ul class="pagination">
+													<li class="page-item first"><a class="page-link " title="First" href="#">first</a></li>
+													<li class="page-item prev"><a class="page-link" title="Previous" href="#">previous</a></li>
+													<li class="page-item"><a class="page-link" href="#">1</a></li>
+													<li class="page-item"><a class="page-link" href="#">2</a></li>
+													<li class="page-item"><a class="page-link" href="#">3</a></li>
+													<li class="page-item next"><a class="page-link" title="Next" href="#">next</a></li>
+													<li class="page-item last"><a class="page-link" title="Last" href="#">all next</a></li>
+												</ul>
+											</div>
+											<div class="col-4">
+												<div class="hcm-page-per-record">
+													<label for="">record per page</label>
+													<select name="" id="">
+														<option value="">5</option>
+														<option value="">10</option>
+														<option value="">15</option>
+														<option value="">20</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div><!-- hcm-list-box -->
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+		&lt;div class="col-6 d-flex justify-content-end">
+			&lt;div class="btn-group hcm-btn-dropdown">
+				&lt;button type="button" class="">추가&lt;/button>
+				&lt;button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown">&lt;/button>
+				&lt;div class="dropdown-menu">
+					&lt;a class="dropdown-item" href="#">저장&lt;/a>
+					&lt;a class="dropdown-item" href="#">삭제&lt;/a>
+				&lt;/div>
+			&lt;/div>
+			&lt;button type="button" class="hcm-btn-list-align">&lt;span>상단&lt;/span>&lt;span class="align-self-center">&lt;/span>&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-close" title="취소/닫기">취소/닫기&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-upload" title="업로드">업로드&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-pdf" title="pdf">pdf&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-excel" title="엑셀">엑실&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-trashcan" title="휴지통">휴지통&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-addfile" title="첨부파일">첨부파일&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;table class="hcm-list-table"> 
+				&lt;colgroup>
+					&lt;col class="hcm-table-count" span=""/>
+					&lt;col class="hcm-tabel-space"/>
+				&lt;/colgroup>	
+				&lt;thead>
+					&lt;tr>
+						&lt;th>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/th>
+						&lt;th>No&lt;/th>
+						&lt;th>상태&lt;/th>
+						&lt;th>운영ID&lt;/th>
+						&lt;th>프로그램ID&lt;/th>
+						&lt;th>프로그램명&lt;/th>
+						&lt;th>프로그램URL&lt;/th>
+						&lt;th>사용여부&lt;/th>
+						&lt;th>신규&lt;/th>
+						&lt;th>삭제&lt;/th>
+						&lt;th>조회&lt;/th>
+						&lt;th>저장&lt;/th>
+						&lt;th>공용매뉴얼&lt;/th>
+						&lt;th>관리자메뉴얼&lt;/th>
+						&lt;th>버튼로그&lt;/th>
+						&lt;th>타입&lt;/th>
+						&lt;th>권한부여&lt;/th>
+						&lt;th>&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody>
+					&lt;tr>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>01&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>DB쿼리&lt;/td>
+						&lt;td>/benit/hr/engine/app/controller/AppDbQuery&lt;/td>
+						&lt;td>예&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>공용메뉴얼&lt;/td>
+						&lt;td>Y&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-table-list">권한여부&lt;/button>
+						&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>01&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>DB쿼리&lt;/td>
+						&lt;td>/benit/hr/engine/app/controller/AppDbQuery&lt;/td>
+						&lt;td>예&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>공용메뉴얼&lt;/td>
+						&lt;td>Y&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-table-list">권한여부&lt;/button>
+						&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-4">
+			&lt;div class="hcm-pgbar-record">
+				Showing&lt;span>1&lt;/span>to&lt;span>12&lt;/span>of&lt;span>40&lt;span>entries
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="col-4">
+			&lt;ul class="pagination">
+				&lt;li class="page-item first">&lt;a class="page-link " title="First" href="#">first&lt;/a>&lt;/li>
+				&lt;li class="page-item prev">&lt;a class="page-link" title="Previous" href="#">previous&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">1&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">2&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">3&lt;/a>&lt;/li>
+				&lt;li class="page-item next">&lt;a class="page-link" title="Next" href="#">next&lt;/a>&lt;/li>
+				&lt;li class="page-item last">&lt;a class="page-link" title="Last" href="#">all next&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+		&lt;div class="col-4">
+			&lt;div class="hcm-page-per-record">
+				&lt;label for="">record per page&lt;/label>
+				&lt;select name="" id="">
+					&lt;option value="">5&lt;/option>
+					&lt;option value="">10&lt;/option>
+					&lt;option value="">15&lt;/option>
+					&lt;option value="">20&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-list-box</span> 최상위 부모가 됩니다.</p>
+										<p>- <span class="hcm-tag">table</span>마크업에 <span class="hcm-class">hcm-list-table</span>클래스를 추가하여 <span class="hcm-tag">table</span>을 컨트롤 합니다.</p>
+										<p>- <span class="hcm-class">hcm-list-table</span>클래스에 <span class="hcm-class">hcm-table-border-none</span>를 추가하면 좌우 보더값이 사라집니다.</p>
+									</div>
+									<!-- hcm-list-box -->
+									<div class="hcm-list-box">
+
+										<h3 class="row">
+											<div class="col-6 hcm-title">프로그램 목록</div>
+											<div class="col-6 d-flex justify-content-end">
+												<div class="btn-group hcm-btn-dropdown">
+													<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+													<button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown"></button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">저장</a>
+														<a class="dropdown-item" href="#">삭제</a>
+													</div>
+												</div>
+												<button type="button" class="hcm-btn-icon-excelupload" title="엑셀 업로드">엑셀 업로드</button>
+											</div>
+										</h3>
+										
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table hcm-table-border-none"> 
+													<colgroup>
+														<col class="hcm-table-count" span=""/>
+														<col class="hcm-tabel-space"/>
+													</colgroup>	
+													<thead>
+														<tr>
+															<th>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</th>
+															<th>No</th>
+															<th>상태</th>
+															<th>운영ID</th>
+															<th>프로그램ID</th>
+															<th>프로그램명</th>
+															<th>프로그램URL</th>
+															<th>사용여부</th>
+															<th>신규</th>
+															<th>삭제</th>
+															<th>조회</th>
+															<th>저장</th>
+															<th>공용매뉴얼</th>
+															<th>관리자메뉴얼</th>
+															<th>버튼로그</th>
+															<th>타입</th>
+															<th>권한부여</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>01</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>02</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>03</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>04</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<input type="checkbox" id="hcm-list-new04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-del04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-search04"/>
+															</td>
+															<td>
+																<input type="checkbox" id="hcm-list-save04"/>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>05</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-4">
+												<div class="hcm-pgbar-record">
+													Showing<span>1</span>to<span>12</span>of<span>40<span>entries
+												</div>
+											</div>
+											<div class="col-4">
+												<ul class="pagination">
+													<li class="page-item first"><a class="page-link " title="First" href="#">first</a></li>
+													<li class="page-item prev"><a class="page-link" title="Previous" href="#">previous</a></li>
+													<li class="page-item"><a class="page-link" href="#">1</a></li>
+													<li class="page-item"><a class="page-link" href="#">2</a></li>
+													<li class="page-item"><a class="page-link" href="#">3</a></li>
+													<li class="page-item next"><a class="page-link" title="Next" href="#">next</a></li>
+													<li class="page-item last"><a class="page-link" title="Last" href="#">all next</a></li>
+												</ul>
+											</div>
+											<div class="col-4">
+												<div class="hcm-page-per-record">
+													<label for="">record per page</label>
+													<select name="" id="">
+														<option value="">5</option>
+														<option value="">10</option>
+														<option value="">15</option>
+														<option value="">20</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div><!-- hcm-list-box -->
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+		&lt;div class="col-6 d-flex justify-content-end">
+			&lt;div class="btn-group hcm-btn-dropdown">
+				&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+				&lt;button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown">&lt;/button>
+				&lt;div class="dropdown-menu">
+					&lt;a class="dropdown-item" href="#">저장&lt;/a>
+					&lt;a class="dropdown-item" href="#">삭제&lt;/a>
+				&lt;/div>
+			&lt;/div>
+			&lt;button type="button" class="hcm-btn-icon-excelupload" title="엑셀 업로드">엑셀 업로드&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;table class="hcm-list-table"> 
+				&lt;colgroup>
+					&lt;col class="hcm-table-count" span=""/>
+					&lt;col class="hcm-tabel-space"/>
+				&lt;/colgroup>	
+				&lt;thead>
+					&lt;tr>
+						&lt;th>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/th>
+						&lt;th>No&lt;/th>
+						&lt;th>상태&lt;/th>
+						&lt;th>운영ID&lt;/th>
+						&lt;th>프로그램ID&lt;/th>
+						&lt;th>프로그램명&lt;/th>
+						&lt;th>프로그램URL&lt;/th>
+						&lt;th>사용여부&lt;/th>
+						&lt;th>신규&lt;/th>
+						&lt;th>삭제&lt;/th>
+						&lt;th>조회&lt;/th>
+						&lt;th>저장&lt;/th>
+						&lt;th>공용매뉴얼&lt;/th>
+						&lt;th>관리자메뉴얼&lt;/th>
+						&lt;th>버튼로그&lt;/th>
+						&lt;th>타입&lt;/th>
+						&lt;th>권한부여&lt;/th>
+						&lt;th>&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody>
+					&lt;tr>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>01&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>DB쿼리&lt;/td>
+						&lt;td>/benit/hr/engine/app/controller/AppDbQuery&lt;/td>
+						&lt;td>예&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>공용메뉴얼&lt;/td>
+						&lt;td>Y&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-table-list">권한여부&lt;/button>
+						&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>01&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>DB쿼리&lt;/td>
+						&lt;td>/benit/hr/engine/app/controller/AppDbQuery&lt;/td>
+						&lt;td>예&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>공용메뉴얼&lt;/td>
+						&lt;td>Y&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-table-list">권한여부&lt;/button>
+						&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="row">
+		&lt;div class="col-4">
+			&lt;div class="hcm-pgbar-record">
+				Showing&lt;span>1&lt;/span>to&lt;span>12&lt;/span>of&lt;span>40&lt;span>entries
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="col-4">
+			&lt;ul class="pagination">
+				&lt;li class="page-item first">&lt;a class="page-link " title="First" href="#">first&lt;/a>&lt;/li>
+				&lt;li class="page-item prev">&lt;a class="page-link" title="Previous" href="#">previous&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">1&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">2&lt;/a>&lt;/li>
+				&lt;li class="page-item">&lt;a class="page-link" href="#">3&lt;/a>&lt;/li>
+				&lt;li class="page-item next">&lt;a class="page-link" title="Next" href="#">next&lt;/a>&lt;/li>
+				&lt;li class="page-item last">&lt;a class="page-link" title="Last" href="#">all next&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+		&lt;div class="col-4">
+			&lt;div class="hcm-page-per-record">
+				&lt;label for="">record per page&lt;/label>
+				&lt;select name="" id="">
+					&lt;option value="">5&lt;/option>
+					&lt;option value="">10&lt;/option>
+					&lt;option value="">15&lt;/option>
+					&lt;option value="">20&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab08">
+					<h1>테이블 마크업 예시(하단 통계 통합)</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-list-box</span> 최상위 부모가 됩니다.</p>
+										<p>- <span class="hcm-tag">table</span> 마크업에 <span class="hcm-class">hcm-list-table</span>클래스를 추가하여 <span class="hcm-tag">table</span>을 컨트롤 합니다.</p>
+										<p>- <span class="hcm-tag">table</span> 마지막 <span class="hcm-tag">tr</span>에<span class="hcm-class">hcm-total-calc</span>클래스를 추가하여 <span class="hcm-tag">td</span>요소 스타일 적용 합니다.</p>
+									</div>
+									<div class="hcm-list-box">
+										<h3 class="row">
+											<div class="col-6 hcm-title">급여일</div>
+											<div class="col-6 text-right">
+												<button type="button" class="hcm-btn-icon-excelupload" title="엑셀 업로드">엑셀 업로드</button>
+												<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+											</div>
+										</h3>
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table"> 
+													<thead>
+														<tr>
+															<th>NO</th>
+															<th>생성구분</th>
+															<th>코스트센터</th>
+															<th>계정명</th>
+															<th>차번</th>
+															<th>대변</th>
+															<th>처리상태</th>
+															<th>인원수</th>
+															<th>코스트센터코드</th>
+															<th>계정코드</th>
+															<th>전표생성번호</th>
+															<th>차변(계정별)</th>
+															<th>대변(계정별)</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-12-11</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-12-11</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-12-11</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>00</td>
+															<td>대기중</td>
+															<td>카카오그룹</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-10-20</td>
+															<td>2018-11-11</td>
+															<td>2018-12-11</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr class="hcm-total-calc">
+															<td colspan="4">
+																합계
+															</td>
+															<td colspan="2">0</td>
+															<td colspan="7">0</td>
+															<td><span></span></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">급여일&lt;/div>
+		&lt;div class="col-6 text-right">
+			&lt;button type="button" class="hcm-btn-icon-excelupload" title="엑셀 업로드">엑셀 업로드&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	&lt;div class="row">
+		&lt;div class="col-12">ㄴ
+			&lt;table class="hcm-list-table"> 
+				&lt;thead>
+					&lt;tr>
+						&lt;th>NO&lt;/th>
+						&lt;th>생성구분&lt;/th>
+						&lt;th>코스트센터&lt;/th>
+						&lt;th>계정명&lt;/th>
+						&lt;th>차번&lt;/th>
+						&lt;th>대변&lt;/th>
+						&lt;th>처리상태&lt;/th>
+						&lt;th>인원수&lt;/th>
+						&lt;th>코스트센터코드&lt;/th>
+						&lt;th>계정코드&lt;/th>
+						&lt;th>전표생성번호&lt;/th>
+						&lt;th>차변(계정별)&lt;/th>
+						&lt;th>대변(계정별)&lt;/th>
+						&lt;th>&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody>
+					&lt;tr>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-12-11&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-12-11&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-12-11&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>00&lt;/td>
+						&lt;td>대기중&lt;/td>
+						&lt;td>카카오그룹&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-10-20&lt;/td>
+						&lt;td>2018-11-11&lt;/td>
+						&lt;td>2018-12-11&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+				&lt;tfoot>
+					&lt;tr class="hcm-total-calc">
+						&lt;td colspan="4">합계&lt;/td>
+						&lt;td colspan="2">0&lt;/td>
+						&lt;td colspan="7">0&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tfoot>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab09">
+					<h1>레이아웃 고정값과 가변값 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">d-flex</span>최상위 부모가 됩니다.</p>
+										<p>- 왼쪽 레이아웃에<span class="hcm-class">hcm-col-4</span>고정값 지정 합니다.</p>
+										<p>- 오른쪽 레이아웃은 <span class="hcm-class">hcm-col-4-cala</span>지정 합니다. [<span class="hcm-css">(100% - hcm-col-4(width값))</span>]</p>
+										<p>- <span class="hcm-class">d-flex</span>최상위 부모에 지정후 <span class="hcm-class">hcm-col-4</span>고정값 지정,<span class="hcm-class">hcm-col-4-calc</span>가변값 지정합니다.</p>
+									</div>
+									<div class="d-flex">
+										<div class="hcm-col-4">
+											<div class="hcm-list-box">
+												<h3 class="row">
+													<div class="col-6 hcm-title">급여일</div>
+													<div class="col-6 text-right">
+														<button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀 업로드</button>
+														<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+													</div>
+												</h3>
+												<div class="row">
+													<div class="col-12">
+														<table class="hcm-list-table"> 
+															<colgroup>
+																<col class="hcm-table-count" span="21">
+																<col class="hcm-tabel-space">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th>NO</th>
+																	<th>상태</th>
+																	<th>급여그룹</th>
+																	<th>산정기간유영</th>
+																	<th>시작일</th>
+																	<th>종료일</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="hcm-col-4-calc">
+											<div class="hcm-list-box">
+												<h3 class="row">
+													<div class="col-6 hcm-title">급여일</div>
+													<div class="col-6 text-right">
+														<button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀 업로드</button>
+														<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+													</div>							
+												</h3>
+												<div class="row">
+													<div class="col-12">
+														<table class="hcm-list-table"> 
+															<thead>
+																<tr>
+																	<th>NO</th>
+																	<th>생성구분</th>
+																	<th>코스트센터</th>
+																	<th>계정명</th>
+																	<th>차번</th>
+																	<th>대변</th>
+																	<th>처리상태</th>
+																	<th>인원수</th>
+																	<th>코스트센터코드</th>
+																	<th>계정코드</th>
+																	<th>전표생성번호</th>
+																	<th>차변(계정별)</th>
+																	<th>대변(계정별)</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>00</td>
+																	<td>대기중</td>
+																	<td>카카오그룹</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-10-20</td>
+																	<td>2018-11-11</td>
+																	<td>2018-12-11</td>
+																	<td><span></span></td>
+																</tr>
+																<tr class="hcm-total-calc">
+																	<td colspan="4">
+																		합계
+																	</td>
+																	<td colspan="2">0</td>
+																	<td colspan="7">0</td>
+																	<td><span></span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="d-flex">
+	&lt;div class="hcm-col-4">
+		&lt;div class="hcm-list-box">
+			&lt;h3 class="row">
+				&lt;div class="col-6 hcm-title">급여일&lt;/div>
+				&lt;div class="col-6 text-right">
+					&lt;button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀 업로드&lt;/button>
+					&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+				&lt;/div>
+			&lt;/h3>
+			&lt;div class="row">
+				&lt;div class="col-12">
+					&lt;table class="hcm-list-table"> 
+						&lt;colgroup>
+							&lt;col class="hcm-table-count" span="21">
+							&lt;col class="hcm-tabel-space">
+						&lt;/colgroup>
+						&lt;thead>
+							&lt;tr>
+								&lt;th>NO&lt;/th>
+								&lt;th>상태&lt;/th>
+								&lt;th>급여그룹&lt;/th>
+								&lt;th>산정기간유영&lt;/th>
+								&lt;th>시작일&lt;/th>
+								&lt;th>종료일&lt;/th>
+							&lt;/tr>
+						&lt;/thead>
+						&lt;tbody>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+						&lt;/tbody>
+					&lt;/table>
+				&lt;/div>
+			&lt;/div>	
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="hcm-col-4-calc">
+		&lt;div class="hcm-list-box">
+			&lt;h3 class="row">
+				&lt;div class="col-6 hcm-title">급여일&lt;/div>
+				&lt;div class="col-6 text-right">
+					&lt;button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀 업로드&lt;/button>
+					&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+				&lt;/div>							
+			&lt;/h3>
+			&lt;div class="row">
+				&lt;div class="col-12">
+					&lt;table class="hcm-list-table"> 
+						&lt;thead>
+							&lt;tr>
+								&lt;th>NO&lt;/th>
+								&lt;th>생성구분&lt;/th>
+								&lt;th>코스트센터&lt;/th>
+								&lt;th>계정명&lt;/th>
+								&lt;th>차번&lt;/th>
+								&lt;th>대변&lt;/th>
+								&lt;th>처리상태&lt;/th>
+								&lt;th>인원수&lt;/th>
+								&lt;th>코스트센터코드&lt;/th>
+								&lt;th>계정코드&lt;/th>
+								&lt;th>전표생성번호&lt;/th>
+								&lt;th>차변(계정별)&lt;/th>
+								&lt;th>대변(계정별)&lt;/th>
+								&lt;th>&lt;/th>
+							&lt;/tr>
+						&lt;/thead>
+						&lt;tbody>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>00&lt;/td>
+								&lt;td>대기중&lt;/td>
+								&lt;td>카카오그룹&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-10-20&lt;/td>
+								&lt;td>2018-11-11&lt;/td>
+								&lt;td>2018-12-11&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr class="hcm-total-calc">
+								&lt;td colspan="4">합계&lt;/td>
+								&lt;td colspan="2">0&lt;/td>
+								&lt;td colspan="7">0&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+						&lt;/tbody>
+					&lt;/table>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab10">
+					<h1>레이아웃 고정값과 가변값 마크업 예시(가변값안에 또다른 가변값)</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-layout-calc, d-flex</span> 최상위 부모가 됩니다.</p>
+										<p>- 마크업 구조 <span class="hcm-class">hcm-layout-calc, d-flex</span>&nbsp;&nbsp;>&nbsp;&nbsp;<span class="hcm-class">hcm-col-4 / hcm-col-4-calc</span>&nbsp;&nbsp;>&nbsp;&nbsp;<span class="hcm-class">hcm-list-box / hcm-search-wrap, hcm-detail-box</span></p>
+										<div class="language-markup">
+											<pre>
+												<code>
+&lt;div class="hcm-layout-calc d-flex">
+	&lt;div class="hcm-col-4">
+		&lt;div class="hcm-search-wrap">
+			&lt;div class="row">
+				&lt;div class="col-12">&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="hcm-list-box">
+			&lt;div class="row">
+				&lt;div class="col-12">&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="hcm-detail-box">
+			&lt;div class="row">
+				&lt;div class="col-12">&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="hcm-view-detail">
+			&lt;div class="row">
+				&lt;div class="col-12">&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="hcm-col-4-calc">
+		&lt;div class="hcm-search-wrap">
+			&lt;div class="row">
+				&lt;div class="col-12">&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="d-felx">
+			&lt;div class="hcm-col-4">&lt;/div>
+			&lt;div class="hcm-col-4-calc">&lt;/div>
+		&lt;/div>	
+	&lt;/div>
+&lt;/div>
+												</code>
+											</pre>
+										</div>
+										<p>-  기본구조형태 위에 소스입니다.<span class="hcm-class">hcm-search-wrap / hcm-list-box / hcm-detail-box / hcm-view-detail</span>필요할때 들어갈 부분들입니다.</p>
+									</div>
+									<div class="hcm-layout-calc d-flex">
+										<div class="hcm-col-4">
+											<div class="hcm-list-box">
+												<h3 class="row">
+													<div class="col-6 hcm-title">이직대상자</div>
+													<div class="col-6 d-flex justify-content-end">
+														<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+														<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+														<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+														<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+													</div>							
+												</h3>
+												<div class="row">
+													<div class="col-12">
+														<table class="hcm-list-table"> 
+															<thead>
+																<tr>
+																	<th>NO</th>
+																	<th>상태</th>
+																	<th>성명</th>
+																	<th>주민등록번호</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+																<tr>
+																	<td>00</td>
+																	<td>카카오</td>
+																	<td>카카오</td>
+																	<td>000000-00000</td>
+																	<td><span></span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="hcm-col-4-calc">
+											<div class="hcm-search-wrap">
+												<div class="row">
+													<div class="col-12 d-flex">
+														<div class="form-group ui-widget">
+															<form action="">
+																<label for="hcm-program-id">프로그램ID</label>
+																<input type="text" class="form-control" id="hcm-program-id">
+																<button type="submit" class="hcm-btn-icon-search">검색</button>
+															</form>
+														</div>
+														<div class="form-group">
+															<label for="hcm-program-name">프로그램명</label>
+															<input type="text" class="hcm-datepicker-btn" id="hcm-program-name" />
+														</div>
+														<div class="form-group">
+															<label for="hcm-program-url">프로그램URL</label>
+															<input type="text" id="hcm-program-url" class="form-control"/>
+														</div>
+														<div class="ml-auto"><button type="button" class="hcm-btn-form">조회</button></div>
+													</div> 
+												</div>
+											</div>
+											<div class="d-flex">
+												<div class="hcm-col-4">
+													<div class="hcm-list-box">
+														<h3 class="row">
+															<div class="col-6 hcm-title">프로그램 목록</div>
+															<div class="col-6 d-flex justify-content-end">
+																<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+																<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+																<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+																<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+															</div>
+														</h3>
+														<div class="row">
+															<div class="col-12">
+																<div class="hcm-list-text-table col-12">
+																	<table class="hcm-list-table">
+																		<thead>
+																			<tr>
+																				<th>NO</th>
+																				<th>피보험단위기간</th>
+																				<th>임금기간 기초일수</th>
+																				<th></th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<td>01</td>
+																				<td>1991-01-01</td>
+																				<td>0000000</td>
+																				<td><span></span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="hcm-col-4-calc">
+													<div class="hcm-list-box">
+														<h3 class="row">
+															<div class="col-6 hcm-title">프로그램 목록</div>
+															<div class="col-6 d-flex justify-content-end">
+																<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+																<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+																<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+																<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+															</div>
+														</h3>
+														<div class="row">
+															<div class="col-12">
+																<div class="hcm-list-text-table col-12">
+																	<table class="hcm-list-table"> 
+																		<colgroup>
+																			<col class="hcm-table-count" span=""/>
+																			<col class="hcm-tabel-space"/>
+																		</colgroup>
+																		<tbody>
+																			<tr>
+																				<th rowspan="2">기준일연장</th>
+																				<th>사유</th>
+																				<td>기준일 연장사유</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th>기간</th>
+																				<td>1991-01-01</td>
+																				<td><span></span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="hcm-list-box">
+														<h3 class="row">
+															<div class="col-6 hcm-title">프로그램 목록</div>
+															<div class="col-6 d-flex justify-content-end">
+																<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+																<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+																<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+																<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>	
+															</div>
+														</h3>
+														<div class="row">
+															<div class="col-12">
+																<div class="hcm-list-text-table col-12">
+																	<table class="hcm-list-table"> 
+																		<colgroup>
+																			<col width="20%" />
+																			<col width="20%" />
+																			<col />
+																		</colgroup>
+																		<tbody>
+																			<tr>
+																				<th colspan="2">기준일연장</th>
+																				<td>기준일 연장사유</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th colspan="2">총일수</th>
+																				<td>00</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th rowspan="4">입금내역</th>
+																				<th>기본급</th>
+																				<td>1,000,000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th>그밖의 수당</th>
+																				<td>1,000,000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th>상여금</th>
+																				<td>1,000,000</td>
+																				<td><span></span></td>
+																			</tr>
+																			<tr>
+																				<th>연차수당</th>
+																				<td>1,000,000</td>
+																				<td><span></span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-layout-calc d-flex">
+	&lt;div class="hcm-col-4">
+		&lt;div class="hcm-list-box">
+			&lt;h3 class="row">
+				&lt;div class="col-6 hcm-title">이직대상자&lt;/div>
+				&lt;div class="col-6 d-flex justify-content-end">
+					&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+					&lt;button type="button" class="hcm-btn-icon-edit" title="수정">수정&lt;/button>
+					&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+					&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+				&lt;/div>							
+			&lt;/h3>
+			&lt;div class="row">
+				&lt;div class="col-12">
+					&lt;table class="hcm-list-table"> 
+						&lt;thead>
+							&lt;tr>
+								&lt;th>NO&lt;/th>
+								&lt;th>상태&lt;/th>
+								&lt;th>성명&lt;/th>
+								&lt;th>주민등록번호&lt;/th>
+								&lt;th>&lt;/th>
+							&lt;/tr>
+						&lt;/thead>
+						&lt;tbody>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;td>00&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>카카오&lt;/td>
+								&lt;td>000000-00000&lt;/td>
+								&lt;td>&lt;span>&lt;/span>&lt;/td>
+							&lt;/tr>
+						&lt;/tbody>
+					&lt;/table>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="hcm-col-4-calc">
+		&lt;div class="hcm-search-wrap">
+			&lt;div class="row">
+				&lt;div class="col-12 d-flex">
+					&lt;div class="form-group ui-widget">
+						&lt;form action="">
+							&lt;label for="hcm-program-id">프로그램ID&lt;/label>
+							&lt;input type="text" class="form-control" id="hcm-program-id">
+							&lt;button type="submit" class="hcm-btn-icon-search">검색&lt;/button>
+						&lt;/form>
+					&lt;/div>
+					&lt;div class="form-group">
+						&lt;label for="hcm-program-name">프로그램명&lt;/label>
+						&lt;input type="text" class="hcm-datepicker-btn" id="hcm-program-name" />
+					&lt;/div>
+					&lt;div class="form-group">
+						&lt;label for="hcm-program-url">프로그램URL&lt;/label>
+						&lt;input type="text" id="hcm-program-url" class="form-control"/>
+					&lt;/div>
+					&lt;div class="ml-auto">&lt;button type="button" class="hcm-btn-form">조회&lt;/button>&lt;/div>
+				&lt;/div> 
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="d-flex">
+			&lt;div class="hcm-col-4">
+				&lt;div class="hcm-list-box">
+					&lt;h3 class="row">
+						&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+						&lt;div class="col-6 d-flex justify-content-end">
+							&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-edit" title="수정">수정&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+						&lt;/div>
+					&lt;/h3>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="hcm-list-text-table col-12">
+								&lt;table class="hcm-list-table">
+									&lt;thead>
+										&lt;tr>
+											&lt;th>NO&lt;/th>
+											&lt;th>피보험단위기간&lt;/th>
+											&lt;th>임금기간 기초일수&lt;/th>
+											&lt;th>&lt;/th>
+										&lt;/tr>
+									&lt;/thead>
+									&lt;tbody>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;td>01&lt;/td>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>0000000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+									&lt;/tbody>
+								&lt;/table>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="hcm-col-4-calc">
+				&lt;div class="hcm-list-box">
+					&lt;h3 class="row">
+						&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+						&lt;div class="col-6 d-flex justify-content-end">
+							&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-edit" title="수정">수정&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+						&lt;/div>
+					&lt;/h3>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="hcm-list-text-table col-12">
+								&lt;table class="hcm-list-table"> 
+									&lt;colgroup>
+										&lt;col class="hcm-table-count" span=""/>
+										&lt;col class="hcm-tabel-space"/>
+									&lt;/colgroup>
+									&lt;tbody>
+										&lt;tr>
+											&lt;th rowspan="2">기준일연장&lt;/th>
+											&lt;th>사유&lt;/th>
+											&lt;td>기준일 연장사유&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th>기간&lt;/th>
+											&lt;td>1991-01-01&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+									&lt;/tbody>
+								&lt;/table>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+				&lt;div class="hcm-list-box">
+					&lt;h3 class="row">
+						&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+						&lt;div class="col-6 d-flex justify-content-end">
+							&lt;button type="button">추가&lt;/button>
+							&lt;button type="button">수정&lt;/button>
+							&lt;button type="button">삭제&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-allchk">&lt;/button>
+						&lt;/div>
+					&lt;/h3>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="hcm-list-text-table col-12">
+								&lt;table class="hcm-list-table"> 
+									&lt;colgroup>
+										&lt;col width="20%" />
+										&lt;col width="20%" />
+										&lt;col />
+									&lt;/colgroup>
+									&lt;tbody>
+										&lt;tr>
+											&lt;th colspan="2">기준일연장&lt;/th>
+											&lt;td>기준일 연장사유&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th colspan="2">총일수&lt;/th>
+											&lt;td>00&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th rowspan="4">입금내역&lt;/th>
+											&lt;th>기본급&lt;/th>
+											&lt;td>1,000,000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th>그밖의 수당&lt;/th>
+											&lt;td>1,000,000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th>상여금&lt;/th>
+											&lt;td>1,000,000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+										&lt;tr>
+											&lt;th>연차수당&lt;/th>
+											&lt;td>1,000,000&lt;/td>
+											&lt;td>&lt;span>&lt;/span>&lt;/td>
+										&lt;/tr>
+									&lt;/tbody>
+								&lt;/table>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab11">
+					<h1>Search 검색영역 / 탭 왼쪽 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-layout-calc</span> 최상위 부모가 됩니다.</p>
+										<p>- <span class="hcm-class">hcm-layout-calc</span> 가변레이아웃 구조 진행됩니다.</p>
+										<p>- <span class="hcm-class">hcm-search-wrap</span> 구조 동일한 마크업으로 진행됩니다.</p>
+										<p>- 탭이 생성되어야 할 <span class="hcm-class">row</span>에 <span class="hcm-class">hcm-left-nav</span>를 추가합니다.</p>
+										<div class="language-markup">
+											<pre>
+												<code>
+&lt;div class="hcm-layout-calc d-flex">
+	&lt;div class="hcm-col-4">
+		&lt;div class="hcm-search-wrap">
+			&lt;div class="row">
+			&lt;/div>
+			&lt;div class="row">
+				&lt;div class="col-12">
+				&lt;/div>
+			&lt;/div>	
+			&lt;div class="row hcm-left-nav">
+				&lt;div class="col-12 hcm-nav-tabs">
+					&lt;ul class="nav nav-tabs">
+						&lt;li>&lt;a data-toggle="tab" href="#cont-tab01">TREE&lt;/a>&lt;/li>
+						&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab02">LIST&lt;/a>&lt;/li>
+					&lt;/ul>
+					&lt;div class="tab-content col-12">
+						&lt;div class="tab-pane active" id="cont-tab01">
+						&lt;/div>
+						&lt;div class="tab-pane active" id="cont-tab02">
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+												</code>
+											</pre>
+										</div>
+									</div>
+									
+									<div class="hcm-layout-calc d-flex">
+										<div class="hcm-col-4">
+											<div class="hcm-search-wrap">
+												<div class="row">
+													<div class="col-12 d-flex">
+														<div class="form-group ui-widget">
+															<label for="hcm-program-name">기준일</label>
+															<input type="text" id="aa" class="form-control hcm-datepicker"/>
+															<button type="button" class="hcm-btn-calnder hcm-btn-calnder1"></button>
+														</div>
+														<div class="ml-auto"><button type="button" class="hcm-btn-form">조회</button></div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12 d-flex">
+														<div class="form-group">
+															<label for="hcm-program-name">소속</label>
+															<div class="hcm-form-merged">
+																<select name="" id="" class="hcm-if-btn-one-calc">
+																	<option value="">선택하세요.</option>
+																</select>
+																<input type="text" class="form-control hcm-if-btn-one-calc">
+																<button type="button" class="hcm-btn-icon-search "></button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row hcm-left-nav">
+													<div class="hcm-nav-tabs col-12">
+														<ul class="nav nav-tabs">
+															<li><a data-toggle="tab" href="#cont-tab01">TREE</a></li>
+															<li><a class="active" data-toggle="tab" href="#cont-tab02">LIST</a></li>
+														</ul>
+													</div>
+													<div class="tab-content col-12">
+														<div class="tab-pane active" id="cont-tab01">
+															<div class="hcm-list-text-table">
+																<table class="hcm-list-table"> 
+																	<thead>
+																		<tr>
+																			<th>NO</th>
+																			<th>부서명(약칭)</th>
+																			<th>부서코드</th>
+																			<th></th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																		<tr>
+																			<td>01</td>
+																			<td>IT/솔루션</td>
+																			<td>A000001</td>
+																			<td><span></span></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-layout-calc d-flex">
+	&lt;div class="hcm-col-4">
+		&lt;div class="hcm-search-wrap">
+			&lt;div class="row">
+				&lt;div class="col-12 d-flex">
+					&lt;div class="form-group ui-widget">
+						&lt;label for="hcm-program-name">기준일&lt;/label>
+						&lt;input type="text" id="aa" class="form-control hcm-datepicker"/>
+						&lt;button type="button" class="hcm-btn-calnder hcm-btn-calnder1">&lt;/button>
+					&lt;/div>
+					&lt;div class="ml-auto">&lt;button type="button" class="hcm-btn-form">조회&lt;/button>&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="row">
+				&lt;div class="col-12 d-flex">
+					&lt;div class="form-group">
+						&lt;label for="hcm-program-name">소속&lt;/label>
+						&lt;div class="hcm-form-merged">
+							&lt;select name="" id="" class="hcm-if-btn-one-calc">
+								&lt;option value="">선택하세요.&lt;/option>
+							&lt;/select>
+							&lt;input type="text" class="form-control hcm-if-btn-one-calc">
+							&lt;button type="button" class="hcm-btn-icon-search ">&lt;/button>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="row hcm-left-nav">
+				&lt;div class="hcm-nav-tabs col-12">
+					&lt;ul class="nav nav-tabs">
+						&lt;li>&lt;a data-toggle="tab" href="#cont-tab01">TREE&lt;/a>&lt;/li>
+						&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab02">LIST&lt;/a>&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="tab-content col-12">
+					&lt;div class="tab-pane active" id="cont-tab01">
+						&lt;table class="hcm-list-table"> 
+							&lt;thead>
+								&lt;tr>
+									&lt;th>NO&lt;/th>
+									&lt;th>부서명(약칭)&lt;/th>
+									&lt;th>부서코드&lt;/th>
+									&lt;th>&lt;/th>
+								&lt;/tr>
+							&lt;/thead>
+							&lt;tbody>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+								&lt;tr>
+									&lt;td>01&lt;/td>
+									&lt;td>IT/솔루션&lt;/td>
+									&lt;td>A000001&lt;/td>
+									&lt;td>&lt;span>&lt;/span>&lt;/td>
+								&lt;/tr>
+							&lt;/tbody>
+						&lt;/table>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab12">
+					<h1>첫번째 레이아웃 변경 마크업 예시</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-layout-calc</span> 최상위 부모가 됩니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="guide_tab_content" id="tab13">
+					<h1>부트스트랩 TAB NAV</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>부트스트랩 기반 TAB</h2>	
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-nav-tabs</span> 최상위 부모가 됩니다.</p>
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-nav-tabs</span>"</span>&#62; 을 추가하여 부트스트랩 <span class="hcm-class">nav nav-tabs</span> / <span class="hcm-class">tab-content</span> <span class="hcm-class">tab-pane</span> 의 속성값인 <span class="hcm-css">css</span>를 override 했습니다. </p>
+									</div>
+									<div class="hcm-contents">
+										<div class="hcm-nav-tabs">
+											<ul class="nav nav-tabs">
+												<li><a class="active" data-toggle="tab" href="#cont-tab03">텝 타이틀01</a></li>
+												<li><a data-toggle="tab" href="#cont-tab04">텝 타이틀02</a></li>
+											</ul>
+										</div>
+										<div class="tab-content">
+											<div class="tab-pane active" id="cont-tab03">cont-tab01 컨텐츠 영역입니다.</div>
+											<div class="tab-pane" id="cont-tab04">cont-tab02 컨텐츠 영역입니다.</div>
+										</div>
+									</div>	
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-contents">
+	&lt;div class="hcm-nav-tabs">
+		&lt;ul class="nav nav-tabs">
+			&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab03">신규등록&lt;/a>&lt;/li>
+			&lt;li>&lt;a data-toggle="tab" href="#cont-tab04">프로그램 관리&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+	&lt;div class="tab-content">
+		&lt;div class="tab-pane active" id="cont-tab03">cont-tab01 컨텐츠 영역입니다.&lt;/div>
+		&lt;div class="tab-pane" id="cont-tab04">cont-tab02 컨텐츠 영역입니다.&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+								<div class="guide_grid">
+									<h2>부트스트랩 기반 BOTTOM TAB</h2>	
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-class">hcm-nav-tabs</span> 최상위 부모가 됩니다.</p>
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-nav-tabs</span>"</span>&#62;에 <span class="hcm-class">hcm-direction-bottom</span>을 추가해 줍니다.</p>
+										<p>- 마크업 구조가 &lt;<span class="hcm-tag">div class="<span class="hcm-class">tab-content</span>"</span>&#62;와 &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-nav-tabs</span>"</span>&#62;반대로 만들어 주시면됩니다. </p>
+									</div></br>
+									<div class="hcm-contents">
+										<div class="tab-content">
+											<div class="tab-pane active" id="cont-tab05">cont-tab03 컨텐츠 영역입니다.</div>
+											<div class="tab-pane" id="cont-tab06">cont-tab04 컨텐츠 영역입니다.</div>
+										</div>
+										<div class="hcm-nav-tabs hcm-direction-bottom">
+											<ul class="nav nav-tabs">
+												<li><a class="active" data-toggle="tab" href="#cont-tab05">텝 타이틀01</a></li>
+												<li><a data-toggle="tab" href="#cont-tab06">텝 타이틀02</a></li>
+											</ul>
+										</div>
+									</div>	
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-contents">
+	&lt;div class="tab-content">
+		&lt;div class="tab-pane active" id="cont-tab05">cont-tab03 컨텐츠 영역입니다.&lt;/div>
+		&lt;div class="tab-pane" id="cont-tab06">cont-tab04 컨텐츠 영역입니다.&lt;/div>
+	&lt;/div>
+	&lt;div class="hcm-nav-tabs hcm-direction-bottom">
+		&lt;ul class="nav nav-tabs">
+			&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab05">텝 타이틀01&lt;/a>&lt;/li>
+			&lt;li>&lt;a data-toggle="tab" href="#cont-tab06">텝 타이틀02&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>	
+											</code>
+										</pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>부트스트랩 기반 LEFT TAB</h2>	
+									<div class="hcm-gride-txt">
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">d-flex</span>"</span>&#62;를 추가해 줍니다.(<span class="hcm-class">hcm-con-2</span>와 <span class="hcm-class">hcm-con-2-calc</span>을 <span class="hcm-css">inline-block</span>화 합니다.)</p>
+										<p>&nbsp;&nbsp;- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-col-2</span>"</span>&#62; 고정값 지정 과 &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-col-2-calc</span>"</span>&#62; 가변값으로 감싸줍니다.</p>
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-nav-tabs</span>"</span>&#62;에 <span class="hcm-class">hcm-direction-left</span>을 추가해 줍니다.</p>
+									</div></br>
+									<div class="hcm-contents">
+										<div class="d-flex">
+											<div class="hcm-col-2">
+												<div class="hcm-nav-tabs hcm-direction-left">
+													<ul class="nav nav-tabs">
+														<li><a class="active" data-toggle="tab" href="#cont-tab07">신규등록신규등록신규등록신규등록신규등록신규등록신규등록신규등록</a></li>
+														<li><a data-toggle="tab" href="#cont-tab08">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab09">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab10">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab11">프로그램 관리</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="hcm-col-2-calc">
+												<div class="tab-content">
+													<div class="tab-pane active" id="cont-tab07">테스트01</div>
+													<div class="tab-pane" id="cont-tab08">테스트02</div>
+													<div class="tab-pane" id="cont-tab09">테스트03</div>
+													<div class="tab-pane" id="cont-tab10">테스트04</div>
+													<div class="tab-pane" id="cont-tab11">테스트05</div>
+												</div>
+											</div>
+										</div>
+									</div>	
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-contents">
+	&lt;div class="d-flex">
+		&lt;div class="hcm-col-2">
+			&lt;div class="hcm-nav-tabs hcm-direction-left">
+				&lt;ul class="nav nav-tabs">
+					&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab07">신규등록신규등록신규등록신규등록신규등록신규등록신규등록신규등록&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab08">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab09">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab10">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab11">프로그램 관리&lt;/a>&lt;/li>
+				&lt;/ul>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="hcm-col-2-calc">
+			&lt;div class="tab-content">
+				&lt;div class="tab-pane active" id="cont-tab07">테스트01&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab08">테스트02&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab09">테스트03&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab10">테스트04&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab11">테스트05&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>부트스트랩 기반 RIGHT TAB</h2>	
+									<div class="hcm-gride-txt">
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">d-flex</span>"</span>&#62;를 추가해 줍니다.(<span class="hcm-class">hcm-con-2</span>와 <span class="hcm-class">hcm-con-2-calc</span>을 <span class="hcm-css">inline-block</span>화 합니다.)</p>
+										<p>&nbsp;&nbsp;- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-col-2-calc</span>"</span>&#62;가변값 과 &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-col-2</span>"</span>&#62; 고정값 지정으로 감싸줍니다.</p>
+										<p>- &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-nav-tabs</span>"</span>&#62;에 <span class="hcm-class">hcm-direction-right</span>을 추가해 줍니다.</p>
+									</div></br>
+									<div class="hcm-contents">
+										<div class="d-flex">
+											<div class="hcm-col-2-calc">
+												<div class="tab-content">
+													<div class="tab-pane active" id="cont-tab12">테스트01</div>
+													<div class="tab-pane" id="cont-tab13">테스트02</div>
+													<div class="tab-pane" id="cont-tab14">테스트03</div>
+													<div class="tab-pane" id="cont-tab15">테스트04</div>
+													<div class="tab-pane" id="cont-tab16">테스트05</div>
+												</div>
+											</div>
+											<div class="hcm-col-2">
+												<div class="hcm-nav-tabs hcm-direction-right">
+													<ul class="nav nav-tabs">
+														<li><a class="active" data-toggle="tab" href="#cont-tab12">신규등록신규등록신규등록신규등록신규등록신규등록신규등록신규등록</a></li>
+														<li><a data-toggle="tab" href="#cont-tab13">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab14">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab15">프로그램 관리</a></li>
+														<li><a data-toggle="tab" href="#cont-tab16">프로그램 관리</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>	
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-contents">
+	&lt;div class="d-flex">
+		&lt;div class="hcm-col-2-calc">
+			&lt;div class="tab-content">
+				&lt;div class="tab-pane active" id="cont-tab12">테스트01&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab13">테스트02&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab14">테스트03&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab15">테스트04&lt;/div>
+				&lt;div class="tab-pane" id="cont-tab16">테스트05&lt;/div>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="hcm-col-2">
+			&lt;div class="hcm-nav-tabs hcm-direction-right">
+				&lt;ul class="nav nav-tabs">
+					&lt;li>&lt;a class="active" data-toggle="tab" href="#cont-tab12">신규등록신규등록신규등록신규등록신규등록신규등록신규등록신규등록&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab13">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab14">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab15">프로그램 관리&lt;/a>&lt;/li>
+					&lt;li>&lt;a data-toggle="tab" href="#cont-tab16">프로그램 관리&lt;/a>&lt;/li>
+				&lt;/ul>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="guide_tab_content" id="tab14">
+					<h1>SECTION TITLE 마크업</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>SECTION TITLE 기본 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-tag">h3</span>아래 첫번째 자식이 TITLE 문구입니다.</p>
+									</div>
+									<h3 class="row">
+										<div class="col-6">SECTION TITLE</div>
+										<div class="col-6"></div>
+									</h3>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;h3 class="row">
+	&lt;div class="col-6">SECTION TITLE&lt;/div>
+	&lt;div class="col-6">&lt;/div>
+&lt;/h3>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+								<div class="guide_grid">
+									<h2>SECTION TITLE과 버튼이 있는 마크업 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p>- <span class="hcm-tag">h3</span>아래 첫번째 자식이 TITLE 문구입니다.</p>
+										<p>- 왼쪽 <span class="hcm-class">col-6</span>에  <span class="hcm-class">hcm-title</span>클래스를 추가해 줍니다.(&lt;<span class="hcm-tag">div =" <span class="hcm-class">col-6 hcm-title</span>"</span>&#62;)</p>
+										<p>- 오른쪽 <span class="hcm-class">col-6</span>에  <span class="hcm-class">d-flex</span>와 <span class="hcm-class">justify-content-end</span>를 추가해 줍니다.  (&lt;<span class="hcm-tag">div =" <span class="hcm-class">col-6 d-flex justify-content-end</span>"</span>&#62;)</p>
+										<p>- &lt;<span class="hcm-tag">div =" <span class="hcm-class">col-6 d-flex justify-content-end</span>"</span>&#62;에 <span class="hcm-tag">button</span> / <span class="hcm-tag">button group</span>을 추가하여 사용하시면 됩니다. </p>
+									</div>
+									<h3 class="row">
+										<div class="col-6 hcm-title">SECTION TITLE</div>
+										<div class="col-6 d-flex justify-content-end">
+											<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+											<div class="btn-group">
+												<button type="button" class="hcm-btn-icon-edit" title="수정">수정</button>
+												<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+												<button type="button" class="dropdown-toggle" data-toggle="dropdown">삭제</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">Tablet</a>
+													<a class="dropdown-item" href="#">Smartphone</a>
+												</div>
+											</div>
+										</div>
+									</h3>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;h3 class="row">
+	&lt;div class="col-6 hcm-title">프로그램 상세 View&lt;/div>
+	&lt;div class="col-6 d-flex justify-content-end">
+		&lt;button type="button" class="">수정&lt;/button>
+		&lt;div class="btn-group">
+			&lt;button type="button" class="hcm-btn-icon-edit" title="수정">수정&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+			&lt;button type="button" class="dropdown-toggle" data-toggle="dropdown">삭제&lt;/button>
+			&lt;div class="dropdown-menu">
+				&lt;a class="dropdown-item" href="#">Tablet&lt;/a>
+				&lt;a class="dropdown-item" href="#">Smartphone&lt;/a>
+			&lt;/div>
+		&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/h3>
+											</code>
+										</pre>
+									</div>
+									
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab15">
+					<h1>PAGENATION 마크업</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>PAGENATION 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p></p>
+									</div>
+									<div class="row">
+										<div class="col-4">
+											<div class="hcm-pgbar-record">
+												Showing<span>1</span>to<span>12</span>of<span>40<span>entries
+											</div>
+										</div>
+										<div class="col-4">
+											<ul class="pagination">
+												<li class="page-item first"><a class="page-link " title="First" href="#">first</a></li>
+												<li class="page-item prev"><a class="page-link" title="Previous" href="#">previous</a></li>
+												<li class="page-item"><a class="page-link" href="#">1</a></li>
+												<li class="page-item"><a class="page-link" href="#">2</a></li>
+												<li class="page-item"><a class="page-link" href="#">3</a></li>
+												<li class="page-item next"><a class="page-link" title="Next" href="#">next</a></li>
+												<li class="page-item last"><a class="page-link" title="Last" href="#">all next</a></li>
+											</ul>
+										</div>
+										<div class="col-4">
+											<div class="hcm-page-per-record">
+												<label for="">record per page</label>
+												<select name="" id="">
+													<option value="">5</option>
+													<option value="">10</option>
+													<option value="">15</option>
+													<option value="">20</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="row">
+	&lt;div class="col-4">
+		&lt;div class="hcm-pgbar-record">
+			Showing&lt;span>1&lt;/span>to&lt;span>12&lt;/span>of&lt;span>40&lt;span>entries
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="col-4">
+		&lt;ul class="pagination">
+			&lt;li class="page-item first">&lt;a class="page-link " title="First" href="#">first&lt;/a>&lt;/li>
+			&lt;li class="page-item prev">&lt;a class="page-link" title="Previous" href="#">previous&lt;/a>&lt;/li>
+			&lt;li class="page-item">&lt;a class="page-link" href="#">1&lt;/a>&lt;/li>
+			&lt;li class="page-item">&lt;a class="page-link" href="#">2&lt;/a>&lt;/li>
+			&lt;li class="page-item">&lt;a class="page-link" href="#">3&lt;/a>&lt;/li>
+			&lt;li class="page-item next">&lt;a class="page-link" title="Next" href="#">next&lt;/a>&lt;/li>
+			&lt;li class="page-item last">&lt;a class="page-link" title="Last" href="#">all next&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+	&lt;div class="col-4">
+		&lt;div class="hcm-page-per-record">
+			&lt;label for="">record per page&lt;/label>
+			&lt;select name="" id="">
+				&lt;option value="">5&lt;/option>
+				&lt;option value="">10&lt;/option>
+				&lt;option value="">15&lt;/option>
+				&lt;option value="">20&lt;/option>
+			&lt;/select>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab16">
+					<h1>TOP SCROLL BUTTON</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>TOP SCROLLING BUTTON 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p></p>
+									</div>
+									<div class="hcm-top-btn d-flex" style="position:static">
+										<button type="button">
+											<span></span>
+											<span>TOP</span>
+										</button>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-top-btn d-flex">
+	&lt;button type="button" class="hcm-top-button">
+		&lt;span>&lt;/span>
+		&lt;span>TOP&lt;/span>
+	&lt;/button>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab17">
+					<h1>TABLE TH STYLE MARKUP</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>TABLE THEAD TH 배경색상 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">thead</span>안에 <span class="hcm-tag">th</span> 유형의 <span class="hcm-tag">table</span> 마크업입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">table</span>에 <span class="hcm-class">hcm-list-table</span>대신 <span class="hcm-class">hcm-list-table-th-style</span>을 추가해줍니다.</p>
+									</div>
+									<div class="hcm-list-box">
+										<h3 class="row">
+											<div class="col-6 hcm-title">프로그램 목록</div>
+											<div class="col-6 text-right">
+												<button type="button" class="hcm-btn-list-align"><span>상단</span><span class="align-self-center"></span></button>
+												<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+												<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+												<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+											</div>
+										</h3>
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table-th-style">
+													<thead>
+														<tr>
+															<th></th>
+															<th>No</th>
+															<th>상태</th>
+															<th>운영ID</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>01</td>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>01</td>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<td>01</td>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+		&lt;div class="col-6 text-right">
+			&lt;button type="button" class="hcm-btn-list-align">&lt;span>상단&lt;/span>&lt;span class="align-self-center">&lt;/span>&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;table class="hcm-list-table-th-style">
+				&lt;thead>
+					&lt;tr>
+						&lt;th>&lt;/th>
+						&lt;th>No&lt;/th>
+						&lt;th>상태&lt;/th>
+						&lt;th>운영ID&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody>
+					&lt;tr>
+						&lt;td>01&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>01&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;td>01&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>TABLE TBODY TH 배경색상 구조입니다.</h2>	
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">tbody</span>안에 <span class="hcm-tag">th</span> 유형의 <span class="hcm-tag">table</span> 마크업입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">table</span>에 <span class="hcm-class">hcm-list-table</span>대신 <span class="hcm-class">hcm-list-table-th-style</span>을 추가해줍니다.</p>
+									</div>
+									<div class="hcm-list-box">
+										<h3 class="row">
+											<div class="col-6 hcm-title">프로그램 목록</div>
+											<div class="col-6 text-right">
+												<button type="button" class="hcm-btn-list-align"><span>상단</span><span class="align-self-center"></span></button>
+												<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+												<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+												<button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택</button>
+											</div>
+										</h3>
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table-th-style">
+													<tbody>
+														<tr>
+															<th>01</th>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<th>02</th>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+														<tr>
+															<th>03</th>
+															<td>AppDbQuery</td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+		&lt;div class="col-6 text-right">
+			&lt;button type="button" class="hcm-btn-list-align">&lt;span>상단&lt;/span>&lt;span class="align-self-center">&lt;/span>&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">전체선택&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;table class="hcm-list-table-th-style">
+				&lt;tbody>
+					&lt;tr>
+						&lt;th>01&lt;/th>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;th>02&lt;/th>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+					&lt;tr>
+						&lt;th>03&lt;/th>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab18">
+					<h1>HANDSONTABLE 사용</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p><strong>HANDSONTABLE</strong>플러그인을 사용 할경우 일반테이블과 구분을 하기 위해서 <span class="hcm-css">border</span>값을 차두게 작업했습니다.</p>
+										<p>&nbsp;&nbsp; - 일반 <span class="hcm-tag">table</span>같은 경우는 <span class="hmc-css">border-top 2px</span>이며 <strong>HANDSONTABLE</strong>플러그인 <span class="hcm-tag">table</span>은  <span class="hcm-tag">table</span>은 <span class="hcm-css">border-top 1px</span>입니다.</p>
+										<p>&nbsp;&nbsp; <strong>HANDSONTABLE</strong>플러그인 <span class="hcm-tag">table</span> 상위에 <span class="hcm-tag">&ltdiv class="<span class="hcm-class">row hcm-top-table-bd</span>">&lt/div></span>를 추가해줍니다.</p>
+									</div>
+									<div class="hcm-list-box">
+										<h3 class="row">
+											<div class="col-6">프로그램 목록</div>
+											<div class="col-6 text-right">
+												<button type="button" class="hcm-btn-list-align"><span>상단</span><span class="align-self-center"></span></button>
+												<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+												<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+											</div>
+										</h3>
+										<div class="row hcm-top-table-bd"></div>
+										<div class="row hcm-grid-row">
+											<div class="col-12">
+												<div id="handsontable"></div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-list-box">
+	&lt;h3 class="row">
+		&lt;div class="col-6">프로그램 목록&lt;/div>
+		&lt;div class="col-6 text-right">
+			&lt;button type="button" class="hcm-btn-list-align">&lt;span>상단&lt;/span>&lt;span class="align-self-center">&lt;/span>&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+			&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+		&lt;/div>
+	&lt;/h3>
+	&lt;div class="row hcm-top-table-bd">&lt;/div>
+	&lt;div class="row hcm-grid-row">
+		&lt;div class="col-12">
+			&lt;div id="handsontable">&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab19">
+					<h1>CLENDER LAYOUT</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<div class="hcm-gride-txt">
+										<p><strong>CLENDER</strong>기본 레이아웃 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">hcm-clender-wrap</span> 최상위 부모 클래스가 됩니다.</p>
+										<p>&nbsp;&nbsp; - 아래의 예제는 달력의 기본 구조 형태입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">hcm-clender-td</span> CLASS는 달력 하루의 해당하는 박스입니다.</p>
+										<p>&nbsp;&nbsp; - <strong>지난달력 / 다음달력</strong>인 경우 <span class="hcm-class">hcm-clender-td</span> CLASS에 <span class="hcm-class">hcm-clender-disbled</span> 클레스를 추가해줍니다.</p>
+										<p>&nbsp;&nbsp; - <strong>공휴일</strong>인 경우 <span class="hcm-class">hcm-clender-td</span> CLASS에 <span class="hcm-class">hcm-clender-holiday</span> 클레스를 추가해줍니다.</p>
+										<p>&nbsp;&nbsp; - <strong>토요일</strong>인 경우 <span class="hcm-class">hcm-clender-td</span> CLASS에 <span class="hcm-class">hcm-clender-saturday</span> 클레스를 추가해줍니다.</p>
+										<p>&nbsp;&nbsp; - <strong>오늘의 날짜</strong>인 경우 <span class="hcm-class">hcm-clender-td</span> CLASS에 <span class="hcm-class">hcm-clender-today</span> 클레스를 추가해줍니다.</p>
+
+										<p>&nbsp;&nbsp; - <span class="hcm-class">hcm-clender-day</span> 달력의 날짜를 표시합니다.</p>
+									</div>
+									<div class="hcm-clender-wrap">
+										<div class="row">
+											<div class="col-12">
+												<div class="hcm-clender-title d-flex justify-content-center">
+													<span class="hcm-year-prev"></span>
+													<h3 class="">2018.12</h3>
+													<span class="hcm-year-next"></span>
+												</div>
+											</div>
+										</div>
+										<div class="hcm-clender-content">
+											<div class="row">
+												<div class="col-12 d-flex">
+													<div class="hcm-clender-td hcm-clender-disbled">
+														<div class="hcm-clender-day">2</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td hcm-clender-holiday">
+														<div class="hcm-clender-day">3</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td hcm-clender-saturday">
+														<div class="hcm-clender-day">4</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트</li>
+															<li>테스트 내용이 길경우 어떻게 되는지 확인 차원에서 텍스트를 넣어봅니다.</li>
+															<li>테스트</li>
+															<li>테스트</li>
+															<li>테스트</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td hcm-clender-today">
+														<div class="hcm-clender-day">5</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트다다다다다다다다다다다다</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td">
+														<div class="hcm-clender-day">6</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트다다다다다다다다다다다다</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td">
+														<div class="hcm-clender-day">7</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트다다다다다다다다다다다다</li>
+														</ul>
+													</div>
+													<div class="hcm-clender-td">
+														<div class="hcm-clender-day">8</div>
+														<div class="hcm-clender-plus"></div>
+														<ul class="hcm-clender-list">
+															<li>휴무일</li>
+															<li>연차</li>
+															<li>테스트</li>
+															<li>테스트다다다다다다다다다다다다</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre>
+											<code>
+&lt;div class="hcm-clender-wrap">
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="hcm-clender-title d-flex justify-content-center">
+				&lt;span class="hcm-year-prev">&lt;/span>
+				&lt;h3 class="">2018.12&lt;/h3>
+				&lt;span class="hcm-year-next">&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="hcm-clender-content">
+		&lt;div class="row">
+			&lt;div class="col-12 d-flex">
+				&lt;div class="hcm-clender-td hcm-clender-disbled">
+					&lt;div class="hcm-clender-day">2&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td hcm-clender-holiday">
+					&lt;div class="hcm-clender-day">3&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td hcm-clender-saturday">
+					&lt;div class="hcm-clender-day">4&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트 내용이 길경우 어떻게 되는지 확인 차원에서 텍스트를 넣어봅니다.&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td hcm-clender-today">
+					&lt;div class="hcm-clender-day">5&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트다다다다다다다다다다다다&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td">
+					&lt;div class="hcm-clender-day">6&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트다다다다다다다다다다다다&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td">
+					&lt;div class="hcm-clender-day">7&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트다다다다다다다다다다다다&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+				&lt;div class="hcm-clender-td">
+					&lt;div class="hcm-clender-day">8&lt;/div>
+					&lt;div class="hcm-clender-plus">&lt;/div>
+					&lt;ul class="hcm-clender-list">
+						&lt;li>휴무일&lt;/li>
+						&lt;li>연차&lt;/li>
+						&lt;li>테스트&lt;/li>
+						&lt;li>테스트다다다다다다다다다다다다&lt;/li>
+					&lt;/ul>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+											</code>
+										</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+
+			</div>
+		</div>
+		<script src="js/prism.js"></script>
+	</body>
+</html>
+
+
+<!-- <div class="language-markup">
+	<pre>
+		<code>
+		</code>
+	</pre>
+</div> -->

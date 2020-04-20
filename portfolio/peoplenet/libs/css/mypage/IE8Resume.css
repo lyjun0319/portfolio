@@ -1,0 +1,9 @@
+input[type=checkbox] { display:inline-block; vertical-align:middle;}
+input[type=checkbox] + label { vertical-align: middle; padding-left:5px;}
+
+
+.ResumeTableInput_St table td input.LabelCheck { border:0; width:20px; }
+.ResumeAcademic .QualiFication { margin-left:0px; }
+.ResumeTableInput_St table td input.IE8Input {border:0; width:20px; margin-left:10px;}
+.ResumeTableInput_St table td input.IE8InputReset { margin-left:0; } 
+.Hope input[type=checkbox] + label { margin-left:0; }

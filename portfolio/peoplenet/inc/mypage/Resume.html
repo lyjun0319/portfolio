@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이력서등록</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../libs/css/common.css">
+    <link rel="stylesheet" href="../../libs/css/reset.css">
+    <link rel="stylesheet" href="../../libs/css/header.css">
+    <link rel="stylesheet" href="../../libs/css/main.css">
+    <link rel="stylesheet" href="../../libs/css/list_style.css">
+    <link rel="stylesheet" href="../../libs/css/mypage/Resume.css">
+    <link rel="stylesheet" href="../../libs/css/mypage/common.css">
+    <link rel="stylesheet" href="../../libs/fonts/flaticon.css">
+    <link rel="stylesheet" href="../../libs/css/inputfile/themes/jquery.filer-dragdropbox-theme.css">
+    <link rel="stylesheet" href="../../libs/css/inputfile/jquery.filer.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../libs/js/common.js"></script>
+    <script src="../../libs/js/mypage.js"></script>
+    <script src="../../libs/js/input/jquery.filer.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <!-- html5 tag -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- nth-child 적용 -->
+    <!--[if lt IE 9]>
+      <script src="./libs/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+    <!--[if gte IE 8]> <link rel="stylesheet" type="text/css" href="/libs/css/mypage/IE8Resume.css" /> <![endif]-->
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- HEADER START -->
+        <header>
+            <div id="header_wrap">
+                <div class="header_inner">
+                    <div class="lately_Announcement">
+                        <div class="lately_title">최근본 공고 <span>0</span>건</div>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집aa</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="javascript:void(0)" class="top_btn"><img src="../../libs/images/header/top_btn.png" alt="top버튼"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR START -->
+                <div id="globalBar" class="util_wrap">
+                    <div class="header_inner">
+                        <div class="util_default">
+                            <a href="/" class="home_link_btn"><i class="flaticon-home"></i><span class="home_link">홈으로</span></a>
+                            <a href="javascript:void(0)" class="bookmark_link_btn" id="favorite"><i class="flaticon-star"></i><span class="bookmark_link">즐겨찾기</span></a>
+                        </div>
+                        <div class="util_option">
+                            <a href="" class="login floatleft">로그인</a>
+                            <a href="" class="join floatleft" >회원가입</a>
+                            <div id="person_header_btn2" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">개인회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                          <li><a href="">개인회원 안내</a></li>
+                                          <li><a href=""><strong>이력서 등록</strong></a></li>
+                                          <li><a href=""><strong>이력서 현황</strong></a></li>
+                                          <li><a href=""><strong>입사지원 현황</strong></a></li>
+                                          <li><a href="">맞춤채용 정보</a></li>
+                                          <li><a href="">스크랩한 공고</a></li>
+                                          <li><a href="">최근 본 공고</a></li>
+                                          <li><a href="">개인정보 수정</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="company_header_btn" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">기업회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                        <li><a href="">기업회원 안내</a></li>
+                                        <li><a href=""><strong>채용공고등록</strong></a></li>
+                                        <li><a href=""><strong>공고/지원자 관리</strong></a></li>
+                                        <li><a href=""><strong>기업정보 수정</strong></a></li>
+                                        <li><a href=""><strong>결제내역 조회</strong></a></li>
+                                        <li><a href="">채용광고 상품</a></li>
+                                        <li><a href="">채용솔루션 상품</a></li>
+                                        <li><a href="">인재정보 열람 상품</a></li>
+                                        <li><a href="">SIAT 인적성검사</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="" class="floatleft">고객센터</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR END -->
+
+                <!-- HEADER MAIN START -->
+                <div id="header_main">
+                    <div class="header_inner">
+                        <h1><a href="/"><img src="../../libs/images/header/main_logo_1.png" alt="사람넷"></a></h1>
+                        <div class="search_box">
+                            <fieldset class="fieldset">
+                                <legend class="hide">검색 폼</legend>
+                                <span id="search_wrap_span" class="box_search_input banner-on">
+                                    <input type="text" name="searchword" id="combineSearchWord" title="검색어 입력" tabindex="1" accesskey="s" autocomplete="off" size="20" value="">
+                                </span>
+                                <button type="submit" id="submit_button" name="go" class="btn_search"><i class="flaticon-magnifying-glass"></i><span class="search_txt">검색</span></button>
+                            </fieldset>
+                            <p class="hastag_record"><span>#디자이너</span><span>#서울</span><span>#퍼블리셔</span></p>
+                        </div>
+                        <div class="header_bn">
+                            <img src="../../libs/images/header/header_bn.png" alt="필요한 채용정보만 확실하게! 해시태그로 간편검색">
+                        </div>
+                    </div>
+                </div>
+                <!-- HEADER MAIN END -->
+
+                <!-- HEADER GNB START -->
+                <div id="header_gnb">
+                    <div class="header_inner">
+                        <h2 class="textindent hide">사람넷 주요 메뉴</h2>
+                        <ul class="gnb_list">
+                            <li id="all">
+                                <a href="#">전체 채용정보</a>
+                            </li>
+                            <li id="job">
+                                <a href="#">직무별</a>
+                            </li>
+                            <li id="area">
+                                <a href="">지역별</a>
+                            </li>
+                        </ul>
+                        <ul class="side_menu">
+                            <li id="resume">
+                                <a href="#"><span class="extra_icon"><i class="flaticon-black"></i></span><span class="txt">이력서 등록</span></a>
+                            </li>
+                            <li id="advertise">
+                                <a href="#"><span class="extra_icon"><i class="flaticon-list-with-dots"></i></span><span class="txt">맞춤공고</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HEADER GNB END-->
+                <div id="header_search">
+                    <div id="header_search_inner">
+                        <div id="hd_search">
+                            <input type="text" class="search_input"  />
+                            <button type="button" class="submit_btn"><i class="flaticon-magnifying-glass"></i></button>
+                        </div>
+                        <div id="search_hastag">
+                            <span class="search_hs_arrow"><img src="../../libs/images/header/search_arrow.png" alt="디자인 요소 화살표입니다."></span>
+                            <p>#사람넷 #디자이너 #퍼블리셔 #단넷개발자 #기획자 #1년 #신규</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- SUB WRAPPER START -->
+        <div id="sub_wrapper">
+            <div id="sub_container">
+                <!-- ASIDE START -->
+                <div id="aside">
+                    <div id="lnb">
+                        <h2 class="lnb_title">마이페이지</h2>
+                        <div class="sub_list">
+                            <!-- RESUME SETTING START -->
+                            <div class="resume eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">이력서 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">이력서 등록</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이력서관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="">입사지원현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="">기업러브콜</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- RESUME SETTING END -->
+
+                            <!-- APPLICATION START -->
+                            <div class="application eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">입사지원 현황</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">입사지원 현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="">기업러브콜</a>
+                                    </li>
+                                    <li>
+                                        <a href="">내이력서 열람기업</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- APPLICATION END -->
+
+                            <!-- ETCMENU START -->
+                            <div class="etc_menu eachlist">
+                                <ul>
+                                    <li><a href="">스크랩 공고</a></li>
+                                    <li><a href="">최근 본 공고</a></li>
+                                    <li><a href="">맞춤채용 정보</a></li>
+                                </ul>
+                            </div>
+                            <!-- ETCMENU END -->
+
+                            <!-- MEMBER_INFO START -->
+                            <div class="member_info eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">회원정보 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">개인정보 수정</a>
+                                    </li>
+                                    <li>
+                                        <a href="">비밀번호변경</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                            <!-- CUSTOMER START -->
+                            <div class="customer eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">고객센터</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이벤트</a>
+                                    </li>
+                                    <li>
+                                        <a href="">신고하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ASIDE END -->
+
+                <!-- SUB CONTENTS START -->
+                <div id="sub_contents">
+                    <div id="ResumeWrap">
+                        <div class="ResumeTitle">
+                            <h2>이력서등록</h2>
+                        </div>
+                        <div class="ResumeContainer">
+                            <div class="ResumeKindBox">
+                                <span class="ResumeKindTitle">이전 채용공고 불러오기</span>
+                                <select class="ResumeKind" name="">
+                                    <option value="">[이력서]김치나라 김치공주가 배추를 키웠다</option>
+                                    <option value="">[이력서]오늘은 화요일 내일은 수요일이겠지</option>
+                                    <option value="">[이력서]빵꾸똥구야 나좀 취업시켜주렴</option>
+                                </select>
+                            </div>
+                            <div class="ResumeContent">
+                                <div class="ResumeTitleInput">
+                                    <input type="text" maxlength="100" placeholder="이력서 제목을 입력하세요. (100자 까지 입력가능)" class="TitleInput">
+                                </div>
+                                <!-- 기본정보 -->
+                                <div class="ResumeUserInfo">
+                                    <div class="ResumeSubTitle">
+                                        <h3>기본 정보</h3>
+                                        <span class="MustInput"><span class="Must">*</span> 필수 입력 요소입니다.</span>
+                                    </div>
+                                    <div class="ResumeTableInput">
+                                        <div class="ResumeUserImg">
+                                            <img src="../../libs/images/mypage/UserImgBasic.png" alt="기본이미지 입니다.">
+                                        </div>
+                                        <table>
+                                            <colgroup>
+                                                <col width="150px" />
+                                            </colgroup>
+                                            <tr>
+                                                <th><span class="Must">*</span>이름</th>
+                                                <td><input type="text" value="홍길동" readonly="readonly" style="border:0;"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="Must">*</span> 생년월일/성별</th>
+                                                <td><input type="text" value="1988년 3월 19일" readonly="readonly" style="border:0;" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="Must">*</span> 휴대폰</th>
+                                                <td>
+                                                    <select class="phone_numfirst" id="user_phone">
+                                                        <option value="">010</option>
+                                                        <option value="">011</option>
+                                                        <option value="">016</option>
+                                                        <option value="">017</option>
+                                                        <option value="">018</option>
+                                                        <option value="">019</option>
+                                                    </select>&nbsp;-&nbsp;
+                                                    <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="6758" style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                                    <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="8803" style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>전화번호</th>
+                                                <td>
+                                                    <select class="phone_numfirst" id="user_phone">
+                                                        <option value="">선택하세요</option>
+                                                        <option value="02">02</option>
+                                                        <option value="031">031</option>
+                                                        <option value="032">032</option>
+                                                        <option value="033">033</option>
+                                                        <option value="041">041</option>
+                                                        <option value="042">042</option>
+                                                        <option value="043">043</option>
+                                                        <option value="044">044</option>
+                                                        <option value="051">051</option>
+                                                        <option value="052">052</option>
+                                                        <option value="053">053</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="061">061</option>
+                                                        <option value="062">062</option>
+                                                        <option value="063">063</option>
+                                                        <option value="064">064</option>
+                                                        <option value="070">070</option>
+                                                        <option value="">010</option>
+                                                        <option value="">011</option>
+                                                        <option value="">016</option>
+                                                        <option value="">017</option>
+                                                        <option value="">018</option>
+                                                        <option value="">019</option>
+                                                    </select>&nbsp;-&nbsp;
+                                                    <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="" style='ime-mode:disabled;' size="4" maxlength="4" />&nbsp;-&nbsp;
+                                                    <input type="text" class="input_st input_year" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' value="" style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="Must">*</span> 이메일</th>
+                                                <td>
+                                                    <input type="text" class="input_st input_email" value="lyjun03" placeholder="- 이메일" />&nbsp;&nbsp;@&nbsp;&nbsp;
+                                                    <input type="text" class="input_st input_email" value="naver.com" placeholder="- 이메일을 선택해주세요" />
+                                                    <select class="choose_email">
+                                                        <option value="">선택하기</option>
+                                                        <option value="" selected="">naver.com</option>
+                                                        <option value="">hanmail.net</option>
+                                                        <option value="">gmail.com</option>
+                                                        <option value="">nate.com</option>
+                                                        <option value="">daum.net</option>
+                                                        <option value="">hotmail.com</option>
+                                                        <option value="">직접입력</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="Must">*</span> 홈페이지</th>
+                                                <td>
+                                                    <input type="text" placeholder="- 개인 홈페이지를 입력해주세요." class="UserHomepage">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="Must">*</span> 주소</th>
+                                                <td><input type="text" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="10" maxlength="10" value="422-240" placeholder="- 개인 홈페이지를 입력해주세요." class="UserAddress"><a href="javascript:void(0)" class="address_search">주소검색</a><br/><input type="text" class="UserAddress" value="경기도 부천시 소사구 심곡본동"><br/><input type="text"  value="롯데아파트 3동 608호" class="UserAddress"></td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <!-- 기본정보 -->
+
+                                <!-- 학력사항 -->
+                                <div class="ResumeAcademic">
+                                    <div class="ResumeSubTitle">
+                                        <h3>학력사항</h3>
+                                        <div class="ResumeChecked">
+                                            <span class="ResumeCheckedTitle"><span class="Must">*</span> 최종학력</span>
+                                            <select name="" id="" class="AcademicChoose">
+                                                <option value="">학력선택</option>
+                                                <option value="">초등학교</option>
+                                                <option value="">중학교</option>
+                                                <option value="">고등학교</option>
+                                                <option value="">대학(2,3년)</option>
+                                                <option value="">대학교(4년)</option>
+                                                <option value="">대학원</option>
+                                            </select>
+                                            <select name="" id="">
+                                                <option value="">상태선택</option>
+                                                <option value="">졸업</option>
+                                                <option value="">졸업예정</option>
+                                                <option value="">중퇴</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="ResumeTableInput_St">
+                                        <div class="ResumeTableInner">
+                                            <table class="HighSchool">
+                                                <colgroup>
+                                                    <col width="150px" />
+                                                </colgroup>
+                                                <tr>
+                                                    <th>고등학교명</th>
+                                                    <td><input type="text" placeholder="고등학교 명을 입력하세요." /><input type="checkbox" id="LabelCheck" class="LabelCheck"/><label for="LabelCheck" class="QualiFication">대입 검정고시</label></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>졸업연도</th>
+                                                    <td>
+                                                        <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                        <select class="" name="">
+                                                            <option value="">상태선택</option>
+                                                            <option value="">졸업</option>
+                                                            <option value="">졸업예정</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>전공</th>
+                                                    <td>
+                                                        <select class="" name="">
+                                                            <option value="">계열선택</option>
+                                                            <option value="">문과계열</option>
+                                                            <option value="">전문(실업)계열</option>
+                                                            <option value="">예체능계열</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="University">
+                                                <colgroup>
+                                                    <col width="150px" />
+                                                </colgroup>
+                                                <tr>
+                                                    <th>대학(교)명</th>
+                                                    <td class="UniversityTD">
+                                                        <input type="text" placeholder="대학교명을 입력하세요."/>
+                                                        <a href="javascript:void(0)" class="UniversityDelet"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>재학기간</th>
+                                                    <td>
+                                                        <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <select class="" name="">
+                                                            <option value="">입학</option>
+                                                            <option value="">편입</option>
+                                                        </select>
+                                                        ~
+                                                        <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <select class="" name="">
+                                                            <option value="">졸업</option>
+                                                            <option value="">졸업예정</option>
+                                                            <option value="">수료</option>
+                                                            <option value="">휴학</option>
+                                                            <option value="">중퇴</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>전공</th>
+                                                    <td>
+                                                        <ul class="MajorList">
+                                                            <li>
+                                                                <select class="" name="">
+                                                                    <option value="" checked>주전공</option>
+                                                                </select>
+                                                                <select name="" id="">
+                                                                    <option value="" label="전공계열 선택">전공계열 선택</option>
+                                                                	<option value="" label="어문학">어문학</option>
+                                                                	<option value="" label="영어/영문">영어/영문</option>
+                                                                	<option value="" label="중어/중문">중어/중문</option>
+                                                                	<option value="" label="일어/일문">일어/일문</option>
+                                                                	<option value="" label="국어/국문">국어/국문</option>
+                                                                	<option value="" label="인문과학">인문과학</option>
+                                                                	<option value="" label="사회과학">사회과학</option>
+                                                                	<option value="" label="상경계열">상경계열</option>
+                                                                	<option value="" label="경제/경영">경제/경영</option>
+                                                                	<option value="" label="회계학">회계학</option>
+                                                                	<option value="" label="법학계열">법학계열</option>
+                                                                	<option value="" label="사범계열">사범계열</option>
+                                                                	<option value="" label="종교학">종교학</option>
+                                                                	<option value="" label="생활과학">생활과학</option>
+                                                                	<option value="" label="예/체능">예/체능</option>
+                                                                	<option value="" label="자연과학계열">자연과학계열</option>
+                                                                	<option value="" label="농수산/해양/축산">농수산/해양/축산</option>
+                                                                	<option value="" label="수학/통계학">수학/통계학</option>
+                                                                	<option value="" label="물리/천문/기상학">물리/천문/기상학</option>
+                                                                	<option value="" label="화학/생물">화학/생물</option>
+                                                                	<option value="" label="공학계열">공학계열</option>
+                                                                	<option value="" label="전기/전자/정보통신공학">전기/전자/정보통신공학</option>
+                                                                	<option value="" label="컴퓨터/시스템공학">컴퓨터/시스템공학</option>
+                                                                	<option value="" label="금속/비금속공학">금속/비금속공학</option>
+                                                                	<option value="" label="생명/화학/환경/바이오">생명/화학/환경/바이오</option>
+                                                                	<option value="" label="도시/토목/건축공학">도시/토목/건축공학</option>
+                                                                	<option value="" label="에너지/원자력공학">에너지/원자력공학</option>
+                                                                	<option value="" label="산업/자동차/우주공학">산업/자동차/우주공학</option>
+                                                                	<option value="" label="기계/조선/항공공학">기계/조선/항공공학</option>
+                                                                	<option value="" label="신소재/재료/섬유공학">신소재/재료/섬유공학</option>
+                                                                	<option value="" label="식품/유전/안전공학">식품/유전/안전공학</option>
+                                                                	<option value="" label="의학계열">의학계열</option>
+                                                                	<option value="" label="직접입력">직접입력</option>
+                                                                </select>
+                                                                <input type="text" placeholder="전공학과 입력" class="Major"/>
+                                                                <a href="javascript:void(0)" class="MajorPlusBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            </li>
+                                                            <li class="MajorPluseLI" style="">
+                                                                <select class="" name="">
+                                                                    <option value="" checked>선택</option>
+                                                                    <option value="" checked>부전공</option>
+                                                                    <option value="" checked>복수전공</option>
+                                                                    <option value="" checked>이중전공</option>
+                                                                </select>
+                                                                <select name="" id="">
+                                                                    <option value="" label="전공계열 선택">전공계열 선택</option>
+                                                                	<option value="" label="어문학">어문학</option>
+                                                                	<option value="" label="영어/영문">영어/영문</option>
+                                                                	<option value="" label="중어/중문">중어/중문</option>
+                                                                	<option value="" label="일어/일문">일어/일문</option>
+                                                                	<option value="" label="국어/국문">국어/국문</option>
+                                                                	<option value="" label="인문과학">인문과학</option>
+                                                                	<option value="" label="사회과학">사회과학</option>
+                                                                	<option value="" label="상경계열">상경계열</option>
+                                                                	<option value="" label="경제/경영">경제/경영</option>
+                                                                	<option value="" label="회계학">회계학</option>
+                                                                	<option value="" label="법학계열">법학계열</option>
+                                                                	<option value="" label="사범계열">사범계열</option>
+                                                                	<option value="" label="종교학">종교학</option>
+                                                                	<option value="" label="생활과학">생활과학</option>
+                                                                	<option value="" label="예/체능">예/체능</option>
+                                                                	<option value="" label="자연과학계열">자연과학계열</option>
+                                                                	<option value="" label="농수산/해양/축산">농수산/해양/축산</option>
+                                                                	<option value="" label="수학/통계학">수학/통계학</option>
+                                                                	<option value="" label="물리/천문/기상학">물리/천문/기상학</option>
+                                                                	<option value="" label="화학/생물">화학/생물</option>
+                                                                	<option value="" label="공학계열">공학계열</option>
+                                                                	<option value="" label="전기/전자/정보통신공학">전기/전자/정보통신공학</option>
+                                                                	<option value="" label="컴퓨터/시스템공학">컴퓨터/시스템공학</option>
+                                                                	<option value="" label="금속/비금속공학">금속/비금속공학</option>
+                                                                	<option value="" label="생명/화학/환경/바이오">생명/화학/환경/바이오</option>
+                                                                	<option value="" label="도시/토목/건축공학">도시/토목/건축공학</option>
+                                                                	<option value="" label="에너지/원자력공학">에너지/원자력공학</option>
+                                                                	<option value="" label="산업/자동차/우주공학">산업/자동차/우주공학</option>
+                                                                	<option value="" label="기계/조선/항공공학">기계/조선/항공공학</option>
+                                                                	<option value="" label="신소재/재료/섬유공학">신소재/재료/섬유공학</option>
+                                                                	<option value="" label="식품/유전/안전공학">식품/유전/안전공학</option>
+                                                                	<option value="" label="의학계열">의학계열</option>
+                                                                	<option value="" label="직접입력">직접입력</option>
+                                                                </select>
+                                                                <input type="text" placeholder="전공학과 입력" class="Major"/>
+                                                                <a href="javascript:void(0)" class="MajorMinusBtn"><img src="../..../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>학점</th>
+                                                    <td>
+                                                        <input type="text" placeholder="학점" class=" "  size="4" maxlength="4" />&nbsp; / &nbsp;<input type="text" placeholder="기준학점" class="GraduationYear"  size="4" maxlength="4" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="AcademicTableListPluse">
+                                            <a href="javascript:void(0)" class="ATLPButton"><img src="../../libs/images/mypage/pluse.png" alt=""><span>학력추가<span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 학력사항 -->
+
+                                <!-- 경력사항 -->
+                                <div class="JobCareer">
+                                    <div class="ResumeSubTitle">
+                                        <h3>경력사항</h3>
+                                        <div class="ResumeChecked">
+                                            <span class="ResumeCheckedTitle"><span class="Must">*</span> 경력유무</span>
+                                            <label for="Career" class="CareerCheck"><input type="radio" name="JobCareer" id="Career" checked="checked" />경력</label>
+                                            <input type="radio" name="JobCareer" id="NotCareer" /><label for="NotCareer">신입</label>
+                                        </div>
+                                    </div>
+                                    <div class="ResumeTableInput_St">
+                                        <div class="ResumeTableInner">
+                                            <table class="JobCareerTableList">
+                                                <tr class="TitleTr">
+                                                    <th colspan="4">
+                                                        <span class="JobCareerNum">1</span>경력<input type="checkbox" id="Secret"><label for="Secret">비밀</label>
+                                                        <a href="javascript:void(0)" class="JobCareerPluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="Must"></span>회사명</th>
+                                                    <td colspan="3"><input type="text" placeholder="회사명 입력" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="Must"></span>근무기간</th>
+                                                    <td colspan="3">
+                                                        <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        &nbsp;&nbsp;~&nbsp;&nbsp;
+                                                        <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        <select class="selectbox" name="">
+                                                            <option value="">퇴사</option>
+                                                            <option value="">재직중</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="Must"></span>부서명</th>
+                                                    <td><input type="text" placeholder="부서명입력" /></td>
+                                                    <th><span class="Must"></span>직급(직책)</th>
+                                                    <td><input type="text" placeholder="직급(직책)입력" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="Must"></span>연봉</th>
+                                                    <td><input type="text" placeholder="급여(연봉)입력">&nbsp;&nbsp;만원</td>
+                                                    <th><span class="Must"></span>퇴사사유</th>
+                                                    <td><input type="text" placeholder="간략히 적어주세요"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="Must"></span>담당업무</th>
+                                                    <td colspan="3"><textarea name="" id="" style="resize:none;"></textarea></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="CareerCountBox">
+                                        <span class="CareerCountTitle"><span class="Must">*</span>총 경력</span>
+                                        <input type="text" value="4" readonly="readonly" class="GraduationYear" />&nbsp;년&nbsp;&nbsp;
+                                        <input type="text" value="9" readonly="readonly"  class="GraduationYear" />&nbsp;개월
+                                    </div>
+                                </div>
+                                <!-- 경력사항 -->
+
+                                <!-- 추가정보입력 -->
+                                <div class="AddInfo">
+                                    <div class="AddInfoTitle">
+                                        <h3>추가사항입력</h3>
+                                        <p>더 많은 이력서 항목을 선택하시면, 상세 이력서를 작성하실 수 있습니다.</p>
+                                    </div>
+                                    <div class="AddInfoChoose">
+                                        <ul class="AddList">
+                                            <li><input type="checkbox" id="Add1"/><label for="Add1">취업우대사항</label></li>
+                                            <li><input type="checkbox" id="Add2"/><label for="Add2">대외활동</label></li>
+                                            <li><input type="checkbox" id="Add3"/><label for="Add3">수상내역/공모전</label></li>
+                                            <li><input type="checkbox" id="Add4"/><label for="Add4">교수이수내용</label></li>
+                                            <li><input type="checkbox" id="Add5"/><label for="Add5">OA능력</label></li>
+                                            <li><input type="checkbox" id="Add6"/><label for="Add6">자격증/면허증</label></li>
+                                            <li><input type="checkbox" id="Add7"/><label for="Add7">어학시험</label></li>
+                                            <li><input type="checkbox" id="Add8"/><label for="Add8">해외연수 및 해외경험</label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="AddListContents">
+                                        <div class="ResumeTableInput_St">
+                                            <div class="JobPreference AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>취업우대사항</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <!--a href="javascript:void(0)" class="JobPreferencePluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a-->
+                                                            <a href="javascript:void(0)" class="JobPreferenceMinusBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>보훈대상</th>
+                                                        <td><label for="label"><input type="radio" id="label" name="labels" class="radios"/>대상</label><label for="label_1"><input type="radio" id="label_1" name="labels"/>비대상</label></td>
+                                                        <th>취업보호대상</th>
+                                                        <td><label for="label_2"><input type="radio" id="label_2" name="labels_1" class="radios"/>대상</label><label for="label_3"><input type="radio" id="label_3" name="labels_1"/>비대상</label></td>
+                                                    </tr>
+                                                    <tr class="EmploySupport">
+                                                        <th>고용지원금대상</th>
+                                                        <td colspan="3"><label for="label_4"><input type="radio" class="radios" id="label_4" name="labels_2"/>대상</label><label for="label_5"><input type="radio" id="label_5" name="labels_2"/>비대상</label><a href="https://www.ei.go.kr/ei/eih/eg/eb/ebEntrprBnef/retrieveEb0401Info.do" target="_blank" class="EmploySupportLink">고용촉진 지원금 자세히보기></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>장애</th>
+                                                        <td>
+                                                            <label for="obstacle_1"><input type="radio" class="radios" id="obstacle_1" name="obstacle"/>대상</label><label for="obstacle_2"><input type="radio" id="obstacle_2" name="obstacle"/>비대상</label>
+                                                            <strong class="ObstacleRating">장애등급</strong>
+                                                            <select class="ObstacleSelect">
+                                                                <option value="">--</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                                <option value="">6</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>병역사항</th>
+                                                        <td colspan="3">
+                                                            <label for="Military"><input type="radio" name="Military" id="Military">군필</label><label for="Military_1"><input type="radio" name="Military" id="Military_1">미필</label><label for="Military_2"><input type="radio" name="Military" id="Military_2">면제</label><br />
+                                                            <p class="MilitaryDate">
+                                                                <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                                <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                                &nbsp;&nbsp;~&nbsp;&nbsp;
+                                                                <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                                <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                                <select class="selectbox" name="">
+                													<option value="0">군별선택</option>
+                													<option value="1">육군</option>
+                                                                    <option value="2">해군</option>
+                                                                    <option value="3">공군</option>
+                                                                    <option value="4">해병</option>
+                                                                    <option value="5">전경</option>
+                                                                    <option value="6">의경</option>
+                                                                    <option value="7">공익</option>
+                                                                    <option value="8">기타</option>
+                                                                </select>
+                                                                <select class="selectbox" name="">
+                                                                    <option value="0">계급선택</option>
+                                                                    <option value="1">이병</option>
+                                                                    <option value="2">일병</option>
+                                                                    <option value="3">상병</option>
+                                                                    <option value="4">병장</option>
+                                                                    <option value="5">하사</option>
+                                                                    <option value="6">중사</option>
+                                                                    <option value="7">상사</option>
+                                                                    <option value="8">원사</option>
+                                                                    <option value="9">준위</option>
+                                                                    <option value="10">소위</option>
+                                                                    <option value="11">중위</option>
+                                                                    <option value="12">대위</option>
+                                                                    <option value="13">소령</option>
+                                                                    <option value="14">중령</option>
+                                                                    <option value="15">대령</option>
+                                                                    <option value="16">준장</option>
+                                                                    <option value="17">소장</option>
+                                                                    <option value="18">중장</option>
+                                                                    <option value="19">대장</option>
+                                                                    <option value="99">기타</option>
+                                                                </select>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="Social AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>대외활동</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <span class="SocialNum">1</span>대외활동
+                                                            <a href="javascript:void(0)" class="SocialPluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="SocialMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>활동구분</th>
+                                                        <td><input type="text" /></td>
+                                                        <th><span class="Must">*</span>활동구분</th>
+                                                        <td>
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                            &nbsp;&nbsp;~&nbsp;&nbsp;
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>기관/장소</th>
+                                                        <td colspan="3"><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>활동내역</th>
+                                                        <td colspan="3">
+                                                            <textarea name="name" style="resize:none;"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="Prize AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>수상내역/공모전</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <span class="PrizeNum">1</span>수상내역/공모전
+                                                            <a href="javascript:void(0)" class="PrizePluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="PrizeMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>수상명</th>
+                                                        <td colspan="3"><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>수상연도</th>
+                                                        <td><input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" /></td>
+                                                        <th><span class="Must">*</span>수여기관</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수상내용</th>
+                                                        <td colspan="3">
+                                                            <textarea name="name" style="resize:none;"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="Education AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>교수이수내용</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <span class="EducationNum">1</span>교육이수
+                                                            <a href="javascript:void(0)" class="EducationPluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="EducationMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>교육명</th>
+                                                        <td><input type="text"></td>
+                                                        <th><span class="Must">*</span>교육기관</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><span class="Must">*</span>교육기간</th>
+                                                        <td colspan="3">
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                            &nbsp;&nbsp;~&nbsp;&nbsp;
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>교육내용</th>
+                                                        <td colspan="3">
+                                                            <textarea name="name" style="resize:none;"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="OAAbility AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>OA능력</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <!-- a href="javascript:void(0)" class="EducationPluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a-->
+                                                            <a href="javascript:void(0)" class="OAAbilityMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <p class="OATitle">문서작성</p>
+                                                            <p class="OASubtxt">(한글 / MS-Word)</p>
+                                                        </th>
+                                                        <th>
+                                                            <p class="OATitle">스프레드시트</p>
+                                                            <p class="OASubtxt">(Excel)</p>
+                                                        </th>
+                                                        <th>
+                                                            <p class="OATitle">프리젠테이션</p>
+                                                            <p class="OASubtxt">(PowerPoint)</p>
+                                                        </th>
+                                                        <th>
+                                                            <p class="OATitle">인터넷</p>
+                                                            <p class="OASubtxt">(정보검색 / Outlook)</p>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <select name="" id="">
+                                                                <option value="">수준</option>
+                                                                <option value="">전문가수준</option>
+                                                                <option value="">업무바로가능</option>
+                                                                <option value="">기본 문서작성 가능</option>
+                                                                <option value="">약간의 기능만 가능</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="" id="">
+                                                                <option value="">수준</option>
+                                                                <option value="">전문가수준</option>
+                                                                <option value="">업무바로가능</option>
+                                                                <option value="">기본 sheet작성 가능</option>
+                                                                <option value="">약간의 기능만 가능</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="" id="">
+                                                                <option value="">수준</option>
+                                                                <option value="">전문가수준</option>
+                                                                <option value="">업무바로가능</option>
+                                                                <option value="">기본 ppt작성 가능</option>
+                                                                <option value="">약간의 기능만 가능</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="" id="">
+                                                                <option value="">수준</option>
+                                                                <option value="">전문가수준</option>
+                                                                <option value="">업무바로가능</option>
+                                                                <option value="">기본 검색/활용 가능</option>
+                                                                <option value="">약간의 기능만 가능</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="Certificate AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>자격증/면허증</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <span class="CertificateNum">1</span>자격증/면허증
+                                                            <a href="javascript:void(0)" class="CertificatePluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="CertificateMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>자격증 / 면허증</th>
+                                                        <td><input type="text"></td>
+                                                        <th>발행처 / 발행기간</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>합격구분</th>
+                                                        <td>
+                                                            <select name="" id="">
+                                                                <option value="">합격구분</option>
+                                                                <option value="">1차합격</option>
+                                                                <option value="">2차합격</option>
+                                                                <option value="">필기합격</option>
+                                                                <option value="">실기합격</option>
+                                                                <option value="">최종합격</option>
+                                                            </select>
+                                                        </td>
+                                                        <th>취득일</th>
+                                                        <td>
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="Language AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>어학시험</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="2">
+                                                            <span class="LanguageNum">1</span>어학시험
+                                                            <a href="javascript:void(0)" class="LanguagePluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="LanguageMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>추가</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>외국어명</th>
+                                                        <td>
+                                                            <select class="" name="" class="LangsSelect">
+                                                                <option value="" label="언어선택">언어선택</option>
+                                                            	<option value="1" label="영어">영어</option>
+                                                            	<option value="2" label="일본어">일본어</option>
+                                                            	<option value="3" label="중국어">중국어</option>
+                                                            	<option value="4" label="독일어">독일어</option>
+                                                            	<option value="5" label="불어">불어</option>
+                                                            	<option value="6" label="스페인어">스페인어</option>
+                                                            	<option value="7" label="러시아어">러시아어</option>
+                                                            	<option value="8" label="이탈리아어">이탈리아어</option>
+                                                            	<option value="45" label="한국어">한국어</option>
+                                                            	<option value="99" label="기타">기타</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>공인시험</th>
+                                                        <td>
+                                                            <!-- 영어 SELECT -->
+                                                            <select name="" id="">
+                                                                <option value="7453">TOEIC</option>
+                                                                <option value="7454">S-ETAT2급</option>
+                                                                <option value="7455">TOED</option>
+                                                                <option value="7456">S-TOED</option>
+                                                                <option value="7457">EPQT</option>
+                                                                <option value="7458">EVQT</option>
+                                                                <option value="7460">EC-TOP(TOQ)</option>
+                                                                <option value="7461">CPET</option>
+                                                                <option value="7463">TOEFL</option>
+                                                                <option value="7464">TEPS</option>
+                                                                <option value="7468">G-TELP</option>
+                                                                <option value="7469">G-ETAT</option>
+                                                                <option value="7470">S-ETAT1급</option>
+                                                                <option value="7758">공무원영어</option>
+                                                                <option value="7759">관광통역안내사 영어</option>
+                                                                <option value="7760">무역영어</option>
+                                                                <option value="7761">영어 교원자격증</option>
+                                                                <option value="7762">AP</option>
+                                                                <option value="7763">Cambridge Certification CAE</option>
+                                                                <option value="7764">Cambridge Certification CPE</option>
+                                                                <option value="7765">Cambridge Certification FCE</option>
+                                                                <option value="7766">EFB</option>
+                                                                <option value="7767">ESPT</option>
+                                                                <option value="7768">FLEX 영어</option>
+                                                                <option value="7769">GMAT</option>
+                                                                <option value="7770">GRE</option>
+                                                                <option value="7771">iB-SET</option>
+                                                                <option value="7772">IELTS</option>
+                                                                <option value="7773">IET</option>
+                                                                <option value="7774">JET</option>
+                                                                <option value="7775">JET Speaking</option>
+                                                                <option value="7776">J-TOED</option>
+                                                                <option value="7777">LSAT</option>
+                                                                <option value="7778">OPIC</option>
+                                                                <option value="7779">PELT</option>
+                                                                <option value="7780">PELT Jr</option>
+                                                                <option value="7781">PELT kids</option>
+                                                                <option value="7782">PELT main</option>
+                                                                <option value="7783">PELT plus</option>
+                                                                <option value="7784">PELT standard</option>
+                                                                <option value="7785">PET(Preliminary English Test)</option>
+                                                                <option value="7786">SAT</option>
+                                                                <option value="7787">SEPT</option>
+                                                                <option value="7788">SLEP</option>
+                                                                <option value="7789">SNULT 영어</option>
+                                                                <option value="7790">SSAT</option>
+                                                                <option value="7791">TCT 번역능력인정시험 영어</option>
+                                                                <option value="7792">TESOL</option>
+                                                                <option value="7793">TOEFL(CBT)</option>
+                                                                <option value="7794">TOEFL(iBT)</option><option value="7795">TOEFL(PBT)</option>
+                                                                <option value="7796">TOEIC Bridge</option>
+                                                                <option value="7797">TOEIC Speaking and Writing Tests</option>
+                                                                <option value="7798">TOEIC Speaking Test</option>
+                                                                <option value="7799">TOP</option>
+                                                                <option value="7800">TOSEL</option>
+                                                                <option value="7801">TSE</option>
+                                                                <option value="7802">TWP</option>
+                                                                <option value="7803">Y-TOED</option>
+                                                                <option value="23573">TOEIC Writing Test</option>
+                                                                <option value="26876">BEC Preliminary</option>
+                                                                <option value="26877">BEC Vantage</option>
+                                                                <option value="26878">BEC Higher</option>
+                                                                <option value="28897">Versant</option>
+                                                                <option value="30481">WPT(Writing Proficiency Test)</option>
+                                                                <option value="36439">SPA(Speaking Proficiency Assessment) </option>
+                                                                <option value="36441">NEAT</option><option value="36442">TESL</option>
+                                                                <option value="36669">ITT 특별통역 자격증</option>
+                                                                <option value="36670">ITT 전문통역 자격증</option>
+                                                                <option value="36671">ITT 비즈니스통역 자격증</option>
+                                                                <option value="36672">ITT 특별번역 자격증</option>
+                                                                <option value="36673">ITT 전문번역 자격증</option>
+                                                                <option value="36674">ITT 비즈니스번역 자격증</option>
+                                                                <option value="39181">TEPS Speaking</option>
+                                                            </select>
+                                                            <!-- 일본어 SELECT -->
+                                                            <select class="" name="" style="display:none;">
+                                                                <option value="7465">JLPT</option>
+                                                                <option value="7466">JPT</option>
+                                                                <option value="7467">JTRA</option>
+                                                                <option value="7804">문부성 장학생 선발 시험</option>
+                                                                <option value="7805">일본어 교원자격증</option>
+                                                                <option value="7806">EJU</option>
+                                                                <option value="7807">EJU 일본유학시험</option>
+                                                                <option value="7808">FLEX 일본어</option>
+                                                                <option value="7809">JET 프로그램</option>
+                                                                <option value="7810">JLRT</option>
+                                                                <option value="7811">JTPA</option>
+                                                                <option value="7812">NIKKEN</option>
+                                                                <option value="7813">NPT</option>
+                                                                <option value="7814">SJPT</option>
+                                                                <option value="7815">SNULT 일어</option>
+                                                                <option value="7816">TCT 번역능력인정시험 일어</option>
+                                                                <option value="23831">J-TEST</option>
+                                                                <option value="28898">(新)JLPT</option>
+                                                                <option value="28899">JLT</option>
+                                                                <option value="31691">BJT</option>
+                                                                <option value="36606">OPIC</option>
+                                                                <option value="36675">ITT 특별통역 자격증</option>
+                                                                <option value="36676">ITT 전문통역 자격증</option>
+                                                                <option value="36677">ITT 비즈니스통역 자격증</option>
+                                                                <option value="36678">ITT 특별번역 자격증</option>
+                                                                <option value="36679">ITT 전문번역 자격증</option>
+                                                                <option value="36680">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 중국어 SELECT -->
+                                                            <select name="" id="" style="display:none;">
+                                                                <option value="7459">HSK</option>
+                                                                <option value="7817">BCT</option>
+                                                                <option value="7818">C.TEST</option>
+                                                                <option value="7819">CPT</option>
+                                                                <option value="7820">FLEX 중국어</option>
+                                                                <option value="7821">SNULT 중국어</option>
+                                                                <option value="7822">TCT 번역능력인정시험 중국어</option>
+                                                                <option value="7823">TSC</option>
+                                                                <option value="7824">YCT</option>
+                                                                <option value="7825">관광통역안내사 중국어</option>
+                                                                <option value="7826">중국어 교원자격증</option>
+                                                                <option value="25618">(新)HSK</option>
+                                                                <option value="26873">(新)HSK회화</option>
+                                                                <option value="26874">OPIC</option>
+                                                                <option value="29284">HKC</option>
+                                                                <option value="36240">新BCT(A)</option>
+                                                                <option value="36366">대만화어문능력시험(SCTOP)</option>
+                                                                <option value="36368">대만화어문능력시험(SCTOP)</option>
+                                                                <option value="36372">新BCT(B)</option>
+                                                                <option value="36440">CST</option>
+                                                                <option value="36443">TOCFL</option>
+                                                                <option value="36681">ITT 특별통역 자격증</option>
+                                                                <option value="36682">ITT 전문통역 자격증</option>
+                                                                <option value="36683">ITT 비즈니스통역 자격증</option>
+                                                                <option value="36684">ITT 특별번역 자격증</option>
+                                                                <option value="36685">ITT 전문번역 자격증</option>
+                                                                <option value="36686">ITT 비즈니스번역 자격증</option>
+                                                                <option value="39182">新BCT(Speaking)</option>
+                                                            </select>
+                                                            <!-- 독일어 SELECT -->
+                                                            <select name="" id="" style="display:none;">
+                                                                <option value="7827">DSH</option>
+                                                                <option value="7828">FLEX 독일어</option>
+                                                                <option value="7829">GDS</option>
+                                                                <option value="7830">KDS</option>
+                                                                <option value="7831">PWD</option>
+                                                                <option value="7832">SD1</option>
+                                                                <option value="7833">SD2</option>
+                                                                <option value="7834">SNULT 독일어</option>
+                                                                <option value="7835">TCT 번역능력인정시험 독일어</option>
+                                                                <option value="7836">TestDaF</option>
+                                                                <option value="7837">ZD</option>
+                                                                <option value="7838">ZDAF</option>
+                                                                <option value="7839">ZMP</option>
+                                                                <option value="7840">ZOP</option>
+                                                                <option value="7841">관광통역안내사 독일어</option>
+                                                                <option value="36687">ITT 특별번역 자격증</option>
+                                                                <option value="36688">ITT 전문번역 자격증</option>
+                                                                <option value="36689">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 불어 SELECT -->
+                                                            <select name="" id="" style="display:none;">
+                                                                <option value="7842">DALF</option>
+                                                                <option value="7843">DELF</option>
+                                                                <option value="7844">DELF A1</option>
+                                                                <option value="7845">DELF A2</option>
+                                                                <option value="7846">DELF JUNIOR</option>
+                                                                <option value="7847">FLEX 프랑스어</option>
+                                                                <option value="7848">SNULT 프랑스어</option>
+                                                                <option value="7849">TCF</option>
+                                                                <option value="7850">TCT 번역능력인정시험 불어</option>
+                                                                <option value="7851">TEF</option>
+                                                                <option value="7852">관광통역안내사 불어</option>
+                                                                <option value="23477">DELF B1</option>
+                                                                <option value="23478">DELF B2</option>
+                                                                <option value="23479">DALF C1</option>
+                                                                <option value="23480">DALF C2</option>
+                                                                <option value="36690">ITT 특별번역 자격증</option>
+                                                                <option value="36691">ITT 전문번역 자격증</option>
+                                                                <option value="36692">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 스페인어 SELECT -->
+                                                            <select name="" id="" style="display:none;">
+                                                                <option value="7853">DELE</option>
+                                                                <option value="7854">EPLE</option>
+                                                                <option value="7855">FLEX 스페인어</option>
+                                                                <option value="7856">SNULT 스페인어</option>
+                                                                <option value="7857">TCT 번역능력인정시험 스페인어</option>
+                                                                <option value="26881">OPIC</option>
+                                                                <option value="36693">ITT 특별번역 자격증</option>
+                                                                <option value="36694">ITT 전문번역 자격증</option>
+                                                                <option value="36695">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 러시아어 SELECT -->
+                                                            <select class="" name="" style="display:none;">
+                                                                <option value="7858">FLEX 러시아어</option>
+                                                                <option value="7859">SNULT 러시아어</option>
+                                                                <option value="7860">TCT 번역능력인정시험 러시아어</option>
+                                                                <option value="7861">토르플</option>
+                                                                <option value="7862">관광통역안내사 노어</option>
+                                                                <option value="26879">OPIC</option>
+                                                                <option value="36696">ITT 특별번역 자격증</option>
+                                                                <option value="36697">ITT 전문번역 자격증</option>
+                                                                <option value="36698">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 이탈리아어 SELECT -->
+                                                            <select class="" name="" style="display:none;">
+                                                                <option value="28900">CELI</option>
+                                                                <option value="28901">CILS</option>
+                                                                <option value="39184">ITT 특별번역 자격증</option>
+                                                                <option value="39185">ITT 전문번역 자격증</option>
+                                                                <option value="39186">ITT 비즈니스번역 자격증</option>
+                                                            </select>
+                                                            <!-- 한국어 SELECT -->
+                                                            <select class="" name="" style="display:none;">
+                                                                <option value="7863">국어능력인증시험</option>
+                                                                <option value="7864">한국어 교원자격증</option>
+                                                                <option value="7865">KBS 한국어능력시험</option>
+                                                                <option value="7866">TOPIK</option>
+                                                            </select>
+                                                            <!-- 기타 SELECT -->
+                                                            <select class="" name="" style="display:none;">
+                                                                <option value="7462">기타</option>
+                                                                <option value="7867">한자능력검정 (한국어문학회)</option>
+                                                                <option value="7868">한자자격검정 (한자교육진흥회)</option>
+                                                                <option value="7869">실용한자 (한국외국어평가원)</option>
+                                                                <option value="7870">한국한자검정 (한국평생교육평가원)</option>
+                                                                <option value="7871">한자급수자격검정 (한자급수자격검정)</option>
+                                                                <option value="7872">한자능력자격검정 (한국한자한문능력개발원)</option>
+                                                                <option value="7873">상공회의소 한자 (대한상공회의소)</option>
+                                                                <option value="7874">YBM 商務漢檢</option>
+                                                                <option value="39179">베트남어 OPI (OPI VIETNAMESE)</option>
+                                                                <option value="39180">호치민 인사대 베트남어 능력시험</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="OverseasTraining AddListContent" style="display:none;">
+                                                <div class="TableListTitle">
+                                                    <h3>해외연수 및 해외경험</h3>
+                                                </div>
+                                                <table>
+                                                    <tr class="TitleTr">
+                                                        <th colspan="4">
+                                                            <span class="OverseasTrainingNum">1</span>해외연수 및 해외경험
+                                                            <a href="javascript:void(0)" class="OverseasTrainingPluseBtn"><img src="../../libs/images/mypage/pluse.png" alt=""><span>추가</span></a>
+                                                            <a href="javascript:void(0)" class="OverseasTrainingMinuseBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>삭제</span></a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            활동기간
+                                                        </th>
+                                                        <td>
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                            &nbsp;&nbsp;~&nbsp;&nbsp;
+                                                            <input type="text" placeholder="연도" class="GraduationYear" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                                            <input type="text" placeholder="월" class="GraduationMonth" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="2" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>국가명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기관/단체</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>목적</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>활동내용</th>
+                                                        <td><textarea name="" id="" style="resize:none;" ></textarea></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 추가정보입력 -->
+
+                                <!-- 포토폴리오 -->
+                                <div class="Portfolio">
+                                    <div class="ResumeSubTitle">
+                                        <h3>포토폴리오</h3>
+                                    </div>
+                                    <div class="PortfolioContents">
+                                        <ul>
+                                            <li><input type="checkbox" id="Portfolio_1" /><label for="Portfolio_1"><a href="http://naver.com" target="_blank">[포토폴리오] http://naver.com</a></label></li>
+                                        </ul>
+                                    </div>
+                                    <div class="PortfolioButton">
+                                        <a href="javascript:void(0)" class="PortfolioMinusBtn"><img src="../../libs/images/mypage/minus.png" alt=""><span>선택삭제</span></a>
+                                        <a href="javascript:void(0)" class="PortfolioPluseBtn"><img src="../../libs/images/mypage/pluse1.png" alt=""><span>포토폴리오 추가</span></a>
+                                    </div>
+                                    <div class="PtPopup">
+                                        <div class="PopHead">
+                                            <p>포토폴리오 등록</p>
+                                            <p class="CloseBtn"><a href="javascript:void(0)"><img src="../../libs/images/mypage/popclose.png" alt=""></a></p>
+                                        </div>
+                                        <div class="PopContent">
+                                            <table>
+                                                <tr>
+                                                    <th>파일구분</th>
+                                                    <td>
+                                                        <select name="" id="">
+                                                            <option value="">선택</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>파일첨부</th>
+                                                    <td>
+                                                        <p>
+                                                            <input type="radio" id="FilePush" name="FilePush" /><label for="FilePush" class="FilePushs">파일첨부</label>
+                                                            <input type="radio" id="PortfoiloPush" name="FilePush" /><label for="PortfoiloPush">포토폴리오</label>
+                                                        </p>
+                                                        <p class="FileInputBox">
+                                                            <input type="file" name="files[]" id="filer_input" multiple="multiple">
+                                                        </p>
+                                                        <p class="PortfolioUrl">
+                                                            <input type="text" />
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="PopSubmitBtn">
+                                                <p>※ 파일크기는 최대 <span class="FC_Orange">30MB</span>이하로 등록바랍니다.</p>
+                                                <div class="SubmitBtn">
+                                                    <button type="button">등록</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 포토폴리오 -->
+                                <div class="Hope">
+                                    <div class="ResumeSubTitle">
+                                        <h3>희망근무조건</h3>
+                                    </div>
+                                    <div class="ResumeTableInput_St">
+                                        <table>
+                                            <tr>
+                                                <th>고용형태</th>
+                                                <td>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope1" class="IE8Input IE8InputReset"><label for="Hope1" class="LabelReset">정규직</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope2" class="IE8Input"><label for="Hope2">계약직</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope3" class="IE8Input"><label for="Hope3">병역특례</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope4" class="IE8Input"><label for="Hope4">프리랜서</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope5" class="IE8Input"><label for="Hope5">헤드헌팅</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope6" class="IE8Input"><label for="Hope6">파견대행</label>
+                                                    <input type="checkbox" name="HopeChoose" id="Hope7" class="IE8Input"><label for="Hope7">인턴직</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></span>희망연봉</th>
+                                                <td>
+                                                    <select class="selectbox" name="">
+                                                        <option value="0">면접후 결정</option>
+                                                        <option value="3">1400 만원 이하</option>
+                                                        <option value="4">1400~1600만원</option>
+                                                        <option value="5">1600~1800만원</option>
+                                                        <option value="6">1800~2000만원</option>
+                                                        <option value="7">2000~2200만원</option>
+                                                        <option value="8">2200~2400만원</option>
+                                                        <option value="9">2400~2600만원</option>
+                                                        <option value="10">2600~2800만원</option>
+                                                        <option value="11">2800~3000만원</option>
+                                                        <option value="12">3000~3200만원</option>
+                                                        <option value="13">3200~3400만원</option>
+                                                        <option value="14">3400~3600만원</option>
+                                                        <option value="15">3600~3800만원</option>
+                                                        <option value="16">3800~4000만원</option>
+                                                        <option value="17">4000~5000만원</option>
+                                                        <option value="18">5000~6000만원</option>
+                                                        <option value="19">6000~7000만원</option>
+                                                        <option value="20">7000~8000만원</option>
+                                                        <option value="21">8000~9000만원</option>
+                                                        <option value="22">9000~1억원</option>
+                                                        <option value="23">1억원 이상</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></span>희망근무지</th>
+                                                <td>
+                                                    <select name="" id="" class="Areachosee">
+                                                        <option value="0">지역선택</option>
+    													<option value="Q000">전국</option>
+    													<option value="I000">서울</option>
+    													<option value="E000">광주</option>
+    													<option value="F000">대구</option>
+    													<option value="G000">대전</option>
+    													<option value="H000">부산</option>
+    													<option value="J000">울산</option>
+    													<option value="K000">인천</option>
+    													<option value="1000">세종</option>
+    													<option value="B000">경기도</option>
+    													<option value="A000">강원도</option>
+    													<option value="C000">경상남도</option>
+    													<option value="D000">경상북도</option>
+    													<option value="L000">전라남도</option>
+    													<option value="M000">전라북도</option>
+    													<option value="O000">충청남도</option>
+    													<option value="P000">충청북도</option>
+    													<option value="N000">제주특별자치도</option>
+    													<option value="X000">중국·홍콩</option>
+    													<option value="Y000">미국</option>
+    													<option value="Z000">일본</option>
+    													<option value="R000">아시아</option>
+    													<option value="S000">북미</option>
+    													<option value="T000">중남미</option>
+    													<option value="U000">유럽</option>
+    													<option value="V000">오세아니아</option>
+    													<option value="W000">아프리카</option>
+                                                    </select>
+                                                    <select name="" id="">
+                                                        <option value="0">상세지역선택</option>
+                                                		<option value="B000">경기전지역</option>
+                                                		<option value="B010">가평군</option>
+                                                		<option value="B020">고양시 덕양구</option>
+                                                		<option value="B030">고양시 일산동구</option>
+                                                		<option value="B031">고양시 일산서구</option>
+                                                		<option value="B040">과천시</option>
+                                                		<option value="B050">광명시</option>
+                                                		<option value="B060">광주시</option>
+                                                		<option value="B070">구리시</option>
+                                                		<option value="B080">군포시</option>
+                                                		<option value="B090">김포시</option>
+                                                		<option value="B100">남양주시</option>
+                                                		<option value="B110">동두천시</option>
+                                                		<option value="B120">부천시 소사구</option>
+                                                		<option value="B130">부천시 오정구</option>
+                                                		<option value="B140">부천시 원미구</option>
+                                                		<option value="B150">성남시 분당구</option>
+                                                		<option value="B160">성남시 수정구</option>
+                                                		<option value="B170">성남시 중원구</option>
+                                                		<option value="B180">수원시 권선구</option>
+                                                		<option value="B190">수원시 장안구</option>
+                                                		<option value="B200">수원시 팔달구</option>
+                                                		<option value="B201">수원시 영통구</option>
+                                                		<option value="B210">시흥시</option>
+                                                		<option value="B220">안산시 단원구</option>
+                                                		<option value="B221">안산시 상록구</option>
+                                                		<option value="B230">안성시</option>
+                                                		<option value="B240">안양시 동안구</option>
+                                                		<option value="B250">안양시 만안구</option>
+                                                		<option value="B260">양주시</option>
+                                                		<option value="B270">양평군</option>
+                                                		<option value="B280">여주시</option>
+                                                		<option value="B290">연천군</option>
+                                                		<option value="B300">오산시</option>
+                                                		<option value="B310">용인시 기흥구</option>
+                                                		<option value="B311">용인시 수지구</option>
+                                                		<option value="B312">용인시 처인구</option>
+                                                		<option value="B320">의왕시</option>
+                                                		<option value="B330">의정부시</option>
+                                                		<option value="B340">이천시</option>
+                                                		<option value="B350">파주시</option>
+                                                		<option value="B360">평택시</option>
+                                                		<option value="B370">포천시</option>
+                                                		<option value="B380">하남시</option>
+                                                		<option value="B390">화성시</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 자기소개서 박스 -->
+                                <div class="MyIntroduction">
+                                    <div class="MyIntroTitle">
+                                        <h3>자기소개서</h3>
+                                        <p>자유로운 형식으로 입력해 주세요.</p>
+                                    </div>
+                                    <div class="MyIntroContent">
+                                        <div class="MyIntroContentTxtBox">
+                                            <p>[추천 자소서 항목] 성장과정, 학창시절, 교외활동, 성격 및 장단점, 지원동기, 입사 후 포부 등을 자유로운 형식으로 입력해 주세요.</p>
+                                        </div>
+                                        <div class="MyIntroInputBox">
+                                            <textarea name="" id="" style="resize:none;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 자기소개서 박스 -->
+                            </div>
+                            <div class="ResumeSave">
+                                <button type="submit">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SUB CONTENTS END -->
+            </div>
+        </div>
+        <!-- SUB WRAPPER END -->
+    </div>
+
+</body>
+</html>

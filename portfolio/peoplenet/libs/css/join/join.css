@@ -1,0 +1,90 @@
+
+#join_wrapper {  width:620px; padding-bottom:50px; margin:0 auto;}
+
+/* 회원가입 공통 */
+#join_wrapper .tit_join_member{ font-size:0; margin-top:50px;}
+#join_wrapper .tit_join_member span {display: inline-block; *display: inline; *zoom: 1;height: 30px;font: 0/0 a; text-indent: -1000em; background: url("../../images/join/join.png") no-repeat; vertical-align: top;}
+#join_wrapper .compulsory_cheak{ font-size:16px; color:#dc0000; padding-right:5px; vertical-align:middle;}
+
+/* 개인정보 이력창 */
+#join_wrapper #join_logo { text-align:center; padding:50px 0;}
+.member_category ul {font-size:0;  box-sizing: border-box; }
+.member_category ul li{ width:310px; height:76px; box-sizing:border-box; background:#fff; display:inline-block; vertical-align:top; text-align:center; border:1px solid #e9e9e9;}
+.member_category ul li:first-child{border-right:0;}
+.member_category ul li a { font-size:14px; color:#737373; display:block; width:100%; height:100%;}
+
+.member_category .personaltab { padding-top:19px;  }
+.member_category .businesstab { padding-top:27px; }
+
+.member_category ul li.active{background:#2289eb;}
+.member_category ul li.active a{ color:#fff; }
+
+.member_category ul li .join_title { font-size:23px; font-weight:bold;}
+
+.member_category ul li:hover { background:#2289eb; }
+.member_category ul li:hover a{ color:#fff;}
+.member_category .compulsory { font-size:13px; padding-top:5px; color:#dc0000;  }
+
+#join_wrapper .tit_join_member span.personal_input { width:168px; height:30px; background-position: 0 -50px; }
+
+.personal_info .personal_entry label { vertical-align:middle; font-size:13px;}
+.personal_info .personal_entry input{ vertical-align: middle; font-size:13px;}
+.personal_info .personal_entry { width:100%; margin-top:20px; background:#fff; border:1px solid #e9e9e9; }
+.personal_info .personal_entry tr { border-bottom:1px solid #e9e9e9; }
+.personal_info .personal_entry tr th { height:40px; text-align:left; font-size:14px; color:#969696; font-weight:400; border-right:1px solid #e9e9e9; vertical-align:middle; padding-left:10px;}
+.personal_info .personal_entry tr th {vertical-align: middle;}
+.personal_info .personal_entry tr td { font-size:13px; vertical-align:middle; padding:0 10px;}
+.personal_info .personal_entry .sub_txt { font-size:12px; color:#969696; padding-left:10px; }
+.personal_info .personal_entry .input_st{  width:100%; height:22px; border:0; color:#565656; box-sizing:border-box;  }
+.personal_info .personal_entry .input_year { width:20%; border:1px solid #e6e6e6; }
+.personal_info .personal_entry .input_phone { width:20%; }
+.personal_info .personal_entry .phone_numfirst { height:30px; color:#969696; }
+.personal_info .personal_entry .certification_btn { float:right; padding:5px 15px; border:1px solid #e9e9e9; background:#fff; font-size:12px; color:#333; margin-left:15px; vertical-align:middle; letter-spacing:-1px;}
+.personal_info .personal_entry .certification_number { width:40%; }
+.personal_info .personal_entry .input_address { width:75%; }
+.personal_info .personal_entry .re_num_btn { margin-left:10px; }
+.personal_info .personal_entry .input_email { width:33%; }
+.personal_info .personal_entry .choose_email { outline:0;  }
+.personal_info .personal_entry .choose_email option { border:1px solid #e9e9e9; }
+.personal_entry tr td:after { display:block; content:""; clear:both; }
+
+
+/* 기업회원가입 */
+
+#join_wrapper .tit_join_member span.company_input { width:168px; height:30px; background-position: 0 -1px; }
+
+.company_info .company_entry label { vertical-align:middle; font-size:13px;}
+.company_info .company_entry input{ vertical-align: middle; font-size:13px;}
+.company_info .company_entry { width:100%; margin-top:20px; background:#fff; border:1px solid #e9e9e9; }
+.company_info .company_entry tr { border-bottom:1px solid #e9e9e9; }
+.company_info .company_entry tr th { height:40px; text-align:left; font-size:14px; color:#969696; font-weight:400; border-right:1px solid #e9e9e9; vertical-align:middle; padding-left:10px;}
+.company_info .company_entry tr th {vertical-align: middle;}
+.company_info .company_entry tr td { font-size:13px; vertical-align:middle; padding:0 10px; position:relative;}
+.company_info .company_entry .sub_txt { font-size:12px; color:#969696; padding-left:10px; }
+.company_info .company_entry .input_st{  width:100%; height:22px; border:0; color:#565656; box-sizing:border-box;  }
+.company_info .company_entry .input_year { width:20%; border:1px solid #e6e6e6; }
+.company_info .company_entry .input_phone { width:20%; }
+.company_info .company_entry .phone_numfirst { height:30px; color:#969696; }
+.company_info .company_entry .certification_btn { position:absolute; left:auto;right:10px; top:5px; padding:5px 15px; border:1px solid #e9e9e9; background:#fff; font-size:12px; color:#333; margin-left:15px; vertical-align:middle; letter-spacing:-1px;}
+.company_info .company_entry .compnay_number { width:80%; }
+.company_info .company_entry .input_address { width:75%; }
+.company_info .company_entry .re_num_btn { margin-left:10px; }
+.company_info .company_entry .input_email { width:33%; }
+.company_info .company_entry .choose_email { outline:0;  }
+.company_info .company_entry .choose_email option { border:1px solid #e9e9e9; }
+.company_entry tr td:after { display:block; content:""; clear:both; }
+
+
+/* 이용약관 동의 */
+#agree { margin-top:30px;}
+#agree_inner {border:1px solid #e9e9e9; background:#fff; padding:15px; margin-top:20px;}
+#agree .tit_join_member .agree_input_title { width:113px; height:29px; background-position: 0 -101px; }
+#anterior .anterior_txt{ border:1px solid #e9e9e9; background:#f9f9f9; width:100%; height:150px; padding:15px; box-sizing:border-box; line-height:150%;}
+#anterior .anterior_title { font-size:14px; color:#252525; font-weight:normal; padding-bottom:10px; }
+#anterior .agree_checked { font-size:13px; padding-top:5px; float:right; }
+#anterior .checkbox { vertical-align:middle; margin-left:5px;}
+#anterior:after { display:block; content:""; clear:both; }
+
+/* 회원가입 버튼 */
+.mem_join_btn { text-align:center; margin-top:28px;}
+.mem_join_btn .member_join_btn { width:250px; height:50px; line-height:50px; padding:10px 20px box-sizing:border-box; font-size:15px; color:#fff; background:#2289eb; }

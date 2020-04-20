@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>사람넷</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../libs/css/common.css">
+    <link rel="stylesheet" href="../../libs/css/reset.css">
+    <link rel="stylesheet" href="../../libs/css/layout.css">
+    <link rel="stylesheet" href="../../libs/css/header.css">
+    <link rel="stylesheet" href="../../libs/css/main.css">
+    <link rel="stylesheet" href="../../libs/css/list_style.css">
+    <link rel="stylesheet" href="../../libs/fonts/flaticon.css">
+
+    <link rel="stylesheet" href="../../libs/css/informview/informview.css">
+
+    <script src="https://ajax.googleapis.com/ajax../../libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../libs/js/common.js"></script>
+    <script src="../../libs/js/slider.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- html5 tag -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com../../libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- nth-child 적용 -->
+    <!--[if lt IE 9]>
+      <script src="../../libs/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div id="Wrapper">
+        <!-- HEADER START -->
+        <header>
+            <div id="header_wrap">
+                <div class="header_inner">
+                    <div class="lately_Announcement">
+                        <div class="lately_title">최근본 공고 <span>0</span>건</div>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="company_logo">
+                                        <a href=""><img src="../../libs/images/header/lately_test_img.png" alt=""></a>
+                                    </dt>
+                                    <dd class="company_name">
+                                        <a href="">
+                                        삼성화재<br/>
+                                        애니카손해보험
+                                        </a>
+                                    </dd>
+                                    <dd class="company_announcement"><a href="">대물보상 신입사원 모집aa</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="javascript:void(0)" class="top_btn"><img src="../../libs/images/header/top_btn.png" alt="top버튼"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR START -->
+                <div id="globalBar" class="util_wrap">
+                    <div class="header_inner">
+                        <div class="util_default">
+                            <a href="/" class="home_link_btn"><i class="flaticon-home"></i><span class="home_link">홈으로</span></a>
+                            <a href="javascript:void(0)" class="bookmark_link_btn" id="favorite"><i class="flaticon-star"></i><span class="bookmark_link">즐겨찾기</span></a>
+                        </div>
+                        <div class="util_option">
+                            <a href="" class="login floatleft">로그인</a>
+                            <a href="" class="join floatleft" >회원가입</a>
+                            <div id="person_header_btn2" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">개인회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                          <li><a href="">개인회원 안내</a></li>
+                                          <li><a href=""><strong>이력서 등록</strong></a></li>
+                                          <li><a href=""><strong>이력서 현황</strong></a></li>
+                                          <li><a href=""><strong>입사지원 현황</strong></a></li>
+                                          <li><a href="">맞춤채용 정보</a></li>
+                                          <li><a href="">스크랩한 공고</a></li>
+                                          <li><a href="">최근 본 공고</a></li>
+                                          <li><a href="">개인정보 수정</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="company_header_btn" class="floatleft util_menu">
+                                <a href="javascript:void(0)" class="util_mem">기업회원<span class="option_arrow_down"></span></a>
+                                <div class="membership_pop">
+                                    <ul>
+                                        <li><a href="">기업회원 안내</a></li>
+                                        <li><a href=""><strong>채용공고등록</strong></a></li>
+                                        <li><a href=""><strong>공고/지원자 관리</strong></a></li>
+                                        <li><a href=""><strong>기업정보 수정</strong></a></li>
+                                        <li><a href=""><strong>결제내역 조회</strong></a></li>
+                                        <li><a href="">채용광고 상품</a></li>
+                                        <li><a href="">채용솔루션 상품</a></li>
+                                        <li><a href="">인재정보 열람 상품</a></li>
+                                        <li><a href="">SIAT 인적성검사</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="" class="floatleft">고객센터</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GLOGBALBAR END -->
+
+                <!-- HEADER MAIN START -->
+                <div id="header_main">
+                    <div class="header_inner">
+                        <h1><img src="../../libs/images/header/main_logo_1.png" alt="사람넷"></h1>
+                        <div class="search_box">
+                            <fieldset class="fieldset">
+                                <legend class="hide">검색 폼</legend>
+                                <span id="search_wrap_span" class="box_search_input banner-on">
+                                    <input type="text" name="searchword" id="combineSearchWord" title="검색어 입력" tabindex="1" accesskey="s" autocomplete="off" size="20" value="">
+                                </span>
+                                <button type="submit" id="submit_button" name="go" class="btn_search"><i class="flaticon-magnifying-glass"></i><span class="search_txt">검색</span></button>
+                            </fieldset>
+                            <p class="hastag_record"><span>#디자이너</span><span>#서울</span><span>#퍼블리셔</span></p>
+                        </div>
+                        <div class="header_bn">
+                            <img src="../../libs/images/header/header_bn.png" alt="필요한 채용정보만 확실하게! 해시태그로 간편검색">
+                        </div>
+                    </div>
+                </div>
+                <!-- HEADER MAIN END -->
+
+                <!-- HEADER GNB START -->
+                <div id="header_gnb">
+                    <div class="header_inner">
+                        <h2 class="textindent hide">사람넷 주요 메뉴</h2>
+                        <ul class="gnb_list">
+                            <li id="all">
+                                <a href="#">전체 채용정보</a>
+                            </li>
+                            <li id="job">
+                                <a href="#">직무별</a>
+                            </li>
+                            <li id="area">
+                                <a href="">지역별</a>
+                            </li>
+                        </ul>
+                        <ul class="side_menu">
+                            <li id="resume">
+                                <a href="/inc/mypage/Resume.html"><span class="extra_icon"><i class="flaticon-black"></i></span><span class="txt">이력서 등록</span></a>
+                            </li>
+                            <li id="advertise">
+                                <a href="#"><span class="extra_icon"><i class="flaticon-list-with-dots"></i></span><span class="txt">맞춤공고</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HEADER GNB END-->
+                <div id="header_search">
+                    <div id="header_search_inner">
+                        <div id="hd_search">
+                            <input type="text" class="search_input" />
+                            <button type="button" class="submit_btn"><i class="flaticon-magnifying-glass"></i></button>
+                        </div>
+                        <div id="search_hastag">
+                            <span class="search_hs_arrow"><img src="../../libs/images/header/search_arrow.png" alt="디자인 요소 화살표입니다."></span>
+                            <p>#사람넷 #디자이너 #퍼블리셔 #단넷개발자 #기획자 #1년 #신규</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <div id="sub_wrapper">
+            <div id="sub_container">
+                <!-- SUB CONTENTS START -->
+                <div id="sub_contents">
+                    <div class="SubContentTitle">
+                        <h2>채용정보</h2>
+                    </div>
+
+                    <div class="CompanyInfo">
+                        <div class="CompanyInfoInner">
+                            <div class="CompanyInfoLeft">
+                                <div class="CompanyTitle">
+                                    <h3>에스디바이오센서/ 바이오노트 신입 및 경력 사원 채용</h3>
+                                </div>
+                                <div class="CompanyContent">
+                                    <div class="CompanyContentLeft">
+                                        <div class="CCLTitle">
+                                            <p>근무조건</p>
+                                        </div>
+                                        <div class="CCLList">
+                                            <ul>
+                                                <li>
+                                                    <dl>
+                                                        <dt>급여</dt>
+                                                        <dd>회사내규에따름</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>지역</dt>
+                                                        <dd>서울, 경기, 인천, 전북, 부산</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>근무형태</dt>
+                                                        <dd>정규직</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>근무요일</dt>
+                                                        <dd>주5일(월~금)</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>직책</dt>
+                                                        <dd>사원</dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="CompanyContentRight">
+                                        <div class="CCLTitle">
+                                            <p>지원자격</p>
+                                        </div>
+                                        <div class="CCLList">
+                                            <ul>
+                                                <li>
+                                                    <dl>
+                                                        <dt>경력</dt>
+                                                        <dd>신입,경력 1년 이상</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>학력</dt>
+                                                        <dd>대학졸업(2,3년)이상 (졸업예정자 가능)</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>나이</dt>
+                                                        <dd>25세(1993년생) 이상</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>우대</dt>
+                                                        <dd>영어가능자 우대</dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CompanyInfoRight">
+                                <div class="">
+                                    <div class="CompanyLogo">
+                                        <img src="../../libs/images/companypage/peoplenet.png" alt="">
+                                    </div>
+                                    <div class="CompanyInfomation">
+                                        <p>FTP Trading Group</p>
+                                        <p class="HompageUrl"><a href="">www.사람넷.com</a><img src="../../libs/images/companypage/UrlIcon.png" alt="홈페이지 주소"></p>
+                                    </div>
+                                    <div class="CompanyInfoList">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>대표자명</dt>
+                                                    <dd>홍길동</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>사원수</dt>
+                                                    <dd>50명</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>자본금</dt>
+                                                    <dd>10억원</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>매출액</dt>
+                                                    <dd>미입력</dd>
+                                                </dl>
+                                            </li>
+                                            <li>
+                                                <dl>
+                                                    <dt>사업분야</dt>
+                                                    <dd>증권 및 미디어</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- SUB CONTENTS END -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

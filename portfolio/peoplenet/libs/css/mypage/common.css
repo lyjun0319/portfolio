@@ -1,0 +1,56 @@
+#sub_wrapper #sub_container #aside { width:165px; position:absolute;}
+#sub_wrapper #sub_container #sub_contents { width:895px; margin-left:205px;}
+
+/* 서브 레프트 메뉴 */
+#lnb { border:1px solid #e9e9e9; border-top:2px solid #2289eb; }
+#lnb .lnb_title { font-size:17px; font-weight:bold; color:#2289eb; padding:20px; padding-top:29px; border-bottom:1px solid #e9e9e9; }
+#lnb .sub_list { padding:0 20px; padding-bottom:40px; }
+
+/* 공통 작업 */
+#lnb .sub_list .lnb_sub_tt a { font-size:15px; color:#333333; font-weight:bold; }
+#lnb .sub_list ul li { padding-top:5px; letter-spacing:-0.5px; }
+#lnb .sub_list ul li a { font-size:13px; color:#777777; font-weight:100; }
+#lnb .eachlist { padding:20px 0; border-bottom:1px solid #e9e9e9; }
+#lnb .sub_list .customer{ border-bottom:0; }
+#lnb .sub_list .etc_menu ul li a { font-size:15px; color:#333; font-weight:bold; }
+.a { background:#212121; }
+
+
+.Must { color:#ff3b3b; padding-right:3px; }
+
+/* 채크박스 스타일 */
+input[type=checkbox] { display: none; }
+input[type=checkbox] + label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 14px;
+    padding-left: 20px;
+    background: url('../../images/mypage/check_bg.png') left/14px no-repeat ;
+    font-size:13px;
+    font-weight:200;
+    color:#888888;
+}
+input[type=checkbox]:checked + label {
+    background-image: url('../../images/mypage/checked_bg.png');
+}
+
+.SubContentTilte { padding:20px 0 16px; border-bottom:1px solid #333; }
+.SubContentTilte h2{ font-size:28px; color:#333;}
+
+/* ListNum */
+.ResumeListNum{font-size:0; text-align:center;}
+.ListArrow{ display:inline-block; vertical-align:top;}
+.ListArrow ul { font-size:0; }
+.ListArrow ul li { display:inline-block; vertical-align:top; width:30px; height:30px; border:1px solid #ddd; text-align:center; line-height:30px; box-sizing:border-box; margin-left:5px; }
+.ListArrow ul li a{ font-size:12px; display:block;}
+
+.ListNumber {display:inline-block; vertical-align:top;}
+.ListNumber ul { width:100%; font-size:0; text-align:center;}
+.ListNumber ul li { display:inline-block; vertical-align:top; width:30px; height:30px; border:1px solid #ddd; text-align:center; line-height:30px; box-sizing:border-box; margin-left:5px;}
+.ListNumber ul li.active { background:#687684; border:0; }
+.ListNumber ul li.active a { color:#fff; }
+.ListNumber ul li:first-child {  margin-left:0; }
+.ListNumber ul li a { font-size:12px; display:block; }
+
+.ListPrevArrow { margin-right:20px; }
+.ListNextArrow { margin-left:20px; }

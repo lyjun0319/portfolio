@@ -1,0 +1,151 @@
+.ContentsTitle h2{ font-size:28px; color:#222; margin-bottom:18px; }
+
+/* 이전 채용 공고 불러오기 */
+.RecruitmentKind { background:#f3f8fc; border:1px solid #dae6f0; padding:9px 0; }
+.RecruitmentKind .RecruitmentKindTitle{ font-size:14px; color:#737373; padding:0 30px; }
+.RecruitmentKind .RecruitmentKindSelect { width:452px; height:30px; font-size:13px; color:#afafaf; padding-left:10px; border:1px solid #ddd; box-sizing:border-box; letter-spacing:-1px; }
+
+/* 공고 제목 */
+.RecruitmentTitle {padding:6px; background:#155ed5; margin-top:20px;}
+.RecruitmentTitleInput { width:100%; height:40px; text-align:center; font-size:14px;}
+
+/* 필수항목 */
+.Requisite { margin-top:20px; }
+.Requisite p {text-align:right; font-size:14px; }
+.Requisite p .FontColorORG{ color:#ff690f; }
+
+
+/* 공통 테이블 스타일 */
+.RecruitmentContents { margin-top:10px; }
+.RecruitmentTable .TableTitle h3{ font-size:24px; color:#444; letter-spacing:-1px; }
+.RecruitmentTable .TableList { margin-top:10px; margin-bottom:40px; padding-bottom:40px; background:url('../../images/companypage/TableBottomBG.png') repeat-x left bottom; }
+.RecruitmentTable .TableList table {width:100%;}
+.RecruitmentTable .TableList table th {font-size:14px; color:#444; font-weight:normal; text-align:left; padding-left:10px; box-sizing:border-box; padding:8px 0;}
+.RecruitmentTable .TableList table td { font-size:14px; padding:8px 0; color:#666; }
+.RecruitmentTable .TableList table td .certification_btn { display:block; width:80px; height:30px; border:1px solid #818181; background:#969696; text-align:center; line-height:30px; color:#fff;}
+
+.TableList table td select { min-width:148px; height:28px; border:1px solid #ddd;  }
+.TableList table td input { vertical-align:middle; height:30px; border:1px solid #ddd;}
+.TableList table td label { vertical-align:middle; padding-left:5px;}
+.TableList table td ul { font-size:0; }
+.TableList table td ul li { display:inline-block; vertical-align:middle; width:25%; font-size:14px; margin-bottom:10px;}
+.TableList table td .PeopleNum { width:50px; height:30px; border:1px solid #ddd; box-sizing:border-box; margin-right:5px; text-align:right; padding-right:5px;  }
+.TableList table td.CashKind{font-size:0;}
+.TableList table td.CashKind select{ width:100px; height:30px; border:1px solid #ddd; box-sizing:border-box; font-size:12px; vertical-align:middle;margin-right:10px;}
+.TableList table td.CashKind input { width:80px; height:30px; border:1px solid #ddd; box-sizing:border-box; font-size:12px; vertical-align:middle; text-align: right; padding-right:5px;}
+.TableList table td.CashKind span { font-size:14px; vertical-align: middle; padding:0 10px;}
+.TableList table td.Position .PositionTitle{ font-size:14px; color:#666666; margin-bottom:10px; }
+.TableList table td.Position .PositionTitle2{ font-size:14px; color:#666666; margin-bottom:10px; margin-top:20px; }
+.TableList table td.Position ul { padding:20px; padding-bottom:10px; border:1px solid #ddd ;background:#fafafa; box-sizing:border-box; }
+.TableList table td.Position ul li { width:33.3333333%; }
+
+.TableList table td.Academic select{ width:250px; height:30px; border:1px solid #ddd; }
+.TableList table td.Career input{ margin-left:20px; }
+.TableList table td.Career input:first-child { margin-left:0; }
+
+.TableList table td.Gender input[type="radio"] { margin-left:20px; }
+.TableList table td.Gender input:first-child { margin-left:0; }
+
+.TableList table td.Age input[type="radio"] {margin-left:20px;}
+.TableList table td.Age input:first-child { margin-left:0; }
+.TableList table td.Age select { width:150px; height:30px; border:1px solid #ddd; box-sizing:border-box;  }
+
+.TableList table td .choosebtn { display:inline-block; vertical-align:top; height:30px; padding:0 10px; font-size:12px; line-height:30px; color:#fff; background:#969696; border:1px solid #828282; }
+.TableList table td .Major { display:inline-block; vertical-align:top; width:80%; height:60px; border:1px solid #ddd; box-sizing:border-box; }
+
+.TableList table td.receipt ul li{ width:17%; }
+.TableList table td.receipt input:first-child { margin-left:0; }
+
+.TableList table th .SubTxt{ font-size:12px; color:#666; margin-top:3px;}
+
+.TableList table.Process th { vertical-align:top; }
+.TableList table.Process td textarea { width:100%; height:100px; border:1px solid #ddd; overflow:auto; padding:10px; box-sizing:border-box;}
+
+
+/* 근무조건 테이블 */
+.TableList .ChooseList { margin-top:15px; padding:20px; padding-bottom:10px; border:1px solid #ddd; box-sizing:border-box; }
+.TableList .ChooseList li { width:100%; }
+.TableList .ChooseList li dl { width:100%; }
+.TableList .ChooseList li dl dt { display:inline-block; vertical-align:middle; width:70px; color:#2288ea;}
+.TableList .ChooseList li dl dt .ExtraDot { display:inline-block; vertical-align:middle; width:3px;height:3px; background:#2288ea; margin-right:5px; }
+
+.TableList .ChooseList li dl dd { display:inline-block; vertical-align:middle; margin-left:10px; }
+.TableList .ChooseList li dl dd:first-child {margin-left:0;}
+.TableList .ChooseList li dl dd span { display:inline-block; vertical-align:middle; font-size:14px;}
+.TableList .ChooseList li dl dd .DeletBtn { width:15px; height:15px; border:1px solid #ddd; box-sizing:border-box; margin-left:5px; cursor:pointer; background:url('/libs/images/companypage/DeletBtn.png') no-repeat center center;}
+.TableList .ChooseList li dl dd .ChooseTitle { padding-top:1px; }
+
+
+/* 근무조건 선택 팝업 */
+.ChooseListPopup{ display:none; position:absolute; top:0; left:50%; width:670px; margin-left:-335px; border:2px solid #2288ea; background:#fff;  }
+.ChooseListPopup .PopupTitle { background:#2288ea; padding:10px 0;  }
+.ChooseListPopup .PopupTitle h3 { color:#fff; padding-left:10px; }
+
+.ChooseListPopup .PopupContent { padding:20px; box-sizing:border-box; }
+.PopupContent ul { font-size:0; border-top:1px solid #26203f;}
+.PopupContent ul li { display:inline-block; vertical-align:middle; width:33.3333333%; min-height:244px; font-size:14px; border-right:1px solid #ddd; border-bottom:1px solid #ddd; box-sizing:border-box;}
+.PopupContent ul li:nth-child(3n) { border-right:0; }
+
+.PopupContent ul li .PopListTitle { padding:12px 0; background:#f5f5f5; border-bottom:1px solid #ddd; box-sizing:border-box; }
+.PopupContent ul li .PopListTitle h4 { text-align:center; color:#666666;  }
+.PopupContent ul li .PopListTitle a {font-size:20px; color:#fff; position:absolute; top:8px; left:auto; right:10px;}
+
+.PopListContent { padding:10px 0; }
+.PopListContent p { width:100%; padding-left:10px; padding-top:10px; box-sizing:border-box;}
+.PopListContent p:first-child { padding-top:0; }
+
+.ChooseListPop { position:relative; }
+
+/* 회사위치 */
+.TableList table td.LocationTd span{ vertical-align:middle; }
+.TableList table td.LocationTd span img{ vertical-align:middle; }
+.TableList table td.LocationTd a { vertical-align:middle; margin-left:10px;  }
+.TableList table td.HopeLocation {font-size:0;}
+.TableList table td.HopeLocation select{ width:150px; height:28px; border:1px solid #ddd; font-size:12px; margin-left:10px;}
+.TableList table td.HopeLocation select:first-child { margin-left:0; }
+
+.TableList table td.DayWeek {font-size:0; }
+.TableList table td.DayWeek select{ font-size:12px; margin-left:10px;}
+.TableList table td.DayWeek select:first-child { margin-left:0; }
+
+
+/* 채용공고 디자인 */
+.RecuitmentDesign { border:1px solid #ddd; background:#fafafa; padding:30px 20px; }
+.RecuitmentDesign .DesignContent { min-height:400px; background:#fff; border:1px solid #ddd; margin-top:20px;  }
+
+/* 담당자 */
+.Responsibility { background:#f6f6fa; margin-top:20px; border:1px solid #eaeaf6; padding:20px;}
+.Responsibility .TableList { margin-top:0; margin-bottom:0; padding-bottom:0; background:none; }
+.TableList table td.PhoneNum { font-size:0; }
+.TableList table td.PhoneNum select { min-width:50px; font-size:13px; vertical-align:middle;}
+.TableList table td.PhoneNum span { font-size:13px; vertical-align:middle; padding:0 8px;}
+.TableList table td.PhoneNum input { width:50px; height:28px; vertical-align:middle; font-size:12px;}
+
+.TableList table td.InfoRadio input[type=radio] { margin-left:10px;}
+.TableList table td.InfoRadio input:first-child { margin-left:0; }
+
+
+.SendBtn { text-align:center; margin-top:50px; font-size:0;}
+.SendBtn button { min-width:150px; height:50px; background:#fafafa; border:1px solid #ddd; box-sizing:border-box; font-size:14px; margin-left:20px;}
+.SendBtn .OkBtn { background:#155ed5; border:1px solid #155ed5; color:#fff; margin-left:0;}
+
+
+/* 필수입력 텍스트 */
+.TableList table th.TextStrong { color:#ff690f; }
+.TableList table td .Time { width:100px; height:32px; border:1px solid #ddd; }
+
+
+/* 채크박스 스타일 */
+.RecruitmentContents input[type=checkbox] { display: none; }
+.RecruitmentContents input[type=checkbox] + label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 14px;
+    padding-left: 20px;
+    background: url('../../images/mypage/check_bg.png') left/14px no-repeat ;
+    font-size:13px;
+    color:#666;
+}
+.RecruitmentContents input[type=checkbox]:checked + label {
+    background-image: url('../../images/mypage/checked_bg.png');
+}

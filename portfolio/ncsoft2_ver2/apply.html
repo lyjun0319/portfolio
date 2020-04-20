@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>NCSOFT</title>	
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style2.css">
+	<link rel="stylesheet" href="./css/flaticon.css">
+
+	<!--[if lte IE 9]>
+		<link href='./css/animations-ie-fix.css' rel='stylesheet'>
+	<![endif]-->
+
+	<script src="./js/jquery.3.3.1.min.js"></script>
+	<script src="./js/selectivizr-min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/run.js"></script>
+	<script src="./js/TweenMax.min.js"></script>
+	<script src="./js/jquery.mousewheel.min.js"></script>
+	<script src="./js/TextPlugin.min.js"></script>
+
+	<!--[if lte IE 8]>
+		<script src="./js/html5.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+
+	<div class="wrap">
+
+		
+
+	</div> <!-- //wrap -->
+
+	<script src="./js/css3-animate-it.js"></script>
+	<script type="text/javascript">
+
+	$(function(){
+
+		//RADIO BOX
+		$('.etc_radio_box input[type="radio"]').on('click',function(){
+			if ($(this).is(':checked')) {
+				$(this).parent().siblings().removeClass('on');
+				$(this).parent().addClass('on');
+			} else {
+				$(this).parent().siblings().removeClass('on');
+			}
+		})
+	});
+		
+	</script>
+</body>
+</html>

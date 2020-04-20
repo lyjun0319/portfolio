@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>입사지원 현황</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../libs/css/common.css">
+    <link rel="stylesheet" href="../../libs/css/reset.css">
+    <link rel="stylesheet" href="../../libs/fonts/flaticon.css">
+    <link rel="stylesheet" href="../../libs/css/companypage/header.css">
+    <link rel="stylesheet" href="../../libs/css/companypage/common.css">
+    <link rel="stylesheet" href="../../libs/css/companypage/recruitment.css">
+
+
+    <link rel="stylesheet" href="../../libs/css/modal.css" />
+    <script src="https://ajax.googleapis.com/ajax../../libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="../../libs/js/common.js"></script>
+    <script src="../../libs/js/slider.js"></script>
+    <script src="../../libs/js/company.js"></script>
+    <script src="../../libs/js/join.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <!-- html5 tag -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com../../libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- nth-child 적용 -->
+    <!--[if lt IE 9]>
+      <script src=".../../libs/js/selectivizr-min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header_wrap">
+                <div class="header_inner">
+                    <div class="logo">
+                        <h1><img src="../../libs/images/header/main_logo.png" alt=""></h1>
+                    </div>
+                    <nav class="depth1Nav">
+                        <ul>
+                            <li><a href="">채용공고관리</a></li>
+                            <li><a href="">유료서비스</a></li>
+                            <li><a href="">인재관리</a></li>
+                            <li><a href="">기업정보관리</a></li>
+                            <li><a href="">기업정보관리</a></li>
+                        </ul>
+                    </nav>
+                    <div class="UserUtilbox">
+                        <ul>
+                            <li><a href="">YSMG님<span class="DownArrow">▼</span></a></li>
+                            <li><a href="">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="sub_wrapper">
+            <div id="sub_container">
+                <!-- ASIDE START -->
+                <div id="aside">
+                    <div id="lnb">
+                        <h2 class="lnb_title">마이페이지</h2>
+                        <div class="sub_list">
+                            <!-- RESUME SETTING START -->
+                            <div class="resume eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">채용공고 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">진행중인 채용공고</a>
+                                    </li>
+                                    <li>
+                                        <a href="">마감된 공고</a>
+                                    </li>
+                                    <li>
+                                        <a href="">채용공고 보관함</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- RESUME SETTING END -->
+
+                            <!-- APPLICATION START -->
+                            <div class="application eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">유료서비스</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">유료채용공고</a>
+                                    </li>
+                                    <li>
+                                        <a href="">수익금관리</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- APPLICATION END -->
+
+                            <!-- MEMBER_INFO START -->
+                            <div class="member_info eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">인재관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">스크랩</a>
+                                    </li>
+                                    <li>
+                                        <a href="">러브콜</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                            <!-- CUSTOMER START -->
+                            <div class="member_info eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">기업정보 관리</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">기업정보 수정</a>
+                                    </li>
+                                    <li>
+                                        <a href="">비밀번호 변경</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                            <!-- CUSTOMER START -->
+                            <div class="customer eachlist">
+                                <h3 class="lnb_sub_tt"><a href="">고객센터</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이벤트</a>
+                                    </li>
+                                    <li>
+                                        <a href="">신고하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- MEMBER_INFO END -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ASIDE END -->
+
+                <!-- SUB CONTENTS START -->
+                <div id="sub_contents">
+                    <!--타이틀-->
+                    <div class="ContentsTitle">
+                        <h2>채용공고등록</h2>
+                    </div>
+                    <!--타이틀-->
+
+                    <!-- 기존공고 선택-->
+                    <div class="RecruitmentKind">
+                        <span class="RecruitmentKindTitle">이전 채용공고 불러오기</span>
+                        <select class="RecruitmentKindSelect" name="">
+                            <option value="">이전 채용공고를 선택하세요.</option>
+                            <option value="">[진행]김치나라 김치공주가 배추를 키웠다</option>
+                            <option value="">[마감]빵꾸똥구야 나좀 취업시켜주렴</option>
+                            <option value="">[마감]오늘은 화요일 내일은 수요일이겠지</option>
+                        </select>
+                    </div>
+                    <!-- 기존공고 선택-->
+
+                    <div class="RecruitmentTitle">
+                        <input type="text" class="RecruitmentTitleInput" placeholder="공고 제목을 입력하세요. (100자 까지 입력가능)" maxlength="100"/>
+                    </div>
+
+                    <div class="Requisite">
+                        <p><span class="FontColorORG">* 표시</span>는 필수 입력사항 입니다.</p>
+                    </div>
+
+                    <div class="RecruitmentContents">
+                        <!-- 모집요강 -->
+                        <div class="RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>모집요강</h3>
+                            </div>
+                            <div class="TableList">
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tr>
+                                        <th>직종/직무</th>
+                                        <td><a href="../type_business/type_business.html" class="certification_btn type_business_btn">선택</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>고용형태</th>
+                                        <td>
+                                            <ul>
+                                                <li><input type="checkbox" id="check1"><label for="check1">정규직</label></li>
+                                                <li><input type="checkbox" id="check2"><label for="check2">계약직</label></li>
+                                                <li><input type="checkbox" id="check3"><label for="check3">인턴</label></li>
+                                                <li><input type="checkbox" id="check4"><label for="check4">파견직</label></li>
+                                                <li><input type="checkbox" id="check5"><label for="check5">도급</label></li>
+                                                <li><input type="checkbox" id="check6"><label for="check6">프리렌서</label></li>
+                                                <li><input type="checkbox" id="check7"><label for="check7">아르바이트</label></li>
+                                                <li><input type="checkbox" id="check8"><label for="check8">연수생/교육생</label></li>
+                                                <li><input type="checkbox" id="check9"><label for="check9">병역특례</label></li>
+                                                <li><input type="checkbox" id="check10"><label for="check10">위촉직/개인사업자</label></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모집인원</th>
+                                        <td><input type="text" class="PeopleNum">명</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TextStrong">급여조건</th>
+                                        <td class="CashKind">
+                                            <select name="" id="" >
+                                                <option value="">연봉</option>
+                                            </select>
+                                            <input type="text" placeholder="최소연봉" /><span>만원<span>~</span><input type="text" placeholder="최대연봉" /><span>만원<span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>직급/직책</th>
+                                        <td class="Position">
+                                            <p class="PositionTitle">직급(중복선택가능)</p>
+                                            <ul>
+                                                <li><input type="checkbox" id="check11"><label for="check11">사원급</label></li>
+                                                <li><input type="checkbox" id="check12"><label for="check12">주임/대리급</label></li>
+                                                <li><input type="checkbox" id="check13"><label for="check13">과장/차장급</label></li>
+                                                <li><input type="checkbox" id="check14"><label for="check14">부장급</label></li>
+                                                <li><input type="checkbox" id="check15"><label for="check15">임원/CEO</label></li>
+                                                <li><input type="checkbox" id="check16"><label for="check16">면접후결정</label></li>
+                                            </ul>
+                                            <p class="PositionTitle2">직책(중복선택가능)</p>
+                                            <ul>
+                                                <li><input type="checkbox" id="check11"><label for="check11">팀원</label></li>
+                                                <li><input type="checkbox" id="check12"><label for="check12">팀장/매니저/실장</label></li>
+                                                <li><input type="checkbox" id="check13"><label for="check13">파트장/그룹장</label></li>
+                                                <li><input type="checkbox" id="check14"><label for="check14">본부장/센터장</label></li>
+                                                <li><input type="checkbox" id="check15"><label for="check15">지점장/지사장/원장/국장/공장장</label></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 모집 요강 -->
+
+                        <!-- 지원자격 -->
+                        <div class="RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>지원자격 및 우대조건</h3>
+                            </div>
+                            <div class="TableList">
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tr>
+                                        <th class="TextStrong">경력사항</th>
+                                        <td class="Career">
+                                            <input type="radio" id="radio1" name="career" checked="checked" /><label for="radio1">신입</label>
+                                            <input type="radio" id="radio2" name="career"/><label for="radio2">경력</label>
+                                            <input type="radio" id="radio3" name="career" /><label for="radio3">신입+경력</label>
+                                            <input type="radio" id="radio4" name="career" /><label for="radio4">경력무관</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TextStrong">최종학력</th>
+                                        <td class="Academic">
+                                            <select name="" id="">
+                                                <option value="">학력 선택하기</option>
+                                                <option value="">초등학교 졸업</option>
+                                                <option value="">초등학교 중퇴</option>
+                                                <option value="">중학교 졸업</option>
+                                                <option value="">중학교 중퇴</option>
+                                                <option value="">고등학교 졸업</option>
+                                                <option value="">고등학교 졸업예정</option>
+                                                <option value="">고등학교 중퇴</option>
+                                                <option value="">대학교(2/3년) 졸업</option>
+                                                <option value="">대학교(2/3년) 졸업예정</option>
+                                                <option value="">대학교(2/3년) 중퇴</option>
+                                                <option value="">대학교(4년) 졸업</option>
+                                                <option value="">대학교(4년) 졸업예정</option>
+                                                <option value="">대학교(4년) 중퇴</option>
+                                                <option value="">대학교 중퇴</option>
+                                                <option value="">대학교 중퇴</option>
+                                                <option value="">대학원</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>성별</th>
+                                        <td class="Gender">
+                                            <input type="radio" name="gender" id="genderNot" checked="checked"/><label for="genderNot">성별무관</label>
+                                            <input type="radio" name="gender" id="man"/><label for="man">남자</label>
+                                            <input type="radio" name="gender" id="women"/><label for="women">여자</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>연령</th>
+                                        <td class="Age">
+                                            <input type="radio" name="Age" id="Age1" checked="checked"/><label for="Age1">연령무관</label>
+                                            <input type="radio" name="Age" id="Age2" /><label for="Age2">제한</label>
+                                            <select name="" id="">
+                                                <option value="">전체</option>
+                                                <option value="2000">18세(2000)년생</option>
+                                                <option value="1999">19세(1999)년생</option>
+                                                <option value="1998">20세(1998)년생</option>
+                                                <option value="1997">21세(1997)년생</option>
+                                                <option value="1996">22세(1996)년생</option>
+                                                <option value="1995">23세(1995)년생</option>
+                                                <option value="1994">24세(1994)년생</option>
+                                                <option value="1993">25세(1993)년생</option>
+                                                <option value="1992">26세(1992)년생</option>
+                                                <option value="1991">27세(1991)년생</option>
+                                                <option value="1990">28세(1990)년생</option>
+                                                <option value="1989">29세(1989)년생</option>
+                                                <option value="1988">30세(1988)년생</option>
+                                                <option value="1987">31세(1987)년생</option>
+                                                <option value="1986">32세(1986)년생</option>
+                                                <option value="1985">33세(1985)년생</option>
+                                                <option value="1984">34세(1984)년생</option>
+                                                <option value="1983">35세(1983)년생</option>
+                                                <option value="1982">36세(1982)년생</option>
+                                                <option value="1981">37세(1981)년생</option>
+                                                <option value="1980">38세(1980)년생</option>
+                                                <option value="1979">39세(1979)년생</option>
+                                                <option value="1978">40세(1978)년생</option>
+                                                <option value="1977">41세(1977)년생</option>
+                                                <option value="1976">42세(1976)년생</option>
+                                                <option value="1975">43세(1975)년생</option>
+                                                <option value="1974">44세(1974)년생</option>
+                                                <option value="1973">45세(1973)년생</option>
+                                                <option value="1972">46세(1972)년생</option>
+                                                <option value="1971">47세(1971)년생</option>
+                                                <option value="1970">48세(1970)년생</option>
+                                                <option value="1969">49세(1969)년생</option>
+                                                <option value="1968">50세(1968)년생</option>
+                                                <option value="1967">51세(1967)년생</option>
+                                                <option value="1966">52세(1966)년생</option>
+                                                <option value="1965">53세(1965)년생</option>
+                                                <option value="1964">54세(1964)년생</option>
+                                                <option value="1963">55세(1963)년생</option>
+                                                <option value="1962">56세(1962)년생</option>
+                                                <option value="1961">57세(1961)년생</option>
+                                                <option value="1960">58세(1960)년생</option>
+                                                <option value="1959">59세(1959)년생</option>
+                                                <option value="1958">60세(1958)년생</option>
+                                                <option value="1957">61세(1957)년생</option>
+                                                <option value="1956">62세(1956)년생</option>
+                                                <option value="1955">63세(1955)년생</option>
+                                                <option value="1954">64세(1954)년생</option>
+                                                <option value="1953">65세(1953)년생</option>
+                                                <option value="1952">66세(1952)년생</option>
+                                                <option value="1951">67세(1951)년생</option>
+                                                <option value="1950">68세(1950)년생</option>
+                                                <option value="1949">69세(1949)년생</option>
+                                                <option value="1948">70세(1948)년생</option>
+                                            </select> ~
+                                            <select name="" id="">
+                                                <option value="">전체</option>
+                                                <option value="2000">18세(2000)년생</option>
+                                                <option value="1999">19세(1999)년생</option>
+                                                <option value="1998">20세(1998)년생</option>
+                                                <option value="1997">21세(1997)년생</option>
+                                                <option value="1996">22세(1996)년생</option>
+                                                <option value="1995">23세(1995)년생</option>
+                                                <option value="1994">24세(1994)년생</option>
+                                                <option value="1993">25세(1993)년생</option>
+                                                <option value="1992">26세(1992)년생</option>
+                                                <option value="1991">27세(1991)년생</option>
+                                                <option value="1990">28세(1990)년생</option>
+                                                <option value="1989">29세(1989)년생</option>
+                                                <option value="1988">30세(1988)년생</option>
+                                                <option value="1987">31세(1987)년생</option>
+                                                <option value="1986">32세(1986)년생</option>
+                                                <option value="1985">33세(1985)년생</option>
+                                                <option value="1984">34세(1984)년생</option>
+                                                <option value="1983">35세(1983)년생</option>
+                                                <option value="1982">36세(1982)년생</option>
+                                                <option value="1981">37세(1981)년생</option>
+                                                <option value="1980">38세(1980)년생</option>
+                                                <option value="1979">39세(1979)년생</option>
+                                                <option value="1978">40세(1978)년생</option>
+                                                <option value="1977">41세(1977)년생</option>
+                                                <option value="1976">42세(1976)년생</option>
+                                                <option value="1975">43세(1975)년생</option>
+                                                <option value="1974">44세(1974)년생</option>
+                                                <option value="1973">45세(1973)년생</option>
+                                                <option value="1972">46세(1972)년생</option>
+                                                <option value="1971">47세(1971)년생</option>
+                                                <option value="1970">48세(1970)년생</option>
+                                                <option value="1969">49세(1969)년생</option>
+                                                <option value="1968">50세(1968)년생</option>
+                                                <option value="1967">51세(1967)년생</option>
+                                                <option value="1966">52세(1966)년생</option>
+                                                <option value="1965">53세(1965)년생</option>
+                                                <option value="1964">54세(1964)년생</option>
+                                                <option value="1963">55세(1963)년생</option>
+                                                <option value="1962">56세(1962)년생</option>
+                                                <option value="1961">57세(1961)년생</option>
+                                                <option value="1960">58세(1960)년생</option>
+                                                <option value="1959">59세(1959)년생</option>
+                                                <option value="1958">60세(1958)년생</option>
+                                                <option value="1957">61세(1957)년생</option>
+                                                <option value="1956">62세(1956)년생</option>
+                                                <option value="1955">63세(1955)년생</option>
+                                                <option value="1954">64세(1954)년생</option>
+                                                <option value="1953">65세(1953)년생</option>
+                                                <option value="1952">66세(1952)년생</option>
+                                                <option value="1951">67세(1951)년생</option>
+                                                <option value="1950">68세(1950)년생</option>
+                                                <option value="1949">69세(1949)년생</option>
+                                                <option value="1948">70세(1948)년생</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p>전공/학과</p>
+                                            <p class="SubTxt">(최대3개)</p>
+                                        </th>
+                                        <td>
+                                            <p class="Major">
+
+                                            </p>
+                                            <a href="javascript:void(0)" class="choosebtn">수정/추가</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p>외국어</p>
+                                            <p class="SubTxt">(최대3개)</p>
+                                        </th>
+                                        <td>
+                                            <p class="Major">
+
+                                            </p>
+                                            <a href="javascript:void(0)" class="choosebtn">수정/추가</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <p>지격증</p>
+                                            <p class="SubTxt">(최대3개)</p>
+                                        </th>
+                                        <td>
+                                            <p class="Major">
+
+                                            </p>
+                                            <a href="javascript:void(0)" class="choosebtn">수정/추가</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 지원자격 -->
+
+                        <!-- 접수기간/방법 -->
+                        <div class="RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>접수기간/방법</h3>
+                            </div>
+                            <div class="TableList">
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tr>
+                                        <th class="TextStrong">모집분야</th>
+                                        <td class="Career">
+                                            <input type="radio" id="radio1_1" name="input" checked="checked" /><label for="radio1_1">미입력</label>
+                                            <input type="radio" id="radio1_2" name="input"/><label for="radio1_2">입력</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TextStrong">접수기간</th>
+                                        <td>
+                                            <input type="text" placeholder="시작날짜"/>&nbsp;&nbsp;~&nbsp;&nbsp;<input type="text" placeholder="마감날짜"/>
+                                            <select name="" id="" class="Time">
+                                                <option value="">시간선택</option>
+                                                <option value="">00:00</option>
+                                                <option value="">01:00</option>
+                                                <option value="">02:00</option>
+                                                <option value="">03:00</option>
+                                                <option value="">04:00</option>
+                                                <option value="">05:00</option>
+                                                <option value="">06:00</option>
+                                                <option value="">07:00</option>
+                                                <option value="">08:00</option>
+                                                <option value="">09:00</option>
+                                                <option value="">10:00</option>
+                                                <option value="">11:00</option>
+                                                <option value="">12:00</option>
+                                                <option value="">13:00</option>
+                                                <option value="">14:00</option>
+                                                <option value="">15:00</option>
+                                                <option value="">16:00</option>
+                                                <option value="">17:00</option>
+                                                <option value="">18:00</option>
+                                                <option value="">19:00</option>
+                                                <option value="">20:00</option>
+                                                <option value="">21:00</option>
+                                                <option value="">22:00</option>
+                                                <option value="">23:00</option>
+                                                <option value="">24:00</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>접수방법</th>
+                                        <td class="receipt">
+                                            <ul>
+                                                <li><input type="checkbox" id="receipt1"><label for="receipt1">홈페이지 접수</label></li>
+                                                <li><input type="checkbox" id="receipt2"><label for="receipt2">우편접수</label></li>
+                                                <li><input type="checkbox" id="receipt3"><label for="receipt3">방문접수</label></li>
+                                                <li><input type="checkbox" id="receipt4"><label for="receipt4">E-mail접수</label></li>
+                                                <li><input type="checkbox" id="receipt4"><label for="receipt4">FAX 접수</label></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 접수기간/방법 -->
+
+                        <!-- 전형절차 및 제출서류 -->
+                        <div class="RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>지원자격 및 우대조건</h3>
+                            </div>
+                            <div class="TableList">
+                                <table class="Process">
+                                    <colgroup>
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tr>
+                                        <th>전형절차</th>
+                                        <td>
+                                            <textarea name="" id="" style="resize:none;" placeholder="전형절차를 입력해주세요"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>제출서류</th>
+                                        <td>
+                                            <textarea name="" id="" style="resize:none;" placeholder="제출서류를 입력해주세요"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사전인터뷰</th>
+                                        <td>
+                                            <textarea name="" id="" style="resize:none;" placeholder="입사지원 전 구직자가 답변해야 할 사전인터뷰 질문을 입력해주세요." ></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 전형절차 및 제출서류 -->
+
+                        <!-- 근무조건 -->
+                        <div class="RecruitmentTable ChooseListPop">
+                            <div class="TableTitle">
+                                <h3>근무조건</h3>
+                            </div>
+                            <div class="TableList">
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tr>
+                                        <th class="TextStrong">복리후생</th>
+                                        <td>
+                                            <a href="javascript:void(0)" class="choosebtn conditionbtn">수정/추가</a>
+                                            <ul class="ChooseList">
+                                                <li>
+                                                    <dl>
+                                                        <dt><span class="ExtraDot"></span>연금보호</dt>
+                                                        <dd><span class="ChooseTitle">연금보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">고용보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">산재보험</span><span class="DeletBtn"></span></dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt><span class="ExtraDot"></span>급여제도</dt>
+                                                        <dd><span class="ChooseTitle">연금보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">고용보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">산재보험</span><span class="DeletBtn"></span></dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt><span class="ExtraDot"></span>수당제도</dt>
+                                                        <dd><span class="ChooseTitle">연금보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">고용보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">산재보험</span><span class="DeletBtn"></span></dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt><span class="ExtraDot"></span>의료건강</dt>
+                                                        <dd><span class="ChooseTitle">연금보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">고용보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">산재보험</span><span class="DeletBtn"></span></dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt><span class="ExtraDot"></span>식사관련</dt>
+                                                        <dd><span class="ChooseTitle">연금보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">고용보험</span><span class="DeletBtn"></span></dd>
+                                                        <dd><span class="ChooseTitle">산재보험</span><span class="DeletBtn"></span></dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TextStrong">회사위치</th>
+                                        <td class="LocationTd">
+                                            <span><img src="../../libs/images/companypage/LocationIcon.png" alt=""></span>
+                                            <span>서울 영등포구 여의도동 44-24, 호성빌딩 6층</span>
+                                            <a href="javascript:void(0)" class="choosebtn">수정/지도선택</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="TextStrong">근무지역</th>
+                                        <td class="HopeLocation">
+                                            <select class="" name="">
+                                                <option value="">서울</option>
+                                            </select>
+                                            <select class="" name="">
+                                                <option value="">강남구</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>근무요일</th>
+                                        <td class="DayWeek">
+                                            <select name="" id="">
+                                                <option value="">근무요일</option>
+                                                <option value="">주 5일(월~금)</option>
+                                                <option value="">토요일 격주휴무(월~토)</option>
+                                                <option value="">주 6일(월~토)</option>
+                                                <option value="">주 3일(격일제)</option>
+                                                <option value="">탄력적근무제</option>
+                                                <option value="">2교대</option>
+                                                <option value="">3교대</option>
+                                                <option value="">4교대</option>
+                                                <option value="">협의가능</option>
+                                                <option value="">직접입력</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>근무시간</th>
+                                        <td class="DayWeek">
+                                            <select name="" id="">
+                                                <option value="">근무시간</option>
+                                                <option value="">오전 9시~오후 6시</option>
+                                                <option value="">오전 8시 30분~오후 5시 30분</option>
+                                                <option value="">오전 10시~오후7시</option>
+                                                <option value="">탄력근무제</option>
+                                                <option value="">직접입력</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="ChooseListPopup">
+                                <div class="PopupTitle">
+                                    <h3>복리후생</h3>
+                                </div>
+                                <div class="PopupContent">
+                                    <ul>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List1" /><label for="List1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List2" /><label for="List2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List3" /><label for="List3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List4" /><label for="List4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List5" /><label for="List5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List6" /><label for="List6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List7" /><label for="List7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List8" /><label for="List8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List2_1" /><label for="List2_1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List2_2" /><label for="List2_2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List2_3" /><label for="List2_3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List2_4" /><label for="List2_4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List2_5" /><label for="List2_5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List2_6" /><label for="List2_6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List2_7" /><label for="List2_7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List2_8" /><label for="List2_8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List3_1" /><label for="List3_1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List3_2" /><label for="List3_2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List3_3" /><label for="List3_3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List3_4" /><label for="List3_4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List3_5" /><label for="List3_5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List3_6" /><label for="List3_6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List3_7" /><label for="List3_7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List3_8" /><label for="List3_8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                                <a href="javascript:void(0)" class="ConditionCloseBtn">x</a>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List4_1" /><label for="List4_1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List4_2" /><label for="List4_2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List4_3" /><label for="List4_3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List4_4" /><label for="List4_4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List4_5" /><label for="List4_5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List4_6" /><label for="List4_6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List4_7" /><label for="List4_7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List4_8" /><label for="List4_8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List5_1" /><label for="List5_1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List5_2" /><label for="List5_2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List5_3" /><label for="List5_3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List5_4" /><label for="List5_4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List5_5" /><label for="List5_5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List5_6" /><label for="List5_6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List5_7" /><label for="List5_7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List5_8" /><label for="List5_8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="PopListTitle">
+                                                <h4>연금보험</h4>
+                                            </div>
+                                            <div class="PopListContent">
+                                                <p><input type="checkbox" id="List6_1" /><label for="List6_1">국민연금(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List6_2" /><label for="List6_2">고용보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List6_3" /><label for="List6_3">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List6_4" /><label for="List6_4">산재보험(4대보험)</label></p>
+                                                <p><input type="checkbox" id="List6_5" /><label for="List6_5">사학연금</label></p>
+                                                <p><input type="checkbox" id="List6_6" /><label for="List6_6">공무원연금</label></p>
+                                                <p><input type="checkbox" id="List6_7" /><label for="List6_7">퇴직연금</label></p>
+                                                <p><input type="checkbox" id="List6_8" /><label for="List6_8">상해보험</label></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 근무조건 -->
+
+                        <!-- 채용공고 디자인 -->
+                        <div class="RecuitmentDesign RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>채용공고 디자인</h3>
+                            </div>
+                            <div class="DesignContent">
+
+                            </div>
+                        </div>
+                        <!-- 채용공고 디자인 -->
+
+                        <!-- 채용담당자 -->
+                        <div class="Responsibility RecruitmentTable">
+                            <div class="TableTitle">
+                                <h3>담당자</h3>
+                            </div>
+                             <div class="TableList">
+                                 <table>
+                                     <colgroup>
+                                         <col width="15%">
+                                     </colgroup>
+                                     <tr>
+                                         <th class="TextStrong">담당자명</th>
+                                         <td><input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                         <th>부서명</th>
+                                         <td><input type="text" /></td>
+                                     </tr>
+                                     <tr>
+                                         <th class="TextStrong">전화번호</th>
+                                         <td class="PhoneNum">
+                                             <select name="" id="">
+                                                 <option value="">선택하세요</option>
+                                                 <option value="">010</option>
+                                                 <option value="">011</option>
+                                                 <option value="">017</option>
+                                                 <option value="">018</option>
+                                                 <option value="">019</option>
+                                                 <option value="">070</option>
+                                             </select>
+                                             <span>-</span>
+                                             <input type="text" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                             <span>-</span>
+                                             <input type="text" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' style='ime-mode:disabled;' size="4" maxlength="4" />
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th>이메일</th>
+                                         <td>
+                                            <input type="text / ">
+                                            <span>@</span>
+                                            <select class="" name="">
+                                                <option value="">gmail.com</option>
+                                                <option value="">naver.com</option>
+                                                <option value="">yahoo.com</option>
+                                                <option value="">hanmail.net</option>
+                                             </select>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th class="TextStrong">담당자 정보공개</th>
+                                         <td class="InfoRadio">
+                                            <input type="radio" id="InfoRadio" checked="checked" name="InfoRadio" /><label for="InfoRadio">공개</label>
+                                            <input type="radio" id="InfoRadio_1" name="InfoRadio" /><label for="InfoRadio_1">비공개</label>
+                                         </td>
+                                     </tr>
+                                 </table>
+                             </div>
+                        </div>
+                        <!-- 채용담당자 -->
+                        <div class="SendBtn">
+                            <button type="button" class="OkBtn">확인</button>
+                            <button type="button" class="CancelBtn">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- SUB CONTENTS End -->
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

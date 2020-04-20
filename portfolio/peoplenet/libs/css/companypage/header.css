@@ -1,0 +1,21 @@
+html,body{ height:100%;}
+#wrapper { background:#f9f9f9;}
+
+header{height:90px; border-bottom:2px solid #efefef; background:#fff;}
+#header_wrap {border-bottom:1px solid #cccccc; height:100%;}
+#header_wrap .header_inner { width:1100px; margin:0 auto; position:relative;}
+.header_inner .logo{ position:absolute; top:50%; left:0; margin-top:-24px;  }
+
+.depth1Nav ul { font-size:0; }
+.depth1Nav ul li{ font-size:0; display:inline-block; vertical-align:middle;  padding-left:50px; line-height:90px;  }
+.depth1Nav ul li:first-child { padding-left:270px; }
+.depth1Nav ul li a { font-size:17px; font-weight:bold; color:#666666;}
+.depth1Nav ul li a:hover { color:#155ed5; }
+.depth1Nav ul li.active a { color:#155ed5; }
+
+.UserUtilbox { position:absolute; top:0; left:auto; right:0; line-height:90px;}
+.UserUtilbox ul {font-size:0;}
+.UserUtilbox ul li{display:inline-block; vertical-aling:middle; margin-left:30px;}
+.UserUtilbox ul li:first-child { margin-left:0; }
+.UserUtilbox ul li a { font-size:13px; color:#666666;}
+.UserUtilbox ul li a .DownArrow { font-size:8px; color:#cccccc;padding-left:10px;}

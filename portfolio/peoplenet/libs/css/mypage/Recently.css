@@ -1,0 +1,13 @@
+.TotalList {padding-bottom:10px;}
+.TotalList p{ font-size:18px; color:#444444; }
+.TotalList p .TotalListCount { color:#ff7623;}
+
+.RecentlyListDelet{}
+.RecentlyListDelet { margin-top:15px; }
+.RecentlyListDelet .DeletBtn { width:50px; display:inline-block; vertical-align:middle; border:1px solid #ddd; padding:6px 7px; box-sizing:border-box; font-size:13px; color:#f00}
+.RecentlyListDelet .DeletBtn img { vertical-align:middle;}
+.RecentlyListDelet .DeletBtn span { vertical-align:middle; padding-left:5px; font-size:13px; font-weight:normal; }
+
+.common_list_st ul li.RecentlyList { position:relative; }
+.common_list_st ul li.RecentlyList .list_inner { padding:20 30px; padding-left:70px; }
+.RecentlyListInput{ position:absolute; top:50%; left:30px; margin-top:-10px; z-index:2; }

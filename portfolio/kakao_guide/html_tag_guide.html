@@ -1,0 +1,3615 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title>카카오 관리자</title>
+		<script src="js/popper.min.js"></script>
+		<script src="js/jquery-1.10.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/hcm.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/handsontable-pro@latest/dist/handsontable.full.min.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		<script src="js/datepicker.ko.js"></script>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable-pro@latest/dist/handsontable.full.min.css">
+
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/datepicker.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.theme.css">
+		
+		<link rel="stylesheet" href="css/hcm.css">
+		<link rel="stylesheet" href="css/hcm-main.css">
+		
+		<link rel="stylesheet" href="css/guide.css">
+		<link rel="stylesheet" href="css/prism.css">
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];
+
+			$(function(){
+				$('.guide_tab_content').hide();
+				$('.guide_tab_content:first').show();
+				$('.guide_nav').on('click','a',function(){
+					var tab_id = $(this).parent().attr('rel');
+					$('.guide_tab_content').hide();
+					$('#'+tab_id).show();
+					$(this).parent().addClass('active').siblings().removeClass('active');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="guide_wrap">
+			<div class="guide_nav">
+				<ul>
+					<li ><a href="html_layout_guide.html" class="a-link">LAYOUT GUIDE</a></li>
+					<li><span>LABEL / INPUT/<br/> SELECT / BUTTON</span></li>
+					<li rel="tab01" class="active"><a href="javascript:void(0)">LABEL</a></li>
+					<li rel="tab02"><a href="javascript:void(0)">INPUT TYPE</a></li>
+					<li rel="tab03"><a href="javascript:void(0)">SELECT</a></li>
+					<li rel="tab04"><a href="javascript:void(0)">기본 BUTTON</a></li>
+					<li rel="tab16"><a href="javascript:void(0)">ICON BUTTON</a></li>
+					<li rel="tab05"><a href="javascript:void(0)">BUTTON STYLE</a></li>
+					<li rel="tab06"><a href="javascript:void(0)">INPUT BUTTON</a></li>
+					<li rel="tab07"><a href="javascript:void(0)">FORM GROUP<br/>INPUT/SELECT<br/>MERGED</a></li>
+					<li rel="tab15"><a href="javascript:void(0)">TEXTAREA</a></li>
+					<li><span>DIALOG</span></li>
+					<li rel="tab08"><a href="javascript:void(0)">MODAL DIALOG</a></li>
+					<li rel="tab09"><a href="javascript:void(0)">ALERT DIALOG</a></li>
+					<li rel="tab10"><a href="javascript:void(0)">우클릭 DIALOG</a></li>
+					<li rel="tab11"><a href="javascript:void(0)">LOADDING DIALOG</a></li>
+					<li><span>ETC</span></li>
+					<li rel="tab12"><a href="javascript:void(0)">UL/LI LISTGROUP</a></li>
+					<li rel="tab13"><a href="javascript:void(0)">PAGE MAP<br/>BACK BUTTON</a></li>
+					<li rel="tab14"><a href="javascript:void(0)">ACCORDION</a></li>
+				</ul>
+			</div>
+
+			<div class="guide_container">
+				<div class="guide_tab_content" id="tab01">
+					<h1>LABEL 기본 속성</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>LABEL STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 <span class="hcm-tag">label</span></p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">label</span>의 기본 스타일 속성은 타이틀 영역의 기본 속성입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="">타이틀 입니다</label>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>&lt;label for="">타이틀 입니다&lt;/label></code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>FORM GROUP LABEL TITLE(기본) / INPUT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀<span class="hcm-tag">label</span> 과 <span class="hcm-tag">input[type="text"]</span>사용법 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="aa">타이틀 입니다</label>
+												<input type="text" id="aa">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="aa">타이틀 입니다.&lt;/label>
+			&lt;input type="text">
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP LABEL TITLE(기본) / SELECT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀<span class="hcm-tag">label</span> 과 <span class="hcm-tag">select</span>사용법 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="aa">타이틀 입니다</label>
+												<select name="" id="">
+													<option value="">옵션을 선택하세요.</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="aa">타이틀 입니다.&lt;/label>
+			&lt;select name="" id="">
+				&lt;option value="">옵션을 선택하세요.&lt;/option>
+			&lt;/select>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP LABEL TITLE(기본) / INPUT / BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀 <span class="hcm-tag">label</span>과 <span class="hcm-tag">input[type="text"]</span>와  <span class="hcm-tag">button</span>사용법 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="aa">타이틀 입니다</label>
+												<input type="text">
+												<button type="button" class="hcm-btn-icon-search"></button>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="aa">타이틀 입니다&lt;/label>
+			&lt;input type="text">
+			&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab02">
+					<h1>INPUT TYPE - TEXT</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 INPUT[TYPE="TEXT"] STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 <span class="hcm-tag">input[type=text]</span></p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>&lt;input type="text"></code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>LABEL / INPUT[TYPE="TEXT"] STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">label</span>과 함께 <span class="hcm-tag">input[type=text]</span> 사용법</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">label</span>(가로사이즈 고정) <span class="hcm-tag">input[type=text]</span> <span class="hcm-css">calc</span>사용(100% - <span class="hcm-tag">label</span> 가로값)했습니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="">타이틀부분</label>
+												<input type="text">
+											</div>
+											<div class="form-group">
+												<label for="">타이틀부분</label>
+												<input type="text">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="">타이틀부분&lt;/label>
+			&lt;input type="text">
+		&lt;/div>
+		&lt;div class="form-group">
+			&lt;label for="">타이틀부분&lt;/label>
+			&lt;input type="text">
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h1>INPUT TYPE - CHECKBOX</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 INPUT[TYPE="CHECKBOX"] STYLE</h2>
+									<div class="hcm-gride-txt">- 기본 <span class="hcm-tag">input[type=checkbox]</span></div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="checkbox">&nbsp;&nbsp;&nbsp;
+												<input type="checkbox" checked="checked">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>&lt;input type="checkbox">
+&lt;input type="checkbox" checked="checked"></code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>TITLE LABEL / INPUT[TYPE="CHECKBOX"] / LABEL INPUT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀 <span class="hcm-tag">label</span> 과 함께 <span class="hcm-tag">input[type=check]</span> 사용법</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">label</span>의 스타일은 타이틀 기본값으로 지정되어 있습니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">input[type=check]</span> 경우 <span class="hcm-tag">label</span>로 감싸야 합니다.</p>
+										<p>&nbsp;&nbsp;- 기본속성<span class="hcm-tag">label</span> 의 스타일이 <span class="hcm-tag">input[type=check]</span>를 감싸는 <span class="hcm-tag">label</span>과 스타일 충돌이 나기 때문에 <span class="hcm-tag">input[type=check]</span>를 감싸는 <span class="hcm-tag">label</span>에 <span class="hcm-class">form-check-label</span>클래스를 지정하여 스타일 충돌을 제재했습니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-class">form-check-inline</span> 타이틀 <span class="hcm-tag">label</span>과 동일 자식으로 <span class="hcm-tag">label</span>스타일속성중 <span class="hcm-css">vertical</span> / <span class="hcm-css">padding</span> / <span class="hcm-css">display</span>의 속성값을 동일하게 조정하였습니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="label03">성별</label>
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="checkbox" name="a" class="form-check-input" checked="checked">남성
+													</label>
+												</div>
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="checkbox" name="a" class="form-check-input">여성
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="label03">성별&lt;/label>
+			&lt;div class="form-check-inline">
+				&lt;label class="form-check-label">
+					&lt;input type="radio" name="a" class="form-check-input" checked="">남성
+				&lt;/label>
+			&lt;/div>
+			&lt;div class="form-check-inline">
+				&lt;label class="form-check-label">
+					&lt;input type="radio" name="a" class="form-check-input">여성
+				&lt;/label>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<h1>INPUT TYPE - RADIO</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 INPUT[TYPE="RADIO"] STYLE</h2>
+									<div class="hcm-gride-txt">- <span class="hcm-tag">input[type=radio]</span></div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="radio">&nbsp;&nbsp;&nbsp;
+												<input type="radio" checked="checked">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>&lt;input type="radio">
+&lt;input type="radio" checked="checked"></code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>TITLE LABEL / INPUT[TYPE="RADIO"] / LABEL INPUT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀 <span class="hcm-tag">label</span> 과 함께 <span class="hcm-tag">input[type=radio]</span> 사용법</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">label</span>의 스타일은 타이틀 기본값으로 지정되어 있습니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">input[type=radio]</span> 경우 <span class="hcm-tag">label</span>로 감싸야 합니다.</p>
+										<p>&nbsp;&nbsp;- 기본속성<span class="hcm-tag">label</span> 의 스타일이 <span class="hcm-tag">input[type=radio]</span>를 감싸는 <span class="hcm-tag">label</span>과 스타일 충돌이 나기 때문에 <span class="hcm-tag">input[type=radio]</span>를 감싸는 <span class="hcm-tag">label</span>에 <span class="hcm-class">form-check-label</span>클래스를 지정하여 스타일 충돌을 제재했습니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-class">form-check-inline</span> 타이틀 <span class="hcm-tag">label</span>과 동일 자식으로 <span class="hcm-tag">label</span>스타일속성중 <span class="hcm-css">vertical</span> / <span class="hcm-css">padding</span> / <span class="hcm-css">display</span>의 속성값을 동일하게 조정하였습니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="label03">성별</label>
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="radio" name="a" class="form-check-input" checked="">남성
+													</label>
+												</div>
+												<div class="form-check-inline">
+													<label class="form-check-label">
+														<input type="radio" name="a" class="form-check-input">여성
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="label03">성별&lt;/label>
+			&lt;div class="form-check-inline">
+				&lt;label class="form-check-label">
+					&lt;input type="radio" name="a" class="form-check-input" checked="">남성
+				&lt;/label>
+			&lt;/div>
+			&lt;div class="form-check-inline">
+				&lt;label class="form-check-label">
+					&lt;input type="radio" name="a" class="form-check-input">여성
+				&lt;/label>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h1>INPUT TYPE - FILE</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 INPUT[TYPE="FILE"] STYLE</h2>
+									<div class="hcm-gride-txt">- <span class="hcm-tag">input[type=file]</span></div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="file" class="form-control-file">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>&lt;input type="file" class="form-control-file"></code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>TITLE LABEL / INPUT[TYPE="file"] / LABEL INPUT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀 <span class="hcm-tag">label</span> 과 함께 <span class="hcm-tag">input[type=text]</span> 사용법</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="label03">첨부파일</label>
+												<input type="file" class="form-control-file">
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="label03">첨부파일&lt;/label>
+			&lt;input type="file" class="form-control-file">
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab03">
+					<h1>SELECT 기본 속성</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 SELECT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 <span class="hcm-tag">SELECT</span>속성 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<select name="" id="">
+													<option value="">옵션을 선택하세요</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;select name="" id="">
+	&lt;option value="">옵션을 선택하세요&lt;/option>
+&lt;/select>
+										</code></pre>
+									</div>
+								</div>
+								<div class="guide_grid">
+									<h2>TITLE LABEL / SELECT STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>타이틀<span class="hcm-tag">label</span> 과 <span class="hcm-tag">select</span>사용법 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="aa">타이틀 입니다</label>
+												<select name="" id="">
+													<option value="">옵션을 선택하세요</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="aa">타이틀 입니다.&lt;/label>
+			&lt;select name="" id="">
+				&lt;option value="">옵션을 선택하세요&lt;/option>
+			&lt;/select>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab04">
+					<h1>BUTTON 기본 속성</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 <span class="hcm-tag">BUTTON</span>속성 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<h3 class="row">
+												<div class="d-flex">
+													<button type="button">엑셀 업로드방식</button>
+													<button type="button">저장</button>
+													<button type="button">추가</button>
+													<button type="button">수정</button>
+													<button type="button">삭제</button>
+												</div>
+											</h3>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button">엑셀 업로드방식&lt;/button>
+&lt;button type="button">저장&lt;/button>
+&lt;button type="button">추가&lt;/button>
+&lt;button type="button">수정&lt;/button>
+&lt;button type="button">삭제&lt;/button>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>BUTTON GROUP INLINE BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">BUTTON GROUP</span>인라인그룹 속성 입니다.</p>
+									</div>
+									<h3 class="row">
+										<div class="d-flex">
+											<div class="btn-group">
+												<button type="button">Apple</button>
+												<button type="button">Samsung</button>
+												<button type="button">Sony</button>
+											</div>
+										</div>
+									</h3>
+									<div class="language-markup">
+										<pre><code>
+&lt;h3 class="row">
+	&lt;div class="d-flex">
+		&lt;div class="btn-group">
+			&lt;button type="button">Apple&lt;/button>
+			&lt;button type="button">Samsung&lt;/button>
+			&lt;button type="button">Sony&lt;/button>
+		&lt;/div>
+	&lt;/div>
+&lt;/h3>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>BUTTON GROUP INLINE TOGGLE BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">BUTTON GROUP</span> <span class="hcm-tag">Button</span>전체 클릭 토글 속성 입니다.</p>
+									</div>
+									<h3 class="row">
+										<div class="d-flex">
+											<button type="button" class="">수정</button>
+											<div class="btn-group">
+												<button type="button" class="">수정</button>
+												<button type="button" class="">삭제</button>
+												<button type="button" class="dropdown-toggle" data-toggle="dropdown">삭제</button>
+												<div class="dropdown-menu">
+													<span class="dropdown-item">Tablet</span>
+													<span class="dropdown-item">Smartphone</span>
+												</div>
+											</div>
+										</div>
+									</h3>
+									<div class="language-markup">
+										<pre><code>
+&lt;h3 class="row">
+	&lt;div class="d-flex">
+		&lt;div class="btn-group">
+			&lt;button type="button" class="">수정&lt;/button>
+			&lt;button type="button" class="">삭제&lt;/button>
+			&lt;button type="button" class="dropdown-toggle" data-toggle="dropdown">삭제&lt;/button>
+			&lt;div class="dropdown-menu">
+				&lt;span class="dropdown-item">Tablet&lt;/span>
+				&lt;span class="dropdown-item">Smartphone&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/h3>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>BUTTON GROUP INLINE ARROW TOGGLE BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">BUTTON GROUP</span> <span class="hcm-tag">Button</span> 화살표 클릭 토글 속성 입니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-tag">BUTTON GROUP</span>에 <span class="hcm-class">hcm-btn-dropdown</span>를 추가합니다.</p>
+										<p>&nbsp;&nbsp;- <span class="hcm-class">hcm-btn-dropdown</span>를 추가하는 이유는 <span class="hcm-tag">BUTTON</span>클릭 토글 버튼과 <span class="hcm-css">css</span>충돌인해 화살표 토글 버튼을 따로 제어하기 위함 입니다. </p>
+									</div>
+									<h3 class="row">
+										<div class="d-flex">
+											<button type="button">삭제</button>
+											<div class="btn-group hcm-btn-dropdown">
+												<button type="button" class="">수정</button>
+												<button type="button" class="">추가</button>
+												<button type="button" class=" dropdown-toggle " data-toggle="dropdown"></button>
+												<div class="dropdown-menu">
+													<span class="dropdown-item">저장</span>
+													<span class="dropdown-item">삭제</span>
+												</div>
+											</div>
+										</div>
+									</h3>
+									<div class="language-markup">
+										<pre><code>
+&lt;h3 class="row">
+	&lt;div class="d-flex">
+		&lt;div class="btn-group hcm-btn-dropdown">
+			&lt;button type="button" class="">수정&lt;/button>
+			&lt;button type="button" class="">추가&lt;/button>
+			&lt;button type="button" class=" dropdown-toggle " data-toggle="dropdown">&lt;/button>
+			&lt;div class="dropdown-menu">
+				&lt;span class="dropdown-item">저장&lt;/span>
+				&lt;span class="dropdown-item">삭제&lt;/span>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/h3>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab05">
+					<h1>BUTTON STYLE 속성</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>CONTAINTER BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 STYLE <span class="hcm-tag">BUTTON</span>속성 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="hcm-btn-form-light">취소</button>
+											<button type="button" class="hcm-btn-form-dark">아니오</button>
+											<button type="button" class="hcm-btn-form">저장</button>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="hcm-btn-form">저장&lt;/button>
+&lt;button type="button" class="hcm-btn-form-light">조회&lt;/button>
+&lt;button type="button" class="hcm-btn-form-dark">조회&lt;/button>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>POPUP BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>팝업<span class="hcm-tag">BUTTON</span>속성 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="hcm-btn-pop-light" data-dismiss="modal">취소</button>
+											<button type="button" class="hcm-btn-pop-dark">아니오</button>
+											<button type="button" class="hcm-btn-pop">확인</button>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="hcm-btn-pop-light" data-dismiss="modal">취소&lt;/button>
+&lt;button type="button" class="hcm-btn-pop-dark">아니오&lt;/button>
+&lt;button type="button" class="hcm-btn-pop">확인&lt;/button>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>TABLE BUTTON STYLE</h2>
+									<div class="hcm-gride-txt">
+										<p>TABLE <span class="hcm-tag">BUTTON</span>속성 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="hcm-btn-table-list">권한부여</button>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="hcm-btn-table-list">권한부여&lt;/button>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab06">
+					<h1>INPUT TAG와 함께 사용하는 버튼</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>SHARE ICON BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">input</span> / <span class="hcm-tag">button</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>에 <span class="hcm-class">hcm-btn-icon-share</span> 추가 공유버튼 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="">타이틀</label>
+												<input type="text" class="form-control">
+												<button type="button" class="hcm-btn-icon-share"></button>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="">타이틀&lt;/label>
+			&lt;input type="text" class="form-control">
+			&lt;button type="button" class="hcm-btn-icon-share">&lt;/button>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>SEARCH ICON BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">input</span> / <span class="hcm-tag">button</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>에 <span class="hcm-class">hcm-btn-icon-search</span> 추가 검색버튼 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="">타이틀</label>
+												<input type="text" class="form-control">
+												<button type="button" class="hcm-btn-icon-search"></button>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="">타이틀&lt;/label>
+			&lt;input type="text" class="form-control">
+			&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab07">
+					<h1>INPUT TAG와 함께 사용하는 버튼</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / INPUT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control"/>
+													<input type="text" id="bb" class="form-control"/>										
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control"/>
+				&lt;input type="text" id="bb" class="form-control"/>										
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / SELECT / SELECT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+								
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / SELECT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<input type="text">
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text">
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 한개인 경우 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span>에 <span class="hcm-class">hcm-if-btn-one-calc</span>클래스를 추가 해주시면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control hcm-if-btn-one-calc"/>
+													<input type="text" id="bb" class="form-control hcm-if-btn-one-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control hcm-if-btn-one-calc"/>
+				&lt;input type="text" id="bb" class="form-control hcm-if-btn-one-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / BUTTON / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 두개인 경우 <span class="hcm-tag">input</span> / <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-btn-one-calc</span>클래스를 추가 해주시면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control hcm-if-btn-two-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+													<input type="text" id="bb" class="form-control hcm-if-btn-two-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control hcm-if-btn-two-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+				&lt;input type="text" id="bb" class="form-control hcm-if-btn-two-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / LINE / INPUT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line">
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line">
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line">
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / LINE / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line-btn-one-calc</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line-btn-one-calc">
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line-btn-one-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line-btn-one-calc">
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line-btn-one-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / BUTTON / LINE / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup hcm-form-merged</span> 안에 버튼 2개 / 라인 / 입력창,선택창이 2개 인 경우<p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line-btn-two-calc</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line-btn-two-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line-btn-two-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line-btn-two-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line-btn-two-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab07">
+					<h1>INPUT TAG와 함께 사용하는 버튼</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / INPUT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control"/>
+													<input type="text" id="bb" class="form-control"/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control"/>
+				&lt;input type="text" id="bb" class="form-control"/>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / SELECT / SELECT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+								
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / SELECT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 없을경우는 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span> 태그만 추가 해주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">기준일</label>
+												<div class="hcm-form-merged">
+													<input type="text">
+													<select name="" id="">
+														<option value="">선택하세요</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text">
+				&lt;select name="" id="">
+					&lt;option value="">선택하세요&lt;/option>
+				&lt;/select>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 한개인 경우 <span class="hcm-tag">input</span> / <span class="hcm-tag">select</span>에 <span class="hcm-class">hcm-if-btn-one-calc</span>클래스를 추가 해주시면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control hcm-if-btn-one-calc"/>
+													<input type="text" id="bb" class="form-control hcm-if-btn-one-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control hcm-if-btn-one-calc"/>
+				&lt;input type="text" id="bb" class="form-control hcm-if-btn-one-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP - LABEL TITLE / INPUT / BUTTON / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">button</span>이 두개인 경우 <span class="hcm-tag">input</span> / <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-btn-one-calc</span>클래스를 추가 해주시면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" id="aa" class="form-control hcm-if-btn-two-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+													<input type="text" id="bb" class="form-control hcm-if-btn-two-calc"/>
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" id="aa" class="form-control hcm-if-btn-two-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+				&lt;input type="text" id="bb" class="form-control hcm-if-btn-two-calc"/>
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / LINE / INPUT</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line">
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line">
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line">
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / LINE / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup</span> 안에 <span class="hcm-tag">label</span> / <span class="hcm-tag">hcm-form-merged</span> 사용법 입니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line-btn-one-calc</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line-btn-one-calc">
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line-btn-one-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line-btn-one-calc">
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line-btn-one-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>FORM GROUP MERGED - LABEL TITLE / INPUT / BUTTON / LINE / INPUT / BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">formgroup hcm-form-merged</span> 안에 버튼 2개 / 라인 / 입력창,선택창이 2개 인 경우<p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">span</span>을 추가하며 <span class="hcm-class">hcm-extra-line</span> 클래스를 추가해 주면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">input</span>에 <span class="hcm-class">hcm-if-line-btn-two-calc</span> 클래스를 추가해 주면 됩니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="hcm-program-name">발령호수</label>
+												<div class="hcm-form-merged">
+													<input type="text" name="" id="" class="hcm-if-line-btn-two-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+													<span class="hcm-extra-line">-</span>
+													<input type="text" id="" class="hcm-if-line-btn-two-calc">
+													<button type="button" class="hcm-btn-icon-search"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;label for="hcm-program-name">기준일&lt;/label>
+			&lt;div class="hcm-form-merged">
+				&lt;input type="text" name="" id="" class="hcm-if-line-btn-two-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+				&lt;span class="hcm-extra-line">-&lt;/span>
+				&lt;input type="text" id="" class="hcm-if-line-btn-two-calc">
+				&lt;button type="button" class="hcm-btn-icon-search">&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab08">
+					<h1>부트스트랩4 기반 MODAL DIALOG</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>기본 MODAL DIALOG</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 입니다. (<a href="https://www.w3schools.com/bootstrap4/bootstrap_modal.asp" target="_blank">부투스트래4 참조</a>)</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#df_modal" >기본팝업</button>
+										</div>
+									</div>
+									<div class="modal fade" id="df_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역</h5>
+													<button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													컨텐츠 부분입니다.
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="" data-toggle="modal" data-target="#df_modal" >기본팝업&lt;/button>
+
+&lt;div class="modal fade" id="df_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-header">
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역&lt;/h5>
+				&lt;button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close">&lt;/button>
+			&lt;/div>
+			&lt;div class="modal-body">
+				컨텐츠 부분입니다.
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>기본 MODAL DIALOG INPUT CONTENT 작업</h2>
+									<div class="hcm-gride-txt">
+										<p>MODAL-BODY 입력컨텐츠 영역 예제 입니다.</p>
+										<p>&nbsp;&nbsp; - 입력컨텐츠 MODAL DIALOG 작업 예시입니다. </p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">modal-body</span>&nbsp;&nbsp;>&nbsp;&nbsp;<span class="hcm-class">row</span>&nbsp;&nbsp;>&nbsp;&nbsp;<span class="hcm-class">col-12</span> 화면 마크업과 동일구조 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#input_modal" >입력컨텐츠 MODAL DIALOG</button>
+										</div>
+									</div>
+									<div class="modal fade" id="input_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역</h5>
+													<button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label01">프로그램ID</label>
+																<input type="text" class="form-control" id="label01" value="AppDbQuery" />
+															</div>
+															<div class="form-group hcm-col-6">
+																<label for="label02">프로그램명</label>
+																<input type="text" class="form-control" id="label02" value="AppDbQuery" />
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label03">VIEW PAGE </label>
+																<input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+															</div>
+															<div class="form-group hcm-col-6">
+																<label for="label04">프로그램 UEL </label>
+																<input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label04">버튼 기능</label>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">신규
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">삭제
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">조회
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">저장
+																	</label>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label for="label05">작업회사여부</label>
+																<select name="" id="label05" class="form-control">
+																	<option value="">아니오</option>
+																	<option value="">예</option>
+																</select>
+															</div>
+
+															<div class="form-group disabled">
+																<label for="label06">기준일자여부</label>
+																<select name="" id="label06" class="form-control">
+																	<option value="">아니오</option>
+																	<option value="">예</option>
+																</select>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label07">신청자코드</label>
+																<input type="text" id="label07" class="form-control" value="Q18535651" />
+															</div>
+															<div class="form-group">
+																<label for="label08">공용메뉴얼</label>
+																<input type="text" id="label08" class="form-control" />
+																<button type="button" class="hcm-btn-icon-share">공유하기</button>
+															</div>
+															<div class="form-group">
+																<label for="label09">관리자메뉴얼</label>
+																<input type="text" id="label09" class="form-control"/>
+																<button type="button" class="hcm-btn-icon-share">공유하기</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="" data-toggle="modal" data-target="#input_modal" >기본팝업&lt;/button>
+
+&lt;div class="modal fade" id="input_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-header">
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역&lt;/h5>
+				&lt;button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close">&lt;/button>
+			&lt;/div>
+			&lt;div class="modal-body">
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label01">프로그램ID&lt;/label>
+							&lt;input type="text" class="form-control" id="label01" value="AppDbQuery" />
+						&lt;/div>
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label02">프로그램명&lt;/label>
+							&lt;input type="text" class="form-control" id="label02" value="AppDbQuery" />
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label03">VIEW PAGE &lt;/label>
+							&lt;input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+						&lt;/div>
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label04">프로그램 UEL &lt;/label>
+							&lt;input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label04">버튼 기능&lt;/label>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">신규
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">삭제
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">조회
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">저장
+								&lt;/label>
+							&lt;/div>
+						&lt;/div>
+
+						&lt;div class="form-group">
+							&lt;label for="label05">작업회사여부&lt;/label>
+							&lt;select name="" id="label05" class="form-control">
+								&lt;option value="">아니오&lt;/option>
+								&lt;option value="">예&lt;/option>
+							&lt;/select>
+						&lt;/div>
+
+						&lt;div class="form-group disabled">
+							&lt;label for="label06">기준일자여부&lt;/label>
+							&lt;select name="" id="label06" class="form-control" disabled="disabled">
+								&lt;option value="">아니오&lt;/option>
+								&lt;option value="">예&lt;/option>
+							&lt;/select>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label07">신청자코드&lt;/label>
+							&lt;input type="text" id="label07" class="form-control" value="Q18535651" />
+						&lt;/div>
+						&lt;div class="form-group">
+							&lt;label for="label08">공용메뉴얼&lt;/label>
+							&lt;input type="text" id="label08" class="form-control" />
+							&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+						&lt;/div>
+						&lt;div class="form-group">
+							&lt;label for="label09">관리자메뉴얼&lt;/label>
+							&lt;input type="text" id="label09" class="form-control"/>
+							&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>기본 MODAL DIALOG INPUT VIEW CONTENT 작업</h2>
+									<div class="hcm-gride-txt">
+										<p>MODAL-BODY 입력 뷰 컨텐츠 영역 예제 입니다.</p>
+										<p>&nbsp;&nbsp; - 입력 뷰 컨텐츠 MODAL DIALOG 작업 예시입니다. </p>
+										<p>&nbsp;&nbsp; - MODAL DIALOG 입력 컨텐츠와 동일한 구조이나 <span class="hcm-class">modal-body</span>아래 &lt;<span class="hcm-tag">div class="<span class="hcm-class">hcm-modal-view-detail</span>"</span>&#62; 마크업 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-tag">form-group</span>아래 &lt;<span class="hcm-tag">input</span>&#62;요소 대신 <span class="hcm-tag">span</span>태그를 사용합니다. </p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#input_view_modal" >입력 뷰 컨텐츠 MODAL DIALOG</button>
+										</div>
+									</div>
+									<div class="modal fade" id="input_view_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역</h5>
+													<button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="hcm-modal-view-detail">
+														<div class="row">
+															<div class="col-12">
+																<div class="form-group hcm-col-6">
+																	<label for="label01" class="hcm-label-strong">프로그램ID</label>
+																	<span>AppDbQuery</span>
+																</div>
+																<div class="form-group hcm-col-6">
+																	<label for="label02" class="hcm-label-strong">프로그램명</label>
+																	<span>AppDbQuery</span>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-12">
+																<div class="form-group hcm-col-6">
+																	<label for="label03" class="hcm-label-strong">VIEW PAGE</label>
+																	<span>engine_app::AppDbQuery.xfdl</span>
+																</div>
+																<div class="form-group hcm-col-6">
+																	<label for="label04">프로그램 UEL</label>
+																	<span>/benit/hr/engine/app/controller/AppDbQuery</span>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-12">
+																<div class="form-group hcm-col-6">
+																	<label for="label04">버튼 기능</label>
+
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<span>신규</span>
+																		</label>
+																	</div>
+
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<span>삭제</span>
+																		</label>
+																	</div>
+
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<span>추가</span>
+																		</label>
+																	</div>
+
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<span>저장</span>
+																		</label>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label for="label05">작업회사여부</label>
+																	<span>아니오</span>
+																</div>
+
+																<div class="form-group disabled">
+																	<label for="label06">기준일자여부</label>
+																	<span>예</span>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-12">
+																<div class="form-group hcm-col-6">
+																	<label for="label07">신청자코드</label>
+																	<span>Q18535651</span>
+																</div>
+																<div class="form-group">
+																	<label for="label08">공용메뉴얼</label>
+																	<span>test</span>
+																</div>
+																<div class="form-group">
+																	<label for="label09">관리자메뉴얼</label>
+																	<span>test</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;button type="button" class="" data-toggle="modal" data-target="#df_modal" >기본팝업&lt;/button>
+
+&lt;div class="modal fade" id="df_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-header">
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역&lt;/h5>
+				&lt;button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close">&lt;/button>
+			&lt;/div>
+			&lt;div class="modal-body">
+				&lt;div class="hcm-modal-view-detail">
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label01" class="hcm-label-strong">프로그램ID&lt;/label>
+								&lt;span>AppDbQuery&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label02" class="hcm-label-strong">프로그램명&lt;/label>
+								&lt;span>AppDbQuery&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label03" class="hcm-label-strong">VIEW PAGE&lt;/label>
+								&lt;span>engine_app::AppDbQuery.xfdl&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">프로그램 UEL&lt;/label>
+								&lt;span>/benit/hr/engine/app/controller/AppDbQuery&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">버튼 기능&lt;/label>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>신규&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>삭제&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>추가&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>저장&lt;/span>
+									&lt;/label>
+								&lt;/div>
+							&lt;/div>
+
+							&lt;div class="form-group">
+								&lt;label for="label05">작업회사여부&lt;/label>
+								&lt;span>아니오&lt;/span>
+							&lt;/div>
+
+							&lt;div class="form-group disabled">
+								&lt;label for="label06">기준일자여부&lt;/label>
+								&lt;span>예&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label07">신청자코드&lt;/label>
+								&lt;span>Q18535651&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label08">공용메뉴얼&lt;/label>
+								&lt;span>test&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label09">관리자메뉴얼&lt;/label>
+								&lt;span>test&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>기본 MODAL DIALOG INPUT CONTENT ALERT 작업</h2>
+									<div class="hcm-gride-txt">
+										<p>MODAL-BODY 입력 컨텐츠 ALERT 영역 예제 입니다.</p>
+										<p>&nbsp;&nbsp; - 입력 컨텐츠 ALERT MODAL DIALOG 작업 예시입니다. </p>
+										<p>&nbsp;&nbsp; - ALERT 클래스 종류 입니다. <strong><span class="hcm-class">hcm-alert-danger</span></strong> / <strong><span class="hcm-class">hcm-alert-success</span></strong> / <strong><span class="hcm-class">hcm-alert-warning</span></strong> / <strong><span class="hcm-class">hcm-alert-info</span></strong></p>
+										<p>&nbsp;&nbsp; - 입력컨텐츠 와 동일한 마크업 구조이며 &lt;<span class="hcm-tag">div class="<span class="hcm-class">form-group</span>"</span>&#62;에  <span class="hcm-class">hcm-alert-danger / hcm-alert-success / hcm-alert-warning / hcm-alert-warning</span> 필요한 클래스를 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - EX.) &lt;<span class="hcm-tag">div class="<span class="hcm-class">form-group hcm-alert-danger</span>"</span>&#62;</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">form-group</span>아래 &lt;<span class="hcm-tag">div class="<span class="hcm-class">alert alert-danger</span>"</span>&#62;를 추가합니다.</p>
+										<p>&nbsp;&nbsp; - ALERT 메세지는 <span class="hcm-tag">span</span>으로 감싸줍니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#input_alert_modal" >입력 뷰 컨텐츠 MODAL DIALOG</button>
+										</div>
+									</div>
+									<div class="modal fade" id="input_alert_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역</h5>
+													<button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6 hcm-alert-danger">
+																<label for="label01">프로그램ID</label>
+																<input type="text" class="form-control" id="label01" value="AppDbQuery" />
+																<div class="alert alert-danger">
+																	<span>Danger! You should read this message.</span>
+																</div>
+															</div>
+															<div class="form-group hcm-col-6 hcm-alert-success">
+																<label for="label02">프로그램명</label>
+																<input type="text" class="form-control" id="label02" value="AppDbQuery" />
+																<div class="alert alert-success">
+																	<span>Success! You should read this message.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6 hcm-alert-warning">
+																<label for="label03">VIEW PAGE </label>
+																<input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+																<div class="alert alert-warning">
+																	<span>Warning You should read this message.</span>
+																</div>
+															</div>
+															<div class="form-group hcm-col-6 hcm-alert-info">
+																<label for="label04">프로그램 UEL </label>
+																<input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+																<div class="alert  alert-info">
+																	<span>Info! You should read this message.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label04">버튼 기능</label>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">신규
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">삭제
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">조회
+																	</label>
+																</div>
+
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">저장
+																	</label>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<label for="label05">작업회사여부</label>
+																<select name="" id="label05" class="form-control">
+																	<option value="">아니오</option>
+																	<option value="">예</option>
+																</select>
+															</div>
+
+															<div class="form-group disabled">
+																<label for="label06">기준일자여부</label>
+																<select name="" id="label06" class="form-control">
+																	<option value="">아니오</option>
+																	<option value="">예</option>
+																</select>
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-12">
+															<div class="form-group hcm-col-6">
+																<label for="label07">신청자코드</label>
+																<input type="text" id="label07" class="form-control" value="Q18535651" />
+															</div>
+															<div class="form-group">
+																<label for="label08">공용메뉴얼</label>
+																<input type="text" id="label08" class="form-control" />
+																<button type="button" class="hcm-btn-icon-share">공유하기</button>
+															</div>
+															<div class="form-group">
+																<label for="label09">관리자메뉴얼</label>
+																<input type="text" id="label09" class="form-control"/>
+																<button type="button" class="hcm-btn-icon-share">공유하기</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade" id="input_alert_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-header">
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle">타이틀영역&lt;/h5>
+				&lt;button type="button" class="hcm-btn-icon-close close" data-dismiss="modal" aria-label="Close">&lt;/button>
+			&lt;/div>
+			&lt;div class="modal-body">
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6 hcm-alert-danger">
+							&lt;label for="label01">프로그램ID&lt;/label>
+							&lt;input type="text" class="form-control" id="label01" value="AppDbQuery" />
+							&lt;div class="alert alert-danger">
+								&lt;span>Danger! You should read this message.&lt;/span>
+							&lt;/div>
+						&lt;/div>
+						&lt;div class="form-group hcm-col-6 hcm-alert-success">
+							&lt;label for="label02">프로그램명&lt;/label>
+							&lt;input type="text" class="form-control" id="label02" value="AppDbQuery" />
+							&lt;div class="alert alert-success">
+								&lt;span>Success! You should read this message.&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6 hcm-alert-warning">
+							&lt;label for="label03">VIEW PAGE &lt;/label>
+							&lt;input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+							&lt;div class="alert alert-warning">
+								&lt;span>Warning You should read this message.&lt;/span>
+							&lt;/div>
+						&lt;/div>
+						&lt;div class="form-group hcm-col-6 hcm-alert-info">
+							&lt;label for="label04">프로그램 UEL &lt;/label>
+							&lt;input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+							&lt;div class="alert  alert-info">
+								&lt;span>Info! You should read this message.&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label04">버튼 기능&lt;/label>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">신규
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">삭제
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">조회
+								&lt;/label>
+							&lt;/div>
+
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">저장
+								&lt;/label>
+							&lt;/div>
+						&lt;/div>
+
+						&lt;div class="form-group">
+							&lt;label for="label05">작업회사여부&lt;/label>
+							&lt;select name="" id="label05" class="form-control">
+								&lt;option value="">아니오&lt;/option>
+								&lt;option value="">예&lt;/option>
+							&lt;/select>
+						&lt;/div>
+
+						&lt;div class="form-group disabled">
+							&lt;label for="label06">기준일자여부&lt;/label>
+							&lt;select name="" id="label06" class="form-control">
+								&lt;option value="">아니오&lt;/option>
+								&lt;option value="">예&lt;/option>
+							&lt;/select>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;div class="form-group hcm-col-6">
+							&lt;label for="label07">신청자코드&lt;/label>
+							&lt;input type="text" id="label07" class="form-control" value="Q18535651" />
+						&lt;/div>
+						&lt;div class="form-group">
+							&lt;label for="label08">공용메뉴얼&lt;/label>
+							&lt;input type="text" id="label08" class="form-control" />
+							&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+						&lt;/div>
+						&lt;div class="form-group">
+							&lt;label for="label09">관리자메뉴얼&lt;/label>
+							&lt;input type="text" id="label09" class="form-control"/>
+							&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="guide_tab_content" id="tab09">
+					<h1>ALERT DIALOG</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>ALERT DANGER</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 마크업을 사용합니다. 팝업형태 ALERT 메세지입니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_wrap</span> 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_danger</span> 메세지 형태의 값의 클래스를 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_wrap</span>를 통해 기본 modal 속성값을 override 시킵니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_danger</span> / <span class="hcm-class">alert_success</span> / <span class="hcm-class">alert_msg_success</span> / <span class="hcm-class">alert_msg_warning</span> / <span class="hcm-class">alert_msg_info</span> 총4자기 형태의 따른 클래스 종류 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#alert_danger" >ALERT DANGER</button>
+										</div>
+									</div>
+									<div class="modal fade alert_msg_wrap alert_msg_danger" id="alert_danger" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="alert_msg_tt"><span class="alert_msg_icon"></span>Danger</div>
+													<div class="alert_msg">You should read this message.</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade alert_msg_wrap alert_msg_danger" id="alert_danger" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body">
+				&lt;div class="alert_msg_tt">&lt;span class="alert_msg_icon">&lt;/span>Danger&lt;/div>
+				&lt;div class="alert_msg">You should read this message.&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>ALERT SUCCESS</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 마크업을 사용합니다. 팝업형태 ALERT 메세지입니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_wrap</span> 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_danger</span> 메세지 형태의 값의 클래스를 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_wrap</span>를 통해 기본 modal 속성값을 override 시킵니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_danger</span> / <span class="hcm-class">alert_success</span> / <span class="hcm-class">alert_msg_success</span> / <span class="hcm-class">alert_msg_warning</span> / <span class="hcm-class">alert_msg_info</span> 총4자기 형태의 따른 클래스 종류 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#alert_success" >ALERT SUCCESS</button>
+										</div>
+									</div>
+									<div class="modal fade alert_msg_wrap alert_msg_success" id="alert_success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="alert_msg_tt"><span class="alert_msg_icon"></span>Success</div>
+													<div class="alert_msg">You should read this message.</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-ok">확인</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade alert_msg_wrap alert_msg_success" id="alert_success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body">
+				&lt;div class="alert_msg_tt">&lt;span class="alert_msg_icon">&lt;/span>Success&lt;/div>
+				&lt;div class="alert_msg">You should read this message.&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">확인&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>ALERT WARNING</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 마크업을 사용합니다. 팝업형태 ALERT 메세지입니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_wrap</span> 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_danger</span> 메세지 형태의 값의 클래스를 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_wrap</span>를 통해 기본 modal 속성값을 override 시킵니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_danger</span> / <span class="hcm-class">alert_success</span> / <span class="hcm-class">alert_msg_success</span> / <span class="hcm-class">alert_msg_warning</span> / <span class="hcm-class">alert_msg_info</span> 총4자기 형태의 따른 클래스 종류 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#alert_warning" >ALERT WARNING</button>
+										</div>
+									</div>
+									<div class="modal fade alert_msg_wrap alert_msg_warning" id="alert_warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="alert_msg_tt"><span class="alert_msg_icon"></span>Warning</div>
+													<div class="alert_msg">You should read this message.</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-ok">예</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade alert_msg_wrap alert_msg_warning" id="alert_warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body">
+				&lt;div class="alert_msg_tt">&lt;span class="alert_msg_icon">&lt;/span>Warning&lt;/div>
+				&lt;div class="alert_msg">You should read this message.&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">예&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>ALERT INFO</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 마크업을 사용합니다. 팝업형태 ALERT 메세지입니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_wrap</span> 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_danger</span> 메세지 형태의 값의 클래스를 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_wrap</span>를 통해 기본 modal 속성값을 override 시킵니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_danger</span> / <span class="hcm-class">alert_success</span> / <span class="hcm-class">alert_msg_success</span> / <span class="hcm-class">alert_msg_warning</span> / <span class="hcm-class">alert_msg_info</span> 총4자기 형태의 따른 클래스 종류 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#alert_info" >ALERT INFO</button>
+										</div>
+									</div>
+									<div class="modal fade alert_msg_wrap alert_msg_info" id="alert_info" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="alert_msg_tt"><span class="alert_msg_icon"></span>INFO</div>
+													<div class="alert_msg">You should read this message.</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-ok">예</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade alert_msg_wrap alert_msg_warning" id="alert_warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body">
+				&lt;div class="alert_msg_tt">&lt;span class="alert_msg_icon">&lt;/span>Warning&lt;/div>
+				&lt;div class="alert_msg">You should read this message.&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">예&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>ALERT INPUT</h2>
+									<div class="hcm-gride-txt">
+										<p>기본 MODAL DIALOG 마크업을 사용합니다. 팝업형태 ALERT 메세지입니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_wrap</span> 추가해 줍니다.</p>
+										<p>&nbsp;&nbsp; - &lt;<span class="hcm-tag">div class="<span class="modal"></span>"</span>&#62;에 <span class="hcm-class">alert_msg_danger</span> 메세지 형태의 값의 클래스를 추가 해주시면 됩니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_wrap</span>를 통해 기본 modal 속성값을 override 시킵니다.</p>
+										<p>&nbsp;&nbsp; - <span class="hcm-class">alert_msg_danger</span> / <span class="hcm-class">alert_success</span> / <span class="hcm-class">alert_msg_success</span> / <span class="hcm-class">alert_msg_warning</span> / <span class="hcm-class">alert_msg_info</span> 총4자기 형태의 따른 클래스 종류 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#alert_input" >ALERT 수정 입력창</button>
+										</div>
+									</div>
+									<div class="modal fade alert_msg_wrap alert_msg_warning" id="alert_input" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="alert_msg_tt"><span class="alert_msg_icon"></span>Warning</div>
+													<div class="alert_msg">You should read this message.</div>
+													<div class="alert_input"><input type="text"></div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소</button>
+													<button type="button" class="hcm-btn-pop-ok">예</button>
+													<button type="button" class="hcm-btn-pop-no">아니오</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade alert_msg_wrap alert_msg_warning" id="alert_warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body">
+				&lt;div class="alert_msg_tt">&lt;span class="alert_msg_icon">&lt;/span>Warning&lt;/div>
+				&lt;div class="alert_msg">You should read this message.&lt;/div>
+			&lt;/div>
+			&lt;div class="modal-footer">
+				&lt;button type="button" class="hcm-btn-pop-cancel" data-dismiss="modal">취소&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-ok">예&lt;/button>
+				&lt;button type="button" class="hcm-btn-pop-no">아니오&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="guide_tab_content" id="tab10">
+					<h1>우클릭 DIALOG</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>우클릭 dialog </h2>
+									<div class="hcm-gride-txt">
+										<p>마우스 우클릭시 나오는 dialog 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#right_click" >우클릭 dialog</button>
+										</div>
+									</div>
+									<div class="modal fade" id="right_click" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<div class="modal-body hcm-right-click">
+													<div class="row">
+														<div class="col-12">
+															<ul>
+																<li class="d-flex"><span class="">뒤로</span> <span class="ml-auto">Alt + 왼쪽 화살표</span></li>
+																<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+															</ul>
+															<ul>
+																<li class="d-flex">
+																	<span class="">뒤로</span> <span class="ml-auto"><img src="./img/click_arrow_btn.png" alt=""></span>
+																	<div class="hcm-right-click-depth2">
+																		<ul>
+																			<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																			<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+																		</ul>
+																		<ul>
+																			<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																			<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+																		</ul>
+																	</div>
+																</li>
+																<li class="d-flex">
+																	<span class="">뒤로</span> <span class="ml-auto"><img src="./img/click_arrow_btn.png" alt=""></span>
+																	<div class="hcm-right-click-depth2">
+																		<ul>
+																			<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																			<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+																		</ul>
+																		<ul>
+																			<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																			<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+																		</ul>
+																	</div>
+																</li>
+																<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+															</ul>
+															<ul>
+																<li class="d-flex"><span class="">뒤로</span> <span class="ml-auto">Alt + 왼쪽 화살표</span></li>
+																<li class="d-flex"><span class="">앞으로</span> <span class="ml-auto">Alt + 오른쪽 화살표</span></li>
+																<li class="d-flex"><span class="">새로고침</span> <span class="ml-auto">Alt + 마우스 왼쪽</span></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal fade" id="right_click" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;div class="modal-body hcm-right-click">
+				&lt;div class="row">
+					&lt;div class="col-12">
+						&lt;ul>
+							&lt;li class="d-flex">&lt;span class="">뒤로&lt;/span> &lt;span class="ml-auto">Alt + 왼쪽 화살표&lt;/span>&lt;/li>
+							&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+							&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+						&lt;/ul>
+						&lt;ul>
+							&lt;li class="d-flex">
+								&lt;span class="">뒤로&lt;/span> &lt;span class="ml-auto">&lt;img src="./img/click_arrow_btn.png" alt="">&lt;/span>
+								&lt;div class="hcm-right-click-depth2">
+									&lt;ul>
+										&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+										&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+									&lt;/ul>
+									&lt;ul>
+										&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+										&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+									&lt;/ul>
+								&lt;/div>
+							&lt;/li>
+							&lt;li class="d-flex">
+								&lt;span class="">뒤로&lt;/span> &lt;span class="ml-auto">&lt;img src="./img/click_arrow_btn.png" alt="">&lt;/span>
+								&lt;div class="hcm-right-click-depth2">
+									&lt;ul>
+										&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+										&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+									&lt;/ul>
+									&lt;ul>
+										&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+										&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+									&lt;/ul>
+								&lt;/div>
+							&lt;/li>
+							&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+						&lt;/ul>
+						&lt;ul>
+							&lt;li class="d-flex">&lt;span class="">뒤로&lt;/span> &lt;span class="ml-auto">Alt + 왼쪽 화살표&lt;/span>&lt;/li>
+							&lt;li class="d-flex">&lt;span class="">앞으로&lt;/span> &lt;span class="ml-auto">Alt + 오른쪽 화살표&lt;/span>&lt;/li>
+							&lt;li class="d-flex">&lt;span class="">새로고침&lt;/span> &lt;span class="ml-auto">Alt + 마우스 왼쪽&lt;/span>&lt;/li>
+						&lt;/ul>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab11">
+					<h1>LODDAING DIALOG</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>LODDAING DANGER</h2>
+									<div class="hcm-gride-txt">
+										<p>LOADDING DIALOG 마크업을 입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<button type="button" class="" data-toggle="modal" data-target="#loadding_dialog" >LODDING DIALOG</button>
+										</div>
+									</div>
+									<div class="modal hcm-loading" id="loadding_dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered" role="document">
+											<div class="modal-content">
+												<img src="./img/loader_spinner.gif" alt="">
+											</div>
+										</div>
+									</div>
+
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="modal hcm-loading" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	&lt;div class="modal-dialog modal-dialog-centered" role="document">
+		&lt;div class="modal-content">
+			&lt;img src="./img/loader_spinner.gif" alt="">
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab12">
+					<h1>부트스트랩 LIST GROUP 형태</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>UL/LI LIST 형태</h2>
+									<div class="hcm-gride-txt">
+										<p>부트스트랩 list group 마크업을 입니다.  (<a href="https://www.w3schools.com/bootstrap4/bootstrap_list_groups.asp" target="_blank">부트스트랩 참조</a>)</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<ul class="list-group">
+												<li class="list-group-item">버튼 기능</li>
+												<li class="list-group-item">AppDbQuery</li>
+												<li class="list-group-item">Third item</li>
+											</ul>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;ul class="list-group">
+			&lt;li class="list-group-item">버튼 기능&lt;/li>
+			&lt;li class="list-group-item">AppDbQuery&lt;/li>
+			&lt;li class="list-group-item">Third item&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>UL/LI LIST active 형태</h2>
+									<div class="hcm-gride-txt">
+										<p>list group li.active 구조입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<ul class="list-group">
+												<li class="active list-group-item">버튼 기능</li>
+												<li class="list-group-item">AppDbQuery</li>
+												<li class="list-group-item">Third item</li>
+											</ul>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;ul class="list-group">
+			&lt;li class="active list-group-item">버튼 기능&lt;/li>
+			&lt;li class="list-group-item">AppDbQuery&lt;/li>
+			&lt;li class="list-group-item">Third item&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab13">
+					<h1>PAGE MAP / BACK BUTTON</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>PAGE MAP / BACK BUTTON 형태</h2>
+									<div class="hcm-gride-txt">
+										<p>PAGE MAP BUTTON기능 마크업 입니다.</p>
+										<p>&nbsp;&nbsp;- 종류는 총 3개자 타입 <span class="hcm-class">hcm-page-map-inline-btn</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span class="hcm-class">hcm-page-map-btn</span>&nbsp;&nbsp;/&nbsp;&nbsp;<span class="hcm-class">hcm-page-map-click-btn</span></p>
+									</div>
+									<div class="hcm-page-map">
+										<div class="row">
+											<div class="col-12">
+												<div class="hcm-page-map-inline-btn d-flex">
+													<div class="hcm-page-map-guide align-self-center">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</div>
+													<button type="button" class="hcm-btn-form ml-auto align-self-center">뒤로가기</button>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="hcm-page-map-btn d-flex">
+													<div class="hcm-page-map-guide">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</div>
+													<button type="button" class="hcm-btn-form">뒤로가기</button>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<button type="button" class="hcm-page-map-click-btn d-flex">
+													<span class="align-self-center">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</span>
+													<span class="align-self-center ml-auto">뒤로가기 버튼입니다</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="hcm-page-map">
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="hcm-page-map-inline-btn d-flex">
+				&lt;div class="hcm-page-map-guide align-self-center">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.&lt;/div>
+				&lt;button type="button" class="hcm-btn-form ml-auto align-self-center">뒤로가기&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;div class="hcm-page-map-btn d-flex">
+				&lt;div class="hcm-page-map-guide">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.&lt;/div>
+				&lt;button type="button" class="hcm-btn-form">뒤로가기&lt;/button>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;button type="button" class="hcm-page-map-click-btn d-flex">
+				&lt;span class="align-self-center">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세, 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.&lt;/span>
+				&lt;span class="align-self-center ml-auto">뒤로가기 버튼입니다&lt;/span>
+			&lt;/button>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide_tab_content" id="tab14">
+					<h1>ACCORDION</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>ACCORDION 형태</h2>
+									<div class="hcm-gride-txt">
+										<p>ACCORDION 부트스트랩 기본 마크업 유지 (<a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_blank">참조</a>)</p>
+										<p>&nbsp;&nbsp;- ACCORDION 부트스트랩 css만 수정 작업했습니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div id="accordion">
+												<div class="card">
+													<div class="card-header" id="headingOne">
+														<h3 class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">타이틀입니다.</h3>
+													</div>
+													<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+														<div class="card-body">
+															<div class="hcm-view-detail">
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label01">프로그램ID</label>
+																			<span>AppDbQuery</span>
+																		</div>
+																		<div class="form-group hcm-col-6">
+																			<label for="label02">프로그램명</label>
+																			<span>AppDbQuery</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label03">VIEW PAGE</label>
+																			<span>engine_app::AppDbQuery.xfdl</span>
+																		</div>
+																		<div class="form-group hcm-col-6">
+																			<label for="label04">프로그램 UEL</label>
+																			<span>/benit/hr/engine/app/controller/AppDbQuery</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label04">버튼 기능</label>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<span>신규</span>
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<span>삭제</span>
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<span>추가</span>
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<span>저장</span>
+																				</label>
+																			</div>
+																		</div>
+
+																		<div class="form-group">
+																			<label for="label05">작업회사여부</label>
+																			<span>아니오</span>
+																		</div>
+
+																		<div class="form-group disabled">
+																			<label for="label06">기준일자여부</label>
+																			<span>예</span>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label07">신청자코드</label>
+																			<span>Q18535651</span>
+																		</div>
+																		<div class="form-group">
+																			<label for="label08">공용메뉴얼</label>
+																			<span>test</span>
+																		</div>
+																		<div class="form-group">
+																			<label for="label09">관리자메뉴얼</label>
+																			<span>test</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- hcm-view-box -->
+														</div>
+													</div>
+												</div>
+												<div class="card">
+													<div class="card-header" id="headingTwo">
+														<h3 class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">타이틀입니다</h3>
+													</div>
+													<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+														<div class="card-body">
+															<!-- hcm-detail-box -->
+															<div class="hcm-detail-box">
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label01" class="hcm-label-strong">프로그램ID </label>
+																			<input type="text" class="form-control" id="label01" value="AppDbQuery" />
+																		</div>
+																		<div class="form-group hcm-col-6">
+																			<label for="label02" class="hcm-label-strong">프로그램명 </label>
+																			<input type="text" class="form-control" id="label02" value="AppDbQuery" />
+																		</div>
+																	</div>
+																</div>
+
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label03" class="hcm-label-strong">VIEW PAGE </label>
+																			<input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+																		</div>
+																		<div class="form-group hcm-col-6">
+																			<label for="label04">프로그램 UEL </label>
+																			<input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+																		</div>
+																	</div>
+																</div>
+
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label04">버튼 기능</label>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<input type="checkbox" class="form-check-input" value="">신규
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<input type="checkbox" class="form-check-input" value="">삭제
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<input type="checkbox" class="form-check-input" value="">조회
+																				</label>
+																			</div>
+
+																			<div class="form-check-inline">
+																				<label class="form-check-label">
+																					<input type="checkbox" class="form-check-input" value="">저장
+																				</label>
+																			</div>
+																		</div>
+
+																		<div class="form-group">
+																			<label for="label05">작업회사여부</label>
+																			<select name="" id="label05" class="form-control">
+																				<option value="">아니오</option>
+																				<option value="">예</option>
+																			</select>
+																		</div>
+
+																		<div class="form-group disabled">
+																			<label for="label06">기준일자여부</label>
+																			<select name="" id="label06" class="form-control" disabled="disabled">
+																				<option value="">아니오</option>
+																				<option value="">예</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="row">
+																	<div class="col-12">
+																		<div class="form-group hcm-col-6">
+																			<label for="label07">신청자코드</label>
+																			<input type="text" id="label07" class="form-control" value="Q18535651" />
+																		</div>
+																		<div class="form-group">
+																			<label for="label08">공용메뉴얼</label>
+																			<input type="text" id="label08" class="form-control" />
+																			<button type="button" class="hcm-btn-icon-share">공유하기</button>
+																		</div>
+																		<div class="form-group">
+																			<label for="label09">관리자메뉴얼</label>
+																			<input type="text" id="label09" class="form-control"/>
+																			<button type="button" class="hcm-btn-icon-share">공유하기</button>
+																		</div>
+																	</div>
+																</div>
+															</div><!-- hcm-detail-box -->
+														</div>
+													</div>
+												</div>
+												<div class="card">
+													<div class="card-header" id="headingThree">
+														<h3 class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">타이틀입니다</h3>	
+													</div>
+													<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+														<div class="card-body">
+														Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div id="accordion">
+	&lt;div class="card">
+		&lt;div class="card-header" id="headingOne">
+			&lt;h3 class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">타이틀입니다.&lt;/h3>
+		&lt;/div>
+		&lt;div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+			&lt;div class="card-body">
+				&lt;div class="hcm-view-detail">
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label01">프로그램ID&lt;/label>
+								&lt;span>AppDbQuery&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label02">프로그램명&lt;/label>
+								&lt;span>AppDbQuery&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label03">VIEW PAGE&lt;/label>
+								&lt;span>engine_app::AppDbQuery.xfdl&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">프로그램 UEL&lt;/label>
+								&lt;span>/benit/hr/engine/app/controller/AppDbQuery&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">버튼 기능&lt;/label>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>신규&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>삭제&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>추가&lt;/span>
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;span>저장&lt;/span>
+									&lt;/label>
+								&lt;/div>
+							&lt;/div>
+
+							&lt;div class="form-group">
+								&lt;label for="label05">작업회사여부&lt;/label>
+								&lt;span>아니오&lt;/span>
+							&lt;/div>
+
+							&lt;div class="form-group disabled">
+								&lt;label for="label06">기준일자여부&lt;/label>
+								&lt;span>예&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label07">신청자코드&lt;/label>
+								&lt;span>Q18535651&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label08">공용메뉴얼&lt;/label>
+								&lt;span>test&lt;/span>
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label09">관리자메뉴얼&lt;/label>
+								&lt;span>test&lt;/span>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+				&lt;!-- hcm-view-box -->
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+	&lt;div class="card">
+		&lt;div class="card-header" id="headingTwo">
+			&lt;h3 class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">타이틀입니다&lt;/h3>
+		&lt;/div>
+		&lt;div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+			&lt;div class="card-body">
+				&lt;!-- hcm-detail-box -->
+				&lt;div class="hcm-detail-box">
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label01" class="hcm-label-strong">프로그램ID &lt;/label>
+								&lt;input type="text" class="form-control" id="label01" value="AppDbQuery" />
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label02" class="hcm-label-strong">프로그램명 &lt;/label>
+								&lt;input type="text" class="form-control" id="label02" value="AppDbQuery" />
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label03" class="hcm-label-strong">VIEW PAGE &lt;/label>
+								&lt;input type="text" class="form-control" id="label03" value="engine_app::AppDbQuery.xfdl" />
+							&lt;/div>
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">프로그램 UEL &lt;/label>
+								&lt;input type="text" class="form-control" id="label04" value="/benit/hr/engine/app/controller/AppDbQuery" />
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label04">버튼 기능&lt;/label>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;input type="checkbox" class="form-check-input" value="">신규
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;input type="checkbox" class="form-check-input" value="">삭제
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;input type="checkbox" class="form-check-input" value="">조회
+									&lt;/label>
+								&lt;/div>
+
+								&lt;div class="form-check-inline">
+									&lt;label class="form-check-label">
+										&lt;input type="checkbox" class="form-check-input" value="">저장
+									&lt;/label>
+								&lt;/div>
+							&lt;/div>
+
+							&lt;div class="form-group">
+								&lt;label for="label05">작업회사여부&lt;/label>
+								&lt;select name="" id="label05" class="form-control">
+									&lt;option value="">아니오&lt;/option>
+									&lt;option value="">예&lt;/option>
+								&lt;/select>
+							&lt;/div>
+
+							&lt;div class="form-group disabled">
+								&lt;label for="label06">기준일자여부&lt;/label>
+								&lt;select name="" id="label06" class="form-control" disabled="disabled">
+									&lt;option value="">아니오&lt;/option>
+									&lt;option value="">예&lt;/option>
+								&lt;/select>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+
+					&lt;div class="row">
+						&lt;div class="col-12">
+							&lt;div class="form-group hcm-col-6">
+								&lt;label for="label07">신청자코드&lt;/label>
+								&lt;input type="text" id="label07" class="form-control" value="Q18535651" />
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label08">공용메뉴얼&lt;/label>
+								&lt;input type="text" id="label08" class="form-control" />
+								&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+							&lt;/div>
+							&lt;div class="form-group">
+								&lt;label for="label09">관리자메뉴얼&lt;/label>
+								&lt;input type="text" id="label09" class="form-control"/>
+								&lt;button type="button" class="hcm-btn-icon-share">공유하기&lt;/button>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>&lt;!-- hcm-detail-box -->
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="guide_tab_content" id="tab15">
+					<h1>TEXTAREA</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>TEXTAREA 기본</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">TEXTAREA</span>의 기본 스타일입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<textarea name="" id=""></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;textarea name="" id="">&lt;/textarea>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+								<div class="guide_grid">
+									<h2>LABEL + TEXTAREA</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">LABEL</span>과 <span class="hcm-tag">TEXTAREA</span>함께 사용한 스타일입니다.</p>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label for="">TEXTAREA</label>	
+												<textarea name="" id=""></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+&lt;div class="row">
+	&lt;div class="col-12">
+		&lt;div class="form-group">
+			&lt;textarea name="" id="">&lt;/textarea>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="guide_tab_content" id="tab16">
+					<h1>BUTTON ICON</h1>
+					<div class="guide_contents">
+						<div class="guide_drawing">
+							<div class="guide_drawing_grid">
+								<div class="guide_grid">
+									<h2>BUTTON ICON 종류</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">H3</span>자식요소에서 <strong>ICON BUTTON</strong> 사용한 경우 입니다.</p>
+										<p>- <strong>추가(플러스)</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-plus</span> 클래스 입니다.</p>
+										<p>- <strong>삭제(마이너스)</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-minus</span> 클래스 입니다.</p>
+										<p>- <strong>닫기(엑스)</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-close</span> 클래스 입니다.</p>
+										<p>- <strong>업로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-upload</span> 클래스 입니다.</p>
+										<p>- <strong>다운로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-down</span> 클래스 입니다.</p>
+										<p>- <strong>pdf</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-pdf</span> 클래스 입니다.</p>
+										<p>- <strong>pdf다운로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-pdfdown</span> 클래스 입니다.</p>
+										<p>- <strong>pdf업로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-pdfupload</span> 클래스 입니다.</p>
+										<p>- <strong>엑셀</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-excel</span> 클래스 입니다.</p>
+										<p>- <strong>엑셀다운로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-exceldown</span> 클래스 입니다.</p>
+										<p>- <strong>엑셀업로드</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-excelupload</span> 클래스 입니다.</p>
+										<p>- <strong>휴지통</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-trashcan</span> 클래스 입니다.</p>
+										<p>- <strong>첨부파일</strong> 아이콘 <span class="hcm-class">hcm-btn-icon-addfile</span> 클래스 입니다.</p>
+										<p>- <strong>전체선택</strong> 아이콘  <span class="hcm-class">hcm-btn-icon-allchk</span> 클래스 입니다.</p>
+										<p>- <strong>상세보기</strong> 아이콘  <span class="hcm-class">hcm-btn-icon-pageview</span> 클래스 입니다.</p>
+										<p>- <strong>에디터</strong> 아이콘  <span class="hcm-class">hcm-btn-icon-edit</span> 클래스 입니다.</p>
+									</div>
+									<h3 class="row">
+										<div class="col-6 hcm-title">프로그램 목록</div>
+										<div class="col-6 d-flex justify-content-end">
+											<div class="btn-group hcm-btn-dropdown">
+												<button type="button" class="">추가</button>
+												<button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown"></button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#">저장</a>
+													<a class="dropdown-item" href="#">삭제</a>
+												</div>
+											</div>
+											<button type="button" class="hcm-btn-list-align"><span>상단</span><span class="align-self-center"></span></button>
+											<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+											<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+											<button type="button" class="hcm-btn-icon-close" title="닫기">클로즈</button>
+											<button type="button" class="hcm-btn-icon-upload" title="업로드">업로드</button>
+											<button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드</button>
+											<button type="button" class="hcm-btn-icon-pdf" title="PDF">PDF</button>
+											<button type="button" class="hcm-btn-icon-pdfdown" title="pdf다운로드">pdf다운로드</button>
+											<button type="button" class="hcm-btn-icon-pdfupload" title="pdf업로드">pdf업로드</button>
+											<button type="button" class="hcm-btn-icon-excel" title="엑셀">엑셀</button>
+											<button type="button" class="hcm-btn-icon-exceldown" title="엑셀다운로드">엑셀다운로드</button>
+											<button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀업로드</button>
+											<button type="button" class="hcm-btn-icon-trashcan" title="휴지통">휴지통</button>
+											<button type="button" class="hcm-btn-icon-addfile" title="첨부파일">첨부파일</button>
+											<button type="button" class="hcm-btn-icon-allchk" title="전체선택"></button>
+											<button type="button" class="hcm-btn-icon-pageview" title="상세보기">상세보기</button>
+											<button type="button" class="hcm-btn-icon-edit" title="에디터">에디터</button>
+										</div>
+									</h3>
+									<div class="language-markup">
+										<pre><code>
+&lt;h3 class="row">
+	&lt;div class="col-6 hcm-title">프로그램 목록&lt;/div>
+	&lt;div class="col-6 d-flex justify-content-end">
+		&lt;div class="btn-group hcm-btn-dropdown">
+			&lt;button type="button" class="">추가&lt;/button>
+			&lt;button type="button" class="dropdown-toggle-split dropdown-toggle " data-toggle="dropdown">&lt;/button>
+			&lt;div class="dropdown-menu">
+				&lt;a class="dropdown-item" href="#">저장&lt;/a>
+				&lt;a class="dropdown-item" href="#">삭제&lt;/a>
+			&lt;/div>
+		&lt;/div>
+		&lt;button type="button" class="hcm-btn-list-align">&lt;span>상단&lt;/span>&lt;span class="align-self-center">&lt;/span>&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-close" title="닫기">클로즈&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-upload" title="업로드">업로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-pdf" title="PDF">PDF&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-pdfdown" title="pdf다운로드">pdf다운로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-pdfupload" title="pdf업로드">pdf업로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-excel" title="엑셀">엑셀&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-exceldown" title="엑셀다운로드">엑셀다운로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-excelupload" title="엑셀업로드">엑셀업로드&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-trashcan" title="휴지통">휴지통&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-addfile" title="첨부파일">첨부파일&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-allchk" title="전체선택">&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-pageview" title="상세보기">상세보기&lt;/button>
+		&lt;button type="button" class="hcm-btn-icon-edit" title="에디터">에디터&lt;/button>
+&lt;/h3>
+										</code></pre>
+									</div>
+								</div>
+								
+								<div class="guide_grid">
+									<h2>SEARCH ICON BUTTON</h2>
+									<div class="hcm-gride-txt">
+										<p><span class="hcm-tag">TABLE TD</span>자식요소에서 <strong>ICON BUTTON</strong> 사용한 경우 입니다.</p>
+									</div>
+									<div class="hcm-list-box">
+										<div class="row">
+											<div class="col-12">
+												<table class="hcm-list-table hcm-table-border-none"> 
+													<colgroup>
+														<col class="hcm-table-count" span=""/>
+														<col class="hcm-tabel-space"/>
+													</colgroup>	
+													<thead>
+														<tr>
+															<th>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</th>
+															<th>No</th>
+															<th>상태</th>
+															<th>운영ID</th>
+															<th>프로그램ID</th>
+															<th>프로그램명</th>
+															<th>프로그램URL</th>
+															<th>사용여부</th>
+															<th>신규</th>
+															<th>삭제</th>
+															<th>조회</th>
+															<th>저장</th>
+															<th>공용매뉴얼</th>
+															<th>관리자메뉴얼</th>
+															<th>버튼로그</th>
+															<th>타입</th>
+															<th>권한부여</th>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>01</td>
+															<td></td>
+															<td>BNT</td>
+															<td>AppDbQuery</td>
+															<td>DB쿼리</td>
+															<td>/benit/hr/engine/app/controller/AppDbQuery</td>
+															<td>예</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>
+																<div class="form-check-inline">
+																	<label class="form-check-label">
+																		<input type="checkbox" class="form-check-input" value="">
+																	</label>
+																</div>
+															</td>
+															<td>공용메뉴얼</td>
+															<td>Y</td>
+															<td></td>
+															<td></td>
+															<td>
+																<button type="button" class="hcm-btn-table-list">권한여부</button>
+															</td>
+															<td>
+																<button type="button" class="hcm-btn-icon-plus" title="추가">추가</button>
+																<button type="button" class="hcm-btn-icon-minus" title="삭제">삭제</button>
+																<button type="button" class="hcm-btn-icon-close" title="닫기">클로즈</button>
+																<button type="button" class="hcm-btn-icon-upload" title="업로드">업로드</button>
+																<button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드</button>
+																<button type="button" class="hcm-btn-icon-pdf" title="PDF">PDF</button>
+															</td>
+															<td><span></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="language-markup">
+										<pre><code>
+										 
+&lt;div class="hcm-list-box">
+	&lt;div class="row">
+		&lt;div class="col-12">
+			&lt;table class="hcm-list-table hcm-table-border-none"> 
+				&lt;colgroup>
+					&lt;col class="hcm-table-count" span=""/>
+					&lt;col class="hcm-tabel-space"/>
+				&lt;/colgroup>	
+				&lt;thead>
+					&lt;tr>
+						&lt;th>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/th>
+						&lt;th>No&lt;/th>
+						&lt;th>상태&lt;/th>
+						&lt;th>운영ID&lt;/th>
+						&lt;th>프로그램ID&lt;/th>
+						&lt;th>프로그램명&lt;/th>
+						&lt;th>프로그램URL&lt;/th>
+						&lt;th>사용여부&lt;/th>
+						&lt;th>신규&lt;/th>
+						&lt;th>삭제&lt;/th>
+						&lt;th>조회&lt;/th>
+						&lt;th>저장&lt;/th>
+						&lt;th>공용매뉴얼&lt;/th>
+						&lt;th>관리자메뉴얼&lt;/th>
+						&lt;th>버튼로그&lt;/th>
+						&lt;th>타입&lt;/th>
+						&lt;th>권한부여&lt;/th>
+						&lt;th>&lt;/th>
+						&lt;th>&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody>
+					&lt;tr>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>01&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>BNT&lt;/td>
+						&lt;td>AppDbQuery&lt;/td>
+						&lt;td>DB쿼리&lt;/td>
+						&lt;td>/benit/hr/engine/app/controller/AppDbQuery&lt;/td>
+						&lt;td>예&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>
+							&lt;div class="form-check-inline">
+								&lt;label class="form-check-label">
+									&lt;input type="checkbox" class="form-check-input" value="">
+								&lt;/label>
+							&lt;/div>
+						&lt;/td>
+						&lt;td>공용메뉴얼&lt;/td>
+						&lt;td>Y&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-table-list">권한여부&lt;/button>
+						&lt;/td>
+						&lt;td>
+							&lt;button type="button" class="hcm-btn-icon-plus" title="추가">추가&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-minus" title="삭제">삭제&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-close" title="닫기">클로즈&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-upload" title="업로드">업로드&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-down" title="다운로드">다운로드&lt;/button>
+							&lt;button type="button" class="hcm-btn-icon-pdf" title="PDF">PDF&lt;/button>
+						&lt;/td>
+						&lt;td>&lt;span>&lt;/span>&lt;/td>
+					&lt;/tr>
+				&lt;/tbody>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+										</code></pre>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/prism.js"></script>
+	</body>
+</html>
+
+
+<!-- <div class="language-marchecked="checked"up">
+	<pre>
+		<code>
+		</code>
+	</pre>
+</div> -->
+
+
+

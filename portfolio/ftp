@@ -1,0 +1,27 @@
+{
+    "protocol": "ftp",
+
+    "host": "lyjun0303.cafe24.com",
+
+    "port": 21,
+
+    "user": "lyjun0303",
+
+    "pass": "tlqkf0303",
+
+    "promptForPass": false,
+
+    "remote": "",
+
+    "secure": false,
+
+    "secureOptions": null,
+
+    "connTimeout": 10000,
+
+    "pasvTimeout": 10000,
+
+    "keepalive": 10000,
+
+    "watch": []
+}

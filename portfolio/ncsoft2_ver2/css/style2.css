@@ -1,0 +1,42 @@
+/* 메뉴리스트 */
+.menu_list{ position:fixed; top:0; left:0; width:calc( 100% - 270px ); height:100%; display:none; z-index:8;}
+.menu_list ul{height:100%;transition-duration:0.3s;}
+.menu_list ul li{overflow:hidden;float:left;position:relative;width:25%;height:100%;transition-duration:0.3s;}
+.menu_list ul li a{display:block;width:100%;height:100%;transition-duration:0.3s;}
+
+.menu_list ul li a:after{}
+
+.menu_list .txt_wrap{display:table;position:relative;left:-130%;z-index:100;width:100%;height:100%;opacity:0;}
+.menu_list .txt_wrap_inner{display:table-cell;width:100%;height:100%;padding:0 50px 200px 50px;box-sizing:border-box;vertical-align:middle;}
+.menu_list .txt_wrap_inner span{font-family: 'Noto Sans KR', sans-serif;font-weight:100;color:#fff;}
+.menu_list .txt_wrap_inner .tit{display:inline-block;margin-bottom:15px;padding-bottom:8px;border-bottom:1px solid #d7b17e;font-size:40px;font-weight:700;}
+.menu_list .txt_wrap_inner .sub_tit{display:block;color:#d7b17e;font-size:14px;}
+.menu_list .menu_list_img{position:absolute;top:0;left:-768px;height:100%;opacity:0;}
+
+.menu_list li a .menu_overlay{position:absolute;top:0;left:0;z-index:50;content:'';width:100%;height:100%;background-color:#0000006b;transition-duration:0.5s;}
+.menu_list li a .menu_overlay .icon_view{display:none;position:absolute;top:50%;left:50%;transform:translate(-50%, 0);-webkit-transform: translate(-50%, 0);width:80px;height:80px;border-radius:80px;background:#000000b3 url(../img/icon_view.png) 50% 50% no-repeat;text-indent:-9999px;}
+
+
+.menu_list li.on a .txt_wrap{}
+.menu_list li.on a .txt_wrap span{text-align:center;}
+.menu_list li.on a .txt_wrap .tit{font-size:65px;}
+.menu_list li.on a .txt_wrap .sub_tit{}
+.menu_list li.on a .menu_overlay{background-color:#0000004a;;}
+.menu_list li.on a .menu_overlay .icon_view{display:block;}
+
+.menu_list li.dim a .menu_overlay{background-color:#000000db}
+
+/* 상세페이지 */
+.detail_wrap{width:100%;height:100%;font-family: 'Noto Sans KR', sans-serif;font-weight:100;}
+.detail_wrap .detail_top{display:table;width:100%;height:100%;background:url(../img/detail_top_bg_01.jpg) 0 0 no-repeat;background-size:cover;text-align:center;}
+.detail_wrap .detail_top_inner{display:table-cell;vertical-align:middle;}
+.detail_wrap .detail_top p{}
+.detail_wrap .detail_top .tit{margin-bottom:20px;font-size:80px;font-weight:700;color:#fff;}
+.detail_wrap .detail_top .con{font-size:14px;color:#ffffffbd}
+
+.detail_wrap .detail_con{width:1280px;margin:auto;}
+.detail_wrap .btn_back{display:block;position:absolute;right:25px;top:25px;padding-left:30px;background:url(../img/icon_back.png) 0 50% no-repeat;font-size:13px;color:#fff;}
+.detail_wrap .btn_back:hover{text-decoration:underline;}
+
+#detail_01 .detail_top{}
+#detail_01 .detail_con{background-color:#131313;}

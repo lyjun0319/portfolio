@@ -1,0 +1,24 @@
+#UserInfoManager {  }
+#UserInfoManager .UserInfoMng_Title { padding:20px 0; border-bottom:1px solid #4e5e6e; }
+#UserInfoManager .UserInfoMng_Title h2{  font-size:28px; color:#222; }
+
+#UserInfoManager .UserInfoMng_List { }
+.UserInfoMng_List .UIM_Guide { position:relative; margin-top:20px;}
+.UserInfoMng_List .MustInput_Guide { position:absolute; top:0; right:10px; font-size:13px; }
+.UserInfoMng_List .UIM_GuideTxt { font-size:13px; color:#888888; }
+
+
+.UserInfoMng_List .UIM_TableList { margin-top:10px; }
+.UserInfoMng_List .UIM_TableList table { width:100%; border-top:2px solid #2289eb;  }
+.UserInfoMng_List .UIM_TableList table th { font-size:13px; color:#444444; background:#fafafa; padding-left:20px; text-align:left; vertical-align:middle; border-bottom:1px solid #ddd;}
+.UserInfoMng_List .UIM_TableList table td { vertical-align:middle; padding:10px 0; padding-left:20px; border-bottom:1px solid #ddd; font-size:13px; color:#666666; }
+.UserInfoMng_List .UIM_TableList table .sub_th { border-left:1px solid #ddd; }
+.UserInfoMng_List .UIM_TableList table input { border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; box-sizing:border-box;}
+.UserInfoMng_List .UIM_TableList table select { border:1px solid #ddd; height:30px; vertical-align: middle; padding:3px; box-sizing:border-box;}
+.UserInfoMng_List .UIM_TableList .UserHomepage { width:80%; }
+.UserInfoMng_List .UIM_TableList .UserAddress { width:80%; margin-top:5px; vertical-align:middle;}
+.UserInfoMng_List .UIM_TableList .UserAddress:first-child{ width:20%; margin-top:0; }
+.UserInfoMng_List .address_search{ display:inline-block; padding:7px 15px; background:#969696; border:1px solid #787878;  vertical-align: middle; color:#fff; margin-left:5px; font-size:12px;}
+
+#UserInfoManager .submit_btn  { margin-top:50px; text-align:center; }
+#UserInfoManager .submit_btn button { padding:18px 38px; background:#155ed5; color:#fff; }
