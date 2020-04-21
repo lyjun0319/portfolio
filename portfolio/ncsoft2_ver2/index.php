@@ -11,32 +11,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>NC SOFT</title>	
-	<link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/style2.css">
-	<link rel="stylesheet" href="./css/style3.css">
-	<link rel="stylesheet" href="./css/flaticon.css">
-	<link rel="stylesheet" href="./css/animate.css">
-	<link rel="stylesheet" href="./css/swiper.min.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/reset.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/style.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/style2.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/css/style3.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/css/flaticon.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/css/animate.css">
+	<link rel="stylesheet" href="/portfolio/ncsoft2_ver2/css/css/swiper.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
 
 	<!--[if lte IE 9]>
 		<link href='./css/animations-ie-fix.css' rel='stylesheet'>
 	<![endif]-->
 
-	<script src="./js/jquery.3.3.1.min.js"></script>
-	<script src="./js/selectivizr-min.js"></script>
-	<script src="./js/swiper.min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/jquery.3.3.1.min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/selectivizr-min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/swiper.min.js"></script>
 	
-	<script src="./js/jquery.fittext.js"></script>
-	<script src="./js/jquery.lettering.js"></script>
-	<script src="./js/jquery.textillate.js"></script>
-	<script src="./js/TweenMax.min.js"></script>
-	<script src="./js/jquery.mousewheel.min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/jquery.fittext.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/jquery.lettering.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/jquery.textillate.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/TweenMax.min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/jquery.mousewheel.min.js"></script>
 	
-	<script src="./js/main.js"></script>
-	<script src="./js/run.js"></script>
-	<script src="./js/TextPlugin.min.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/main.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/run.js"></script>
+	<script src="/portfolio/ncsoft2_ver2/js/TextPlugin.min.js"></script>
 	
 	<script src="./js/modernizr.custom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
