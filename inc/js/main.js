@@ -43,7 +43,7 @@ $('.flaticon-close').on('click', function(){
 function dataParsing(links){
     let newData = new Array();
     $.ajax({
-        type: "post",
+        type: "get",
         url: links,
         async: false,
         dataType: "JSON",

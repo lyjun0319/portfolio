@@ -6,7 +6,7 @@ const app = http.createServer(function(request,response){
     console.log(response)
     var url = request.url;
     if(request.url == '/'){
-      url = '/intro.html';
+      url = '/index.html';
     }
     if(request.url == '/favicon.ico'){
       response.writeHead(404);
