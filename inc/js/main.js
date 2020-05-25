@@ -35,9 +35,6 @@ $('.flaticon-close').on('click', function(){
 })
 /* ===== // Start Code ===== */
 
-
-
-
 /* ===== FUNCITON CODE ===== */
 //PORTFOLIO & HISTORY AJAX RETURN
 function dataParsing(links){
@@ -106,18 +103,19 @@ function myHistoryData(arr, listType){
 
 // PORTFOLIO HTML
 function portfolioHtml(item){
+    const {name, skils, guide, linkUrl, day} = item;
     let html = '';
     html += "<article class='listItem'>";
-    html += "<h3 class='listTitle'>"+item.name+"</h3>";
-    html += "<p class='useSkill'>"+item.skils+"</p>";
+    html += "<h3 class='listTitle'>"+name+"</h3>";
+    html += "<p class='useSkill'>"+skils+"</p>";
     html += "<div class='guideTxt'>";
-    html += arrWork(item.guide, "portfolio");
+    html += arrWork(guide, "portfolio");
     html += "</div>";
     html += "<div class='extra_txt'>";
-    if(item.linkUrl){
-        html += "<a href='"+item.linkUrl+"'class='linkUrl' target='_blank'>Link</a>";
+    if(linkUrl){
+        html += "<a href='"+linkUrl+"'class='linkUrl' target='_blank'>Link</a>";
     }
-    html += "<p class='listDay'>"+item.day+"</p>";
+    html += "<p class='listDay'>"+day+"</p>";
     html += "</div>";
     html += "</article>";
     return html;
@@ -125,18 +123,19 @@ function portfolioHtml(item){
 
 // COMPANY HTML
 function companyHtml(item){
+    const {link, companyName, workDay, skils, intro, reason, work} = item;
     let html = '';
     html += "<article class='company_list'>";
-    html += "<a href='"+item.link+"'>PORJECT VIEW</a>";
+    html += "<a href='"+link+"'>PORJECT VIEW</a>";
     html += "<div class='list_head'>";
-    html += "<h3 class='cp_name'>"+item.companyName+"</h3>";
-    html += "<p class='cp_workday'>"+item.workDay+"</p>";
+    html += "<h3 class='cp_name'>"+companyName+"</h3>";
+    html += "<p class='cp_workday'>"+workDay+"</p>";
     html += "</div>";
-    html += "<p class='cp_skils'>"+item.skils+"</p>";
-    html += "<p class='cp_intro'>"+item.intro+"</p>";
-    html += "<p class='cp_choose'>"+item.reason+"</p>";
+    html += "<p class='cp_skils'>"+skils+"</p>";
+    html += "<p class='cp_intro'>"+intro+"</p>";
+    html += "<p class='cp_choose'>"+reason+"</p>";
     html += "<div class='work_intro'>";
-    html += arrWork(item.work, "company");
+    html += arrWork(work, "company");
     html += "</div>";
     html += "</article>";
     return html;
@@ -171,7 +170,6 @@ function clearList(){
 function animateList(){
     $('#portfolio_list').children().css({
         opacity : 0,
-
     }).animate({
         opacity : 1
     },1000);
